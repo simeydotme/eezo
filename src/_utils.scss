@@ -9,6 +9,59 @@
 
 }
 
+// Adds a hypen before a string, if the string is not empty.
+// // @param {String} $val - String to add hyphen to.
+// @returns {Number} - The string with a new hyphen (perhaps).
+@function hyphen( $val, $check: null, $invert: false ) {
+    
+    $newval: -#{ $val };
+
+    @if $check == null { 
+        $check: $val; 
+    }
+    
+    @if $invert {
+        @if $check == "" {
+            @return $newval;
+        }
+    }
+    
+    @else {
+        @if $check != "" {
+           @return $newval;
+        }
+    }
+    
+    @return $val;
+
+}
+
+// Adds a hypen after a string, if the string is not empty.
+// // @param {String} $val - String to add hyphen to.
+// @returns {Number} - The string with a new hyphen (perhaps).
+@function hyphen-after( $val, $check: null, $invert: false ) {
+    
+    $newval: #{ $val }-;
+
+    @if $check == null { 
+        $check: $val; 
+    }
+    
+    @if $invert {
+        @if $check == "" {
+            @return $newval;
+        }
+    }
+
+    @else {
+        @if $check != "" {
+           @return $newval;
+        }
+    }
+    
+    @return $val;
+
+}
 
 
 // Returns a rem value based on %/px input
