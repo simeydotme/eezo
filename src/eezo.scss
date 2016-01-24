@@ -4,5 +4,6 @@
 @import "eezo-components";
 
 // now include each component's mixin one-by-one.
-@include coords();
+@include coordinates();
 @include margins();
+@include paddings();

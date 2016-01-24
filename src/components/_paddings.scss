@@ -1,0 +1,37 @@
+
+// defaults based on defaults.scss.
+// override in your project before including @mixin for customisation.
+
+$paddings-prop: "pad" !default;
+$paddings-name: "padding" !default;
+
+$paddings-dist: $distances !default;
+$paddings-dist-neg: $negative-distances !default;
+
+$paddings-coords: $coords !default;
+
+
+// the output mixin which we can use in eezo.scss
+// and can be included in your project.
+
+@mixin paddings( $bps: $default-bp ) {
+
+    @each $b in $bps {
+        
+        @if $b == nth( $default-bp, 1 ) {
+
+            @include coords(( #{$paddings-prop}, $paddings-name ), $paddings-dist );
+        
+        }
+
+        @else {
+
+            @include breakpoint( #{$b} ) {
+                @include coords(( #{$b}-#{$paddings-prop}, $paddings-name ), $paddings-dist );
+            }
+
+        }
+
+    }
+
+}

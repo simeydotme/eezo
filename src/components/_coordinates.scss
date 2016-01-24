@@ -24,7 +24,7 @@ $coordinates-coords-neg: (
 
     @each $b in $bps {
         
-        @if $b == nth( $default-bp, 1 ) {      
+        @if $b == nth( $default-bp, 1 ) {     
 
             @include coords(( #{$coordinates-prop}, $coordinates-name ), $coordinates-dist );
             @include coords(( #{$coordinates-prop}, $coordinates-name ), $coordinates-dist-neg, $coordinates-coords-neg );
@@ -33,7 +33,6 @@ $coordinates-coords-neg: (
 
         @else {
 
-            // desktop coord declarations
             @include breakpoint( #{$b} ) {
                 @include coords(( #{$b}-#{$coordinates-prop}, $coordinates-name ), $coordinates-dist );
                 @include coords(( #{$b}-#{$coordinates-prop}, $coordinates-name ), $coordinates-dist-neg, $coordinates-coords-neg );

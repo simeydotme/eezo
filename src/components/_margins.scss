@@ -10,12 +10,12 @@ $margins-dist-neg: $negative-distances !default;
 
 $margins-coords: $coords !default;
 $margins-coords-neg: (
+    "v": ( "t", "b" ),
+    "h": ( "l", "r" ),
     "t": "top",
     "b": "bottom",
     "l": "left",
-    "r": "right",
-    "v": ( "t", "b" ),
-    "h": ( "l", "r" )
+    "r": "right"
 ) !default;
 
 
@@ -35,10 +35,9 @@ $margins-coords-neg: (
 
         @else {
 
-            // desktop coord declarations
             @include breakpoint( #{$b} ) {
-                @include coords(( #{$b}-#{$coordinates-prop}, $coordinates-name ), $coordinates-dist );
-                @include coords(( #{$b}-#{$coordinates-prop}, $coordinates-name ), $coordinates-dist-neg, $coordinates-coords-neg );
+                @include coords(( #{$b}-#{$margins-prop}, $margins-name ), $margins-dist );
+                @include coords(( #{$b}-#{$margins-prop}, $margins-name ), $margins-dist-neg, $margins-coords-neg );
             }
 
         }

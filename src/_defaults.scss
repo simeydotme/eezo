@@ -2,13 +2,13 @@
 // coords is the coordinates for positioning
 // such as "top", "left", "bottom", "right"
 $coords: (
+    a: ( "t", "b", "l", "r" ),
+    v: ( "t", "b" ),
+    h: ( "l", "r" ),
     t: "top", 
     b: "bottom",
     r: "right",
-    l: "left",
-    v: ( "t", "b" ),
-    h: ( "l", "r" ),
-    a: ( "t", "b", "l", "r" )
+    l: "left"
 ) !default;
 
 // distances holds a list of distances
