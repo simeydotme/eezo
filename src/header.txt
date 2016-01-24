@@ -2,4 +2,5 @@
  * [ eezo ]
  * - a css framework for massless stylesheets
  * - http://github.com/simeydotme/eezo
+ * - @simeydotme / http://simey.me
  */
