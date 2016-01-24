@@ -14,7 +14,7 @@ var fs = require("fs"),
 
 gulp.task( "clean", function() {
 
-    del( "./dist" );
+    del( "./dist/**/*" );
 
 });
 
