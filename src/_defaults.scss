@@ -1,0 +1,39 @@
+
+// coords is the coordinates for positioning
+// such as "top", "left", "bottom", "right"
+$coords: (
+    t: "top", 
+    b: "bottom",
+    r: "right",
+    l: "left",
+    v: ( "t", "b" ),
+    h: ( "l", "r" ),
+    a: ( "t", "b", "l", "r" )
+) !default;
+
+// distances holds a list of distances
+// that we want to use for things such as margins
+$distances: (
+    "0": 0,
+    "2": rems( 2px ),
+    "5": rems( 5px ),
+    "10": rems( 10px ),
+    "15": rems( 15px ),
+    "20": rems( 20px ),
+    "30": rems( 30px ),
+    "50": rems( 50px ),
+    "100": rems( 100px )
+) !default;
+
+// negativec distances holds a list of distances
+// that we want to use for things such as margins
+$negative-distances: (
+    "neg2": rems( -2px ),
+    "neg5": rems( -5px ),
+    "neg10": rems( -10px ),
+    "neg15": rems( -15px ),
+    "neg20": rems( -20px ),
+    "neg30": rems( -30px ),
+    "neg50": rems( -50px ),
+    "neg100": rems( -100px )
+) !default;

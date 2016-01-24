@@ -1,0 +1,46 @@
+
+// defaults based on defaults.scss.
+// override in your project before including @mixin for customisation.
+
+$coordinates-prop: "pos" !default;
+$coordinates-name: "" !default;
+
+$coordinates-dist: $distances !default;
+$coordinates-dist-neg: $negative-distances !default;
+
+$coordinates-coords: $coords !default;
+$coordinates-coords-neg: (
+    "t": "top",
+    "b": "bottom",
+    "l": "left",
+    "r": "right"
+) !default;
+
+
+// the output mixin which we can use in eezo.scss
+// and can be included in your project.
+
+@mixin coordinates( $bps: $default-bp ) {
+
+    @each $b in $bps {
+        
+        @if $b == nth( $default-bp, 1 ) {      
+
+            @include coords(( #{$coordinates-prop}, $coordinates-name ), $coordinates-dist );
+            @include coords(( #{$coordinates-prop}, $coordinates-name ), $coordinates-dist-neg, $coordinates-coords-neg );
+        
+        }
+
+        @else {
+
+            // desktop coord declarations
+            @include breakpoint( #{$b} ) {
+                @include coords(( #{$b}-#{$coordinates-prop}, $coordinates-name ), $coordinates-dist );
+                @include coords(( #{$b}-#{$coordinates-prop}, $coordinates-name ), $coordinates-dist-neg, $coordinates-coords-neg );
+            }
+
+        }
+
+    }
+
+}

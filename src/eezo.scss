@@ -1,0 +1,8 @@
+
+// import all the components we need for
+// building a default eezo project.
+@import "eezo-components";
+
+// now include each component's mixin one-by-one.
+@include coords();
+@include margins();

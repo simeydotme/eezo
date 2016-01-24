@@ -1,0 +1,48 @@
+
+// defaults based on defaults.scss.
+// override in your project before including @mixin for customisation.
+
+$margins-prop: "mar" !default;
+$margins-name: "margin" !default;
+
+$margins-dist: $distances !default;
+$margins-dist-neg: $negative-distances !default;
+
+$margins-coords: $coords !default;
+$margins-coords-neg: (
+    "t": "top",
+    "b": "bottom",
+    "l": "left",
+    "r": "right",
+    "v": ( "t", "b" ),
+    "h": ( "l", "r" )
+) !default;
+
+
+// the output mixin which we can use in eezo.scss
+// and can be included in your project.
+
+@mixin margins( $bps: $default-bp ) {
+
+    @each $b in $bps {
+        
+        @if $b == nth( $default-bp, 1 ) {      
+
+            @include coords(( #{$margins-prop}, $margins-name ), $margins-dist );
+            @include coords(( #{$margins-prop}, $margins-name ), $margins-dist-neg, $margins-coords-neg );
+        
+        }
+
+        @else {
+
+            // desktop coord declarations
+            @include breakpoint( #{$b} ) {
+                @include coords(( #{$b}-#{$coordinates-prop}, $coordinates-name ), $coordinates-dist );
+                @include coords(( #{$b}-#{$coordinates-prop}, $coordinates-name ), $coordinates-dist-neg, $coordinates-coords-neg );
+            }
+
+        }
+
+    }
+
+}

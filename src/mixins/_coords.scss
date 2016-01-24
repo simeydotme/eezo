@@ -1,0 +1,67 @@
+
+// a mixin for returning a large set of coordinate/distance
+// classes when given a property "selector class" and "name value";
+// eg: 
+//   @include coords( ("mar", "margin-") );
+//   @include coords( ("tb-mar", "margin-") );
+//   @include coords( ("dt-mar", "margin-") );
+
+@mixin coords( $prop: ("pos", ""), $dist: $distances, $co: $coords ) {
+
+    // property key and value
+    $p-key: nth( $prop , 1 );
+    $p-val: nth( $prop , 2 );
+
+    // add a "-" if our property is not empty which
+    // results in something like: "margin-";
+    @if $p-val != "" {
+        $p-val: #{ $p-val } + "-";
+    }
+
+    @each $coord in $co {
+        
+        // coordinate key and value
+        $c-key: nth( $coord , 1 );
+        $c-val: nth( $coord , 2 );
+
+        @each $distance in $dist {
+            
+            // distance key and value
+            $d-key: nth( $distance , 1 );
+            $d-val: nth( $distance , 2 );
+            
+            // create a selector with the property, coordinate and distance keys
+            .#{ $p-key }-#{ $c-key }#{ $d-key } {
+                
+                // if our coordinate is a list of other coordinates
+                // then loop through them.
+                @if type-of( $c-val ) == "list" {
+                    
+                    @each $item in $c-val {
+                        
+                        // coordinate item key
+                        $i-key: map-get( $co , $item );
+
+                        // return a property and value based on the
+                        // property value, coord item key and distance value.
+                        #{ $p-val }#{ $i-key }: $d-val;
+
+                    }
+
+                }
+
+                @else {
+
+                    // return a property and value based on the
+                    // property value, coord value and distance value.
+                    #{ $p-val }#{ $c-val }: $d-val;
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
