@@ -41,7 +41,7 @@ gulp.task( "min", ["clean"], function() {
         .pipe( sass().on( "error", sass.logError ) )
         .pipe( prefix() )
         .pipe( header( banner ) )
-        .pipe( nano({ mergeLonghand: false }) )
+        .pipe( nano({ safe: true }) )
         .pipe( size({ title: "~~ min: "}) )
         .pipe( size({ title: "~~ gzip: ", gzip: true }) )
         .pipe( rename("eezo.min.css") )
