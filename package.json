@@ -1,0 +1,36 @@
+{
+  "name": "eezo",
+  "version": "0.1.0",
+  "description": "css framework for massless stylesheets",
+  "main": " ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "css",
+    "framework",
+    "eeze",
+    "element",
+    "zero",
+    "massless",
+    "stylsheets",
+    "prototype",
+    "prototyping",
+    "lightweight",
+    "light"
+  ],
+  "author": "Simon Goellner",
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^2.2.0",
+    "fs": "0.0.2",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cssnano": "^2.1.0",
+    "gulp-header": "^1.7.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.1",
+    "gulp-size": "^2.0.0",
+    "gulp-sourcemaps": "^1.6.0"
+  }
+}
