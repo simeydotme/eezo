@@ -1,0 +1,81 @@
+
+// defaults based on defaults.scss.
+// override in your project before including @mixin for customisation.
+
+$borders-prop: "bor" !default;
+$borders-name: "border" !default;
+
+$borders-sizes: (
+    "1": rems( 1px ),
+    "2": rems( 2px ),
+    "3": rems( 3px )
+) !default;
+
+$borders-styles: (
+    "": "solid",
+    "dash": "dashed",
+    "dot": "dotted"
+) !default;
+
+$borders-coords: (
+    "": "",
+    "t": "top",
+    "b": "bottom",
+    "l": "left",
+    "r": "right"
+) !default;
+
+
+@mixin border( $bp: "" ) {
+
+    $bp: hyphen-after( $bp );
+
+    @each $c in $borders-coords {
+
+        $coord-key: nth( $c, 1);
+        $coord-val: nth( $c, 2);
+                
+        $coord-key: hyphen( $coord-key );
+        $coord-val: hyphen( $coord-val );
+
+        @each $size in $borders-sizes {
+
+            $size-key: nth( $size, 1);
+            $size-val: nth( $size, 2);
+            
+            $size-key: hyphen( $size-key, $coord-key, true );
+                        
+            @each $style in $borders-styles {
+
+                $style-key: #{ $size-key }#{ nth( $style, 1) };
+                $style-val: #{ nth( $style, 2) };
+            
+                .#{ $bp }#{ $borders-prop }#{ $coord-key }#{ $style-key } {
+                    #{ $borders-name }#{ $coord-val }: $size-val $style-val;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+// the output mixin which we can use in eezo.scss
+// and can be included in your project.
+
+@mixin borders( $bps: $default-bp ) {
+
+    @each $b in $bps {
+        @if $b == nth( $default-bp, 1 ) {
+            @include border();
+        }
+        @else {
+            @include breakpoint( $b ) {
+                @include border( $b );
+            }
+        }
+    }
+
+}
