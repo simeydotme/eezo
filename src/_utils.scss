@@ -10,7 +10,7 @@
 }
 
 // Adds a hypen before a string, if the string is not empty.
-// // @param {String} $val - String to add hyphen to.
+// @param {String} $val - String to add hyphen to.
 // @returns {Number} - The string with a new hyphen (perhaps).
 @function hyphen( $val, $check: null, $invert: false ) {
     
@@ -37,7 +37,7 @@
 }
 
 // Adds a hypen after a string, if the string is not empty.
-// // @param {String} $val - String to add hyphen to.
+// @param {String} $val - String to add hyphen to.
 // @returns {Number} - The string with a new hyphen (perhaps).
 @function hyphen-after( $val, $check: null, $invert: false ) {
     
@@ -174,10 +174,12 @@
 
     // Try to pull a named breakpoint out of the $breakpoints map
     @if type-of( $bp ) == "string" {
-        @if map-has-key($breakpoints, $bp) {
+
+        @if map-has-key( $breakpoints, $bp ) {
+
             @if $dir == "only" or $dir == "down" {
 
-                $next-bp: map-next($breakpoints, $bp);
+                $next-bp: map-next( $breakpoints, $bp );
 
                 @if $next-bp == null {
                     $bp-max: null;
@@ -196,9 +198,17 @@
         }
         
         @else {
-            @warn "Couldn't find '#{$bp}' in $breakpoints list";
+
+            @if $bp != "" {
+
+                @warn "Couldn't find '#{$bp}' in $breakpoints list";
+
+            }
+
             $bp: 0;
+
         }
+
     }
 
     // Convert any pixel, rem, or unitless value to em

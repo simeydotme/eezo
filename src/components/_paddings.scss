@@ -17,19 +17,13 @@ $paddings-coords: $coords !default;
 @mixin paddings( $bps: $default-bp ) {
 
     @each $b in $bps {
-        
-        @if $b == nth( $default-bp, 1 ) {
 
-            @include coords(( #{$paddings-prop}, $paddings-name ), $paddings-dist );
-        
+        @if $b == nth( $default-bp, 1 ) {
+            $b: "";
         }
 
-        @else {
-
-            @include breakpoint( #{$b} ) {
-                @include coords(( #{$b}-#{$paddings-prop}, $paddings-name ), $paddings-dist );
-            }
-
+        @include breakpoint( $b ) {
+            @include coords(( #{hyphen-after($b)}#{$paddings-prop}, $paddings-name ), $paddings-dist );
         }
 
     }

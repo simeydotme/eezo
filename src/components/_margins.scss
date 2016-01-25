@@ -25,21 +25,14 @@ $margins-coords-neg: (
 @mixin margins( $bps: $default-bp ) {
 
     @each $b in $bps {
-        
-        @if $b == nth( $default-bp, 1 ) {      
 
-            @include coords(( #{$margins-prop}, $margins-name ), $margins-dist );
-            @include coords(( #{$margins-prop}, $margins-name ), $margins-dist-neg, $margins-coords-neg );
-        
+        @if $b == nth( $default-bp, 1 ) {
+            $b: "";
         }
 
-        @else {
-
-            @include breakpoint( #{$b} ) {
-                @include coords(( #{$b}-#{$margins-prop}, $margins-name ), $margins-dist );
-                @include coords(( #{$b}-#{$margins-prop}, $margins-name ), $margins-dist-neg, $margins-coords-neg );
-            }
-
+        @include breakpoint( $b ) {
+            @include coords(( #{hyphen-after($b)}#{$margins-prop}, $margins-name ), $margins-dist );
+            @include coords(( #{hyphen-after($b)}#{$margins-prop}, $margins-name ), $margins-dist-neg, $margins-coords-neg );
         }
 
     }

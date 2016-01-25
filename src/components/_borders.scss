@@ -68,14 +68,15 @@ $borders-coords: (
 @mixin borders( $bps: $default-bp ) {
 
     @each $b in $bps {
+
         @if $b == nth( $default-bp, 1 ) {
-            @include border();
+            $b: "";
         }
-        @else {
-            @include breakpoint( $b ) {
-                @include border( $b );
-            }
+
+        @include breakpoint( $b ) {
+            @include border( $b );
         }
+
     }
 
 }

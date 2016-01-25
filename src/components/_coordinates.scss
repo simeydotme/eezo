@@ -23,20 +23,15 @@ $coordinates-coords-neg: (
 @mixin coordinates( $bps: $default-bp ) {
 
     @each $b in $bps {
-        
-        @if $b == nth( $default-bp, 1 ) {     
 
-            @include coords(( #{$coordinates-prop}, $coordinates-name ), $coordinates-dist );
-            @include coords(( #{$coordinates-prop}, $coordinates-name ), $coordinates-dist-neg, $coordinates-coords-neg );
-        
+        @if $b == nth( $default-bp, 1 ) {
+            $b: "";
         }
 
-        @else {
+        @include breakpoint( $b ) {
 
-            @include breakpoint( #{$b} ) {
-                @include coords(( #{$b}-#{$coordinates-prop}, $coordinates-name ), $coordinates-dist );
-                @include coords(( #{$b}-#{$coordinates-prop}, $coordinates-name ), $coordinates-dist-neg, $coordinates-coords-neg );
-            }
+            @include coords(( #{hyphen-after($b)}#{$coordinates-prop}, $coordinates-name ), $coordinates-dist );
+            @include coords(( #{hyphen-after($b)}#{$coordinates-prop}, $coordinates-name ), $coordinates-dist-neg, $coordinates-coords-neg );
 
         }
 
