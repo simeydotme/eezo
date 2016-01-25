@@ -4,6 +4,15 @@
 
 $border-prop: "bor" !default;
 $border-bps: $default-bps !default;
+$border-colors: $default-colors !default;
+
+$border-coords: (
+    "": "",
+    "t": "top",
+    "b": "bottom",
+    "l": "left",
+    "r": "right"
+) !default;
 
 $border-sizes: (
     "1": rems( 1px ),
@@ -17,14 +26,6 @@ $border-styles: (
     "dot": "dotted"
 ) !default;
 
-$border-coords: (
-    "": "",
-    "t": "top",
-    "b": "bottom",
-    "l": "left",
-    "r": "right"
-) !default;
-
 
 @mixin border( $bp: "" ) {
 
@@ -32,11 +33,8 @@ $border-coords: (
 
     @each $c in $border-coords {
 
-        $coord-key: nth( $c, 1);
-        $coord-val: nth( $c, 2);
-                
-        $coord-key: hyphen( $coord-key );
-        $coord-val: hyphen( $coord-val );
+        $coord-key: hyphen( nth( $c, 1) );
+        $coord-val: hyphen( nth( $c, 2) );
 
         @each $size in $border-sizes {
 
@@ -62,6 +60,28 @@ $border-coords: (
 
 }
 
+@mixin border-color() {
+
+    @each $c in $border-coords {
+
+        $coord-key: hyphen( nth( $c, 1) );
+        $coord-val: hyphen( nth( $c, 2) );
+
+        @each $clr in $border-colors {
+
+            $clr-key: nth( $clr, 1);
+            $clr-val: nth( $clr, 2);
+
+            .#{ $border-prop }#{ $coord-key }-#{ $clr-key } {
+                #{ "border" }#{ $coord-val }: $clr-val;
+            }
+
+        }
+
+    }
+
+}
+
 // the output mixin which we can use in eezo.scss
 // and can be included in your project.
 
@@ -78,5 +98,7 @@ $border-coords: (
         }
 
     }
+
+    @include border-color();
 
 }
