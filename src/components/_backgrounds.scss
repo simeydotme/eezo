@@ -7,9 +7,10 @@ $background-bps: $default-bps !default;
 
 $background-colors: $default-colors !default;
 
-$background-sizes: (
-    cov: "cover",
-    con: "contain"
+$background-attachments: (
+    scr: "scroll",
+    fix: "fixed",
+    loc: "local",
 ) !default;
 
 $background-positions: (
@@ -20,18 +21,17 @@ $background-positions: (
     c: "center"
 ) !default;
 
-$background-attachments: (
-    scr: "scroll",
-    fix: "fixed",
-    loc: "local",
-) !default;
-
 $background-repeats: (
-    no: "no-repeat",
-    rptx: "repeat-x",
-    rpty: "repeat-y",
+    no-rpt: "no-repeat",
+    rpt-x: "repeat-x",
+    rpt-y: "repeat-y",
     spc: "space",
     rnd: "round"
+) !default;
+
+$background-sizes: (
+    cov: "cover",
+    con: "contain"
 ) !default;
 
 // the output mixin which we can use in eezo.scss
@@ -50,6 +50,16 @@ $background-repeats: (
         }
 
     }
+            
+    // repeats
+
+    @each $rpt in $background-repeats {
+        
+        .#{ $p }-#{ nth( $rpt, 1 ) } {
+            background-repeat: nth( $rpt, 2 );
+        }
+
+    }
 
 
     @each $b in $bps {
@@ -59,6 +69,42 @@ $background-repeats: (
         }
 
         @include breakpoint( $b ) {
+            
+            // attachments
+
+            @each $atch in $background-positions {
+        
+                .#{ hyphen-after($b) }#{ $p }-#{ nth( $atch, 1 ) } {
+                    background-position: nth( $atch, 2 );
+                }
+
+            }
+            
+            // none
+            
+            .#{ hyphen-after($b) }#{ $p }-none {
+                background: none;
+            }
+            
+            // positions
+
+            @each $pos in $background-attachments {
+        
+                .#{ hyphen-after($b) }#{ $p }-#{ nth( $pos, 1 ) } {
+                    background-attachment: nth( $pos, 2 );
+                }
+
+            }
+            
+            // sizes
+
+            @each $size in $background-sizes {
+        
+                .#{ hyphen-after($b) }#{ $p }-#{ nth( $size, 1 ) } {
+                    background-size: nth( $size, 2 );
+                }
+
+            }
             
         }
 

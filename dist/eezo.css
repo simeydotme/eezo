@@ -4,17 +4,17 @@
  * - http://github.com/simeydotme/eezo
  * - @simeydotme / http://simey.me
  */
-.bg-ablack {
-  background-color: #000; }
-
-.bg-awhite {
-  background-color: #fff; }
-
-.bg-black {
+.bg-blk {
   background-color: #222; }
 
-.bg-white {
+.bg-wht {
   background-color: #eee; }
+
+.bg-black {
+  background-color: #000; }
+
+.bg-white {
+  background-color: #fff; }
 
 .bg-cream {
   background-color: #f7f2eb; }
@@ -42,6 +42,102 @@
 
 .bg-blue {
   background-color: #1e9bd6; }
+
+.bg-no-rpt {
+  background-repeat: "no-repeat"; }
+
+.bg-rptx {
+  background-repeat: "repeat-x"; }
+
+.bg-rpty {
+  background-repeat: "repeat-y"; }
+
+.bg-spc {
+  background-repeat: "space"; }
+
+.bg-rnd {
+  background-repeat: "round"; }
+
+.bg-t {
+  background-position: "top"; }
+
+.bg-b {
+  background-position: "bottom"; }
+
+.bg-r {
+  background-position: "right"; }
+
+.bg-l {
+  background-position: "left"; }
+
+.bg-c {
+  background-position: "center"; }
+
+.bg-none {
+  background: none; }
+
+.bg-scr {
+  background-attachment: "scroll"; }
+
+.bg-fix {
+  background-attachment: "fixed"; }
+
+.bg-loc {
+  background-attachment: "local"; }
+
+.bg-cov {
+  background-size: "cover"; }
+
+.bg-con {
+  background-size: "contain"; }
+
+@media screen and (min-width: 48em) {
+  .tb-bg-t {
+    background-position: "top"; }
+  .tb-bg-b {
+    background-position: "bottom"; }
+  .tb-bg-r {
+    background-position: "right"; }
+  .tb-bg-l {
+    background-position: "left"; }
+  .tb-bg-c {
+    background-position: "center"; }
+  .tb-bg-none {
+    background: none; }
+  .tb-bg-scr {
+    background-attachment: "scroll"; }
+  .tb-bg-fix {
+    background-attachment: "fixed"; }
+  .tb-bg-loc {
+    background-attachment: "local"; }
+  .tb-bg-cov {
+    background-size: "cover"; }
+  .tb-bg-con {
+    background-size: "contain"; } }
+
+@media screen and (min-width: 64em) {
+  .dt-bg-t {
+    background-position: "top"; }
+  .dt-bg-b {
+    background-position: "bottom"; }
+  .dt-bg-r {
+    background-position: "right"; }
+  .dt-bg-l {
+    background-position: "left"; }
+  .dt-bg-c {
+    background-position: "center"; }
+  .dt-bg-none {
+    background: none; }
+  .dt-bg-scr {
+    background-attachment: "scroll"; }
+  .dt-bg-fix {
+    background-attachment: "fixed"; }
+  .dt-bg-loc {
+    background-attachment: "local"; }
+  .dt-bg-cov {
+    background-size: "cover"; }
+  .dt-bg-con {
+    background-size: "contain"; } }
 
 .bor-1 {
   border: 0.0625rem solid; }
