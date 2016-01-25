@@ -5,11 +5,11 @@
 $coordinates-prop: "pos" !default;
 $coordinates-bps: $default-bps !default;
 
-$coordinates-dist: $distances !default;
-$coordinates-dist-neg: $distances-neg !default;
-
 $coordinates-coords: $coords !default;
 $coordinates-coords-neg: $coords-neg !default;
+
+$coordinates-dist: $distances !default;
+$coordinates-dist-neg: $distances-neg !default;
 
 
 // the output mixin which we can use in eezo.scss

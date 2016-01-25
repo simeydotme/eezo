@@ -5,11 +5,11 @@
 $margin-prop: "mar" !default;
 $margin-bps: $default-bps !default;
 
-$margin-dist: $distances !default;
-$margin-dist-neg: $distances-neg !default;
-
 $margin-coords: $coords !default;
 $margin-coords-neg: $coords-neg !default;
+
+$margin-dist: $distances !default;
+$margin-dist-neg: $distances-neg !default;
 
 
 // the output mixin which we can use in eezo.scss
