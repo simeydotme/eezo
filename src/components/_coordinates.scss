@@ -3,35 +3,30 @@
 // override in your project before including @mixin for customisation.
 
 $coordinates-prop: "pos" !default;
-$coordinates-name: "" !default;
+$coordinates-bps: $default-bps !default;
 
 $coordinates-dist: $distances !default;
-$coordinates-dist-neg: $negative-distances !default;
+$coordinates-dist-neg: $distances-neg !default;
 
 $coordinates-coords: $coords !default;
-$coordinates-coords-neg: (
-    "t": "top",
-    "b": "bottom",
-    "l": "left",
-    "r": "right"
-) !default;
+$coordinates-coords-neg: $coords-neg !default;
 
 
 // the output mixin which we can use in eezo.scss
 // and can be included in your project.
 
-@mixin coordinates( $bps: $default-bp ) {
+@mixin coordinates( $bps: $coordinates-bps ) {
 
     @each $b in $bps {
 
-        @if $b == nth( $default-bp, 1 ) {
+        @if $b == nth( $default-bps, 1 ) {
             $b: "";
         }
 
         @include breakpoint( $b ) {
 
-            @include coords(( #{hyphen-after($b)}#{$coordinates-prop}, $coordinates-name ), $coordinates-dist );
-            @include coords(( #{hyphen-after($b)}#{$coordinates-prop}, $coordinates-name ), $coordinates-dist-neg, $coordinates-coords-neg );
+            @include coords(( #{hyphen-after($b)}#{$coordinates-prop}, "" ), $coordinates-dist );
+            @include coords(( #{hyphen-after($b)}#{$coordinates-prop}, "" ), $coordinates-dist-neg, $coordinates-coords-neg );
 
         }
 

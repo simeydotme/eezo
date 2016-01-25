@@ -5,7 +5,16 @@ $coords: (
     a: ( "t", "b", "l", "r" ),
     v: ( "t", "b" ),
     h: ( "l", "r" ),
-    t: "top", 
+    t: "top",
+    b: "bottom",
+    r: "right",
+    l: "left"
+) !default;
+
+// coords-neg is the coordinates for positioning negatively
+// such as "top", "left", "bottom", "right" negatively
+$coords-neg: (
+    t: "top",
     b: "bottom",
     r: "right",
     l: "left"
@@ -27,7 +36,7 @@ $distances: (
 
 // negativec distances holds a list of distances
 // that we want to use for things such as margins
-$negative-distances: (
+$distances-neg: (
     "neg2": rems( -2px ),
     "neg5": rems( -5px ),
     "neg10": rems( -10px ),
@@ -37,3 +46,44 @@ $negative-distances: (
     "neg50": rems( -50px ),
     "neg100": rems( -100px )
 ) !default;
+
+
+// default colors for all components
+// can be overridden here or per-component.
+
+$custom-colors: () !default;
+
+$default-colors: (
+    "ablack": #000,
+    "awhite": #fff,
+    "black": #222,
+    "white": #eee,
+    "cream": #f7f2eb,
+    "grey": #82848e,
+    "light": #b5b8bf,
+    "dark": #575c67,
+    "silver": #dde3e6,
+    "tar": #161f23,
+    "red": #d61e40,
+    "green": #1ed668,
+    "blue": #1e9bd6
+) !default;
+
+$default-colors: map-merge( $default-colors, $custom-colors );
+// $no-extra-colors: false !default;
+
+// @if ( $no-extra-colors != true ) {
+
+//     $extra-colors: (
+//         "yellow": #d6d01e,
+//         "orange": #d66a1e,
+//         "mint": #31e894,
+//         "teal": #26ab92,
+//         "purple": #5930d6,
+//         "violet": #981bd8,
+//         "pink": #ec2666
+//     ) !default;
+
+//     $default-colors: join( $default-colors, $extra-colors );
+
+// }

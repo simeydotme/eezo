@@ -13,6 +13,6 @@ $breakpoints: (
     hg: 75
 ) !default;
 
-// $default-bp defines the default breakpoints
+// $default-bps defines the default breakpoints
 // used in most of the components.
-$default-bp: ("mb", "tb", "dt") !default;
+$default-bps: ("mb", "tb", "dt") !default;

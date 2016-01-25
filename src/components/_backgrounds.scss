@@ -1,0 +1,67 @@
+
+// defaults based on defaults.scss.
+// override in your project before including @mixin for customisation.
+
+$background-prop: "bg" !default;
+$background-bps: $default-bps !default;
+
+$background-colors: $default-colors !default;
+
+$background-sizes: (
+    cov: "cover",
+    con: "contain"
+) !default;
+
+$background-positions: (
+    t: "top",
+    b: "bottom",
+    r: "right",
+    l: "left",
+    c: "center"
+) !default;
+
+$background-attachments: (
+    scr: "scroll",
+    fix: "fixed",
+    loc: "local",
+) !default;
+
+$background-repeats: (
+    no: "no-repeat",
+    rptx: "repeat-x",
+    rpty: "repeat-y",
+    spc: "space",
+    rnd: "round"
+) !default;
+
+// the output mixin which we can use in eezo.scss
+// and can be included in your project.
+
+@mixin backgrounds( $bps: $background-bps ) {
+    
+    $p: $background-prop;
+            
+    // colors
+
+    @each $clr in $background-colors {
+        
+        .#{ $p }-#{ nth( $clr, 1 ) } {
+            background-color: nth( $clr, 2 );
+        }
+
+    }
+
+
+    @each $b in $bps {
+
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
+
+        @include breakpoint( $b ) {
+            
+        }
+
+    }
+
+}

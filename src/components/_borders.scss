@@ -2,22 +2,22 @@
 // defaults based on defaults.scss.
 // override in your project before including @mixin for customisation.
 
-$borders-prop: "bor" !default;
-$borders-name: "border" !default;
+$border-prop: "bor" !default;
+$border-bps: $default-bps !default;
 
-$borders-sizes: (
+$border-sizes: (
     "1": rems( 1px ),
     "2": rems( 2px ),
     "3": rems( 3px )
 ) !default;
 
-$borders-styles: (
+$border-styles: (
     "": "solid",
     "dash": "dashed",
     "dot": "dotted"
 ) !default;
 
-$borders-coords: (
+$border-coords: (
     "": "",
     "t": "top",
     "b": "bottom",
@@ -30,7 +30,7 @@ $borders-coords: (
 
     $bp: hyphen-after( $bp );
 
-    @each $c in $borders-coords {
+    @each $c in $border-coords {
 
         $coord-key: nth( $c, 1);
         $coord-val: nth( $c, 2);
@@ -38,20 +38,20 @@ $borders-coords: (
         $coord-key: hyphen( $coord-key );
         $coord-val: hyphen( $coord-val );
 
-        @each $size in $borders-sizes {
+        @each $size in $border-sizes {
 
             $size-key: nth( $size, 1);
             $size-val: nth( $size, 2);
             
             $size-key: hyphen( $size-key, $coord-key, true );
                         
-            @each $style in $borders-styles {
+            @each $style in $border-styles {
 
                 $style-key: #{ $size-key }#{ nth( $style, 1) };
                 $style-val: #{ nth( $style, 2) };
             
-                .#{ $bp }#{ $borders-prop }#{ $coord-key }#{ $style-key } {
-                    #{ $borders-name }#{ $coord-val }: $size-val $style-val;
+                .#{ $bp }#{ $border-prop }#{ $coord-key }#{ $style-key } {
+                    #{ "border" }#{ $coord-val }: $size-val $style-val;
                 }
 
             }
@@ -65,11 +65,11 @@ $borders-coords: (
 // the output mixin which we can use in eezo.scss
 // and can be included in your project.
 
-@mixin borders( $bps: $default-bp ) {
+@mixin borders( $bps: $border-bps ) {
 
     @each $b in $bps {
 
-        @if $b == nth( $default-bp, 1 ) {
+        @if $b == nth( $default-bps, 1 ) {
             $b: "";
         }
 
