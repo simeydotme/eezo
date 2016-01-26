@@ -37,23 +37,23 @@ $background-sizes: (
 // and can be included in your project.
 
 @mixin backgrounds( $bps: $background-bps ) {
-    
+
     $p: $background-prop;
-            
+
     // colors
 
     @each $clr in $background-colors {
-        
+
         .#{ $p }-#{ nth( $clr, 1 ) } {
             background-color: nth( $clr, 2 );
         }
 
     }
-            
+
     // repeats
 
     @each $rpt in $background-repeats {
-        
+
         .#{ $p }-#{ nth( $rpt, 1 ) } {
             background-repeat: nth( $rpt, 2 );
         }
@@ -68,43 +68,43 @@ $background-sizes: (
         }
 
         @include breakpoint( $b ) {
-            
+
             // attachments
 
             @each $atch in $background-positions {
-        
+
                 .#{ hyphen-after($b) }#{ $p }-#{ nth( $atch, 1 ) } {
                     background-position: nth( $atch, 2 );
                 }
 
             }
-            
+
             // none
-            
+
             .#{ hyphen-after($b) }#{ $p }-none {
                 background: none;
             }
-            
+
             // positions
 
             @each $pos in $background-attachments {
-        
+
                 .#{ hyphen-after($b) }#{ $p }-#{ nth( $pos, 1 ) } {
                     background-attachment: nth( $pos, 2 );
                 }
 
             }
-            
+
             // sizes
 
             @each $size in $background-sizes {
-        
+
                 .#{ hyphen-after($b) }#{ $p }-#{ nth( $size, 1 ) } {
                     background-size: nth( $size, 2 );
                 }
 
             }
-            
+
         }
 
     }

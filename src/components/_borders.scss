@@ -40,14 +40,14 @@ $border-styles: (
 
             $size-key: nth( $size, 1);
             $size-val: nth( $size, 2);
-            
+
             $size-key: hyphen( $size-key, $coord-key, true );
-                        
+
             @each $style in $border-styles {
 
                 $style-key: #{ $size-key }#{ nth( $style, 1) };
                 $style-val: #{ nth( $style, 2) };
-            
+
                 .#{ $bp }#{ $border-prop }#{ $coord-key }#{ $style-key } {
                     #{ "border" }#{ $coord-val }: $size-val $style-val;
                 }
@@ -73,7 +73,7 @@ $border-styles: (
             $clr-val: nth( $clr, 2);
 
             .#{ $border-prop }#{ $coord-key }-#{ $clr-key } {
-                #{ "border" }#{ $coord-val }: $clr-val;
+                #{ "border" + $coord-val + "-color" }: $clr-val;
             }
 
         }
