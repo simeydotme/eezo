@@ -1,10 +1,24 @@
 {
   "name": "eezo",
   "version": "0.1.0",
+
+  "author": {
+    "name": "simeydotme",
+    "email": "simey.me@gmail.com",
+    "url": "http://simey.me"
+  },
   "description": "css framework for massless stylesheets",
-  "main": " ",
+  "license": "MIT",
+
+  "main": "src/eezo.scss",
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/simeydotme/eezo"
   },
   "keywords": [
     "css",
@@ -19,8 +33,6 @@
     "lightweight",
     "light"
   ],
-  "author": "Simon Goellner",
-  "license": "MIT",
   "devDependencies": {
     "del": "^2.2.0",
     "fs": "0.0.2",
@@ -31,6 +43,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.1.1",
     "gulp-size": "^2.0.0",
-    "gulp-sourcemaps": "^1.6.0"
+    "gulp-sourcemaps": "^1.6.0",
+    "lodash": "^4.2.0"
   }
 }

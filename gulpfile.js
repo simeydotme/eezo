@@ -1,5 +1,6 @@
 
-var fs = require("fs"),
+var _ = require("lodash"),
+    fs = require("fs"),
     del = require("del"),
     gulp = require("gulp"),
     sass = require("gulp-sass"),
@@ -10,23 +11,34 @@ var fs = require("fs"),
     prefix = require("gulp-autoprefixer"),
     sourcemaps = require("gulp-sourcemaps"),
 
-    banner = fs.readFileSync("./src/header.txt", "utf-8");
+    banner = function() {
+
+        var pkg = JSON.parse( fs.readFileSync("./package.json", "utf-8") );
+        var tpl = fs.readFileSync("./src/header.txt", "utf-8");
+
+        return (_.template( tpl , {
+            interpolate: /{{=\s*?(.*?)\s*?}}/g
+        })( pkg ));
+
+    };
+
+
 
 gulp.task( "clean", function() {
 
-    del( "./dist/**/*" );
+    return del( "./dist/**/*" );
 
 });
 
 gulp.task( "max", ["clean"], function() {
 
-    gulp.src("./src/eezo.scss")
+    return gulp.src("./src/eezo.scss")
 
         .pipe( sass({ 
             outputStyle: "nested"
         }).on( "error", sass.logError ) )
         .pipe( prefix() )
-        .pipe( header( banner ) )
+        .pipe( header( banner() ) )
         .pipe( size({ title: "~~ reg: "}) )
 
         .pipe( gulp.dest("./dist") );
@@ -35,12 +47,12 @@ gulp.task( "max", ["clean"], function() {
 
 gulp.task( "min", ["clean"], function() {
 
-    gulp.src("./src/eezo.scss")
+    return gulp.src("./src/eezo.scss")
 
         .pipe( sourcemaps.init() )
         .pipe( sass().on( "error", sass.logError ) )
         .pipe( prefix() )
-        .pipe( header( banner ) )
+        .pipe( header( banner() ) )
         .pipe( nano({ safe: true }) )
         .pipe( size({ title: "~~ min: "}) )
         .pipe( size({ title: "~~ gzip: ", gzip: true }) )
