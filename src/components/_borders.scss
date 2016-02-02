@@ -4,7 +4,7 @@
 
 $border-prop: "bor" !default;
 $border-bps: $default-bps !default;
-$border-colors: $default-colors !default;
+$border-colors: $colors !default;
 
 $border-coords: (
     "": "",
@@ -73,7 +73,7 @@ $border-styles: (
             $clr-val: nth( $clr, 2);
 
             .#{ $border-prop }#{ $coord-key }-#{ $clr-key } {
-                #{ "border" }#{ $coord-val }: $clr-val;
+                #{ "border" }#{ $coord-val }-color: $clr-val;
             }
 
         }

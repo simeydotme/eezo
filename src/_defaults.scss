@@ -54,37 +54,36 @@ $distances-neg: (
 $custom-colors: () !default;
 
 $default-colors: (
-    "trans": transparent,
+    "bl": #000,
     "blk": #222,
-    "wht": #eee,
-    "black": #000,
-    "white": #fff,
-    "cream": #f7f2eb,
-    "grey": #82848e,
-    "light": #b5b8bf,
-    "dark": #575c67,
-    "silver": #dde3e6,
-    "tar": #161f23,
-    "red": #d61e40,
-    "green": #1ed668,
-    "blue": #1e9bd6
+    "cr": #f7f2eb,
+    "da": #575c67,
+    "go": #c7aa5c,
+    "gr": #82848e,
+    "li": #b5b8bf,
+    "si": #dde3e6,
+    "ta": #161f23,
+    "x": transparent,
+    "wh": #fff,
+    "wht": #eee
 ) !default;
 
-$default-colors: map-merge( $default-colors, $custom-colors );
-// $no-extra-colors: false !default;
+$extra-colors: (
+    "blu": #1e9bd6,
+    "grn": #1ed668,
+    "mnt": #31e894,
+    "orng": #d66a1e,
+    "pnk": #ec2666,
+    "prpl": #5930d6,
+    "red": #d61e40,
+    "teal": #26ab92,
+    "vlt": #981bd8,
+    "yel": #d6d01e
+) !default;
 
-// @if ( $no-extra-colors != true ) {
+$colors: map-merge( $default-colors, $custom-colors );
 
-//     $extra-colors: (
-//         "yellow": #d6d01e,
-//         "orange": #d66a1e,
-//         "mint": #31e894,
-//         "teal": #26ab92,
-//         "purple": #5930d6,
-//         "violet": #981bd8,
-//         "pink": #ec2666
-//     ) !default;
-
-//     $default-colors: join( $default-colors, $extra-colors );
-
-// }
+$no-extra-colors: false !default;
+@if ( $no-extra-colors != true ) {
+    $colors: map-merge( $default-colors, $extra-colors );
+}
