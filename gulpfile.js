@@ -63,4 +63,8 @@ gulp.task( "min", ["clean"], function() {
 
 });
 
-gulp.task("default", ["min", "max"]);
+gulp.task( "default", [ "min", "max" ] );
+
+gulp.task("spy", function() {
+    gulp.watch( "./src/**/*.scss" , [ "default" ] );
+});
