@@ -34,3 +34,12 @@ $text-bps: $default-bps !default;
     }
 
 }
+
+
+
+
+@mixin text() {
+
+    @include text-sizes();
+
+}
