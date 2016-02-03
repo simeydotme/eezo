@@ -1,8 +1,8 @@
 
 // import all the needed utilities, mixins and config
 
-    @import "config";
     @import "utils";
+    @import "config";
     @import "defaults";
     @import "mixins/breakpoint";
     @import "mixins/coords";
@@ -11,7 +11,10 @@
 
     @import "components/backgrounds";
     @import "components/borders";
+
     @import "components/coordinates";
     @import "components/margins";
     @import "components/paddings";
+
+    @import "components/text";
     

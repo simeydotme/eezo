@@ -6,6 +6,9 @@
 // now include each component's mixin one-by-one.
 @include backgrounds();
 @include borders();
+
 @include coordinates();
 @include margin();
 @include padding();
+
+@include text-sizes();

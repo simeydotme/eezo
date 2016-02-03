@@ -1,10 +1,11 @@
 
 // a mixin for returning a large set of coordinate/distance
-// classes when given a property "selector class" and "name value";
+// classes when given a list of ( "className", "propertyPrefix" );
 // eg: 
+//   @include coords( ("pos", "") );
+//   @include coords( ("pad", "padding-") );
 //   @include coords( ("mar", "margin-") );
 //   @include coords( ("tb-mar", "margin-") );
-//   @include coords( ("dt-mar", "margin-") );
 
 @mixin coords( $prop: ("pos", ""), $dist: $distances, $co: $coords ) {
 

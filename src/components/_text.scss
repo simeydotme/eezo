@@ -1,0 +1,36 @@
+
+// defaults based on defaults.scss.
+// override in your project before including @mixin for customisation.
+
+$text-prop: "txt" !default;
+$text-bps: $default-bps !default;
+
+// the output mixin which we can use in eezo.scss
+// and can be included in your project.
+
+@mixin text-sizes( $bps: $text-bps ) {
+
+    @each $b in $bps {
+
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
+
+        @include breakpoint( $b ) {
+            
+            @each $size in $text-sizes {
+                
+                $key: nth( $size, 1 );
+                $val: nth( $size, 2 );
+
+                .#{ hyphen-after($b) }#{ $text-prop }#{ $key } {
+                    font-size: $val;
+                }
+
+            }
+
+        }
+
+    }
+
+}

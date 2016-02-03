@@ -1,4 +1,17 @@
 
+$text-sizes: (
+    "-2":  0.75rem,
+    "-1":  0.875rem,
+    "-0":    1rem,
+    "\\+1":  1.125rem,
+    "\\+2":  1.25rem,
+    "\\+3":  1.5rem,
+    "\\+4":  1.75rem,
+    "\\+5":  2rem,
+    "\\+6":  2.5rem,
+    "\\+7":  3rem   
+) !default;
+
 // coords is the coordinates for positioning
 // such as "top", "left", "bottom", "right"
 $coords: (
@@ -30,11 +43,10 @@ $distances: (
     "15": rems( 15px ),
     "20": rems( 20px ),
     "30": rems( 30px ),
-    "50": rems( 50px ),
-    "100": rems( 100px )
+    "50": rems( 50px )
 ) !default;
 
-// negativec distances holds a list of distances
+// negative distances holds a list of distances
 // that we want to use for things such as margins
 $distances-neg: (
     "neg2": rems( -2px ),
@@ -42,9 +54,6 @@ $distances-neg: (
     "neg10": rems( -10px ),
     "neg15": rems( -15px ),
     "neg20": rems( -20px ),
-    "neg30": rems( -30px ),
-    "neg50": rems( -50px ),
-    "neg100": rems( -100px )
 ) !default;
 
 
