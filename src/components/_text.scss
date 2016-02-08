@@ -48,6 +48,10 @@ $font-styles: (
     i: "italic"
 ) !default;
 
+
+$line-height-prop: "lh" !default;
+$line-heights: $font-sizes !default;
+
 // the output mixin which we can use in eezo.scss
 // and can be included in your project.
 
@@ -124,6 +128,33 @@ $font-styles: (
 
 }
 
+@mixin line-heights( $bps: $text-bps ) {
+
+    @each $b in $bps {
+
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
+
+        @include breakpoint( $b ) {
+            
+            @each $height in $line-heights {
+                
+                $key: nth( $height, 1 );
+                $val: nth( $height, 2 );
+
+                .#{ hyphen-after($b) }#{ $line-height-prop }#{ $key } {
+                    line-height: strip( $val );
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
 @mixin text-colors() {
             
     @each $color in $text-colors {
@@ -148,6 +179,7 @@ $font-styles: (
     @include font-styles();
     @include font-weights();
     @include font-sizes();
+    @include line-heights();
     @include text-colors();
 
 }
