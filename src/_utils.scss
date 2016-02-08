@@ -102,8 +102,9 @@
     @if $value == 0rem {
         $value: 0;
     }
-
-    @return $value;
+    
+    // return the value, with the unit stripped, as rem.
+    @return strip( $value ) * 1rem;
 
 }
 
