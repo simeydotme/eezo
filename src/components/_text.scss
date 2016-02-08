@@ -33,10 +33,10 @@ $font-zh-sans:  微软雅黑体, 微软雅黑, "Microsoft YaHei", 黑体, SimHei
 $font-zh-serif: 新細明體, PMingLiU, 华文细黑, STXihei, 宋体, SimSun !default;
 
 $fonts: (
-    sans: $font-sans + ", " + $font-zh-sans + ", sans-serif",
-    serif: $font-serif + ", " + $font-zh-serif + ", serif",
     code: $font-code + ", monospace",
-    heading: $font-heading + ", " + $font-zh-sans + ", sans-serif"
+    heading: $font-heading + ", " + $font-zh-sans + ", sans-serif",
+    sans: $font-sans + ", " + $font-zh-sans + ", sans-serif",
+    serif: $font-serif + ", " + $font-zh-serif + ", serif"
 ) !default;
 
 
