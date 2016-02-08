@@ -4,6 +4,8 @@
 
 $border-prop: "bor" !default;
 $border-bps: $default-bps !default;
+
+
 $border-colors: $colors !default;
 
 $border-coords: (
@@ -14,11 +16,13 @@ $border-coords: (
     "r": "right"
 ) !default;
 
+
 $border-sizes: (
     "1": rems( 1px ),
     "2": rems( 2px ),
     "3": rems( 3px )
 ) !default;
+
 
 $border-styles: (
     "": "solid",
@@ -27,29 +31,53 @@ $border-styles: (
 ) !default;
 
 
-@mixin border( $bp: "" ) {
+$border-radius-prop: $border-prop !default;
+$border-radius: (
+    "rad1": rems( 1px ),
+    "rad2": rems( 2px ),
+    "rad3": rems( 3px ),
+    "rad4": rems( 4px ),
+    "rad5": rems( 5px ),
+    "rad10": rems( 10px ),
+    "circle": rems( 100% )
+) !default;
 
-    $bp: hyphen-after( $bp );
-    $prop: hyphen-after( $border-prop );
 
-    @each $c in $border-coords {
+@mixin border-styles( $bps: $border-bps ) {
 
-        $coord-key: nth( $c, 1 );
-        $coord-val: hyphen( nth( $c, 2 ) );
+    @each $b in $bps {
 
-        @each $size in $border-sizes {
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
 
-            $size-key: nth( $size, 1 );
-            $size-val: nth( $size, 2 );
+        @include breakpoint( $b ) {
 
-            @each $style in $border-styles {
+            $bp: hyphen-after( $b );
+            $prop: hyphen-after( $border-prop );
 
-                $style-key: nth( $style, 1 );
-                $style-val: nth( $style, 2 );
-                $suffix: #{ $coord-key }#{ $size-key }#{ $style-key };
+            @each $c in $border-coords {
 
-                .#{ $bp }#{ $prop }#{ $suffix } {
-                    #{ "border" }#{ $coord-val }: $size-val $style-val;
+                $coord-key: nth( $c, 1 );
+                $coord-val: hyphen( nth( $c, 2 ) );
+
+                @each $size in $border-sizes {
+
+                    $size-key: nth( $size, 1 );
+                    $size-val: nth( $size, 2 );
+
+                    @each $style in $border-styles {
+
+                        $style-key: nth( $style, 1 );
+                        $style-val: nth( $style, 2 );
+                        $suffix: #{ $coord-key }#{ $size-key }#{ $style-key };
+
+                        .#{ $bp }#{ $prop }#{ $suffix } {
+                            #{ "border" }#{ $coord-val }: $size-val $style-val;
+                        }
+
+                    }
+
                 }
 
             }
@@ -60,7 +88,7 @@ $border-styles: (
 
 }
 
-@mixin border-color() {
+@mixin border-colors() {
 
     @each $c in $border-coords {
 
@@ -69,8 +97,8 @@ $border-styles: (
 
         @each $clr in $border-colors {
 
-            $clr-key: nth( $clr, 1);
-            $clr-val: nth( $clr, 2);
+            $clr-key: nth( $clr, 1 );
+            $clr-val: nth( $clr, 2 );
 
             .#{ hyphen-after( $border-prop ) }#{ $coord-key }#{ $clr-key } {
 
@@ -84,23 +112,30 @@ $border-styles: (
 
 }
 
-// the output mixin which we can use in eezo.scss
-// and can be included in your project.
+@mixin border-radius() {
 
-@mixin borders( $bps: $border-bps ) {
+    @each $rad in $border-radius {
 
-    @each $b in $bps {
+        $key: nth( $rad, 1 );
+        $val: nth( $rad, 2 );
 
-        @if $b == nth( $default-bps, 1 ) {
-            $b: "";
-        }
+        .#{ hyphen-after( $border-radius-prop ) }#{ $key } {
 
-        @include breakpoint( $b ) {
-            @include border( $b );
+            border-radius: $val;
+            
         }
 
     }
 
-    @include border-color();
+}
+
+// the output mixin which we can use in eezo.scss
+// and can be included in your project.
+
+@mixin borders() {
+            
+    @include border-styles();
+    @include border-colors();
+    @include border-radius();
 
 }
