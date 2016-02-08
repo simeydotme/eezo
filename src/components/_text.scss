@@ -7,15 +7,16 @@ $text-bps: $default-bps !default;
 
 $text-colors: $colors !default;
 
-$weight-prop: "fw";
-$text-weights: (
+$font-weight-prop: "fw" !default;
+$font-weights: (
     "thin":       100,
     "x-light":    200,
     "light":      300,
     "book":       400,
-    "normal":     normal,
+    "n":          normal,
     "medium":     500,
     "d-bold":     600,
+    "b":          bold,
     "bold":       700,
     "x-bold":     800,
     "heavy":      800,
@@ -40,6 +41,13 @@ $fonts: (
     heading: $font-heading + ", " + $font-zh-sans + ", sans-serif"
 ) !default;
 
+
+$font-style-prop: "fs" !default;
+$font-styles: (
+    n: "normal",
+    i: "italic"
+) !default;
+
 // the output mixin which we can use in eezo.scss
 // and can be included in your project.
 
@@ -51,14 +59,15 @@ $fonts: (
         $key: nth( $family, 1 );
         $val: nth( $family, 2 );
 
-        .#{ $font-family-prop }#{ hyphen( $key ) } {
+        .#{ hyphen-after( $font-family-prop ) }#{ $key } {
             font-family: unquote( $val );
         }
 
     }
 
 }
-@mixin text-sizes( $bps: $text-bps ) {
+
+@mixin font-sizes( $bps: $text-bps ) {
 
     @each $b in $bps {
 
@@ -68,17 +77,47 @@ $fonts: (
 
         @include breakpoint( $b ) {
             
-            @each $size in $text-sizes {
+            @each $size in $font-sizes {
                 
                 $key: nth( $size, 1 );
                 $val: nth( $size, 2 );
 
                 .#{ hyphen-after($b) }#{ $text-prop }#{ $key } {
-                    font-size: $val;
+                    font-size: rems( $val );
                 }
 
             }
 
+        }
+
+    }
+
+}
+
+@mixin font-styles() {
+            
+    @each $style in $font-styles {
+        
+        $key: nth( $style, 1 );
+        $val: nth( $style, 2 );
+
+        .#{ hyphen-after( $font-style-prop ) }#{ $key } {
+            font-style: $val;
+        }
+
+    }
+
+}
+
+@mixin font-weights() {
+            
+    @each $weight in $font-weights {
+        
+        $key: nth( $weight, 1 );
+        $val: nth( $weight, 2 );
+
+        .#{ hyphen-after( $font-weight-prop ) }#{ $key } {
+            font-weight: $val;
         }
 
     }
@@ -92,23 +131,8 @@ $fonts: (
         $key: nth( $color, 1 );
         $val: nth( $color, 2 );
 
-        .#{ $text-prop }#{ hyphen( $key ) } {
+        .#{ hyphen-after( $text-prop ) }#{ $key } {
             color: $val;
-        }
-
-    }
-
-}
-
-@mixin text-weights() {
-            
-    @each $weight in $text-weights {
-        
-        $key: nth( $weight, 1 );
-        $val: nth( $weight, 2 );
-
-        .#{ $weight-prop }#{ hyphen( $key ) } {
-            font-weight: $val;
         }
 
     }
@@ -121,8 +145,9 @@ $fonts: (
 @mixin text() {
 
     @include font-families();
-    @include text-sizes();
+    @include font-styles();
+    @include font-weights();
+    @include font-sizes();
     @include text-colors();
-    @include text-weights();
 
 }
