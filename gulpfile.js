@@ -16,7 +16,7 @@ var _ = require("lodash"),
         var pkg = JSON.parse( fs.readFileSync("./package.json", "utf-8") );
         var tpl = fs.readFileSync("./src/header.txt", "utf-8");
 
-        return (_.template( tpl , {
+        return ( _.template( tpl , {
             interpolate: /{{=\s*?(.*?)\s*?}}/g
         })( pkg ));
 
@@ -52,8 +52,8 @@ gulp.task( "min", ["clean"], function() {
         .pipe( sourcemaps.init() )
         .pipe( sass().on( "error", sass.logError ) )
         .pipe( prefix() )
-        .pipe( header( banner() ) )
         .pipe( nano({ safe: true }) )
+        .pipe( header( banner() ) )
         .pipe( size({ title: "~~ min: "}) )
         .pipe( size({ title: "~~ gzip: ", gzip: true }) )
         .pipe( rename("eezo.min.css") )
