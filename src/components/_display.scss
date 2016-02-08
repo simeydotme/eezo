@@ -1,0 +1,58 @@
+
+// defaults based on defaults.scss.
+// override in your project before including @mixin for customisation.
+
+$display-prop: "disp" !default;
+$display-bps: $default-bps !default;
+$displays: (
+    "n":     none,
+    "i":     inline,
+    "b":     block,
+    "ib":    inline-block,
+    "it":    inline-table,
+    "tb":    table,
+    "tc":    table-cell,
+    "tcol":  table-column,
+    "tcolg": table-column-group,
+    "flex":  flex
+) !default;
+
+
+// the output mixins which we can use in eezo.scss
+// and can be included in your project.
+
+@mixin displays( $bps: $display-bps ) {
+
+    @each $b in $bps {
+
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
+
+        @include breakpoint( $b ) {
+
+            @each $disp in $displays {
+        
+                $key: nth( $disp, 1 );
+                $val: nth( $disp, 2 );
+
+                .#{ hyphen-after($b) }#{ hyphen-after( $display-prop ) }#{ $key } {
+                    display: $val;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+
+
+@mixin display() {
+
+    @include displays();
+
+}
