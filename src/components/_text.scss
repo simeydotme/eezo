@@ -5,8 +5,6 @@
 $text-prop: "txt" !default;
 $text-bps: $default-bps !default;
 
-$text-colors: $colors !default;
-
 $font-weight-prop: "fw" !default;
 $font-weights: (
     "thin":       100,
@@ -51,6 +49,20 @@ $font-styles: (
 
 $line-height-prop: "lh" !default;
 $line-heights: $font-sizes !default;
+
+
+$text-align-prop: $text-prop !default;
+$text-aligns: (
+    l: "left",
+    r: "right",
+    c: "center",
+    j: "justify",
+    ja: "justify-all",
+    s: "start",
+    e: "end"
+) !default;
+
+$text-colors: $colors !default;
 
 // the output mixin which we can use in eezo.scss
 // and can be included in your project.
@@ -155,6 +167,33 @@ $line-heights: $font-sizes !default;
 
 }
 
+@mixin text-aligns( $bps: $text-bps ) {
+
+    @each $b in $bps {
+
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
+
+        @include breakpoint( $b ) {
+            
+            @each $align in $text-aligns {
+                
+                $key: nth( $align, 1 );
+                $val: nth( $align, 2 );
+
+                .#{ hyphen-after($b) }#{ hyphen-after( $text-align-prop ) }#{ $key } {
+                    text-align: $val;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
 @mixin text-colors() {
             
     @each $color in $text-colors {
@@ -180,6 +219,7 @@ $line-heights: $font-sizes !default;
     @include font-weights();
     @include font-sizes();
     @include line-heights();
+    @include text-aligns();
     @include text-colors();
 
 }
