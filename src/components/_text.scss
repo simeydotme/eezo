@@ -77,9 +77,19 @@ $text-decorations: (
     noline: "none" 
 ) !default;
 
-// the output mixin which we can use in eezo.scss
-// and can be included in your project.
 
+$text-transform-prop: "trans" !default;
+$text-transforms: (
+    u: "uppercase",
+    l: "lowercase",
+    c: "capitalize",
+    n: "none"
+) !default;
+
+
+
+// the output mixins which we can use in eezo.scss
+// and can be included in your project.
 
 @mixin font-families() {
             
@@ -237,6 +247,33 @@ $text-decorations: (
 
 }
 
+@mixin text-transforms( $bps: $text-bps ) {
+
+    @each $b in $bps {
+
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
+
+        @include breakpoint( $b ) {
+
+            @each $trans in $text-transforms {
+        
+                $key: nth( $trans, 1 );
+                $val: nth( $trans, 2 );
+
+                .#{ hyphen-after($b) }#{ hyphen-after( $text-transform-prop ) }#{ $key } {
+                    text-transform: $val;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
 
 
 
@@ -250,5 +287,6 @@ $text-decorations: (
     @include text-aligns();
     @include text-colors();
     @include text-decorations();
+    @include text-transforms();
 
 }
