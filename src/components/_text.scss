@@ -62,7 +62,20 @@ $text-aligns: (
     e: "end"
 ) !default;
 
+
+$text-color-prop: $text-prop !default;
 $text-colors: $colors !default;
+
+
+$text-decoration-prop: $text-prop !default;
+$text-decorations: (
+    oline: "overline",
+    uline: "underline",
+    strike: "line-through",
+    bline: "overline underline",
+    aline: "overline line-through underline",
+    noline: "none" 
+) !default;
 
 // the output mixin which we can use in eezo.scss
 // and can be included in your project.
@@ -201,8 +214,23 @@ $text-colors: $colors !default;
         $key: nth( $color, 1 );
         $val: nth( $color, 2 );
 
-        .#{ hyphen-after( $text-prop ) }#{ $key } {
+        .#{ hyphen-after( $text-color-prop ) }#{ $key } {
             color: $val;
+        }
+
+    }
+
+}
+
+@mixin text-decorations() {
+            
+    @each $deco in $text-decorations {
+        
+        $key: nth( $deco, 1 );
+        $val: nth( $deco, 2 );
+
+        .#{ hyphen-after( $text-decoration-prop ) }#{ $key } {
+            text-decoration: $val;
         }
 
     }
@@ -221,5 +249,6 @@ $text-colors: $colors !default;
     @include line-heights();
     @include text-aligns();
     @include text-colors();
+    @include text-decorations();
 
 }
