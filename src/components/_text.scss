@@ -5,9 +5,59 @@
 $text-prop: "txt" !default;
 $text-bps: $default-bps !default;
 
+$text-colors: $colors !default;
+
+$weight-prop: "fw";
+$text-weights: (
+    "thin":       100,
+    "x-light":    200,
+    "light":      300,
+    "book":       400,
+    "normal":     normal,
+    "medium":     500,
+    "d-bold":     600,
+    "bold":       700,
+    "x-bold":     800,
+    "heavy":      800,
+    "black":      900
+) !default;
+
+
+
+$font-family-prop: $text-prop !default;
+
+$font-sans:     "Noto Sans", "Open Sans", Lato, "Segoe UI", "Helvetica Neue", Helvetica, Arial !default;
+$font-serif:    "Noto Serif", Merriweather, Georgia !default;
+$font-code:     Menlo, Monaco, Consolas !default;
+$font-heading:  "Proxima Nova", Lato, Avenir, Arial !default;
+$font-zh-sans:  微软雅黑体, 微软雅黑, "Microsoft YaHei", 黑体, SimHei, 冬青黑体, "Hiragino Sans GB", 华文黑体, STHeiti !default;
+$font-zh-serif: 新細明體, PMingLiU, 华文细黑, STXihei, 宋体, SimSun !default;
+
+$fonts: (
+    sans: $font-sans + ", " + $font-zh-sans + ", sans-serif",
+    serif: $font-serif + ", " + $font-zh-serif + ", serif",
+    code: $font-code + ", monospace",
+    heading: $font-heading + ", " + $font-zh-sans + ", sans-serif"
+) !default;
+
 // the output mixin which we can use in eezo.scss
 // and can be included in your project.
 
+
+@mixin font-families() {
+            
+    @each $family in $fonts {
+        
+        $key: nth( $family, 1 );
+        $val: nth( $family, 2 );
+
+        .#{ $font-family-prop }#{ hyphen( $key ) } {
+            font-family: unquote( $val );
+        }
+
+    }
+
+}
 @mixin text-sizes( $bps: $text-bps ) {
 
     @each $b in $bps {
@@ -35,11 +85,44 @@ $text-bps: $default-bps !default;
 
 }
 
+@mixin text-colors() {
+            
+    @each $color in $text-colors {
+        
+        $key: nth( $color, 1 );
+        $val: nth( $color, 2 );
+
+        .#{ $text-prop }#{ hyphen( $key ) } {
+            color: $val;
+        }
+
+    }
+
+}
+
+@mixin text-weights() {
+            
+    @each $weight in $text-weights {
+        
+        $key: nth( $weight, 1 );
+        $val: nth( $weight, 2 );
+
+        .#{ $weight-prop }#{ hyphen( $key ) } {
+            font-weight: $val;
+        }
+
+    }
+
+}
+
 
 
 
 @mixin text() {
 
+    @include font-families();
     @include text-sizes();
+    @include text-colors();
+    @include text-weights();
 
 }
