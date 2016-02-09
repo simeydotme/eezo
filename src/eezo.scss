@@ -1,15 +1,53 @@
 
 // import all the components we need for
 // building a default eezo project.
-@import "eezo-components";
+
+// import all the needed utilities, 
+// mixins and config
+
+    @import "utils";
+    @import "config";
+    @import "defaults";
+    @import "mixins/breakpoint";
+    @import "mixins/coords";
+
+// import all the base components
+
+    @import "components/backgrounds/_base";
+    @import "components/backgrounds/attachment";
+    @import "components/backgrounds/color";
+    @import "components/backgrounds/position";
+    @import "components/backgrounds/repeat";
+    @import "components/backgrounds/size";
+
+    @import "components/borders/_base";
+    @import "components/borders/color";
+    @import "components/borders/radius";
+    @import "components/borders/style";
+
+    @import "components/display";
+
+    @import "components/margins/_base";
+    @import "components/margins/margin";
+    @import "components/margins/margin-negative";
+
+    @import "components/paddings/_base";
+    @import "components/paddings/padding";
+    @import "components/paddings/padding-negative";
+
+    @import "components/positions/_base";
+    @import "components/positions/position";
+    @import "components/positions/positioning";
+    @import "components/positions/positioning-negative";
+
+    @import "components/text";
 
 // now include each component's mixin one-by-one.
-@include backgrounds();
-@include borders();
 
-@include coordinates();
-@include display();
-@include margin();
-@include padding();
-
-@include text();
+    @include backgrounds();
+    @include borders();
+    @include display();
+    @include margins();
+    @include paddings();
+    @include positions();
+    @include text();

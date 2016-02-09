@@ -1,0 +1,32 @@
+
+$border-color-prop:     $border-prop !default;
+$border-colors:         $colors !default;
+$border-color-coords:   $border-coords !default;
+
+
+
+@mixin border-color() {
+
+    $p: hyphen-after( $border-color-prop );
+
+    @each $c in $border-coords {
+
+        $coord-key: hyphen-after( nth( $c, 1 ) );
+        $coord-val: hyphen-after( nth( $c, 2 ) );
+
+        @each $clr in $border-colors {
+
+            $clr-key: nth( $clr, 1 );
+            $clr-val: nth( $clr, 2 );
+
+            .#{ $p }#{ $coord-key }#{ $clr-key } {
+
+                #{ "border-" + $coord-val + "color" }: $clr-val;
+                
+            }
+
+        }
+
+    }
+
+}

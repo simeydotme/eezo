@@ -1,0 +1,35 @@
+
+$background-sizes: (
+
+    cov:    "cover",
+    con:    "contain",
+
+) !default;
+
+
+
+@mixin background-size( $bps: $background-bps ) {
+
+    $p: hyphen-after( $background-prop );
+
+    @each $b in $bps {
+
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
+
+        @include breakpoint( $b ) {
+
+            @each $size in $background-sizes {
+
+                .#{ hyphen-after($b) }#{ $p }#{ nth( $size, 1 ) } {
+                    background-size: nth( $size, 2 );
+                }
+
+            }
+
+        }
+
+    }
+
+}

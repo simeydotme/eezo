@@ -1,0 +1,68 @@
+
+$border-style-prop:     $border-prop !default;
+$border-style-coords:   $border-coords !default;
+
+$border-sizes: (
+
+    "1":        rems( 1px ),
+    "2":        rems( 2px ),
+    "3":        rems( 3px ),
+
+) !default;
+
+
+$border-styles: (
+
+    "":         solid,
+    "dash":     dashed,
+    "dot":      dotted,
+
+) !default;
+
+
+
+@mixin border-style( $bps: $border-bps ) {
+    
+    $p: hyphen-after( $border-style-prop );
+
+    @each $b in $bps {
+
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
+
+        @include breakpoint( $b ) {
+
+            $bp: hyphen-after( $b );
+
+            @each $c in $border-style-coords {
+
+                $coord-key: nth( $c, 1 );
+                $coord-val: hyphen( nth( $c, 2 ) );
+
+                @each $size in $border-sizes {
+
+                    $size-key: nth( $size, 1 );
+                    $size-val: nth( $size, 2 );
+
+                    @each $style in $border-styles {
+
+                        $style-key: nth( $style, 1 );
+                        $style-val: nth( $style, 2 );
+                        $suffix: #{ $coord-key }#{ $size-key }#{ $style-key };
+
+                        .#{ $bp }#{ $p }#{ $suffix } {
+                            #{ "border" }#{ $coord-val }: $size-val $style-val;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

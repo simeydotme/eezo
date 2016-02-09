@@ -1,0 +1,76 @@
+
+// defaults based on defaults.scss.
+// override in your project before including @mixin for customisation.
+
+$padding-neg-coords:     $coords-neg !default;
+$padding-neg-dist:       $distances-neg !default;
+
+
+
+@mixin padding-negative( $bps: $padding-bps ) {
+
+    $p: hyphen-after( $padding-prop );
+
+    @each $b in $bps {
+
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
+
+        @include breakpoint( $b ) {
+
+            $bp: hyphen-after( $b );
+
+            @each $c in $padding-neg-coords {
+        
+                $c-key: nth( $c , 1 );
+                $c-val: nth( $c , 2 );
+
+                @each $d in $padding-neg-dist {
+                    
+                    $d-key: nth( $d , 1 );
+                    $d-val: nth( $d , 2 );
+                    
+                    // create a selector with the 
+                    // property, coordinate key and distance key
+
+                    .#{ $bp }#{ $p }#{ $c-key }#{ $d-key } {
+                        
+                        // if our coordinate is a list of other coordinates
+                        // then loop through them.
+
+                        @if type-of( $c-val ) == "list" {
+                            
+                            @each $item in $c-val {
+                                
+                                $i-key: map-get( $padding-neg-coords , $item );
+
+                                // return a property and value based on the
+                                // property value, coord item key and distance value.
+
+                                #{ padding }#{ hyphen( $i-key ) }: $d-val;
+
+                            }
+
+                        }
+
+                        @else {
+
+                            // return a property and value based on the
+                            // property value, coord value and distance value.
+
+                            #{ padding }#{ hyphen( $c-val ) }: $d-val;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

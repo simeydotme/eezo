@@ -1,0 +1,18 @@
+
+$background-colors: $colors !default;
+
+
+
+@mixin background-color() {
+
+    $p: hyphen-after( $background-prop );
+
+    @each $clr in $background-colors {
+
+        .#{ $p }#{ nth( $clr, 1 ) } {
+            background-color: nth( $clr, 2 );
+        }
+
+    }
+
+}

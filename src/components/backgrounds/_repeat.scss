@@ -1,0 +1,27 @@
+
+$background-repeats: (
+
+    rpt:        "repeat",
+    no-rpt:     "no-repeat",
+    rpt-x:      "repeat-x",
+    rpt-y:      "repeat-y",
+    spc:        "space",
+    rnd:        "round",
+
+) !default;
+
+
+
+@mixin background-repeat() {
+
+    $p: hyphen-after( $background-prop );
+
+    @each $rpt in $background-repeats {
+
+        .#{ $p }#{ nth( $rpt, 1 ) } {
+            background-repeat: nth( $rpt, 2 );
+        }
+
+    }
+
+}

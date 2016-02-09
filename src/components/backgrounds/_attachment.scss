@@ -1,0 +1,38 @@
+
+$background-prop: "bg" !default;
+$background-bps: $default-bps !default;
+$background-attachments: (
+
+    scr:    "scroll",
+    fix:    "fixed",
+    loc:    "local",
+
+) !default;
+
+
+
+@mixin background-attachment( $bps: $background-bps ) {
+
+    $p: hyphen-after( $background-prop );
+
+    @each $b in $bps {
+
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
+
+        @include breakpoint( $b ) {
+
+            @each $attach in $background-attachments {
+
+                .#{ hyphen-after($b) }#{ $p }#{ nth( $attach, 1 ) } {
+                    background-attachment: nth( $attach, 2 );
+                }
+
+            }
+
+        }
+
+    }
+
+}

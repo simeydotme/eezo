@@ -1,0 +1,77 @@
+
+// defaults based on defaults.scss.
+// override in your project before including @mixin for customisation.
+
+$positioning-prop:          "" !default;
+$positioning-coords:        $position-coords !default;
+$positioning-dist:          $position-dist !default;
+
+
+
+@mixin positioning( $bps: $position-bps ) {
+
+    $p: hyphen-after( $positioning-prop );
+
+    @each $b in $bps {
+
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
+
+        @include breakpoint( $b ) {
+
+            $bp: hyphen-after( $b );
+
+            @each $c in $positioning-coords {
+        
+                $c-key: nth( $c , 1 );
+                $c-val: nth( $c , 2 );
+
+                @each $d in $positioning-dist {
+                    
+                    $d-key: nth( $d , 1 );
+                    $d-val: nth( $d , 2 );
+                    
+                    // create a selector with the 
+                    // property, coordinate key and distance key
+
+                    .#{ $bp }#{ $p }#{ $c-key }#{ $d-key } {
+                        
+                        // if our coordinate is a list of other coordinates
+                        // then loop through them.
+
+                        @if type-of( $c-val ) == "list" {
+                            
+                            @each $item in $c-val {
+                                
+                                $i-key: map-get( $positioning-coords , $item );
+
+                                // return a property and value based on the
+                                // property value, coord item key and distance value.
+
+                                #{ position }#{ hyphen( $i-key ) }: $d-val;
+
+                            }
+
+                        }
+
+                        @else {
+
+                            // return a property and value based on the
+                            // property value, coord value and distance value.
+
+                            #{ position }#{ hyphen( $c-val ) }: $d-val;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

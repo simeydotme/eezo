@@ -1,0 +1,38 @@
+
+$background-positions: (
+
+    t:      "top",
+    b:      "bottom",
+    r:      "right",
+    l:      "left",
+    c:      "center",
+
+) !default;
+
+
+
+@mixin background-position( $bps: $background-bps ) {
+
+    $p: hyphen-after( $background-prop );
+
+    @each $b in $bps {
+
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
+
+        @include breakpoint( $b ) {
+
+            @each $pos in $background-positions {
+
+                .#{ hyphen-after($b) }#{ $p }#{ nth( $pos, 1 ) } {
+                    background-position: nth( $pos, 2 );
+                }
+
+            }
+
+        }
+
+    }
+
+}

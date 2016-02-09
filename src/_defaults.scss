@@ -1,59 +1,69 @@
 
 $font-sizes: (
-    "-2":    0.75rem,
-    "-1":    0.875rem,
-    "-n":    1rem,
-    "\\+1":  1.125rem,
-    "\\+2":  1.25rem,
-    "\\+3":  1.5rem,
-    "\\+4":  1.75rem,
-    "\\+5":  2rem,
-    "\\+6":  2.5rem,
-    "\\+7":  3rem   
+
+    "-2":       0.75rem,
+    "-1":       0.875rem,
+    "-n":       1rem,
+    "\\+1":     1.125rem,
+    "\\+2":     1.25rem,
+    "\\+3":     1.5rem,
+    "\\+4":     1.75rem,
+    "\\+5":     2rem,
+    "\\+6":     2.5rem,
+    "\\+7":     3rem,
+
 ) !default;
 
 // coords is the coordinates for positioning
 // such as "top", "left", "bottom", "right"
 $coords: (
-    a: ( "t", "b", "l", "r" ),
-    v: ( "t", "b" ),
-    h: ( "l", "r" ),
-    t: "top",
-    b: "bottom",
-    r: "right",
-    l: "left"
+
+    "":         ( "t", "b", "l", "r" ),
+    v:          ( "t", "b" ),
+    h:          ( "l", "r" ),
+    t:          "top",
+    b:          "bottom",
+    r:          "right",
+    l:          "left",
+
 ) !default;
 
 // coords-neg is the coordinates for positioning negatively
 // such as "top", "left", "bottom", "right" negatively
 $coords-neg: (
-    t: "top",
-    b: "bottom",
-    r: "right",
-    l: "left"
+
+    t:          "top",
+    b:          "bottom",
+    r:          "right",
+    l:          "left",
+
 ) !default;
 
 // distances holds a list of distances
 // that we want to use for things such as margins
 $distances: (
-    "0": 0,
-    "2": rems( 2px ),
-    "5": rems( 5px ),
-    "10": rems( 10px ),
-    "15": rems( 15px ),
-    "20": rems( 20px ),
-    "30": rems( 30px ),
-    "50": rems( 50px )
+
+    "0":        0,
+    "2":        rems( 2px ),
+    "5":        rems( 5px ),
+    "10":       rems( 10px ),
+    "15":       rems( 15px ),
+    "20":       rems( 20px ),
+    "30":       rems( 30px ),
+    "50":       rems( 50px ),
+
 ) !default;
 
 // negative distances holds a list of distances
 // that we want to use for things such as margins
 $distances-neg: (
-    "neg2": rems( -2px ),
-    "neg5": rems( -5px ),
-    "neg10": rems( -10px ),
-    "neg15": rems( -15px ),
-    "neg20": rems( -20px ),
+
+    "n2":       rems( -2px ),
+    "n5":       rems( -5px ),
+    "n10":      rems( -10px ),
+    "n15":      rems( -15px ),
+    "n20":      rems( -20px ),
+
 ) !default;
 
 
@@ -63,36 +73,41 @@ $distances-neg: (
 $custom-colors: () !default;
 
 $default-colors: (
-    "bl": #000,
-    "blk": #222,
-    "cr": #f7f2eb,
-    "da": #575c67,
-    "go": #c7aa5c,
-    "gr": #82848e,
-    "li": #b5b8bf,
-    "si": #dde3e6,
-    "ta": #161f23,
-    "x": transparent,
-    "wh": #fff,
-    "wht": #eee
+
+    "bl":       #000,
+    "blk":      #222,
+    "cr":       #f7f2eb,
+    "da":       #575c67,
+    "go":       #c7aa5c,
+    "gr":       #82848e,
+    "li":       #b5b8bf,
+    "si":       #dde3e6,
+    "ta":       #161f23,
+    "x":        transparent,
+    "wh":       #fff,
+    "wht":      #eee,
+
 ) !default;
 
 $extra-colors: (
-    "blu": #1e9bd6,
-    "grn": #1ed668,
-    "mnt": #31e894,
-    "orng": #d66a1e,
-    "pnk": #ec2666,
-    "prpl": #5930d6,
-    "red": #d61e40,
-    "teal": #26ab92,
-    "vlt": #981bd8,
-    "yel": #d6d01e
+
+    "blu":      #1e9bd6,
+    "grn":      #1ed668,
+    "mnt":      #31e894,
+    "orng":     #d66a1e,
+    "pnk":      #ec2666,
+    "prpl":     #5930d6,
+    "red":      #d61e40,
+    "teal":     #26ab92,
+    "vlt":      #981bd8,
+    "yel":      #d6d01e,
+
 ) !default;
 
 $colors: map-merge( $default-colors, $custom-colors );
-
 $no-extra-colors: false !default;
+
+
 @if ( $no-extra-colors != true ) {
     $colors: map-merge( $default-colors, $extra-colors );
 }

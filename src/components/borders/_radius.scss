@@ -1,0 +1,35 @@
+
+$border-radius-prop:    $border-prop !default;
+
+$border-radius: (
+
+    "rad1":         rems( 1px ),
+    "rad2":         rems( 2px ),
+    "rad3":         rems( 3px ),
+    "rad4":         rems( 4px ),
+    "rad5":         rems( 5px ),
+    "rad10":        rems( 10px ),
+    "circle":       100%,
+
+) !default;
+
+
+
+@mixin border-radius() {
+    
+    $p: hyphen-after( $border-radius-prop );
+
+    @each $rad in $border-radius {
+
+        $key: nth( $rad, 1 );
+        $val: nth( $rad, 2 );
+
+        .#{ $p }#{ $key } {
+
+            border-radius: $val;
+            
+        }
+
+    }
+
+}

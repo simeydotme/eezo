@@ -1,0 +1,15 @@
+
+// defaults based on defaults.scss.
+// override in your project before including @mixin for customisation.
+
+$margin-prop:       "mar" !default;
+$margin-bps:        $default-bps !default;
+
+
+
+@mixin margins() {
+    
+    @include margin();
+    @include margin-negative();
+
+}

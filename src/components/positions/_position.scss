@@ -1,0 +1,46 @@
+
+$position-prop: "pos" !default;
+
+$position-values: (
+
+    "s":    static,
+    "r":    relative,
+    "a":    absolute,
+    "f":    fixed,
+
+) !default;
+
+
+
+@mixin position( $bps: $border-bps ) {
+    
+    $p: hyphen-after( $position-prop );
+
+    @each $b in $bps {
+
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
+
+        @include breakpoint( $b ) {
+
+            $bp: hyphen-after( $b );
+
+            @each $pos in $position-values {
+
+                $key: nth( $pos, 1 );
+                $val: nth( $pos, 2 );
+
+                .#{ $bp }#{ $p }#{ $key } {
+
+                    position: $val;
+                    
+                }
+
+            }
+
+        }
+
+    }
+
+}

@@ -1,0 +1,26 @@
+
+// defaults based on defaults.scss.
+// override in your project before including @mixin for customisation.
+
+$border-prop:   "bor" !default;
+$border-bps:    $default-bps !default;
+
+$border-coords: (
+
+    "":     "",
+    "t":    "top",
+    "b":    "bottom",
+    "l":    "left",
+    "r":    "right",
+
+) !default;
+
+
+
+@mixin borders() {
+    
+    @include border-color();
+    @include border-radius();
+    @include border-style();
+
+}

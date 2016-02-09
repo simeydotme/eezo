@@ -1,0 +1,29 @@
+
+// defaults based on defaults.scss.
+// override in your project before including @mixin for customisation.
+
+$position-bps:        $default-bps !default;
+
+$position-coords: (
+
+    t:          "top",
+    b:          "bottom",
+    r:          "right",
+    l:          "left",
+
+) !default;
+
+$position-neg-coords:   $position-coords !default;
+
+$position-dist:         $distances !default;
+$position-neg-dist:     $distances-neg !default;
+
+
+
+@mixin positions() {
+    
+    @include position();
+    @include positioning();
+    @include positioning-negative();
+
+}
