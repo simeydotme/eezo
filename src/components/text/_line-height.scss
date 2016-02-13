@@ -1,0 +1,34 @@
+
+$line-height-prop: "lh" !default;
+$line-heights: $font-sizes !default;
+
+
+
+@mixin line-height( $bps: $text-bps ) {
+
+    $p: $line-height-prop;
+
+    @each $b in $bps {
+
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
+
+        @include breakpoint( $b ) {
+
+            @each $height in $line-heights {
+
+                $key: nth( $height, 1 );
+                $val: nth( $height, 2 );
+
+                .#{ hyphen-after($b) }#{ $p }#{ $key } {
+                    line-height: strip( $val );
+                }
+
+            }
+
+        }
+
+    }
+
+}

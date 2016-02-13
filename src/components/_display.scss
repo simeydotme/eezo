@@ -1,7 +1,4 @@
 
-// defaults based on defaults.scss.
-// override in your project before including @mixin for customisation.
-
 $display-prop:      "disp" !default;
 $display-bps:       $default-bps !default;
 
@@ -24,6 +21,8 @@ $displays: (
 
 @mixin display( $bps: $display-bps ) {
 
+    $p: hyphen-after( $display-prop );
+
     @each $b in $bps {
 
         @if $b == nth( $default-bps, 1 ) {
@@ -37,7 +36,7 @@ $displays: (
                 $key: nth( $disp, 1 );
                 $val: nth( $disp, 2 );
 
-                .#{ hyphen-after($b) }#{ hyphen-after( $display-prop ) }#{ $key } {
+                .#{ hyphen-after($b) }#{ $p }#{ $key } {
                     display: $val;
                 }
 

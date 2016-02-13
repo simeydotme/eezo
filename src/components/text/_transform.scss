@@ -1,0 +1,41 @@
+
+$text-transform-prop: $text-prop !default;
+$text-transforms: (
+
+    upper:      "uppercase",
+    lower:      "lowercase",
+    cap:        "capitalize",
+    none:       "none",
+
+) !default;
+
+
+
+@mixin text-transform( $bps: $text-bps ) {
+
+    $p: hyphen-after( $text-transform-prop );
+
+    @each $b in $bps {
+
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
+
+        @include breakpoint( $b ) {
+
+            @each $trans in $text-transforms {
+
+                $key: nth( $trans, 1 );
+                $val: nth( $trans, 2 );
+
+                .#{ hyphen-after($b) }#{ $p }#{ $key } {
+                    text-transform: $val;
+                }
+
+            }
+
+        }
+
+    }
+
+}

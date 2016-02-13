@@ -6,6 +6,7 @@ $rem: 100% !default;
 
 // $breakpoints accepts px / em values
 // if no unit is provided, it defaults to em.
+// this is used for the "breakpoint" mixin.
 $breakpoints: (
     mb: 0,
     tb: 48,

@@ -1,0 +1,44 @@
+
+$text-align-prop: $text-prop !default;
+$text-aligns: (
+
+    l: "left",
+    r: "right",
+    c: "center",
+    j: "justify",
+    ja: "justify-all",
+    s: "start",
+    e: "end",
+
+) !default;
+
+
+
+@mixin text-align( $bps: $text-bps ) {
+
+    $p: hyphen-after( $text-align-prop );
+
+    @each $b in $bps {
+
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
+
+        @include breakpoint( $b ) {
+
+            @each $align in $text-aligns {
+
+                $key: nth( $align, 1 );
+                $val: nth( $align, 2 );
+
+                .#{ hyphen-after($b) }#{ $p }#{ $key } {
+                    text-align: $val;
+                }
+
+            }
+
+        }
+
+    }
+
+}

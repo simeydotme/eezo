@@ -1,0 +1,57 @@
+
+$overflow-prop:      "of" !default;
+$overflow-bps:       $default-bps !default;
+
+$overflow-directions: (
+
+    "":     "",
+    "x":    "x",
+    "y":    "y",
+
+);
+
+$overflows: (
+
+    "a":     auto,
+    "h":     hidden,
+    "s":     scroll,
+    "v":     visible,
+
+) !default;
+
+
+
+@mixin overflow( $bps: $overflow-bps ) {
+
+    @each $b in $bps {
+
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
+
+        @include breakpoint( $b ) {
+
+            @each $dir in $overflow-directions {
+
+                $dir-key: nth( $dir, 1 );
+                $dir-val: nth( $dir, 2 );
+                $p: hyphen-after( $overflow-prop + $dir-key );
+
+                @each $over in $overflows {
+
+                    $key:   nth( $over, 1 );
+                    $val:   nth( $over, 2 );
+
+                    .#{ hyphen-after($b) }#{ $p }#{ $key } {
+                        overflow#{ hyphen( $dir-val ) }: $val;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

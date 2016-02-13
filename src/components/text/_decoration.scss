@@ -1,0 +1,31 @@
+
+$text-decoration-prop: $text-prop !default;
+$text-decorations: (
+
+    oline:      "overline",
+    uline:      "underline",
+    strike:     "line-through",
+    bline:      "overline underline",
+    aline:      "overline line-through underline",
+    noline:     "none",
+
+) !default;
+
+
+
+@mixin text-decoration() {
+
+    $p: hyphen-after( $text-decoration-prop );
+
+    @each $deco in $text-decorations {
+
+        $key: nth( $deco, 1 );
+        $val: nth( $deco, 2 );
+
+        .#{ $p }#{ $key } {
+            text-decoration: $val;
+        }
+
+    }
+
+}

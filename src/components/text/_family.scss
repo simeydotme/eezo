@@ -1,0 +1,37 @@
+
+$font-family-prop: $text-prop !default;
+
+$font-code:         Menlo, Monaco, Consolas !default;
+$font-heading:      "Proxima Nova", Lato, Avenir, Arial !default;
+$font-sans:         "Noto Sans", "Open Sans", Lato, "Segoe UI", "Helvetica Neue", Helvetica, Arial !default;
+$font-serif:        "Noto Serif", Merriweather, Georgia !default;
+$font-zh-sans:      微软雅黑体, 微软雅黑, "Microsoft YaHei", 黑体, SimHei, 冬青黑体, "Hiragino Sans GB", 华文黑体, STHeiti !default;
+$font-zh-serif:     新細明體, PMingLiU, 华文细黑, STXihei, 宋体, SimSun !default;
+
+$fonts: (
+
+    code: $font-code + ", monospace",
+    heading: $font-heading + ", " + $font-zh-sans + ", sans-serif",
+    sans: $font-sans + ", " + $font-zh-sans + ", sans-serif",
+    serif: $font-serif + ", " + $font-zh-serif + ", serif",
+
+) !default;
+
+
+
+@mixin font-family() {
+
+    $p: hyphen-after( $font-family-prop );
+            
+    @each $family in $fonts {
+        
+        $key: nth( $family, 1 );
+        $val: nth( $family, 2 );
+
+        .#{ $p }#{ $key } {
+            font-family: unquote( $val );
+        }
+
+    }
+
+}

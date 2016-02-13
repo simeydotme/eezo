@@ -1,0 +1,44 @@
+
+$whitespace-prop:      "ws" !default;
+$whitespace-bps:       $default-bps !default;
+
+$whitespaces: (
+
+    "wrap":         normal,
+    "nowrap":       nowrap,
+    "pre":          pre,
+    "prewrap":      pre-wrap,
+    "preline":      pre-line,
+
+) !default;
+
+
+
+@mixin white-space( $bps: $whitespace-bps ) {
+
+    $p: hyphen-after( $whitespace-prop );
+
+    @each $b in $bps {
+
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
+
+        @include breakpoint( $b ) {
+
+            @each $space in $whitespaces {
+
+                $key: nth( $space, 1 );
+                $val: nth( $space, 2 );
+
+                .#{ hyphen-after($b) }#{ $p }#{ $key } {
+                    white-space: $val;
+                }
+
+            }
+
+        }
+
+    }
+
+}

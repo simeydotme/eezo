@@ -1,0 +1,48 @@
+
+$letter-spacing-prop: "ls" !default;
+$letter-spacings: (
+
+    "-3":    -0.075em,
+    "-2":    -0.05em,
+    "-1":    -0.025em,
+    "-0":    0,
+    "-n":    normal,
+    "\\+1":  0.025em,
+    "\\+2":  0.05em,
+    "\\+3":  0.075em,
+    "\\+4":  0.125em,
+    "\\+5":  0.25em,
+    "\\+6":  0.5em,
+
+) !default;
+
+
+
+@mixin letter-spacing( $bps: $text-bps ) {
+
+    $p: $letter-spacing-prop;
+
+    @each $b in $bps {
+
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
+
+        @include breakpoint( $b ) {
+
+            @each $space in $letter-spacings {
+
+                $key: nth( $space, 1 );
+                $val: nth( $space, 2 );
+
+                .#{ hyphen-after($b) }#{ $p }#{ $key } {
+                    letter-spacing: $val;
+                }
+
+            }
+
+        }
+
+    }
+
+}

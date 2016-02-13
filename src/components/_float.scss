@@ -1,0 +1,42 @@
+
+$float-prop:      "float" !default;
+$float-bps:       $default-bps !default;
+
+$floats: (
+
+    "l":     left,
+    "r":     right,
+    "n":     none,
+
+) !default;
+
+
+
+@mixin float( $bps: $float-bps ) {
+
+    $p: hyphen-after( $float-prop );
+
+    @each $b in $bps {
+
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
+
+        @include breakpoint( $b ) {
+
+            @each $flo in $floats {
+
+                $key: nth( $flo, 1 );
+                $val: nth( $flo, 2 );
+
+                .#{ hyphen-after($b) }#{ $p }#{ $key } {
+                    float: $val;
+                }
+
+            }
+
+        }
+
+    }
+
+}

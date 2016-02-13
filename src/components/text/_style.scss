@@ -1,0 +1,27 @@
+
+$font-style-prop: "fs" !default;
+$font-styles: (
+
+    n: normal,
+    i: italic,
+
+) !default;
+
+
+
+@mixin font-style() {
+
+    @each $style in $font-styles {
+
+        $p: hyphen-after( $font-style-prop );
+
+        $key: nth( $style, 1 );
+        $val: nth( $style, 2 );
+
+        .#{ $p }#{ $key } {
+            font-style: $val;
+        }
+
+    }
+
+}

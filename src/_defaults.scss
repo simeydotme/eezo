@@ -69,38 +69,37 @@ $distances-neg: (
 
 // default colors for all components
 // can be overridden here or per-component.
-
 $custom-colors: () !default;
 
 $default-colors: (
 
-    "bl":       #000,
-    "blk":      #222,
-    "cr":       #f7f2eb,
-    "da":       #575c67,
-    "go":       #c7aa5c,
-    "gr":       #82848e,
-    "li":       #b5b8bf,
-    "si":       #dde3e6,
-    "ta":       #161f23,
     "x":        transparent,
-    "wh":       #fff,
-    "wht":      #eee,
+    "blk":      #000,
+    "black":    #222,
+    "cream":    #f7f2eb,
+    "wht":      #fff,
+    "white":    #eee,
+    "grey":     #82848e,
+    "dark":     #575c67,
+    "light":    #b5b8bf,
+    "silver":   #dde3e6,
+    "gold":     #c7aa5c,
+    "pitch":    #161f23,
 
 ) !default;
 
 $extra-colors: (
 
-    "blu":      #1e9bd6,
-    "grn":      #1ed668,
-    "mnt":      #31e894,
-    "orng":     #d66a1e,
-    "pnk":      #ec2666,
-    "prpl":     #5930d6,
+    "blue":     #1e9bd6,
+    "green":    #1ed668,
+    "mint":     #31e894,
+    "orange":   #d66a1e,
+    "pink":     #ec2666,
+    "purple":   #5930d6,
     "red":      #d61e40,
     "teal":     #26ab92,
-    "vlt":      #981bd8,
-    "yel":      #d6d01e,
+    "violet":   #981bd8,
+    "yellow":   #d6d01e,
 
 ) !default;
 

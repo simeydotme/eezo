@@ -1,0 +1,22 @@
+
+$text-color-prop: "" !default;
+$text-colors: $colors !default;
+
+
+
+@mixin text-color() {
+
+    $p: hyphen-after( $text-color-prop );
+
+    @each $color in $text-colors {
+
+        $key: nth( $color, 1 );
+        $val: nth( $color, 2 );
+
+        .#{ $p }#{ $key } {
+            color: $val;
+        }
+
+    }
+
+}

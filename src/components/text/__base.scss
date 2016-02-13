@@ -1,0 +1,19 @@
+
+$text-prop: "txt" !default;
+$text-bps: $default-bps !default;
+
+
+@mixin texts() {
+
+    @include font-family();
+    @include font-size();
+    @include font-style();
+    @include font-weight();
+    @include letter-spacing();
+    @include line-height();
+    @include text-align();
+    @include text-color();
+    @include text-decoration();
+    @include text-transform();
+
+}

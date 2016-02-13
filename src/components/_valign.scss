@@ -1,0 +1,46 @@
+
+$valign-prop:      "va" !default;
+$valign-bps:       $default-bps !default;
+
+$valigns: (
+
+    "base":     baeline,
+    "sub":      sub,
+    "sup":      super,
+    "top":      top,
+    "bot":      bottom,
+    "ttop":     text-top,
+    "tbot":     text-bottom,
+
+) !default;
+
+
+
+@mixin valign( $bps: $valign-bps ) {
+
+    $p: hyphen-after( $valign-prop );
+
+    @each $b in $bps {
+
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
+
+        @include breakpoint( $b ) {
+
+            @each $va in $valigns {
+
+                $key: nth( $va, 1 );
+                $val: nth( $va, 2 );
+
+                .#{ hyphen-after($b) }#{ $p }#{ $key } {
+                    vertical-align: $val;
+                }
+
+            }
+
+        }
+
+    }
+
+}

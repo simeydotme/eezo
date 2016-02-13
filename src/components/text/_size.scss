@@ -1,0 +1,32 @@
+
+$text-size-prop: $text-prop !default;
+$text-sizes: $font-sizes !default;
+
+@mixin font-size( $bps: $text-bps ) {
+
+    $p: $text-size-prop;
+
+    @each $b in $bps {
+
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
+
+        @include breakpoint( $b ) {
+
+            @each $size in $text-sizes {
+
+                $key: nth( $size, 1 );
+                $val: nth( $size, 2 );
+
+                .#{ hyphen-after($b) }#{ $p }#{ $key } {
+                    font-size: rems( $val );
+                }
+
+            }
+
+        }
+
+    }
+
+}
