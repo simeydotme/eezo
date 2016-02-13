@@ -1,0 +1,37 @@
+
+@mixin links() {
+
+/*
+ * some default link styling
+ */
+
+    $link-blue: map-get( $extra-colors, "blue" );
+    $link-purple: map-get( $extra-colors, "purple" );
+
+    a:not([class]),
+    .link {
+
+        color: $link-blue;
+        transition: opacity 0.2s ease, color 0.2s ease, border 0.2s ease;
+        border-bottom: 1px solid transparent;
+
+    }
+
+    a:hover:not([class]),
+    a:focus:not([class]),
+    .link:hover,
+    .link:focus {
+
+        opacity: 0.8;
+        border-bottom-color: rgba( $link-blue, 0.5 );
+
+    }
+
+    a:visited:not([class]),
+    .link:visited {
+
+        color: $link-purple;
+
+    }
+
+}

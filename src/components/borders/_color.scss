@@ -22,7 +22,7 @@ $border-color-coords:   $border-coords !default;
             .#{ $p }#{ $coord-key }#{ $clr-key } {
 
                 #{ "border-" + $coord-val + "color" }: $clr-val;
-                
+
             }
 
         }

@@ -1,0 +1,19 @@
+
+@mixin opinions() {
+
+    * {
+
+        box-sizing: border-box;
+
+    }
+
+    html,
+    body {
+
+        // stops ugly white backgrounds
+        // when the content isn't as tall as window
+        min-height: 100%;
+
+    }
+
+}

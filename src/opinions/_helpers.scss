@@ -1,0 +1,32 @@
+
+@mixin clears {
+
+    .clear {
+
+        &:before,
+        &:after {
+
+            content: " ";
+            display: "table";
+
+        }
+
+        &:after {
+
+            clear: both;
+
+        }
+
+    }
+
+}
+
+@mixin visibility() {
+
+    .hidden {
+        clip: rect( 1px, 1px, 1px, 1px );
+        overflow: hidden;
+        position: fixed;
+    }
+
+}

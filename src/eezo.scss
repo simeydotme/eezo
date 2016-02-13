@@ -2,66 +2,25 @@
 // import all the components we need for
 // building a default eezo project.
 
-// import all the needed utilities, 
-// mixins and config
+    @import "eezo-imports";
 
-    @import "utils";
-    @import "config";
-    @import "defaults";
-    @import "mixins/breakpoint";
+// include each component's mixin one-by-one.
+// your own project could pick-and-choose
+// these includes
 
-// import all the base components
+/*
+ * a set of opinions about
+ * default HTML styling
+ */
 
-    @import "components/backgrounds/_base";
-        @import "components/backgrounds/attachment";
-        @import "components/backgrounds/color";
-        @import "components/backgrounds/position";
-        @import "components/backgrounds/repeat";
-        @import "components/backgrounds/size";
+    @include opinions();
+    @include clears();
+    @include links();
+    @include visibility();
 
-    @import "components/borders/_base";
-        @import "components/borders/color";
-        @import "components/borders/radius";
-        @import "components/borders/style";
-
-    @import "components/display";
-
-    @import "components/float";
-
-    @import "components/margins/_base";
-        @import "components/margins/margin";
-        @import "components/margins/margin-negative";
-
-    @import "components/overflow";
-
-    @import "components/paddings/_base";
-        @import "components/paddings/padding";
-        @import "components/paddings/padding-negative";
-
-    @import "components/positions/_base";
-        @import "components/positions/position";
-        @import "components/positions/positioning";
-        @import "components/positions/positioning-negative";
-
-    @import "components/text/_base";
-        @import "components/text/align";
-        @import "components/text/color";
-        @import "components/text/decoration";
-        @import "components/text/family";
-        @import "components/text/line-height";
-        @import "components/text/size";
-        @import "components/text/spacing";
-        @import "components/text/style";
-        @import "components/text/transform";
-        @import "components/text/weight";
-
-    @import "components/valign";
-
-    @import "components/visibility";
-
-    @import "components/white-space";
-
-// now include each component's mixin one-by-one.
+/*
+ * eezo's main component styling
+ */
 
     @include backgrounds();
     @include borders();
@@ -73,5 +32,4 @@
     @include positions();
     @include texts();
     @include valign();
-    @include visibility();
     @include white-space();
