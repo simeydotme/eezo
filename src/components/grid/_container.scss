@@ -1,0 +1,10 @@
+
+@mixin container() {
+
+    .#{ $container-prop } {
+
+        max-width: $max-width;
+
+    }
+
+}

@@ -1,5 +1,5 @@
 
-// $rem is the root element's pixel value should usually 
+// $rem is the root element's pixel value should usually
 // be 100% (16px), as this is the default for most browsers.
 // if you want to override this, it should be in px / %.
 $rem: 100% !default;
@@ -8,12 +8,17 @@ $rem: 100% !default;
 // if no unit is provided, it defaults to em.
 // this is used for the "breakpoint" mixin.
 $breakpoints: (
+
     mb: 0,
-    tb: 48,
-    dt: 64,
-    hg: 75
+    tb: 768px,
+    dt: 1024px,
+    hg: 1200px,
+
 ) !default;
 
 // $default-bps defines the default breakpoints
 // used in most of the components.
 $default-bps: ("mb", "tb", "dt") !default;
+
+// maximum width, used for container
+$max-width: rems( 1200px ) !default;

@@ -13,7 +13,7 @@ $position-values: (
 
 
 @mixin position( $bps: $border-bps ) {
-    
+
     $p: hyphen-after( $position-prop );
 
     @each $b in $bps {
@@ -34,7 +34,7 @@ $position-values: (
                 .#{ $bp }#{ $p }#{ $key } {
 
                     position: $val;
-                    
+
                 }
 
             }

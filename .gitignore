@@ -1,6 +1,9 @@
 
 # Created by https://www.gitignore.io/api/windows,osx,node,grunt
 
+### Eezo ###
+test.html
+
 ### Windows ###
 # Windows image file caches
 Thumbs.db

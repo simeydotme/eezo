@@ -1,0 +1,170 @@
+
+@mixin columns( $bps: $default-bps ) {
+
+    .#{ $column-prop },
+    .#{ $column-prop }s {
+
+        display: block;
+        width: percentage( 1 / 12 );
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+
+        &:not( [ class *= "#{ $float-prop }-" ] ) {
+
+            float: left;
+
+            &:last-child:not( :first-child ) {
+
+                float: right;
+
+            }
+
+        }
+
+         &.row:not( [ class *= "#{ $padding-prop }-" ] ) {
+
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+        }
+
+    }
+
+    .center,
+    .centered {
+
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+}
+
+
+
+@mixin column-sizes( $bps: $default-bps ) {
+
+    @each $b in $bps {
+
+        @include breakpoint( $b ) {
+
+            $bp: hyphen-after( $b );
+
+            @for $i from 1 through 12 {
+
+                .#{ $bp }#{ $i } {
+
+                    width: percentage( $i / 12 );
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+
+@mixin column-shift( $bps: $default-bps ) {
+
+    @each $b in $bps {
+
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
+
+        @include breakpoint( $b ) {
+
+            $bp: hyphen-after( $b );
+
+            @for $i from 1 through 12 {
+
+                .#{ $bp }#{ shift- }#{ $i } {
+
+                    margin-left: percentage( $i / 12 );
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+
+@mixin column-pull( $bps: $default-bps ) {
+
+    [ class *= "#{ pull- }" ] {
+
+        position: relative;
+
+    }
+
+    @each $b in $bps {
+
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
+
+        @include breakpoint( $b ) {
+
+            $bp: hyphen-after( $b );
+
+            @for $i from 1 through 12 {
+
+                .#{ $bp }#{ pull- }#{ $i } {
+
+                    left: - percentage( $i / 12 );
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+
+@mixin column-push( $bps: $default-bps ) {
+
+    [ class *= "#{ push- }" ] ) {
+
+        position: relative;
+
+    }
+
+    @each $b in $bps {
+
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
+
+        @include breakpoint( $b ) {
+
+            $bp: hyphen-after( $b );
+
+            @for $i from 1 through 12 {
+
+                .#{ $bp }#{ push- }#{ $i } {
+
+                    left: percentage( $i / 12 );
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

@@ -8,7 +8,7 @@ $padding-bps:        $default-bps !default;
 
 
 @mixin paddings() {
-    
+
     @include padding();
     @include padding-negative();
 

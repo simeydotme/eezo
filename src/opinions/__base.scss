@@ -10,9 +10,14 @@
     html,
     body {
 
-        // stops ugly white backgrounds
-        // when the content isn't as tall as window
-        min-height: 100%;
+/*
+ * stops ugly white backgrounds
+ * when the content isn't as tall as window
+ */
+
+        height: 100%;
+        margin: 0;
+        padding: 0;
 
     }
 

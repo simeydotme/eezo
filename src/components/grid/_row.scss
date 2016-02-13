@@ -1,0 +1,13 @@
+
+@mixin rows() {
+
+    .#{ $row-prop } {
+
+        display: block;
+        width: 100%;
+
+        @extend .clear;
+
+    }
+
+}

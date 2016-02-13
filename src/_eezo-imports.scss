@@ -9,6 +9,13 @@
 
 // import all the base components
 
+    // grid
+    @import "components/grid/_base";
+    @import "components/grid/container";
+    @import "components/grid/row";
+    @import "components/grid/column";
+
+
     // backgrounds
     @import "components/backgrounds/_base";
     @import "components/backgrounds/attachment";
@@ -54,8 +61,6 @@
     @import "components/text/weight";
     // alignmnet
     @import "components/valign";
-    // visibility
-    @import "components/visibility";
     // whitespace
     @import "components/white-space";
 
