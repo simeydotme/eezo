@@ -6,25 +6,18 @@
 
         display: block;
         width: percentage( 1 / 12 );
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+        padding-left: $column-padding;
+        padding-right: $column-padding;
 
-        &:not( [ class *= "#{ $float-prop }-" ] ) {
+        &:not( [ class *= "#{ $float-prop }-" ] ):not( .centered ):not( .center ) {
 
             float: left;
 
-            &:last-child:not( :first-child ) {
+            &:last-child:not( :first-child ):not( .end ) {
 
                 float: right;
 
             }
-
-        }
-
-         &.row:not( [ class *= "#{ $padding-prop }-" ] ) {
-
-            padding-left: 1rem;
-            padding-right: 1rem;
 
         }
 
@@ -83,7 +76,7 @@
 
             @for $i from 1 through 12 {
 
-                .#{ $bp }#{ shift- }#{ $i } {
+                .#{ $bp }#{ $shift-prop }-#{ $i } {
 
                     margin-left: percentage( $i / 12 );
 
@@ -119,7 +112,7 @@
 
             @for $i from 1 through 12 {
 
-                .#{ $bp }#{ pull- }#{ $i } {
+                .#{ $bp }#{ $pull-prop }-#{ $i } {
 
                     left: - percentage( $i / 12 );
 
@@ -155,7 +148,7 @@
 
             @for $i from 1 through 12 {
 
-                .#{ $bp }#{ push- }#{ $i } {
+                .#{ $bp }#{ $push-prop }-#{ $i } {
 
                     left: percentage( $i / 12 );
 

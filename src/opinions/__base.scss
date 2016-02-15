@@ -1,19 +1,22 @@
 
 @mixin opinions() {
 
-    * {
+    *,
+    :after,
+    :before {
 
         box-sizing: border-box;
 
     }
 
-    html,
-    body {
 
 /*
  * stops ugly white backgrounds
  * when the content isn't as tall as window
  */
+
+    html,
+    body {
 
         height: 100%;
         margin: 0;

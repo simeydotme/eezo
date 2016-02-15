@@ -1,21 +1,27 @@
 
-@mixin clears {
+@mixin clearfix() {
+
+    &:before,
+    &:after {
+
+        content: " ";
+        display: table;
+
+    }
+
+    &:after {
+
+        clear: both;
+
+    }
+
+}
+
+@mixin clears() {
 
     .clear {
 
-        &:before,
-        &:after {
-
-            content: " ";
-            display: table;
-
-        }
-
-        &:after {
-
-            clear: both;
-
-        }
+        @include clearfix();
 
     }
 
@@ -24,9 +30,11 @@
 @mixin visibility() {
 
     .hidden {
+
         clip: rect( 1px, 1px, 1px, 1px );
         overflow: hidden;
         position: fixed;
+
     }
 
 }

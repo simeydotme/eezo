@@ -4,9 +4,15 @@
     .#{ $row-prop } {
 
         display: block;
-        width: 100%;
 
-        @extend .clear;
+        @include clearfix();
+
+    }
+
+    .#{ $row-prop } .#{ $row-prop } {
+
+        margin-left: -$column-padding;
+        margin-right: -$column-padding;
 
     }
 
