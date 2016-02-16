@@ -59,6 +59,10 @@
     @import "components/text/style";
     @import "components/text/transform";
     @import "components/text/weight";
+    // svg
+    @import "components/svg/_base";
+    @import "components/svg/fill";
+    @import "components/svg/stroke";
     // alignmnet
     @import "components/valign";
     // whitespace

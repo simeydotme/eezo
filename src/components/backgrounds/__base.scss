@@ -1,14 +1,11 @@
 
-// defaults based on defaults.scss.
-// override in your project before including @mixin for customisation.
-
 $background-prop: "bg" !default;
 $background-bps: $default-bps !default;
 
 
 
 @mixin backgrounds() {
-    
+
     @include background-attachment();
     @include background-color();
     @include background-position();

@@ -1,0 +1,19 @@
+
+$svg-fill-prop: "fill" !default;
+$svg-fill-colors: $colors !default;
+
+
+
+@mixin svg-fill() {
+
+    $p: hyphen-after( $svg-fill-prop );
+
+    @each $clr in $svg-fill-colors {
+
+        .#{ $p }#{ nth( $clr, 1 ) } {
+            fill: nth( $clr, 2 );
+        }
+
+    }
+
+}

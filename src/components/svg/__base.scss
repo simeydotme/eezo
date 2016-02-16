@@ -1,0 +1,8 @@
+
+@mixin svgs() {
+
+    @include svg-fill();
+    @include svg-stroke-color();
+    @include svg-stroke-width();
+
+}
