@@ -1,0 +1,37 @@
+
+$cursor-prop:      "cur" !default;
+
+$cursors: (
+
+    "n":     none,
+    "d":     default,
+    "p":     pointer,
+    "t":     text,
+    "h":     help,
+    "m":     move,
+    "x":     not-allowed,
+    "g":     grab,
+    "gb":    grabbing,
+    "zi":    zoom-in,
+    "zo":    zoom-out,
+
+) !default;
+
+
+
+@mixin cursors() {
+
+    $p: hyphen-after( $cursor-prop );
+
+    @each $cur in $cursors {
+
+        $key: nth( $cur, 1 );
+        $val: nth( $cur, 2 );
+
+        .#{ $p }#{ $key } {
+            cursor: $val;
+        }
+
+    }
+
+}
