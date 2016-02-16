@@ -14,7 +14,7 @@ $whitespaces: (
 
 
 
-@mixin white-space( $bps: $whitespace-bps ) {
+@mixin whitespaces( $bps: $whitespace-bps ) {
 
     $p: hyphen-after( $whitespace-prop );
 

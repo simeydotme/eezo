@@ -16,7 +16,7 @@ $valigns: (
 
 
 
-@mixin valign( $bps: $valign-bps ) {
+@mixin valigns( $bps: $valign-bps ) {
 
     $p: hyphen-after( $valign-prop );
 

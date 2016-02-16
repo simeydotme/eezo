@@ -21,7 +21,7 @@ $overflows: (
 
 
 
-@mixin overflow( $bps: $overflow-bps ) {
+@mixin overflows( $bps: $overflow-bps ) {
 
     @each $b in $bps {
 

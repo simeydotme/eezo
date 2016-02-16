@@ -19,7 +19,7 @@ $displays: (
 
 
 
-@mixin display( $bps: $display-bps ) {
+@mixin displays( $bps: $display-bps ) {
 
     $p: hyphen-after( $display-prop );
 

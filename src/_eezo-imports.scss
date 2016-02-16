@@ -17,36 +17,36 @@
 
 
     // backgrounds
-    @import "components/backgrounds/_base";
-    @import "components/backgrounds/attachment";
-    @import "components/backgrounds/color";
-    @import "components/backgrounds/position";
-    @import "components/backgrounds/repeat";
-    @import "components/backgrounds/size";
+    @import "components/background/_base";
+    @import "components/background/attachment";
+    @import "components/background/color";
+    @import "components/background/position";
+    @import "components/background/repeat";
+    @import "components/background/size";
     // borders
-    @import "components/borders/_base";
-    @import "components/borders/color";
-    @import "components/borders/radius";
-    @import "components/borders/style";
+    @import "components/border/_base";
+    @import "components/border/color";
+    @import "components/border/radius";
+    @import "components/border/style";
     // display
     @import "components/display";
     // float
     @import "components/float";
     // margins
-    @import "components/margins/_base";
-    @import "components/margins/margin";
-    @import "components/margins/margin-negative";
+    @import "components/margin/_base";
+    @import "components/margin/margin";
+    @import "components/margin/margin-negative";
     // overflow
     @import "components/overflow";
     // padding
-    @import "components/paddings/_base";
-    @import "components/paddings/padding";
-    @import "components/paddings/padding-negative";
+    @import "components/padding/_base";
+    @import "components/padding/padding";
+    @import "components/padding/padding-negative";
     // position
-    @import "components/positions/_base";
-    @import "components/positions/position";
-    @import "components/positions/positioning";
-    @import "components/positions/positioning-negative";
+    @import "components/position/_base";
+    @import "components/position/position";
+    @import "components/position/positioning";
+    @import "components/position/positioning-negative";
     // text
     @import "components/text/_base";
     @import "components/text/align";
@@ -66,7 +66,7 @@
     // alignmnet
     @import "components/valign";
     // whitespace
-    @import "components/white-space";
+    @import "components/whitespace";
 
 
     // opinions of eezo

@@ -30,13 +30,13 @@
 
     @include backgrounds();
     @include borders();
-    @include display();
-    @include float();
+    @include displays();
+    @include floats();
     @include margins();
-    @include overflow();
+    @include overflows();
     @include paddings();
     @include positions();
     @include texts();
     @include svgs();
-    @include valign();
-    @include white-space();
+    @include valigns();
+    @include whitespaces();
