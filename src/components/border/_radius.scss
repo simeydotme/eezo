@@ -16,7 +16,7 @@ $border-radius: (
 
 
 @mixin border-radius() {
-    
+
     $p: hyphen-after( $border-radius-prop );
 
     @each $rad in $border-radius {
@@ -27,7 +27,7 @@ $border-radius: (
         .#{ $p }#{ $key } {
 
             border-radius: $val;
-            
+
         }
 
     }

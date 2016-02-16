@@ -10,7 +10,6 @@ $border-sizes: (
 
 ) !default;
 
-
 $border-styles: (
 
     "":         solid,
@@ -22,7 +21,7 @@ $border-styles: (
 
 
 @mixin border-style( $bps: $border-bps ) {
-    
+
     $p: hyphen-after( $border-style-prop );
 
     @each $b in $bps {

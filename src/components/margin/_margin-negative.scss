@@ -1,7 +1,4 @@
 
-// defaults based on defaults.scss.
-// override in your project before including @mixin for customisation.
-
 $margin-neg-coords:     $coords-neg !default;
 $margin-neg-dist:       $distances-neg !default;
 
@@ -22,27 +19,27 @@ $margin-neg-dist:       $distances-neg !default;
             $bp: hyphen-after( $b );
 
             @each $c in $margin-neg-coords {
-        
+
                 $c-key: nth( $c , 1 );
                 $c-val: nth( $c , 2 );
 
                 @each $d in $margin-neg-dist {
-                    
+
                     $d-key: nth( $d , 1 );
                     $d-val: nth( $d , 2 );
-                    
-                    // create a selector with the 
+
+                    // create a selector with the
                     // property, coordinate key and distance key
 
                     .#{ $bp }#{ $p }#{ $c-key }#{ $d-key } {
-                        
+
                         // if our coordinate is a list of other coordinates
                         // then loop through them.
 
                         @if type-of( $c-val ) == "list" {
-                            
+
                             @each $item in $c-val {
-                                
+
                                 $i-key: map-get( $margin-neg-coords , $item );
 
                                 // return a property and value based on the

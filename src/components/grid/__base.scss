@@ -11,9 +11,10 @@ $grid-bps:          $default-bps !default;
 $column-padding:    0.75rem;
 
 
+
 @mixin grid() {
 
-    @include container();
+    @include containers();
 
     @include rows();
 
