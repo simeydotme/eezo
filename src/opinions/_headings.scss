@@ -1,0 +1,24 @@
+
+@mixin headings() {
+
+/*
+ * some default link styling
+ */
+
+    h1 { @extend .txt\+6; }
+    h2 { @extend .txt\+5; }
+    h3 { @extend .txt\+4; }
+    h4 { @extend .txt\+3; }
+    h5 { @extend .txt\+2; }
+    h6 { @extend .txt\+1; }
+
+    h1, h2, h3, h4, h5, h6 {
+
+        margin-top: 1em;
+        margin-bottom: 1em;
+
+        font-family: $font-sans;
+
+    }
+
+}

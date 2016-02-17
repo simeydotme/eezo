@@ -5,15 +5,27 @@
  * some default link styling
  */
 
-    $link-blue: map-get( $extra-colors, "blue" );
-    $link-purple: map-get( $extra-colors, "purple" );
+    $link-normal:       map-get( $extra-colors, "blue" );
+    $link-visited:      map-get( $extra-colors, "purple" );
+    $link-hover:        map-get( $extra-colors, "green" );
+
+
 
     a:not([class]),
-    .link {
+    a:not([class]):active,
+    .link,
+    .link:active {
 
-        color: $link-blue;
-        transition: opacity 0.2s ease, color 0.2s ease, border 0.2s ease;
-        border-bottom: 1px solid transparent;
+        color: $link-normal;
+        transition: color 1s ease;
+        text-decoration: none;
+
+    }
+
+    a:visited:not([class]),
+    .link:visited {
+
+        color: $link-visited;
 
     }
 
@@ -22,15 +34,8 @@
     .link:hover,
     .link:focus {
 
-        opacity: 0.8;
-        border-bottom-color: rgba( $link-blue, 0.5 );
-
-    }
-
-    a:visited:not([class]),
-    .link:visited {
-
-        color: $link-purple;
+        color: $link-hover;
+        transition: color 0.24s ease;
 
     }
 

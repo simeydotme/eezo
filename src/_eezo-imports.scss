@@ -9,6 +9,12 @@
 
 // import all the base components
 
+    // opinions of eezo
+    @import "opinions/_base";
+    @import "opinions/headings";
+    @import "opinions/helpers";
+    @import "opinions/links";
+
     // grid
     @import "components/grid/_base";
     @import "components/grid/container";
@@ -69,10 +75,4 @@
     @import "components/valign";
     // whitespace
     @import "components/whitespace";
-
-
-    // opinions of eezo
-    @import "opinions/_base";
-    @import "opinions/helpers";
-    @import "opinions/links";
 
