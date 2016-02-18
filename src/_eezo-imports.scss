@@ -24,7 +24,6 @@
     @import "components/grid/row";
     @import "components/grid/column";
 
-
     // backgrounds
     @import "components/background/_base";
     @import "components/background/attachment";
@@ -32,34 +31,44 @@
     @import "components/background/position";
     @import "components/background/repeat";
     @import "components/background/size";
+
     // borders
     @import "components/border/_base";
     @import "components/border/color";
     @import "components/border/radius";
     @import "components/border/style";
+
     // cursors
     @import "components/cursor";
+
     // display
     @import "components/display";
+
     // floats
     @import "components/float";
+
     // links
     @import "components/link";
+
     // margins
     @import "components/margin/_base";
     @import "components/margin/margin";
     @import "components/margin/margin-negative";
+
     // overflow
     @import "components/overflow";
+
     // padding
     @import "components/padding/_base";
     @import "components/padding/padding";
     @import "components/padding/padding-negative";
+
     // position
     @import "components/position/_base";
     @import "components/position/position";
     @import "components/position/positioning";
     @import "components/position/positioning-negative";
+
     // text
     @import "components/text/_base";
     @import "components/text/align";
@@ -72,12 +81,15 @@
     @import "components/text/style";
     @import "components/text/transform";
     @import "components/text/weight";
+
     // svg
     @import "components/svg/_base";
     @import "components/svg/fill";
     @import "components/svg/stroke";
+
     // alignmnet
     @import "components/valign";
+
     // whitespace
     @import "components/whitespace";
 
