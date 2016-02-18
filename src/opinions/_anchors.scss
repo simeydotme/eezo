@@ -1,0 +1,10 @@
+
+@mixin anchors() {
+
+    a:not([class]) {
+
+        @extend %link;
+
+    }
+
+}

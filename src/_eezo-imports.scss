@@ -9,11 +9,14 @@
 
 // import all the base components
 
+    // Normalize
+    @import "opinions/normalize";
+
     // opinions of eezo
     @import "opinions/_base";
+    @import "opinions/anchors";
     @import "opinions/headings";
     @import "opinions/helpers";
-    @import "opinions/links";
 
     // grid
     @import "components/grid/_base";
@@ -40,6 +43,8 @@
     @import "components/display";
     // floats
     @import "components/float";
+    // links
+    @import "components/link";
     // margins
     @import "components/margin/_base";
     @import "components/margin/margin";
