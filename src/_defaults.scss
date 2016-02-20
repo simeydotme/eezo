@@ -72,14 +72,15 @@ $distances-neg: (
 // can be overridden here or per-component.
 $custom-colors: () !default;
 
+// default colors are static.
 $default-colors: (
 
     "x":        transparent,
     "blk":      #000,
-    "black":    #222,
+    "black":    #1a1a1a,
     "cream":    #f7f2eb,
     "wht":      #fff,
-    "white":    #eee,
+    "white":    #f9f9f9,
     "grey":     #82848e,
     "dark":     #575c67,
     "light":    #b5b8bf,
@@ -87,7 +88,7 @@ $default-colors: (
     "gold":     #c7aa5c,
     "pitch":    #161f23,
 
-) !default;
+);
 
 $extra-colors: (
 
