@@ -1,0 +1,18 @@
+
+
+
+@mixin input() {
+
+    .input {
+
+        width: 16rem + rems(3px);
+
+        &:hover {
+
+            border-color: $form-border-hover;
+
+        }
+
+    }
+
+}

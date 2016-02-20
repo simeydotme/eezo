@@ -1,19 +1,28 @@
 
 $font-family-prop: $text-prop !default;
 
-$font-code:         Menlo, Monaco, Consolas !default;
-$font-heading:      "Proxima Nova", Lato, Avenir, Arial !default;
-$font-sans:         "Noto Sans", "Open Sans", Lato, "Segoe UI", "Helvetica Neue", Helvetica, Arial !default;
-$font-serif:        "Noto Serif", Merriweather, Georgia !default;
-$font-zh-sans:      微软雅黑体, 微软雅黑, "Microsoft YaHei", 黑体, SimHei, 冬青黑体, "Hiragino Sans GB", 华文黑体, STHeiti !default;
-$font-zh-serif:     新細明體, PMingLiU, 华文细黑, STXihei, 宋体, SimSun !default;
+$font-yahei:        微软雅黑体, 微软雅黑, "Microsoft YaHei";
+$font-simhei:       黑体, SimHei;
+$font-hiragino:     冬青黑体, "Hiragino Sans GB";
+$font-heiti:        华文黑体, STHeiti;
+
+$font-pming:        新細明體, PMingLiU;
+$font-xihei:        华文细黑, STXihei;
+$font-simsun:       宋体, SimSun;
+
+$font-code:         Menlo, Monaco, Consolas, monospace !default;
+$font-heading:      "Proxima Nova", Lato, Avenir, Arial, sans-serif !default;
+$font-sans:         "Noto Sans", "Open Sans", Lato, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-serif:        "Noto Serif", Merriweather, Georgia, serif !default;
+$font-zh-sans:      $font-yahei, $font-simhei, $font-hiragino, $font-heiti, sans-serif !default;
+$font-zh-serif:     $font-pming, $font-xihei, $font-simsun, serif !default;
 
 $fonts: (
 
-    code: $font-code + ", monospace",
-    heading: $font-heading + ", " + $font-zh-sans + ", sans-serif",
-    sans: $font-sans + ", " + $font-zh-sans + ", sans-serif",
-    serif: $font-serif + ", " + $font-zh-serif + ", serif",
+    code:       $font-code,
+    heading:    $font-heading + ", " + $font-zh-sans,
+    sans:       $font-sans +    ", " + $font-zh-sans,
+    serif:      $font-serif +   ", " + $font-zh-serif,
 
 ) !default;
 
@@ -22,14 +31,14 @@ $fonts: (
 @mixin font-family() {
 
     $p: hyphen-after( $font-family-prop );
-            
+
     @each $family in $fonts {
-        
+
         $key: nth( $family, 1 );
         $val: nth( $family, 2 );
 
         .#{ $p }#{ $key } {
-            font-family: unquote( $val );
+            font-family: unquote( "" + $val );
         }
 
     }

@@ -15,6 +15,7 @@
     // opinions of eezo
     @import "opinions/_base";
     @import "opinions/anchors";
+    @import "opinions/fieldsets";
     @import "opinions/headings";
     @import "opinions/helpers";
 
@@ -46,6 +47,12 @@
 
     // floats
     @import "components/float";
+
+    // forms
+    @import "components/form/_base";
+    @import "components/form/button";
+    @import "components/form/input";
+    @import "components/form/select";
 
     // links
     @import "components/link";

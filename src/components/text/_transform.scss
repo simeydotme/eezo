@@ -2,10 +2,10 @@
 $text-transform-prop: $text-prop !default;
 $text-transforms: (
 
-    upper:      "uppercase",
-    lower:      "lowercase",
-    cap:        "capitalize",
-    none:       "none",
+    upper:      uppercase,
+    lower:      lowercase,
+    cap:        capitalize,
+    none:       none,
 
 ) !default;
 

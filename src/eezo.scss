@@ -16,9 +16,17 @@
     @include normalize();
     @include opinions();
     @include anchors();
+    @include fieldsets();
     @include clears();
     @include headings();
     @include visibility();
+
+/*
+ * eezo's form styling
+ * source order is important for this one
+ */
+
+    @include forms();
 
 /*
  * eezo's basic grid

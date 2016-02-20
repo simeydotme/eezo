@@ -1,0 +1,15 @@
+
+$fieldset-margin:   0 !default;
+$fieldset-padding:   1rem !default;
+
+
+@mixin fieldsets() {
+
+    fieldset {
+
+        margin: $fieldset-margin;
+        padding: $fieldset-padding;
+
+    }
+
+}
