@@ -1,15 +1,4 @@
 
-$select-pad-v:           $form-pad !default;
-$select-pad-h:           $form-pad * 2 !default;
-$select-radius:          $form-radius !default;
-
-$select-border:          $form-border-default !default;
-$select-border-hover:    $form-border-hover !default;
-$select-color:           $form-color-default !default;
-$select-bg:              $form-bg-default !default;
-
-
-
 @mixin select() {
 
     .select {

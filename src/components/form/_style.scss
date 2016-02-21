@@ -3,7 +3,8 @@
 
     .input,
     .select,
-    .btn, .btn-alt {
+    .btn,
+    .btn-alt {
 
         color: inherit;
         background-color: $form-bg-default;
@@ -24,9 +25,16 @@
         text-align: inherit;
 
         &:focus,
-        &:hover:focus {
+        &:focus:hover {
 
             border-color: $form-border-focus;
+
+        }
+
+        &:invalid,
+        &.error {
+
+            border-color: $form-border-error;
 
         }
 

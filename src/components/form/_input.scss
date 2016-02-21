@@ -1,10 +1,9 @@
 
-
-
 @mixin input() {
 
     .input {
 
+        // + 3px == inline-block whitespace size
         width: 16rem + rems(3px);
 
         &:hover {

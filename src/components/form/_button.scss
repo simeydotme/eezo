@@ -19,10 +19,6 @@ $button-opacity-active:     1 !default;
     .btn-alt {
 
         text-align: center;
-
-        color: $button-color;
-        border-color: $button-bg;
-        background-color: $button-bg;
         opacity: $button-opacity-default;
 
         &:hover,
@@ -34,9 +30,11 @@ $button-opacity-active:     1 !default;
 
     }
 
-    .btn-min {
+    .btn {
 
-        min-width: 8rem;
+        color: $button-color;
+        border-color: $button-bg;
+        background-color: $button-bg;
 
     }
 
@@ -45,6 +43,12 @@ $button-opacity-active:     1 !default;
         color: $button-alt-color;
         border-color: $button-alt-bg;
         background-color: $button-alt-bg;
+
+    }
+
+    .btn-min {
+
+        min-width: 8rem;
 
     }
 
