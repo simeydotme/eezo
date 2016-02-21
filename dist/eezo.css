@@ -577,10 +577,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn,
 .btn-alt {
-  border-color: #161f23;
-  opacity: 0.9;
+  text-align: center;
   color: #f9f9f9;
-  background-color: #161f23; }
+  border-color: #161f23;
+  background-color: #161f23;
+  opacity: 0.9; }
   .btn:hover, .btn:focus,
   .btn-alt:hover,
   .btn-alt:focus {
