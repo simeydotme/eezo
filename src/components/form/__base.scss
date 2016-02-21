@@ -7,13 +7,14 @@ $form-pad-right:        $form-pad !default;
 
 $form-radius:           2px !default;
 
-$form-border-default:   map-get( $default-colors, "grey" ) !default;
-$form-border-hover:     map-get( $default-colors, "black" ) !default;
+$form-border-default:   map-get( $default-colors, "light" ) !default;
+$form-border-hover:     map-get( $default-colors, "dark" ) !default;
 $form-border-focus:     map-get( $colors, "blue" ) !default;
 $form-border-error:     map-get( $colors, "red" ) !default;
 
+$form-placeholder:      map-get( $default-colors, "light" ) !default;
 $form-color-default:    map-get( $default-colors, "black" ) !default;
-$form-bg-default:       map-get( $default-colors, "white" ) !default;
+$form-bg-default:       map-get( $default-colors, "wht" ) !default;
 
 
 
@@ -23,15 +24,16 @@ $form-bg-default:       map-get( $default-colors, "white" ) !default;
     .select,
     .btn, .btn-alt {
 
-        vertical-align: middle;
-        display: inline-block;
-
-        border-radius: $form-radius;
-        border: 1px solid $form-border-default;
-
         color: $form-color-default;
         background-color: $form-bg-default;
 
+        outline: none;
+        border: 1px solid $form-border-default;
+        border-radius: $form-radius;
+        transition: border 0.1s ease;
+
+        vertical-align: middle;
+        display: inline-block;
         padding-top:    $form-pad-top;
         padding-bottom: $form-pad-bottom;
         padding-left:   $form-pad-left;
@@ -39,12 +41,18 @@ $form-bg-default:       map-get( $default-colors, "white" ) !default;
 
         line-height: normal;
 
-        &:active,
-        &:focus {
+        &:focus,
+        &:hover:focus {
 
-            outline: 2px auto $form-border-focus;
+            border-color: $form-border-focus;
 
         }
+
+    }
+
+    ::placeholder {
+
+        color: $form-placeholder;
 
     }
 
