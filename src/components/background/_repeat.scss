@@ -1,12 +1,12 @@
 
 $background-repeats: (
 
-    rpt:        "repeat",
-    no-rpt:     "no-repeat",
-    rpt-x:      "repeat-x",
-    rpt-y:      "repeat-y",
-    spc:        "space",
-    rnd:        "round",
+    rpt:        repeat,
+    no-rpt:     no-repeat,
+    rpt-x:      repeat-x,
+    rpt-y:      repeat-y,
+    spc:        space,
+    rnd:        round,
 
 ) !default;
 
@@ -18,8 +18,11 @@ $background-repeats: (
 
     @each $rpt in $background-repeats {
 
-        .#{ $p }#{ nth( $rpt, 1 ) } {
-            background-repeat: nth( $rpt, 2 );
+        $key: nth( $rpt, 1 );
+        $val: nth( $rpt, 2 );
+
+        .#{ $p }#{ $key } {
+            background-repeat: $val;
         }
 
     }

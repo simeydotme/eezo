@@ -1,11 +1,11 @@
 
 $background-positions: (
 
-    t:      "top",
-    b:      "bottom",
-    r:      "right",
-    l:      "left",
-    c:      "center",
+    t:      top,
+    b:      bottom,
+    r:      right,
+    l:      left,
+    c:      center,
 
 ) !default;
 
@@ -23,10 +23,15 @@ $background-positions: (
 
         @include breakpoint( $b ) {
 
+            $bp: hyphen-after( $b );
+
             @each $pos in $background-positions {
 
-                .#{ hyphen-after($b) }#{ $p }#{ nth( $pos, 1 ) } {
-                    background-position: nth( $pos, 2 );
+                $key: nth( $pos, 1 );
+                $val: nth( $pos, 2 );
+
+                .#{ $bp }#{ $p }#{ $key } {
+                    background-position: $val;
                 }
 
             }

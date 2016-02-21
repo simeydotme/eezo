@@ -1,11 +1,9 @@
 
-$background-prop: "bg" !default;
-$background-bps: $default-bps !default;
 $background-attachments: (
 
-    scr:    "scroll",
-    fix:    "fixed",
-    loc:    "local",
+    scr:    scroll,
+    fix:    fixed,
+    loc:    local,
 
 ) !default;
 
@@ -23,10 +21,15 @@ $background-attachments: (
 
         @include breakpoint( $b ) {
 
+            $bp: hyphen-after( $b );
+
             @each $attach in $background-attachments {
 
-                .#{ hyphen-after($b) }#{ $p }#{ nth( $attach, 1 ) } {
-                    background-attachment: nth( $attach, 2 );
+                $key: nth( $attach, 1 );
+                $val: nth( $attach, 2 );
+
+                .#{ $bp }#{ $p }#{ $key } {
+                    background-attachment: $val;
                 }
 
             }

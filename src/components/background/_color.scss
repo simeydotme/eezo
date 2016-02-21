@@ -9,8 +9,11 @@ $background-colors: $colors !default;
 
     @each $clr in $background-colors {
 
-        .#{ $p }#{ nth( $clr, 1 ) } {
-            background-color: nth( $clr, 2 );
+        $key: nth( $clr, 1 );
+        $val: nth( $clr, 2 );
+
+        .#{ $p }#{ $key } {
+            background-color: $val;
         }
 
     }
