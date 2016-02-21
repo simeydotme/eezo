@@ -1,0 +1,41 @@
+
+@mixin style() {
+
+    .input,
+    .select,
+    .btn, .btn-alt {
+
+        color: inherit;
+        background-color: $form-bg-default;
+
+        outline: none;
+        border: 1px solid $form-border-default;
+        border-radius: $form-radius;
+        transition: border 0.1s ease;
+
+        vertical-align: middle;
+        display: inline-block;
+        padding-top:    $form-pad-top;
+        padding-bottom: $form-pad-bottom;
+        padding-left:   $form-pad-left;
+        padding-right:  $form-pad-right;
+
+        line-height: normal;
+        text-align: inherit;
+
+        &:focus,
+        &:hover:focus {
+
+            border-color: $form-border-focus;
+
+        }
+
+    }
+
+    ::placeholder {
+
+        color: $form-placeholder;
+
+    }
+
+}

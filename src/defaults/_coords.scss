@@ -1,0 +1,42 @@
+
+// coords is the coordinates for positioning
+// such as "top", "left", "bottom", "right"
+
+/**
+ * $coords is used in components for positioning
+ * or spacing, like margin/padding/position.
+ * uses a nested list to generate horizontal/vertical/all
+ * coordinates by referencing itself.
+ *
+ * @type { key/value list }
+ */
+$coords: (
+
+    "":         ( "t", "b", "l", "r" ),
+    v:          ( "t", "b" ),
+    h:          ( "l", "r" ),
+    t:          "top",
+    b:          "bottom",
+    r:          "right",
+    l:          "left",
+
+) !default;
+
+
+
+/**
+ * $coords-neg is used for positioning
+ * in negative space. Not really need to
+ * have vertical/horizontal/all coordinates
+ * be positioning negatively.
+ *
+ * @type { key/value list }
+ */
+$coords-neg: (
+
+    t:          "top",
+    b:          "bottom",
+    r:          "right",
+    l:          "left",
+
+) !default;

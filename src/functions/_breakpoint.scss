@@ -1,0 +1,130 @@
+
+// Generates a media query string matching the input value.
+// @param {Keyword|Number} $val [mb] - Breakpoint name, or px, rem, or em value to process.
+// @returns {String} - <edia query string for use with @breakpoint mixin.
+// - borrowed from Zurb Foundation 6
+
+@function breakpoint( $val: mb ) {
+
+    // Size or keyword
+    $bp: nth( $val, 1 );
+
+    // Value for max-width media queries
+    $bp-max: 0;
+
+    // Direction of media query (up, down, or only)
+    $dir: if( length( $val ) > 1, nth( $val, 2 ), up );
+
+    // Eventual output
+    $str: "";
+
+    // Is it a named media query?
+    $named: false;
+
+    // Orientation media queries have a unique syntax
+    @if $bp == "landscape" or $bp == "portrait" {
+        @return "(orientation: #{$bp})";
+    }
+
+    @else if $bp == "retina" or $bp == "hdpi" {
+        @return "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
+    }
+
+    // Try to pull a named breakpoint out of the $breakpoints map
+    @if type-of( $bp ) == "string" {
+
+        @if map-has-key( $breakpoints, $bp ) {
+
+            @if $dir == "only" or $dir == "down" {
+
+                $next-bp: map-next( $breakpoints, $bp );
+
+                @if $next-bp == null {
+                    $bp-max: null;
+                    @warn "breakpoint(): the media query '#{$val}' cannot be used because '#{$bp}' is the largest breakpoint.";
+                }
+
+                @else {
+                    $bp-max: $next-bp;
+                }
+
+            }
+
+            $bp: map-get($breakpoints, $bp);
+            $named: true;
+
+        }
+
+        @else {
+
+            @if $bp != "" {
+
+                @warn "Couldn't find '#{$bp}' in $breakpoints list";
+
+            }
+
+            $bp: 0;
+
+        }
+
+    }
+
+    // Convert any pixel, rem, or unitless value to em
+    $bp: ems( $bp );
+    @if $bp-max {
+        $bp-max: ems( $bp-max ) - (1/16);
+    }
+
+    // Skip media query creation if the input is "0 up"
+    @if $bp > 0em or $dir == "only" or $dir == "down" {
+        // `only` ranges use the format `(min-width: n) and (max-width: n)`
+        @if $dir == "only" {
+
+            @if $named == true {
+
+                $str: $str + "(min-width: #{$bp})";
+
+                @if $bp-max != null {
+                    $str: $str + " and (max-width: #{$bp-max})";
+                }
+
+            }
+
+            @else {
+
+                @warn "Only named media queries can have an `only` range.";
+
+            }
+
+        }
+
+        // `down` ranges use the format `(max-width: n)`
+        @else if $dir == "down" {
+
+            $max: 0;
+
+            // For named breakpoints, subtract the breakpoint value by one "pixel", or 1/16em.
+            @if $named {
+                $max: $bp-max;
+            }
+
+            @else {
+                $max: $bp;
+            }
+
+            // Skip media query creation if input value is exactly "0 down" but don't "small down"
+            @if $named or $bp > 0em {
+                $str: $str + "(max-width: #{$max})";
+            }
+
+        }
+
+        // `up` ranges use the format `(min-width: n)`
+        @else if $bp > 0em {
+          $str: $str + "(min-width: #{$bp})";
+        }
+    }
+
+    @return $str;
+
+}

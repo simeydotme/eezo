@@ -11,10 +11,12 @@ var _ = require("lodash"),
     prefix = require("gulp-autoprefixer"),
     sourcemaps = require("gulp-sourcemaps"),
 
-    banner = function() {
+    banner = function( type ) {
 
         var pkg = JSON.parse( fs.readFileSync("./package.json", "utf-8") );
         var tpl = fs.readFileSync("./src/header.txt", "utf-8");
+
+        pkg.type = type || "";
 
         return ( _.template( tpl , {
             interpolate: /{{=\s*?(.*?)\s*?}}/g
@@ -34,7 +36,7 @@ gulp.task( "max", ["clean"], function() {
 
     return gulp.src("./src/eezo.scss")
 
-        .pipe( sass({ 
+        .pipe( sass({
             outputStyle: "nested"
         }).on( "error", sass.logError ) )
         .pipe( prefix() )

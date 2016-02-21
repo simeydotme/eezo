@@ -1,102 +1,36 @@
 
-// import all the needed utilities,
-// mixins and config
+// import all the needed functions,
+// config, mixins and default values.
 
-    @import "utils";
-    @import "config";
-    @import "defaults";
-    @import "mixins/breakpoint";
+    @import "functions/_";
+    @import "config/_";
+    @import "mixins/_";
+    @import "defaults/_";
 
-// import all the base components
+// import all the components
 
     // Normalize
-    @import "normalize";
+    @import "components/normalize";
 
-    // opinions of eezo
-    @import "opinions/_base";
-    @import "opinions/anchors";
-    @import "opinions/fieldsets";
-    @import "opinions/headings";
-    @import "opinions/helpers";
+    // eezo opinionated defaults
+    @import "opinions/_";
 
-    // grid
-    @import "components/grid/_base";
-    @import "components/grid/container";
-    @import "components/grid/row";
-    @import "components/grid/column";
+    // eezo grid
+    @import "components/grid/_";
 
-    // backgrounds
-    @import "components/background/_base";
-    @import "components/background/attachment";
-    @import "components/background/color";
-    @import "components/background/position";
-    @import "components/background/repeat";
-    @import "components/background/size";
-
-    // borders
-    @import "components/border/_base";
-    @import "components/border/color";
-    @import "components/border/radius";
-    @import "components/border/style";
-
-    // cursors
+    // components
+    @import "components/background/_";
+    @import "components/border/_";
     @import "components/cursor";
-
-    // display
     @import "components/display";
-
-    // floats
     @import "components/float";
-
-    // forms
-    @import "components/form/_base";
-    @import "components/form/button";
-    @import "components/form/input";
-    @import "components/form/select";
-
-    // links
+    @import "components/form/_";
     @import "components/link";
-
-    // margins
-    @import "components/margin/_base";
-    @import "components/margin/margin";
-    @import "components/margin/margin-negative";
-
-    // overflow
+    @import "components/margin/_";
     @import "components/overflow";
-
-    // padding
-    @import "components/padding/_base";
-    @import "components/padding/padding";
-    @import "components/padding/padding-negative";
-
-    // position
-    @import "components/position/_base";
-    @import "components/position/position";
-    @import "components/position/positioning";
-    @import "components/position/positioning-negative";
-
-    // text
-    @import "components/text/_base";
-    @import "components/text/align";
-    @import "components/text/color";
-    @import "components/text/decoration";
-    @import "components/text/family";
-    @import "components/text/line-height";
-    @import "components/text/size";
-    @import "components/text/spacing";
-    @import "components/text/style";
-    @import "components/text/transform";
-    @import "components/text/weight";
-
-    // svg
-    @import "components/svg/_base";
-    @import "components/svg/fill";
-    @import "components/svg/stroke";
-
-    // alignmnet
+    @import "components/padding/_";
+    @import "components/position/_";
+    @import "components/text/_";
+    @import "components/svg/_";
     @import "components/valign";
-
-    // whitespace
     @import "components/whitespace";
-

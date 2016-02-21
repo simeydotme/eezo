@@ -1,0 +1,38 @@
+
+/**
+ * $distances is used to create spacings
+ * across components such as margin/padding/position
+ *
+ * @type { key/value list }
+ */
+$distances: (
+
+    "0":        0,
+    "2":        rems( 2px ),
+    "5":        rems( 5px ),
+    "10":       rems( 10px ),
+    "15":       rems( 15px ),
+    "20":       rems( 20px ),
+    "30":       rems( 30px ),
+    "50":       rems( 50px ),
+    "100":      rems( 100px ),
+
+) !default;
+
+
+
+/**
+ * $distance-neg is the same as distances,
+ * except for negative margins or positioning.
+ *
+ * @type { key/value list }
+ */
+$distances-neg: (
+
+    "n2":       rems( -2px ),
+    "n5":       rems( -5px ),
+    "n10":      rems( -10px ),
+    "n15":      rems( -15px ),
+    "n20":      rems( -20px ),
+
+) !default;

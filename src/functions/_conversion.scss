@@ -1,0 +1,80 @@
+
+// Returns a rem value based on %/px input
+// @param {Number} $convert - input value of %/px.
+// @returns {Number} - Input converted to rem unit.
+// - inspired by Zurb Foundation 6.
+
+@function rems( $convert ) {
+
+    $unit: unit( $convert );
+    $value: strip( $convert );
+    $base: $rem;
+
+    // error handling for non-px / non-% / non-rem values.
+    @if ( $unit != "%" ) and ( $unit != "px" ) and ( $unit != "rem" ) {
+
+        @warn $convert + " was passed to rems(), which may be incorrect.";
+        @return $convert;
+
+    }
+
+    // if the font sizes are %, then multiply them by 16px
+    // this is because 100% font size = 16px in most all browsers
+    @if $unit == "%" {
+        $value: strip( ( $convert / 100% ) * 16px );
+    }
+
+    // convert $base to px
+    @if unit( $base ) == "%" {
+        $base: ( $base / 100% ) * 16px;
+    }
+
+    // calculate rem if units for $unit is not rem
+    @if $unit != "rem" {
+        $value: $value / strip( $base ) * 1rem;
+    }
+
+    // convert 0rem into 0
+    @if $value == 0rem {
+        $value: 0;
+    }
+
+    // return the value, with the unit stripped, as rem.
+    @return strip( $value ) * 1rem;
+
+}
+
+
+
+// Converts a unitless, pixel, or rem value to em, for use in breakpoints.
+// @param {Number} $convert - Number with a %/px/rem unit
+// @returns {Number} - Input converted to ems
+// - borrowed from Zurb Foundation 6.
+
+@function ems( $convert ) {
+
+    $unit: unit( $convert );
+
+    @if $unit == "rem" or $unit == "px" {
+
+        // the value is converted to ems
+        @return strip( rems( $convert ) ) * 1em;
+
+    }
+
+    @else if $unit == "em" or unitless( $convert ) {
+
+        // convert from em / unitless
+        @return strip( $convert ) * 1em;
+
+    }
+
+    @else {
+
+        // if the value wasnt converted then return original
+        @warn $convert + " was not converted to ems, not a valid unit.";
+        @return $convert;
+
+    }
+
+}

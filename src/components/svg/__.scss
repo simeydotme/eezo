@@ -1,4 +1,9 @@
 
+$svg-colors: $colors !default;
+
+@import "fill";
+@import "stroke";
+
 @mixin svgs() {
 
     @include svg-fill();

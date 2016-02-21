@@ -4,6 +4,17 @@ $text-bps: $default-bps !default;
 
 
 
+@import "align";
+@import "color";
+@import "decoration";
+@import "family";
+@import "line-height";
+@import "size";
+@import "spacing";
+@import "style";
+@import "transform";
+@import "weight";
+
 @mixin texts() {
 
     @include font-family();

@@ -34,14 +34,14 @@ $border-styles: (
 
             $bp: hyphen-after( $b );
 
-            .#{ $bp }#{ $p }0 {
-                border: none;
-            }
-
             @each $c in $border-style-coords {
 
                 $coord-key: nth( $c, 1 );
                 $coord-val: hyphen( nth( $c, 2 ) );
+
+                .#{ $bp }#{ $p }#{ $coord-key }0 {
+                    #{ "border" }#{ $coord-val }: none;
+                }
 
                 @each $size in $border-sizes {
 

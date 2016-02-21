@@ -4,6 +4,12 @@ $background-bps: $default-bps !default;
 
 
 
+@import "attachment";
+@import "color";
+@import "position";
+@import "repeat";
+@import "size";
+
 @mixin backgrounds() {
 
     @include background-attachment();

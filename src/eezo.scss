@@ -1,11 +1,16 @@
 
-// import all the components we need for
-// building a default eezo project.
+/**
+ * import all the components of eezo.
+ * - regardless of your project, this should
+ * - always happen. each component is loaded
+ * - via a mixin, so this import can be done
+ * - safely without generating any CSS.
+ */
 
     @import "eezo-imports";
 
 // include each component's mixin one-by-one.
-// your own project could pick-and-choose
+// your own project can pick-and-choose
 // these includes
 
 /*

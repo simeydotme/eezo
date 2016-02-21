@@ -4,10 +4,10 @@
     .#{ $column-prop },
     .#{ $column-prop }s {
 
-        display: block;
         width: percentage( 1 / 12 );
-        padding-left: $column-padding;
-        padding-right: $column-padding;
+
+        display: block;
+        padding: $column-padding;
 
         &:not( .centered ):not( .center ) {
 

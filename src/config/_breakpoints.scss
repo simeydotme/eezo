@@ -1,0 +1,42 @@
+
+/**
+ * list of breakpoints to produce unique components at
+ *
+ * - if no unit is provided, it defaults to em.
+ * - used for the "breakpoint" mixin to reference.
+ * - breakpoints are mobile-up (or mobile-first)
+ *
+ * @type { key/value list }
+ *
+ * $breakpoints: (
+ *
+ *     mb: 0,
+ *     tb: 768px,
+ *     dt: 1024px,
+ *     hg: 1200px,
+ *
+ * ) !default;
+ */
+$breakpoints: (
+
+    mb: 0,
+    tb: 768px,
+    dt: 1024px,
+    hg: 1200px,
+
+) !default;
+
+
+/**
+ * defines the default breakpoints
+ * used in most of the components.
+ *
+ * modifying this can increase, or decrease your
+ * codebase as each component will loop through
+ * each breakpoint.
+ *
+ * @type {array/list}
+ *
+ * $default-bps: ("mb", "tb", "dt") !default;
+ */
+$default-bps: ("mb", "tb", "dt") !default;

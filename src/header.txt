@@ -1,6 +1,6 @@
 /*!
  * [ {{= name }} ]
  * - {{= description }}
- * - {{= version }} | {{= repository.url }}
+ * - {{= type }}{{= version }} | {{= repository.url }}
  * - @{{= author.name }} | {{= author.url }}
  */

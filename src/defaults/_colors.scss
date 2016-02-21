@@ -1,0 +1,73 @@
+
+/**
+ * colors can not be overridden, but
+ * it can be configured with $custom-colors
+ * @type { key/value list }
+ */
+$colors:            ();
+
+/**
+ * custom-colors can be defined so that your
+ * own project can have it's brand colours
+ * applied as backgrounds/borders/text/etc
+ *
+ * @type { key/value list }
+ */
+$custom-colors:     () !default;
+
+/**
+ * base-colors are static, and available
+ * always, try to make use of them.
+ *
+ * @type { key/value list }
+ */
+$base-colors: (
+
+    "x":        transparent,
+    "blk":      #000,
+    "black":    #1a1a1a,
+    "cream":    #f7f2eb,
+    "wht":      #fff,
+    "white":    #f9f9f9,
+    "grey":     #82848e,
+    "dark":     #575c67,
+    "light":    #b5b8bf,
+    "pitch":    #161f23,
+
+);
+
+/**
+ * extra-colors are some nice default colours
+ * you could use in your projects, but
+ * they are not for everyone, so save some
+ * kilobytes by turning them off with:
+ *
+ * - $no-extra-colors: true;
+ *
+ * @type { key/value list }
+ */
+$extra-colors: (
+
+    "blue":     #1e9bd6,
+    "green":    #1ed668,
+    "mint":     #31e894,
+    "orange":   #d66a1e,
+    "pink":     #ec2666,
+    "purple":   #5930d6,
+    "red":      #d61e40,
+    "teal":     #26ab92,
+    "violet":   #981bd8,
+    "yellow":   #d6d01e,
+    "silver":   #dde3e6,
+    "gold":     #c7aa5c,
+
+);
+
+// merge the colours together.
+
+$colors: map-merge( $colors, $base-colors );
+$colors: map-merge( $colors, $custom-colors );
+
+@if ( $no-extra-colors != true ) {
+    $colors: map-merge( $colors, $extra-colors );
+}

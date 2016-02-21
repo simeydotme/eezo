@@ -1,0 +1,33 @@
+
+$form-pad:              0.5rem !default;
+$form-pad-top:          $form-pad !default;
+$form-pad-bottom:       $form-pad !default;
+$form-pad-left:         $form-pad !default;
+$form-pad-right:        $form-pad !default;
+
+$form-radius:           2px !default;
+
+$form-border-default:   map-get( $base-colors, "light" ) !default;
+$form-border-hover:     map-get( $base-colors, "dark" ) !default;
+$form-border-focus:     map-get( $colors, "blue" ) !default;
+$form-border-error:     map-get( $colors, "red" ) !default;
+
+$form-placeholder:      map-get( $base-colors, "light" ) !default;
+$form-color-default:    map-get( $base-colors, "black" ) !default;
+$form-bg-default:       map-get( $base-colors, "wht" ) !default;
+
+
+
+@import "components/form/style";
+@import "components/form/input";
+@import "components/form/button";
+@import "components/form/select";
+
+@mixin forms() {
+
+    @include style();
+    @include button();
+    @include input();
+    @include select();
+
+}
