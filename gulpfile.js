@@ -17,7 +17,7 @@ var out =       "./dist",
     style =     { outputStyle: "nested" },
     regular =   { title: "~~ 🐢 | "},
     minified =  { title: "~~ 🐇 | "},
-    gzipped =   { title: "~~ ⚡ | ", gzip: true },
+    gzipped =   { title: "~~ 🐆 | ", gzip: true },
 
     banner = function( type ) {
 
