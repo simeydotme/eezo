@@ -24,12 +24,14 @@ $floats: (
 
         @include breakpoint( $b ) {
 
+            $bp: hyphen-after( $b );
+
             @each $flo in $floats {
 
                 $key: nth( $flo, 1 );
                 $val: nth( $flo, 2 );
 
-                .#{ hyphen-after($b) }#{ $p }#{ $key } {
+                .#{ $bp }#{ $p }#{ $key } {
                     float: $val;
                 }
 

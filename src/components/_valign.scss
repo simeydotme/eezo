@@ -1,6 +1,6 @@
 
-$valign-prop:      "va" !default;
-$valign-bps:       $default-bps !default;
+$valign-prop:       "va" !default;
+$valign-bps:        $default-bps !default;
 
 $valigns: (
 
@@ -28,12 +28,14 @@ $valigns: (
 
         @include breakpoint( $b ) {
 
+            $bp: hyphen-after( $b );
+
             @each $va in $valigns {
 
                 $key: nth( $va, 1 );
                 $val: nth( $va, 2 );
 
-                .#{ hyphen-after($b) }#{ $p }#{ $key } {
+                .#{ $bp }#{ $p }#{ $key } {
                     vertical-align: $val;
                 }
 

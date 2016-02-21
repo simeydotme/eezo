@@ -1,6 +1,6 @@
 
-$whitespace-prop:      "ws" !default;
-$whitespace-bps:       $default-bps !default;
+$whitespace-prop:       "ws" !default;
+$whitespace-bps:        $default-bps !default;
 
 $whitespaces: (
 
@@ -26,12 +26,14 @@ $whitespaces: (
 
         @include breakpoint( $b ) {
 
+            $bp: hyphen-after( $b );
+
             @each $space in $whitespaces {
 
                 $key: nth( $space, 1 );
                 $val: nth( $space, 2 );
 
-                .#{ hyphen-after($b) }#{ $p }#{ $key } {
+                .#{ $bp }#{ $p }#{ $key } {
                     white-space: $val;
                 }
 

@@ -1,6 +1,6 @@
 
-$overflow-prop:      "of" !default;
-$overflow-bps:       $default-bps !default;
+$overflow-prop:     "of" !default;
+$overflow-bps:      $default-bps !default;
 
 $overflow-directions: (
 
@@ -12,10 +12,10 @@ $overflow-directions: (
 
 $overflows: (
 
-    "a":     auto,
-    "h":     hidden,
-    "s":     scroll,
-    "v":     visible,
+    "a":    auto,
+    "h":    hidden,
+    "s":    scroll,
+    "v":    visible,
 
 ) !default;
 
@@ -31,10 +31,12 @@ $overflows: (
 
         @include breakpoint( $b ) {
 
+            $bp: hyphen-after( $b );
+
             @each $dir in $overflow-directions {
 
                 $dir-key: nth( $dir, 1 );
-                $dir-val: nth( $dir, 2 );
+                $dir-val: hyphen( nth( $dir, 2 ) );
                 $p: hyphen-after( $overflow-prop + $dir-key );
 
                 @each $over in $overflows {
@@ -42,8 +44,8 @@ $overflows: (
                     $key:   nth( $over, 1 );
                     $val:   nth( $over, 2 );
 
-                    .#{ hyphen-after($b) }#{ $p }#{ $key } {
-                        overflow#{ hyphen( $dir-val ) }: $val;
+                    .#{ $bp }#{ $p }#{ $key } {
+                        #{ "overflow" }#{ $dir-val }: $val;
                     }
 
                 }

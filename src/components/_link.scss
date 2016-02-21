@@ -1,11 +1,11 @@
 
+$link-normal:       map-get( $extra-colors, "blue" ) !default;
+$link-visited:      map-get( $extra-colors, "purple" ) !default;
+$link-hover:        map-get( $extra-colors, "teal" ) !default;
+
+
+
 @mixin links() {
-
-    $link-normal:       map-get( $extra-colors, "blue" );
-    $link-visited:      map-get( $extra-colors, "purple" );
-    $link-hover:        map-get( $extra-colors, "teal" );
-
-
 
     %link {
 
@@ -13,8 +13,8 @@
         &:active {
 
             color: $link-normal;
-            transition: color 1s ease;
             text-decoration: none;
+            transition: color 0.8s ease;
 
         }
 
