@@ -18,11 +18,12 @@ $button-opacity-active:     1 !default;
     .btn,
     .btn-alt {
 
-        border-color: $button-bg;
-        opacity: $button-opacity-default;
+        text-align: center;
 
         color: $button-color;
+        border-color: $button-bg;
         background-color: $button-bg;
+        opacity: $button-opacity-default;
 
         &:hover,
         &:focus {
