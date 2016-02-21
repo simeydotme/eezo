@@ -1,5 +1,5 @@
 
-@mixin columns( $bps: $default-bps ) {
+@mixin columns() {
 
     .#{ $column-prop },
     .#{ $column-prop }s {
@@ -9,7 +9,7 @@
         padding-left: $column-padding;
         padding-right: $column-padding;
 
-        &:not( [ class *= "#{ $float-prop }-" ] ):not( .centered ):not( .center ) {
+        &:not( .centered ):not( .center ) {
 
             float: left;
 

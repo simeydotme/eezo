@@ -24,7 +24,7 @@ $form-bg-default:       map-get( $default-colors, "wht" ) !default;
     .select,
     .btn, .btn-alt {
 
-        color: $form-color-default;
+        color: inherit;
         background-color: $form-bg-default;
 
         outline: none;
@@ -40,6 +40,7 @@ $form-bg-default:       map-get( $default-colors, "wht" ) !default;
         padding-right:  $form-pad-right;
 
         line-height: normal;
+        text-align: inherit;
 
         &:focus,
         &:hover:focus {

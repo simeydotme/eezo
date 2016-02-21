@@ -34,6 +34,10 @@ $border-styles: (
 
             $bp: hyphen-after( $b );
 
+            .#{ $bp }#{ $p }0 {
+                border: none;
+            }
+
             @each $c in $border-style-coords {
 
                 $coord-key: nth( $c, 1 );
