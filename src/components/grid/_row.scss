@@ -3,16 +3,7 @@
 
     .#{ $row-prop } {
 
-        display: block;
-
         @include clearfix();
-
-    }
-
-    .#{ $row-prop } .#{ $row-prop } {
-
-        margin-left: -$column-padding;
-        margin-right: -$column-padding;
 
     }
 

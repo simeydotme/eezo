@@ -8,7 +8,7 @@ $pull-prop:         "pull" !default;
 
 $grid-bps:          $default-bps !default;
 
-$column-padding:    0.75rem !default;
+$column-padding:    rems( 15px ) !default;
 
 
 
@@ -19,10 +19,9 @@ $column-padding:    0.75rem !default;
 @mixin grid() {
 
     @include containers();
-
     @include rows();
-
     @include columns();
+
     @include column-sizes();
     @include column-shift();
     @include column-pull();

@@ -1,10 +1,12 @@
 
+$columns-max:   12 !default;
+
 @mixin columns() {
 
     .#{ $column-prop },
     .#{ $column-prop }s {
 
-        width: percentage( 1 / 12 );
+        width: percentage( 1 / $columns-max );
 
         display: block;
         padding: $column-padding;
@@ -44,11 +46,11 @@
 
             $bp: hyphen-after( $b );
 
-            @for $i from 1 through 12 {
+            @for $i from 1 through $columns-max {
 
                 .#{ $bp }#{ $i } {
 
-                    width: percentage( $i / 12 );
+                    width: percentage( $i / $columns-max );
 
                 }
 
@@ -74,11 +76,11 @@
 
             $bp: hyphen-after( $b );
 
-            @for $i from 1 through 12 {
+            @for $i from 1 through $columns-max {
 
                 .#{ $bp }#{ $shift-prop }-#{ $i } {
 
-                    margin-left: percentage( $i / 12 );
+                    margin-left: percentage( $i / $columns-max );
 
                 }
 
@@ -110,11 +112,11 @@
 
             $bp: hyphen-after( $b );
 
-            @for $i from 1 through 12 {
+            @for $i from 1 through $columns-max {
 
                 .#{ $bp }#{ $pull-prop }-#{ $i } {
 
-                    left: - percentage( $i / 12 );
+                    left: - percentage( $i / $columns-max );
 
                 }
 
@@ -146,11 +148,11 @@
 
             $bp: hyphen-after( $b );
 
-            @for $i from 1 through 12 {
+            @for $i from 1 through $columns-max {
 
                 .#{ $bp }#{ $push-prop }-#{ $i } {
 
-                    left: percentage( $i / 12 );
+                    left: percentage( $i / $columns-max );
 
                 }
 
