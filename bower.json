@@ -1,7 +1,6 @@
 {
   "name": "eezo",
-  "version": "0.4.0",
-
+  "version": "0.4.1",
   "author": {
     "name": "simeydotme",
     "email": "simey.me@gmail.com",
@@ -9,13 +8,7 @@
   },
   "description": "css framework for massless stylesheets",
   "license": "MIT",
-
   "main": "src/eezo.scss",
-
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-
   "repository": {
     "type": "git",
     "url": "http://github.com/simeydotme/eezo"
