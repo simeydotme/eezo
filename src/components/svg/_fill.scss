@@ -1,6 +1,6 @@
 
-$svg-fill-prop: "fill" !default;
-$svg-fill-colors: $svg-colors !default;
+$svg-fill-prop:         "fill" !default;
+$svg-fill-colors:       $svg-colors !default;
 
 
 
@@ -10,8 +10,11 @@ $svg-fill-colors: $svg-colors !default;
 
     @each $clr in $svg-fill-colors {
 
-        .#{ $p }#{ nth( $clr, 1 ) } {
-            fill: nth( $clr, 2 );
+        $key: nth( $clr, 1 );
+        $val: nth( $clr, 2 );
+
+        .#{ $p }#{ $key } {
+            fill: $val;
         }
 
     }

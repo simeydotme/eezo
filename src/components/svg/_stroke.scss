@@ -1,6 +1,6 @@
 
-$svg-stroke-prop: "stroke" !default;
-$svg-stroke-colors: $svg-colors !default;
+$svg-stroke-prop:       "stroke" !default;
+$svg-stroke-colors:     $svg-colors !default;
 
 $svg-stroke-sizes: (
 
@@ -23,8 +23,11 @@ $svg-stroke-sizes: (
 
     @each $clr in $svg-stroke-colors {
 
-        .#{ $p }#{ nth( $clr, 1 ) } {
-            stroke: nth( $clr, 2 );
+        $key: nth( $clr, 1 );
+        $val: nth( $clr, 2 );
+
+        .#{ $p }#{ $key } {
+            stroke: $val;
         }
 
     }
@@ -35,13 +38,13 @@ $svg-stroke-sizes: (
 
     $p: $svg-stroke-prop;
 
-    @each $size in $text-sizes {
+    @each $size in $svg-stroke-sizes {
 
         $key: nth( $size, 1 );
         $val: nth( $size, 2 );
 
         .#{ $p }#{ $key } {
-            stroke-width: rems( $val );
+            stroke-width: $val;
         }
 
     }

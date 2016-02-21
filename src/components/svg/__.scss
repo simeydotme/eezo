@@ -1,5 +1,7 @@
 
-$svg-colors: $colors !default;
+$svg-colors:            $colors !default;
+
+
 
 @import "fill";
 @import "stroke";
