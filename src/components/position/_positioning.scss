@@ -29,13 +29,7 @@ $positioning-dist:          $position-dist !default;
                     $d-key: nth( $d , 1 );
                     $d-val: nth( $d , 2 );
 
-                    // create a selector with the
-                    // property, coordinate key and distance key
-
                     .#{ $bp }#{ $p }#{ $c-key }#{ $d-key } {
-
-                        // if our coordinate is a list of other coordinates
-                        // then loop through them.
 
                         @if type-of( $c-val ) == "list" {
 
@@ -43,10 +37,7 @@ $positioning-dist:          $position-dist !default;
 
                                 $i-key: map-get( $positioning-coords , $item );
 
-                                // return a property and value based on the
-                                // property value, coord item key and distance value.
-
-                                #{ position }#{ hyphen( $i-key ) }: $d-val;
+                                #{ $i-key }: $d-val;
 
                             }
 
@@ -54,10 +45,7 @@ $positioning-dist:          $position-dist !default;
 
                         @else {
 
-                            // return a property and value based on the
-                            // property value, coord value and distance value.
-
-                            #{ position }#{ hyphen( $c-val ) }: $d-val;
+                            #{ $c-val }: $d-val;
 
                         }
 
