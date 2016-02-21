@@ -1,15 +1,13 @@
 
-$padding-prop:       "pad" !default;
-$padding-bps:        $default-bps !default;
+$padding-prop:      "pad" !default;
+$padding-bps:       $default-bps !default;
 
 
 
 @import "padding";
-@import "padding-negative";
 
 @mixin paddings() {
 
     @include padding();
-    @include padding-negative();
 
 }
