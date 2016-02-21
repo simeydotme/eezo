@@ -1,5 +1,5 @@
 
-$text-transform-prop: $text-prop !default;
+$text-transform-prop:   $text-prop !default;
 $text-transforms: (
 
     upper:      uppercase,
@@ -23,12 +23,14 @@ $text-transforms: (
 
         @include breakpoint( $b ) {
 
+            $bp: hyphen-after( $b );
+
             @each $trans in $text-transforms {
 
                 $key: nth( $trans, 1 );
                 $val: nth( $trans, 2 );
 
-                .#{ hyphen-after($b) }#{ $p }#{ $key } {
+                .#{ $bp }#{ $p }#{ $key } {
                     text-transform: $val;
                 }
 

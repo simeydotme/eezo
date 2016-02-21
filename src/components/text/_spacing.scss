@@ -1,5 +1,5 @@
 
-$letter-spacing-prop: "ls" !default;
+$letter-spacing-prop:   "ls" !default;
 $letter-spacings: (
 
     "-3":    -0.075em,
@@ -30,12 +30,14 @@ $letter-spacings: (
 
         @include breakpoint( $b ) {
 
+            $bp: hyphen-after( $b );
+
             @each $space in $letter-spacings {
 
                 $key: nth( $space, 1 );
                 $val: nth( $space, 2 );
 
-                .#{ hyphen-after($b) }#{ $p }#{ $key } {
+                .#{ $bp }#{ $p }#{ $key } {
                     letter-spacing: $val;
                 }
 

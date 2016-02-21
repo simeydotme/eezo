@@ -1,5 +1,5 @@
 
-$text-align-prop: $text-prop !default;
+$text-align-prop:       $text-prop !default;
 $text-aligns: (
 
     l:      left,
@@ -26,12 +26,14 @@ $text-aligns: (
 
         @include breakpoint( $b ) {
 
+            $bp: hyphen-after( $b );
+
             @each $align in $text-aligns {
 
                 $key: nth( $align, 1 );
                 $val: nth( $align, 2 );
 
-                .#{ hyphen-after($b) }#{ $p }#{ $key } {
+                .#{ $bp }#{ $p }#{ $key } {
                     text-align: $val;
                 }
 

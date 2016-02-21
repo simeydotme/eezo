@@ -1,6 +1,6 @@
 
-$line-height-prop: "lh" !default;
-$line-heights: $font-sizes !default;
+$line-height-prop:      "lh" !default;
+$line-heights:          $font-sizes !default;
 
 
 
@@ -16,12 +16,14 @@ $line-heights: $font-sizes !default;
 
         @include breakpoint( $b ) {
 
+            $bp: hyphen-after( $b );
+
             @each $height in $line-heights {
 
                 $key: nth( $height, 1 );
                 $val: nth( $height, 2 );
 
-                .#{ hyphen-after($b) }#{ $p }#{ $key } {
+                .#{ $bp }#{ $p }#{ $key } {
                     line-height: strip( $val );
                 }
 
