@@ -2,12 +2,12 @@
 $text-decoration-prop:  $text-prop !default;
 $text-decorations: (
 
-    oline:      "overline",
-    uline:      "underline",
-    strike:     "line-through",
-    bline:      "overline underline",
-    aline:      "overline line-through underline",
-    noline:     "none",
+    oline:      overline,
+    uline:      underline,
+    strike:     line-through,
+    bline:      overline underline,
+    aline:      overline line-through underline,
+    noline:     none,
 
 ) !default;
 

@@ -4363,22 +4363,22 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   color: #c7aa5c; }
 
 .txt-oline {
-  text-decoration: "overline"; }
+  text-decoration: overline; }
 
 .txt-uline {
-  text-decoration: "underline"; }
+  text-decoration: underline; }
 
 .txt-strike {
-  text-decoration: "line-through"; }
+  text-decoration: line-through; }
 
 .txt-bline {
-  text-decoration: "overline underline"; }
+  text-decoration: overline underline; }
 
 .txt-aline {
-  text-decoration: "overline line-through underline"; }
+  text-decoration: overline line-through underline; }
 
 .txt-noline {
-  text-decoration: "none"; }
+  text-decoration: none; }
 
 .txt-upper {
   text-transform: uppercase; }
