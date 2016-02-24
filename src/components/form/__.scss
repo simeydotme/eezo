@@ -18,10 +18,10 @@ $form-bg-default:       map-get( $base-colors, "wht" ) !default;
 
 
 
-@import "components/form/style";
-@import "components/form/input";
-@import "components/form/button";
-@import "components/form/select";
+@import "style";
+@import "input";
+@import "button";
+@import "select";
 
 @mixin forms() {
 
