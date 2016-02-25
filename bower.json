@@ -1,0 +1,39 @@
+{
+  "name": "eezo github pages",
+  "version": "0.0.1",
+  "author": {
+    "name": "simeydotme",
+    "email": "simey.me@gmail.com",
+    "url": "http://simey.me"
+  },
+  "description": "css framework for massless stylesheets",
+  "license": "MIT",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/simeydotme/eezo"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "keywords": [
+    "css",
+    "framework",
+    "eezo",
+    "element",
+    "zero",
+    "massless",
+    "stylesheets",
+    "prototype",
+    "prototyping",
+    "lightweight",
+    "light"
+  ],
+  "dependencies": {
+    "eezo": "https://github.com/simeydotme/eezo.git#~0.4.3-alpha"
+  }
+}
