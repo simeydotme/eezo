@@ -82,6 +82,7 @@ build/Release
 # Dependency directory
 # https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git
 node_modules
+bower_components
 
 # Optional npm cache directory
 .npm
@@ -96,6 +97,3 @@ node_modules
 
 # Grunt usually preprocesses files such as coffeescript, compass... inside the .tmp directory
 .tmp/
-
-
-
