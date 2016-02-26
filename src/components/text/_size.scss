@@ -1,5 +1,5 @@
 
-$text-size-prop:        $text-prop !default;
+$text-size-prop:        "f" !default;
 $text-sizes:            $font-sizes !default;
 
 @mixin font-size( $bps: $text-bps ) {

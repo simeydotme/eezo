@@ -107,6 +107,19 @@
  * $distances is used to create spacings
  * across components such as margin/padding/position
  *
+ * the defaults are quite reasonable.
+ *
+ * if you ever think you need to adjust something by 1px;
+ *     you're wrong. move it by 2.
+ *
+ * if you think you need to move something by 3/4px;
+ *     wrong, use 2/5.
+ *
+ * from there on up, pick the closest size for aesthetically
+ * consistent and pleasing distances across your app.
+ *
+ * or just override in your own stylesheet.
+ *
  * @type { key/value list }
  */
 /**
@@ -118,9 +131,6 @@
 /**
  * $font-sizes for generating font scale
  * and line-height scale.
- *
- * uses "+" and "-" to jump from the base
- * rem value (16px) to other multiples.
  *
  * please don't make text smaller than 12px
  * for your users... firefox wont even allow it !!
@@ -523,9 +533,8 @@ fieldset {
  * some default link styling
  */
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-family: "Noto Sans", "Open Sans", Lato, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Noto Sans", "Open Sans", Lato, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: inherit; }
 
 .hidden {
   clip: rect(1px, 1px, 1px, 1px);
@@ -3975,79 +3984,86 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .txt-serif {
   font-family: "Noto Serif", Merriweather, Georgia, serif, 新細明體, PMingLiU, 华文细黑, STXihei, 宋体, SimSun, serif; }
 
-.txt-2 {
+.f2- {
   font-size: 0.75rem; }
 
-.txt-1 {
+.f1- {
   font-size: 0.875rem; }
 
-.txt-n {
+.f0 {
   font-size: 1rem; }
 
-.txt\+1, h6 {
+.f1 {
   font-size: 1.125rem; }
 
-.txt\+2, h5 {
+.f2 {
   font-size: 1.25rem; }
 
-.txt\+3, h4 {
+.f3 {
   font-size: 1.5rem; }
 
-.txt\+4, h3 {
+.f4 {
   font-size: 1.75rem; }
 
-.txt\+5, h2 {
+.f5 {
   font-size: 2rem; }
 
-.txt\+6, h1 {
+.f6 {
   font-size: 2.5rem; }
 
-.txt\+7 {
+.f7 {
   font-size: 3rem; }
 
+.f8 {
+  font-size: 4rem; }
+
 @media screen and (min-width: 48em) {
-  .tb-txt-2 {
+  .tb-f2- {
     font-size: 0.75rem; }
-  .tb-txt-1 {
+  .tb-f1- {
     font-size: 0.875rem; }
-  .tb-txt-n {
+  .tb-f0 {
     font-size: 1rem; }
-  .tb-txt\+1 {
+  .tb-f1 {
     font-size: 1.125rem; }
-  .tb-txt\+2 {
+  .tb-f2 {
     font-size: 1.25rem; }
-  .tb-txt\+3 {
+  .tb-f3 {
     font-size: 1.5rem; }
-  .tb-txt\+4 {
+  .tb-f4 {
     font-size: 1.75rem; }
-  .tb-txt\+5 {
+  .tb-f5 {
     font-size: 2rem; }
-  .tb-txt\+6 {
+  .tb-f6 {
     font-size: 2.5rem; }
-  .tb-txt\+7 {
-    font-size: 3rem; } }
+  .tb-f7 {
+    font-size: 3rem; }
+  .tb-f8 {
+    font-size: 4rem; } }
 
 @media screen and (min-width: 64em) {
-  .dt-txt-2 {
+  .dt-f2- {
     font-size: 0.75rem; }
-  .dt-txt-1 {
+  .dt-f1- {
     font-size: 0.875rem; }
-  .dt-txt-n {
+  .dt-f0 {
     font-size: 1rem; }
-  .dt-txt\+1 {
+  .dt-f1 {
     font-size: 1.125rem; }
-  .dt-txt\+2 {
+  .dt-f2 {
     font-size: 1.25rem; }
-  .dt-txt\+3 {
+  .dt-f3 {
     font-size: 1.5rem; }
-  .dt-txt\+4 {
+  .dt-f4 {
     font-size: 1.75rem; }
-  .dt-txt\+5 {
+  .dt-f5 {
     font-size: 2rem; }
-  .dt-txt\+6 {
+  .dt-f6 {
     font-size: 2.5rem; }
-  .dt-txt\+7 {
-    font-size: 3rem; } }
+  .dt-f7 {
+    font-size: 3rem; }
+  .dt-f8 {
+    font-size: 4rem; } }
 
 .fs-n {
   font-style: normal; }
@@ -4088,160 +4104,174 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .fw-black {
   font-weight: 900; }
 
-.ls-3 {
+.ls3- {
   letter-spacing: -0.075em; }
 
-.ls-2 {
+.ls2- {
   letter-spacing: -0.05em; }
 
-.ls-1 {
+.ls1- {
   letter-spacing: -0.025em; }
 
-.ls-0 {
+.ls0 {
   letter-spacing: 0; }
 
-.ls-n {
-  letter-spacing: normal; }
-
-.ls\+1 {
+.ls1 {
   letter-spacing: 0.025em; }
 
-.ls\+2 {
+.ls2 {
   letter-spacing: 0.05em; }
 
-.ls\+3 {
+.ls3 {
   letter-spacing: 0.075em; }
 
-.ls\+4 {
+.ls4 {
   letter-spacing: 0.125em; }
 
-.ls\+5 {
+.ls5 {
   letter-spacing: 0.25em; }
 
-.ls\+6 {
+.ls6 {
   letter-spacing: 0.5em; }
 
+.ls7 {
+  letter-spacing: 1em; }
+
+.lsn {
+  letter-spacing: normal; }
+
 @media screen and (min-width: 48em) {
-  .tb-ls-3 {
+  .tb-ls3- {
     letter-spacing: -0.075em; }
-  .tb-ls-2 {
+  .tb-ls2- {
     letter-spacing: -0.05em; }
-  .tb-ls-1 {
+  .tb-ls1- {
     letter-spacing: -0.025em; }
-  .tb-ls-0 {
+  .tb-ls0 {
     letter-spacing: 0; }
-  .tb-ls-n {
-    letter-spacing: normal; }
-  .tb-ls\+1 {
+  .tb-ls1 {
     letter-spacing: 0.025em; }
-  .tb-ls\+2 {
+  .tb-ls2 {
     letter-spacing: 0.05em; }
-  .tb-ls\+3 {
+  .tb-ls3 {
     letter-spacing: 0.075em; }
-  .tb-ls\+4 {
+  .tb-ls4 {
     letter-spacing: 0.125em; }
-  .tb-ls\+5 {
+  .tb-ls5 {
     letter-spacing: 0.25em; }
-  .tb-ls\+6 {
-    letter-spacing: 0.5em; } }
+  .tb-ls6 {
+    letter-spacing: 0.5em; }
+  .tb-ls7 {
+    letter-spacing: 1em; }
+  .tb-lsn {
+    letter-spacing: normal; } }
 
 @media screen and (min-width: 64em) {
-  .dt-ls-3 {
+  .dt-ls3- {
     letter-spacing: -0.075em; }
-  .dt-ls-2 {
+  .dt-ls2- {
     letter-spacing: -0.05em; }
-  .dt-ls-1 {
+  .dt-ls1- {
     letter-spacing: -0.025em; }
-  .dt-ls-0 {
+  .dt-ls0 {
     letter-spacing: 0; }
-  .dt-ls-n {
-    letter-spacing: normal; }
-  .dt-ls\+1 {
+  .dt-ls1 {
     letter-spacing: 0.025em; }
-  .dt-ls\+2 {
+  .dt-ls2 {
     letter-spacing: 0.05em; }
-  .dt-ls\+3 {
+  .dt-ls3 {
     letter-spacing: 0.075em; }
-  .dt-ls\+4 {
+  .dt-ls4 {
     letter-spacing: 0.125em; }
-  .dt-ls\+5 {
+  .dt-ls5 {
     letter-spacing: 0.25em; }
-  .dt-ls\+6 {
-    letter-spacing: 0.5em; } }
+  .dt-ls6 {
+    letter-spacing: 0.5em; }
+  .dt-ls7 {
+    letter-spacing: 1em; }
+  .dt-lsn {
+    letter-spacing: normal; } }
 
-.lh-2 {
+.lh2- {
   line-height: 0.75; }
 
-.lh-1 {
+.lh1- {
   line-height: 0.875; }
 
-.lh-n {
+.lh0 {
   line-height: 1; }
 
-.lh\+1 {
+.lh1 {
   line-height: 1.125; }
 
-.lh\+2 {
+.lh2 {
   line-height: 1.25; }
 
-.lh\+3 {
+.lh3 {
   line-height: 1.5; }
 
-.lh\+4 {
+.lh4 {
   line-height: 1.75; }
 
-.lh\+5 {
+.lh5 {
   line-height: 2; }
 
-.lh\+6 {
+.lh6 {
   line-height: 2.5; }
 
-.lh\+7 {
+.lh7 {
   line-height: 3; }
 
+.lh8 {
+  line-height: 4; }
+
 @media screen and (min-width: 48em) {
-  .tb-lh-2 {
+  .tb-lh2- {
     line-height: 0.75; }
-  .tb-lh-1 {
+  .tb-lh1- {
     line-height: 0.875; }
-  .tb-lh-n {
+  .tb-lh0 {
     line-height: 1; }
-  .tb-lh\+1 {
+  .tb-lh1 {
     line-height: 1.125; }
-  .tb-lh\+2 {
+  .tb-lh2 {
     line-height: 1.25; }
-  .tb-lh\+3 {
+  .tb-lh3 {
     line-height: 1.5; }
-  .tb-lh\+4 {
+  .tb-lh4 {
     line-height: 1.75; }
-  .tb-lh\+5 {
+  .tb-lh5 {
     line-height: 2; }
-  .tb-lh\+6 {
+  .tb-lh6 {
     line-height: 2.5; }
-  .tb-lh\+7 {
-    line-height: 3; } }
+  .tb-lh7 {
+    line-height: 3; }
+  .tb-lh8 {
+    line-height: 4; } }
 
 @media screen and (min-width: 64em) {
-  .dt-lh-2 {
+  .dt-lh2- {
     line-height: 0.75; }
-  .dt-lh-1 {
+  .dt-lh1- {
     line-height: 0.875; }
-  .dt-lh-n {
+  .dt-lh0 {
     line-height: 1; }
-  .dt-lh\+1 {
+  .dt-lh1 {
     line-height: 1.125; }
-  .dt-lh\+2 {
+  .dt-lh2 {
     line-height: 1.25; }
-  .dt-lh\+3 {
+  .dt-lh3 {
     line-height: 1.5; }
-  .dt-lh\+4 {
+  .dt-lh4 {
     line-height: 1.75; }
-  .dt-lh\+5 {
+  .dt-lh5 {
     line-height: 2; }
-  .dt-lh\+6 {
+  .dt-lh6 {
     line-height: 2.5; }
-  .dt-lh\+7 {
-    line-height: 3; } }
+  .dt-lh7 {
+    line-height: 3; }
+  .dt-lh8 {
+    line-height: 4; } }
 
 .txt-l {
   text-align: left; }
@@ -4362,22 +4392,22 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .gold {
   color: #c7aa5c; }
 
-.txt-oline {
+.oline {
   text-decoration: overline; }
 
-.txt-uline {
+.uline {
   text-decoration: underline; }
 
-.txt-strike {
+.strike {
   text-decoration: line-through; }
 
-.txt-bline {
+.bline {
   text-decoration: overline underline; }
 
-.txt-aline {
+.aline {
   text-decoration: overline line-through underline; }
 
-.txt-noline {
+.noline {
   text-decoration: none; }
 
 .txt-upper {
