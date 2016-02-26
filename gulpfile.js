@@ -63,6 +63,11 @@ gulp.task( "sass", ["wipe"], function() {
 gulp.task( "spy", function() {
 
     live.listen();
-    gulp.watch( "src/**/*.*", ["default"] );
+    gulp.watch( "src/**/*.*", [
+        "wipe",
+        "landing",
+        "docs",
+        "sass"
+    ]);
 
 });

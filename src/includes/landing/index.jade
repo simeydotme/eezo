@@ -1,9 +1,20 @@
 
-include ./partials/head
+extends ./layout/main
 
-body.bg-white
+append body
 
-    header.container.center.bg-eezo.pad-50
-        h1(class="white txt+6") Eezo
-    
-    
+    body.bg-white
+
+        header.bg-eezo.pad-v50
+            include ./partials/header
+
+
+        section.container.row.center
+
+            .col.tb-6
+                include ./partials/instead-of
+
+            .col.tb-6
+                include ./partials/do-this
+
+
