@@ -4574,28 +4574,28 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .stroke-gold {
   stroke: #c7aa5c; }
 
-.stroke-0 {
+.stroke0 {
   stroke-width: 0; }
 
-.stroke\+1 {
+.stroke1 {
   stroke-width: 0.3125rem; }
 
-.stroke\+2 {
+.stroke2 {
   stroke-width: 0.625rem; }
 
-.stroke\+3 {
+.stroke3 {
   stroke-width: 0.9375rem; }
 
-.stroke\+4 {
+.stroke4 {
   stroke-width: 1.25rem; }
 
-.stroke\+5 {
+.stroke5 {
   stroke-width: 1.875rem; }
 
-.stroke\+6 {
+.stroke6 {
   stroke-width: 2.5rem; }
 
-.stroke\+7 {
+.stroke7 {
   stroke-width: 3.125rem; }
 
 .va-base {
