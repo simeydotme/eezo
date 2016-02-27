@@ -1,7 +1,7 @@
 /*!
  * [ eezo ]
  * - css framework for massless stylesheets
- * - 0.4.3-alpha | http://github.com/simeydotme/eezo
+ * - 0.4.5-alpha | http://github.com/simeydotme/eezo
  * - @simeydotme | http://simey.me
  */
 @charset "UTF-8";
@@ -3996,22 +3996,22 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .f1 {
   font-size: 1.125rem; }
 
-.f2 {
+.f2, h6 {
   font-size: 1.25rem; }
 
-.f3 {
+.f3, h5 {
   font-size: 1.5rem; }
 
-.f4 {
+.f4, h4 {
   font-size: 1.75rem; }
 
-.f5 {
+.f5, h3 {
   font-size: 2rem; }
 
-.f6 {
+.f6, h2 {
   font-size: 2.5rem; }
 
-.f7 {
+.f7, h1 {
   font-size: 3rem; }
 
 .f8 {
