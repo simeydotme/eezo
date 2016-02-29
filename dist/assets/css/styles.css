@@ -1054,8 +1054,17 @@ h1, h2, h3, h4, h5, h6 {
 .bg-pitch {
   background-color: #161f23; }
 
-.bg-eezo {
-  background-color: #1d152c; }
+.bg-eezo-purple {
+  background-color: #25154c; }
+
+.bg-eezo-beige {
+  background-color: #fec894; }
+
+.bg-eezo-pink {
+  background-color: #f47964; }
+
+.bg-eezo-blue {
+  background-color: #185585; }
 
 .bg-blue {
   background-color: #1e9bd6; }
@@ -1198,8 +1207,17 @@ h1, h2, h3, h4, h5, h6 {
 .bor-pitch {
   border-color: #161f23; }
 
-.bor-eezo {
-  border-color: #1d152c; }
+.bor-eezo-purple {
+  border-color: #25154c; }
+
+.bor-eezo-beige {
+  border-color: #fec894; }
+
+.bor-eezo-pink {
+  border-color: #f47964; }
+
+.bor-eezo-blue {
+  border-color: #185585; }
 
 .bor-blue {
   border-color: #1e9bd6; }
@@ -1267,8 +1285,17 @@ h1, h2, h3, h4, h5, h6 {
 .bor-t-pitch {
   border-top-color: #161f23; }
 
-.bor-t-eezo {
-  border-top-color: #1d152c; }
+.bor-t-eezo-purple {
+  border-top-color: #25154c; }
+
+.bor-t-eezo-beige {
+  border-top-color: #fec894; }
+
+.bor-t-eezo-pink {
+  border-top-color: #f47964; }
+
+.bor-t-eezo-blue {
+  border-top-color: #185585; }
 
 .bor-t-blue {
   border-top-color: #1e9bd6; }
@@ -1336,8 +1363,17 @@ h1, h2, h3, h4, h5, h6 {
 .bor-b-pitch {
   border-bottom-color: #161f23; }
 
-.bor-b-eezo {
-  border-bottom-color: #1d152c; }
+.bor-b-eezo-purple {
+  border-bottom-color: #25154c; }
+
+.bor-b-eezo-beige {
+  border-bottom-color: #fec894; }
+
+.bor-b-eezo-pink {
+  border-bottom-color: #f47964; }
+
+.bor-b-eezo-blue {
+  border-bottom-color: #185585; }
 
 .bor-b-blue {
   border-bottom-color: #1e9bd6; }
@@ -1405,8 +1441,17 @@ h1, h2, h3, h4, h5, h6 {
 .bor-l-pitch {
   border-left-color: #161f23; }
 
-.bor-l-eezo {
-  border-left-color: #1d152c; }
+.bor-l-eezo-purple {
+  border-left-color: #25154c; }
+
+.bor-l-eezo-beige {
+  border-left-color: #fec894; }
+
+.bor-l-eezo-pink {
+  border-left-color: #f47964; }
+
+.bor-l-eezo-blue {
+  border-left-color: #185585; }
 
 .bor-l-blue {
   border-left-color: #1e9bd6; }
@@ -1474,8 +1519,17 @@ h1, h2, h3, h4, h5, h6 {
 .bor-r-pitch {
   border-right-color: #161f23; }
 
-.bor-r-eezo {
-  border-right-color: #1d152c; }
+.bor-r-eezo-purple {
+  border-right-color: #25154c; }
+
+.bor-r-eezo-beige {
+  border-right-color: #fec894; }
+
+.bor-r-eezo-pink {
+  border-right-color: #f47964; }
+
+.bor-r-eezo-blue {
+  border-right-color: #185585; }
 
 .bor-r-blue {
   border-right-color: #1e9bd6; }
@@ -3983,22 +4037,22 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .f1 {
   font-size: 1.125rem; }
 
-.f2 {
+.f2, h6 {
   font-size: 1.25rem; }
 
-.f3 {
+.f3, h5 {
   font-size: 1.5rem; }
 
-.f4 {
+.f4, h4 {
   font-size: 1.75rem; }
 
-.f5 {
+.f5, h3 {
   font-size: 2rem; }
 
-.f6 {
+.f6, h2 {
   font-size: 2.5rem; }
 
-.f7 {
+.f7, h1 {
   font-size: 3rem; }
 
 .f8 {
@@ -4343,8 +4397,17 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .pitch {
   color: #161f23; }
 
-.eezo {
-  color: #1d152c; }
+.eezo-purple {
+  color: #25154c; }
+
+.eezo-beige {
+  color: #fec894; }
+
+.eezo-pink {
+  color: #f47964; }
+
+.eezo-blue {
+  color: #185585; }
 
 .blue {
   color: #1e9bd6; }
@@ -4462,8 +4525,17 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .fill-pitch {
   fill: #161f23; }
 
-.fill-eezo {
-  fill: #1d152c; }
+.fill-eezo-purple {
+  fill: #25154c; }
+
+.fill-eezo-beige {
+  fill: #fec894; }
+
+.fill-eezo-pink {
+  fill: #f47964; }
+
+.fill-eezo-blue {
+  fill: #185585; }
 
 .fill-blue {
   fill: #1e9bd6; }
@@ -4531,8 +4603,17 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .stroke-pitch {
   stroke: #161f23; }
 
-.stroke-eezo {
-  stroke: #1d152c; }
+.stroke-eezo-purple {
+  stroke: #25154c; }
+
+.stroke-eezo-beige {
+  stroke: #fec894; }
+
+.stroke-eezo-pink {
+  stroke: #f47964; }
+
+.stroke-eezo-blue {
+  stroke: #185585; }
 
 .stroke-blue {
   stroke: #1e9bd6; }
@@ -4685,3 +4766,8 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     white-space: pre-wrap; }
   .dt-ws-preline {
     white-space: pre-line; } }
+
+header {
+  background-image: url("../img/nebular.jpg"); }
+  header svg path {
+    fill: #f47964; }

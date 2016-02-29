@@ -8,7 +8,6 @@ var del = require("del"),
 
 
 gulp.task( "default", [
-        "wipe",
         "landing",
         "docs",
         "sass"
@@ -18,16 +17,17 @@ gulp.task( "default", [
 
     });
 
-gulp.task( "wipe", function() {
-    return del( ["./index.html", "./dist/**/*.*"] );
-});
+gulp.task( "landing", function() {
 
-gulp.task( "landing", ["wipe"], function() {
+    del( ["./index.html"] );
 
     return gulp.src([
             "src/index.jade"
         ])
-        .pipe( jade({ pretty: true }).on("error", function(err) {
+        .pipe( jade({
+            pretty: true,
+            basedir: "./"
+        }).on("error", function(err) {
               console.log(err);
         }) )
         .pipe( gulp.dest("./") )
@@ -35,13 +35,18 @@ gulp.task( "landing", ["wipe"], function() {
 
 });
 
-gulp.task( "docs", ["wipe"], function() {
+gulp.task( "docs", function() {
+
+    del( ["./dist/docs/*.html"] );
 
     return gulp.src([
             "src/includes/docs/**/*.jade",
             "!**/partials/**/*"
         ])
-        .pipe( jade({ pretty: true }).on("error", function(err) {
+        .pipe( jade({
+            pretty: true,
+            basedir: "./"
+        }).on("error", function(err) {
               console.log(err);
         }) )
         .pipe( gulp.dest("./dist/docs") )
@@ -49,7 +54,9 @@ gulp.task( "docs", ["wipe"], function() {
 
 });
 
-gulp.task( "sass", ["wipe"], function() {
+gulp.task( "sass", function() {
+
+    del( ["./dist/**/*.css"] );
 
     return gulp.src([
             "./src/assets/*.scss"
@@ -60,11 +67,17 @@ gulp.task( "sass", ["wipe"], function() {
 
 });
 
+gulp.task( "img", function() {
+
+    return gulp.src([ "./src/assets/*.*(jpg|svg|png|jpeg|gif)" ])
+        .pipe( gulp.dest("./dist/assets/img") );
+
+});
+
 gulp.task( "spy", function() {
 
     live.listen();
     gulp.watch( "src/**/*.*", [
-        "wipe",
         "landing",
         "docs",
         "sass"

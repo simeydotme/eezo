@@ -1,6 +1,28 @@
 
+$eezo-purple:   #25154c;
+$eezo-beige:    #fec894;
+$eezo-pink:     #f47964;
+$eezo-blue:     #185585;
+
 $custom-colors: (
-    eezo: #1d152c
+
+    eezo-purple:    $eezo-purple,
+    eezo-beige:     $eezo-beige,
+    eezo-pink:      $eezo-pink,
+    eezo-blue:      $eezo-blue,
+
 );
 
 @import "bower_components/eezo/src/eezo";
+
+header {
+
+    background-image: url( "../img/nebular.jpg" );
+
+    svg path {
+
+        fill: $eezo-pink;
+
+    }
+
+}
