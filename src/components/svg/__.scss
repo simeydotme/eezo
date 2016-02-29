@@ -1,15 +1,12 @@
 
-$svg-colors:            $colors !default;
+$svg-colors:        $colors !default;
 
 
 
 @import "fill";
-@import "stroke";
 
 @mixin svgs() {
 
     @include svg-fill();
-    @include svg-stroke-color();
-    @include svg-stroke-width();
 
 }

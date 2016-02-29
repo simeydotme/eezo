@@ -13,8 +13,11 @@ $svg-fill-colors:       $svg-colors !default;
         $key: nth( $clr, 1 );
         $val: nth( $clr, 2 );
 
-        .#{ $p }#{ $key } {
+        .#{ $p }#{ $key },
+        .#{ $p }#{ $key } path {
+
             fill: $val;
+
         }
 
     }
