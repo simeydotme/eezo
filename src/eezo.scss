@@ -25,6 +25,7 @@
     @include fieldsets();
     @include clears();
     @include headings();
+    @include hide();
     @include visibility();
 
 /*

@@ -536,10 +536,36 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Noto Sans", "Open Sans", Lato, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: inherit; }
 
+.hide {
+  display: none !important; }
+
+@media screen and (min-width: 0em) and (max-width: 47.9375em) {
+  .mb-only-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 48em) {
+  .tb-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 48em) and (max-width: 63.9375em) {
+  .tb-only-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 64em) {
+  .dt-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {
+  .dt-only-hide {
+    display: none !important; } }
+
 .hidden {
   clip: rect(1px, 1px, 1px, 1px);
   overflow: hidden;
   position: fixed; }
+
+.invisible {
+  visibility: hidden; }
 
 /*
  * eezo's form styling

@@ -37,4 +37,44 @@
 
     }
 
+    .invisible {
+
+        visibility: hidden;
+
+    }
+
+}
+
+@mixin hide() {
+
+    .hide {
+
+        display: none !important;
+
+    }
+
+    @each $b in $default-bps {
+
+        @if $b != nth( $default-bps, 1 ) {
+
+            @include breakpoint( $b ) {
+
+                .#{ hyphen-after($b) }#{ "hide" } {
+                    display: none !important;
+                }
+
+            }
+
+        }
+
+        @include breakpoint( $b "only" ) {
+
+            .#{ hyphen-after($b) }#{ "only-hide" } {
+                display: none !important;
+            }
+
+        }
+
+    }
+
 }
