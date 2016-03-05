@@ -15,6 +15,7 @@ $text-bps:      $default-bps !default;
 @import "style";
 @import "transform";
 @import "weight";
+@import "whitespace";
 @import "wrap";
 
 @mixin texts() {
@@ -29,6 +30,7 @@ $text-bps:      $default-bps !default;
     @include text-color();
     @include text-decoration();
     @include text-transform();
+    @include white-space();
     @include word-break();
     @include word-spacing();
     @include word-wrap();

@@ -4130,92 +4130,92 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .fw-black {
   font-weight: 900; }
 
-.letter-sp3- {
+.ls3- {
   letter-spacing: -0.075em; }
 
-.letter-sp2- {
+.ls2- {
   letter-spacing: -0.05em; }
 
-.letter-sp1- {
+.ls1- {
   letter-spacing: -0.025em; }
 
-.letter-sp0 {
+.ls0 {
   letter-spacing: 0; }
 
-.letter-sp1 {
+.ls1 {
   letter-spacing: 0.025em; }
 
-.letter-sp2 {
+.ls2 {
   letter-spacing: 0.05em; }
 
-.letter-sp3 {
+.ls3 {
   letter-spacing: 0.075em; }
 
-.letter-sp4 {
+.ls4 {
   letter-spacing: 0.125em; }
 
-.letter-sp5 {
+.ls5 {
   letter-spacing: 0.25em; }
 
-.letter-sp6 {
+.ls6 {
   letter-spacing: 0.5em; }
 
-.letter-sp7 {
+.ls7 {
   letter-spacing: 1em; }
 
-.letter-spn {
+.lsn {
   letter-spacing: normal; }
 
 @media screen and (min-width: 48em) {
-  .tb-letter-sp3- {
+  .tb-ls3- {
     letter-spacing: -0.075em; }
-  .tb-letter-sp2- {
+  .tb-ls2- {
     letter-spacing: -0.05em; }
-  .tb-letter-sp1- {
+  .tb-ls1- {
     letter-spacing: -0.025em; }
-  .tb-letter-sp0 {
+  .tb-ls0 {
     letter-spacing: 0; }
-  .tb-letter-sp1 {
+  .tb-ls1 {
     letter-spacing: 0.025em; }
-  .tb-letter-sp2 {
+  .tb-ls2 {
     letter-spacing: 0.05em; }
-  .tb-letter-sp3 {
+  .tb-ls3 {
     letter-spacing: 0.075em; }
-  .tb-letter-sp4 {
+  .tb-ls4 {
     letter-spacing: 0.125em; }
-  .tb-letter-sp5 {
+  .tb-ls5 {
     letter-spacing: 0.25em; }
-  .tb-letter-sp6 {
+  .tb-ls6 {
     letter-spacing: 0.5em; }
-  .tb-letter-sp7 {
+  .tb-ls7 {
     letter-spacing: 1em; }
-  .tb-letter-spn {
+  .tb-lsn {
     letter-spacing: normal; } }
 
 @media screen and (min-width: 64em) {
-  .dt-letter-sp3- {
+  .dt-ls3- {
     letter-spacing: -0.075em; }
-  .dt-letter-sp2- {
+  .dt-ls2- {
     letter-spacing: -0.05em; }
-  .dt-letter-sp1- {
+  .dt-ls1- {
     letter-spacing: -0.025em; }
-  .dt-letter-sp0 {
+  .dt-ls0 {
     letter-spacing: 0; }
-  .dt-letter-sp1 {
+  .dt-ls1 {
     letter-spacing: 0.025em; }
-  .dt-letter-sp2 {
+  .dt-ls2 {
     letter-spacing: 0.05em; }
-  .dt-letter-sp3 {
+  .dt-ls3 {
     letter-spacing: 0.075em; }
-  .dt-letter-sp4 {
+  .dt-ls4 {
     letter-spacing: 0.125em; }
-  .dt-letter-sp5 {
+  .dt-ls5 {
     letter-spacing: 0.25em; }
-  .dt-letter-sp6 {
+  .dt-ls6 {
     letter-spacing: 0.5em; }
-  .dt-letter-sp7 {
+  .dt-ls7 {
     letter-spacing: 1em; }
-  .dt-letter-spn {
+  .dt-lsn {
     letter-spacing: normal; } }
 
 .lh2- {
@@ -4468,6 +4468,45 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   .dt-txt-none {
     text-transform: none; } }
 
+.whs-wrap {
+  white-space: normal; }
+
+.whs-nowrap {
+  white-space: nowrap; }
+
+.whs-pre {
+  white-space: pre; }
+
+.whs-prewrap {
+  white-space: pre-wrap; }
+
+.whs-preline {
+  white-space: pre-line; }
+
+@media screen and (min-width: 48em) {
+  .tb-whs-wrap {
+    white-space: normal; }
+  .tb-whs-nowrap {
+    white-space: nowrap; }
+  .tb-whs-pre {
+    white-space: pre; }
+  .tb-whs-prewrap {
+    white-space: pre-wrap; }
+  .tb-whs-preline {
+    white-space: pre-line; } }
+
+@media screen and (min-width: 64em) {
+  .dt-whs-wrap {
+    white-space: normal; }
+  .dt-whs-nowrap {
+    white-space: nowrap; }
+  .dt-whs-pre {
+    white-space: pre; }
+  .dt-whs-prewrap {
+    white-space: pre-wrap; }
+  .dt-whs-preline {
+    white-space: pre-line; } }
+
 .wb-break {
   word-break: break-all; }
 
@@ -4493,92 +4532,92 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   .dt-wb-normal {
     word-break: normal; } }
 
-.word-sp3- {
+.ws3- {
   word-spacing: -0.075em; }
 
-.word-sp2- {
+.ws2- {
   word-spacing: -0.05em; }
 
-.word-sp1- {
+.ws1- {
   word-spacing: -0.025em; }
 
-.word-sp0 {
+.ws0 {
   word-spacing: 0; }
 
-.word-sp1 {
+.ws1 {
   word-spacing: 0.025em; }
 
-.word-sp2 {
+.ws2 {
   word-spacing: 0.05em; }
 
-.word-sp3 {
+.ws3 {
   word-spacing: 0.075em; }
 
-.word-sp4 {
+.ws4 {
   word-spacing: 0.125em; }
 
-.word-sp5 {
+.ws5 {
   word-spacing: 0.25em; }
 
-.word-sp6 {
+.ws6 {
   word-spacing: 0.5em; }
 
-.word-sp7 {
+.ws7 {
   word-spacing: 1em; }
 
-.word-spn {
+.wsn {
   word-spacing: normal; }
 
 @media screen and (min-width: 48em) {
-  .tb-word-sp3- {
+  .tb-ws3- {
     word-spacing: -0.075em; }
-  .tb-word-sp2- {
+  .tb-ws2- {
     word-spacing: -0.05em; }
-  .tb-word-sp1- {
+  .tb-ws1- {
     word-spacing: -0.025em; }
-  .tb-word-sp0 {
+  .tb-ws0 {
     word-spacing: 0; }
-  .tb-word-sp1 {
+  .tb-ws1 {
     word-spacing: 0.025em; }
-  .tb-word-sp2 {
+  .tb-ws2 {
     word-spacing: 0.05em; }
-  .tb-word-sp3 {
+  .tb-ws3 {
     word-spacing: 0.075em; }
-  .tb-word-sp4 {
+  .tb-ws4 {
     word-spacing: 0.125em; }
-  .tb-word-sp5 {
+  .tb-ws5 {
     word-spacing: 0.25em; }
-  .tb-word-sp6 {
+  .tb-ws6 {
     word-spacing: 0.5em; }
-  .tb-word-sp7 {
+  .tb-ws7 {
     word-spacing: 1em; }
-  .tb-word-spn {
+  .tb-wsn {
     word-spacing: normal; } }
 
 @media screen and (min-width: 64em) {
-  .dt-word-sp3- {
+  .dt-ws3- {
     word-spacing: -0.075em; }
-  .dt-word-sp2- {
+  .dt-ws2- {
     word-spacing: -0.05em; }
-  .dt-word-sp1- {
+  .dt-ws1- {
     word-spacing: -0.025em; }
-  .dt-word-sp0 {
+  .dt-ws0 {
     word-spacing: 0; }
-  .dt-word-sp1 {
+  .dt-ws1 {
     word-spacing: 0.025em; }
-  .dt-word-sp2 {
+  .dt-ws2 {
     word-spacing: 0.05em; }
-  .dt-word-sp3 {
+  .dt-ws3 {
     word-spacing: 0.075em; }
-  .dt-word-sp4 {
+  .dt-ws4 {
     word-spacing: 0.125em; }
-  .dt-word-sp5 {
+  .dt-ws5 {
     word-spacing: 0.25em; }
-  .dt-word-sp6 {
+  .dt-ws6 {
     word-spacing: 0.5em; }
-  .dt-word-sp7 {
+  .dt-ws7 {
     word-spacing: 1em; }
-  .dt-word-spn {
+  .dt-wsn {
     word-spacing: normal; } }
 
 .ww-break {
@@ -4739,42 +4778,3 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     vertical-align: text-top; }
   .dt-va-tbot {
     vertical-align: text-bottom; } }
-
-.ws-wrap {
-  white-space: normal; }
-
-.ws-nowrap {
-  white-space: nowrap; }
-
-.ws-pre {
-  white-space: pre; }
-
-.ws-prewrap {
-  white-space: pre-wrap; }
-
-.ws-preline {
-  white-space: pre-line; }
-
-@media screen and (min-width: 48em) {
-  .tb-ws-wrap {
-    white-space: normal; }
-  .tb-ws-nowrap {
-    white-space: nowrap; }
-  .tb-ws-pre {
-    white-space: pre; }
-  .tb-ws-prewrap {
-    white-space: pre-wrap; }
-  .tb-ws-preline {
-    white-space: pre-line; } }
-
-@media screen and (min-width: 64em) {
-  .dt-ws-wrap {
-    white-space: normal; }
-  .dt-ws-nowrap {
-    white-space: nowrap; }
-  .dt-ws-pre {
-    white-space: pre; }
-  .dt-ws-prewrap {
-    white-space: pre-wrap; }
-  .dt-ws-preline {
-    white-space: pre-line; } }

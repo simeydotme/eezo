@@ -1,5 +1,5 @@
 
-$letter-spacing-prop:   "letter-sp" !default;
+$letter-spacing-prop:   "ls" !default;
 $letter-spacings: (
 
     "3-":   -0.075em,
@@ -17,7 +17,7 @@ $letter-spacings: (
 
 ) !default;
 
-$word-spacing-prop:   "word-sp" !default;
+$word-spacing-prop:   "ws" !default;
 $word-spacings: $letter-spacings !default;
 
 

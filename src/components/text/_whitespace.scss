@@ -1,8 +1,8 @@
 
-$whitespace-prop:       "ws" !default;
-$whitespace-bps:        $default-bps !default;
+$white-space-prop:       "whs" !default;
+$white-space-bps:        $default-bps !default;
 
-$whitespaces: (
+$white-spaces: (
 
     "wrap":         normal,
     "nowrap":       nowrap,
@@ -14,9 +14,9 @@ $whitespaces: (
 
 
 
-@mixin whitespaces( $bps: $whitespace-bps ) {
+@mixin white-space( $bps: $white-space-bps ) {
 
-    $p: hyphen-after( $whitespace-prop );
+    $p: hyphen-after( $white-space-prop );
 
     @each $b in $bps {
 
@@ -28,7 +28,7 @@ $whitespaces: (
 
             $bp: hyphen-after( $b );
 
-            @each $space in $whitespaces {
+            @each $space in $white-spaces {
 
                 $key: nth( $space, 1 );
                 $val: nth( $space, 2 );
