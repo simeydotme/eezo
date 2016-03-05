@@ -10,7 +10,7 @@
   "license": "MIT",
   "main": "src/eezo.scss",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "gulp"
   },
   "repository": {
     "type": "git",
