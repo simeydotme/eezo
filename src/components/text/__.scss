@@ -27,5 +27,6 @@ $text-bps:      $default-bps !default;
     @include text-color();
     @include text-decoration();
     @include text-transform();
+    @include word-spacing();
 
 }

@@ -4104,92 +4104,92 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .fw-black {
   font-weight: 900; }
 
-.ls3- {
+.letter-sp3- {
   letter-spacing: -0.075em; }
 
-.ls2- {
+.letter-sp2- {
   letter-spacing: -0.05em; }
 
-.ls1- {
+.letter-sp1- {
   letter-spacing: -0.025em; }
 
-.ls0 {
+.letter-sp0 {
   letter-spacing: 0; }
 
-.ls1 {
+.letter-sp1 {
   letter-spacing: 0.025em; }
 
-.ls2 {
+.letter-sp2 {
   letter-spacing: 0.05em; }
 
-.ls3 {
+.letter-sp3 {
   letter-spacing: 0.075em; }
 
-.ls4 {
+.letter-sp4 {
   letter-spacing: 0.125em; }
 
-.ls5 {
+.letter-sp5 {
   letter-spacing: 0.25em; }
 
-.ls6 {
+.letter-sp6 {
   letter-spacing: 0.5em; }
 
-.ls7 {
+.letter-sp7 {
   letter-spacing: 1em; }
 
-.lsn {
+.letter-spn {
   letter-spacing: normal; }
 
 @media screen and (min-width: 48em) {
-  .tb-ls3- {
+  .tb-letter-sp3- {
     letter-spacing: -0.075em; }
-  .tb-ls2- {
+  .tb-letter-sp2- {
     letter-spacing: -0.05em; }
-  .tb-ls1- {
+  .tb-letter-sp1- {
     letter-spacing: -0.025em; }
-  .tb-ls0 {
+  .tb-letter-sp0 {
     letter-spacing: 0; }
-  .tb-ls1 {
+  .tb-letter-sp1 {
     letter-spacing: 0.025em; }
-  .tb-ls2 {
+  .tb-letter-sp2 {
     letter-spacing: 0.05em; }
-  .tb-ls3 {
+  .tb-letter-sp3 {
     letter-spacing: 0.075em; }
-  .tb-ls4 {
+  .tb-letter-sp4 {
     letter-spacing: 0.125em; }
-  .tb-ls5 {
+  .tb-letter-sp5 {
     letter-spacing: 0.25em; }
-  .tb-ls6 {
+  .tb-letter-sp6 {
     letter-spacing: 0.5em; }
-  .tb-ls7 {
+  .tb-letter-sp7 {
     letter-spacing: 1em; }
-  .tb-lsn {
+  .tb-letter-spn {
     letter-spacing: normal; } }
 
 @media screen and (min-width: 64em) {
-  .dt-ls3- {
+  .dt-letter-sp3- {
     letter-spacing: -0.075em; }
-  .dt-ls2- {
+  .dt-letter-sp2- {
     letter-spacing: -0.05em; }
-  .dt-ls1- {
+  .dt-letter-sp1- {
     letter-spacing: -0.025em; }
-  .dt-ls0 {
+  .dt-letter-sp0 {
     letter-spacing: 0; }
-  .dt-ls1 {
+  .dt-letter-sp1 {
     letter-spacing: 0.025em; }
-  .dt-ls2 {
+  .dt-letter-sp2 {
     letter-spacing: 0.05em; }
-  .dt-ls3 {
+  .dt-letter-sp3 {
     letter-spacing: 0.075em; }
-  .dt-ls4 {
+  .dt-letter-sp4 {
     letter-spacing: 0.125em; }
-  .dt-ls5 {
+  .dt-letter-sp5 {
     letter-spacing: 0.25em; }
-  .dt-ls6 {
+  .dt-letter-sp6 {
     letter-spacing: 0.5em; }
-  .dt-ls7 {
+  .dt-letter-sp7 {
     letter-spacing: 1em; }
-  .dt-lsn {
+  .dt-letter-spn {
     letter-spacing: normal; } }
 
 .lh2- {
@@ -4441,6 +4441,94 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     text-transform: capitalize; }
   .dt-txt-none {
     text-transform: none; } }
+
+.word-sp3- {
+  word-spacing: -0.075em; }
+
+.word-sp2- {
+  word-spacing: -0.05em; }
+
+.word-sp1- {
+  word-spacing: -0.025em; }
+
+.word-sp0 {
+  word-spacing: 0; }
+
+.word-sp1 {
+  word-spacing: 0.025em; }
+
+.word-sp2 {
+  word-spacing: 0.05em; }
+
+.word-sp3 {
+  word-spacing: 0.075em; }
+
+.word-sp4 {
+  word-spacing: 0.125em; }
+
+.word-sp5 {
+  word-spacing: 0.25em; }
+
+.word-sp6 {
+  word-spacing: 0.5em; }
+
+.word-sp7 {
+  word-spacing: 1em; }
+
+.word-spn {
+  word-spacing: normal; }
+
+@media screen and (min-width: 48em) {
+  .tb-word-sp3- {
+    word-spacing: -0.075em; }
+  .tb-word-sp2- {
+    word-spacing: -0.05em; }
+  .tb-word-sp1- {
+    word-spacing: -0.025em; }
+  .tb-word-sp0 {
+    word-spacing: 0; }
+  .tb-word-sp1 {
+    word-spacing: 0.025em; }
+  .tb-word-sp2 {
+    word-spacing: 0.05em; }
+  .tb-word-sp3 {
+    word-spacing: 0.075em; }
+  .tb-word-sp4 {
+    word-spacing: 0.125em; }
+  .tb-word-sp5 {
+    word-spacing: 0.25em; }
+  .tb-word-sp6 {
+    word-spacing: 0.5em; }
+  .tb-word-sp7 {
+    word-spacing: 1em; }
+  .tb-word-spn {
+    word-spacing: normal; } }
+
+@media screen and (min-width: 64em) {
+  .dt-word-sp3- {
+    word-spacing: -0.075em; }
+  .dt-word-sp2- {
+    word-spacing: -0.05em; }
+  .dt-word-sp1- {
+    word-spacing: -0.025em; }
+  .dt-word-sp0 {
+    word-spacing: 0; }
+  .dt-word-sp1 {
+    word-spacing: 0.025em; }
+  .dt-word-sp2 {
+    word-spacing: 0.05em; }
+  .dt-word-sp3 {
+    word-spacing: 0.075em; }
+  .dt-word-sp4 {
+    word-spacing: 0.125em; }
+  .dt-word-sp5 {
+    word-spacing: 0.25em; }
+  .dt-word-sp6 {
+    word-spacing: 0.5em; }
+  .dt-word-sp7 {
+    word-spacing: 1em; }
+  .dt-word-spn {
+    word-spacing: normal; } }
 
 .fill-x,
 .fill-x path {
