@@ -3,16 +3,24 @@ extends ./layout/main
 
 append body
 
-    body.bg-white
+    include ../nav
 
-        include ./partials/header
+    include ./partials/header
 
-        section.container.row.center
+    section.container.row.center
 
-            .col.tb-6
-                include ./partials/instead-of
+        .col.tb-6.pad-h50
+            p
+                | Eezo is a composable set of html classes which can be
+                | used to define and build a website's style.
 
-            .col.tb-6
-                include ./partials/do-this
+        .col.tb-6.pad-h50
+            p
+                | Developers should be spending less time writing
+                | css, and more time thinking about important stuff like
+                | performance and architecture.
+
+            p: em
+                | And css is notoriously easy to f**k up.
 
 

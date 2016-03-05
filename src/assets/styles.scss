@@ -1,8 +1,8 @@
 
-$eezo-purple:   #25154c;
+$eezo-purple:   #B8A2FD;
 $eezo-beige:    #fec894;
-$eezo-pink:     #f47964;
-$eezo-blue:     #185585;
+$eezo-pink:     #F77F9F;
+$eezo-blue:     #6CAEDA;
 
 $custom-colors: (
 
@@ -13,7 +13,13 @@ $custom-colors: (
 
 );
 
+$link-normal: $eezo-blue;
+$link-visited: $eezo-blue;
+$link-hover: $eezo-pink;
+
 @import "bower_components/eezo/src/eezo";
+$pitch: map-get( $colors, pitch );
+
 
 header {
 
@@ -21,7 +27,17 @@ header {
 
     svg path {
 
-        fill: $eezo-pink;
+        fill: $pitch;
+
+    }
+
+}
+
+nav {
+
+    ul {
+
+        list-style: none;
 
     }
 

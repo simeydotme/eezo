@@ -5,11 +5,16 @@
     <meta description="a lightweight and responsive css framework">
     <link rel="stylesheet" href="./dist/assets/css/styles.css">
   </head>
-  <body></body>
-  <body class="bg-white">
-    <header class="landing-header bg-eezo-purple bg-c pad-v50">
+  <body class="f3 lh3 bg-pitch light">
+    <nav class="container center pad-v20 txt-sans">
+      <ul class="mar-0 pad-0 txt-r">
+        <li class="disp-ib"><a href="./" class="pad-h30 pad-v20 link">home</a></li>
+        <li class="disp-ib"><a href="./dist/docs/" class="pad-h30 pad-v20 link">docs</a></li>
+      </ul>
+    </nav>
+    <header class="landing-header bg-eezo-purple bg-c pad-v20">
       <div class="container center">
-        <h1 class="mb-8 center pad-v50"><svg id="eezo-type" data-name="eezo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 535.78 98">
+        <h1 class="mb-10 tb-6 center pad-v20"><svg id="eezo-type" data-name="eezo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 535.78 98">
   <title>eezo</title>
   <g>
     <path class="eezo-e1" d="M31.08,88.06c-1.12,2.52-2.8,6.44-3.22,7.28C27.16,96.6,25.62,98,22.4,98H0V2.8A3.06,3.06,0,0,1,3.08,0H29.26L25.9,7.28c-0.56,1.26-2.1,2.8-5.32,2.8H12.46a2.28,2.28,0,0,0-2.38,2.38V41.58H25.2C24.08,44.1,22.4,48.16,22,49c-0.7,1.26-2.1,2.66-5.32,2.66h-4.2A2.45,2.45,0,0,0,10.08,54v34h21Z" fill="#222"/>
@@ -22,36 +27,21 @@
         </h1>
       </div>
     </header>
-    <h2 class="txt-c ls-5">massless stylesheets.</h2>
+    <h2 class="f7 fw-thin ls4 ws6 txt-c">massless stylesheets</h2>
     <section class="container row center">
-      <div class="col tb-6">
-        <div class="bg-cream pad-v15 pad-h30">
-          <pre><code data-lang="html">&lt;header class="my-header"&gt;
-
-    my header
-
-&lt;/header&gt;
-</code></pre>
-          <pre><code data-lang="css">.my-header {
-    color: white;
-    background: black;
-    padding: 15px 30px;
-    margin: 10px;
-}</code></pre>
-        </div>
+      <div class="col tb-6 pad-h50">
+        <p>
+          Eezo is a composable set of html classes which can be
+          used to define and build a website's style.
+        </p>
       </div>
-      <div class="col tb-6">
-        <div class="bg-cream pad-v15 pad-h30">
-          <h3>html</h3>
-          <pre><code data-lang="html">&lt;header class="my-header /
-    white bg-black pad-v15 pad-h30 mar-10"&gt;
-
-    my header
-
-&lt;/header&gt;
-</code></pre>
-          <pre><code data-lang="css">/* :) */</code></pre>
-        </div>
+      <div class="col tb-6 pad-h50">
+        <p>
+          Developers should be spending less time writing
+          css, and more time thinking about important stuff like
+          performance and architecture.
+        </p>
+        <p><em>And css is notoriously easy to f**k up.</em></p>
       </div>
     </section>
   </body>
