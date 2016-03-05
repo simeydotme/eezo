@@ -4,13 +4,14 @@ $valign-bps:        $default-bps !default;
 
 $valigns: (
 
-    "base":     baeline,
+    "base":     baseline,
+    "bot":      bottom,
+    "mid":      middle,
     "sub":      sub,
     "sup":      super,
     "top":      top,
-    "bot":      bottom,
-    "ttop":     text-top,
     "tbot":     text-bottom,
+    "ttop":     text-top,
 
 ) !default;
 

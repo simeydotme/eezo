@@ -1,7 +1,7 @@
 /*!
  * [ eezo ]
  * - css framework for massless stylesheets
- * - 0.5.0-alpha | http://github.com/simeydotme/eezo
+ * - 0.5.1-alpha | http://github.com/simeydotme/eezo
  * - @simeydotme | http://simey.me
  */
 @charset "UTF-8";
@@ -4727,7 +4727,13 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   fill: #c7aa5c; }
 
 .va-base {
-  vertical-align: baeline; }
+  vertical-align: baseline; }
+
+.va-bot {
+  vertical-align: bottom; }
+
+.va-mid {
+  vertical-align: middle; }
 
 .va-sub {
   vertical-align: sub; }
@@ -4738,43 +4744,44 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .va-top {
   vertical-align: top; }
 
-.va-bot {
-  vertical-align: bottom; }
+.va-tbot {
+  vertical-align: text-bottom; }
 
 .va-ttop {
   vertical-align: text-top; }
 
-.va-tbot {
-  vertical-align: text-bottom; }
-
 @media screen and (min-width: 48em) {
   .tb-va-base {
-    vertical-align: baeline; }
+    vertical-align: baseline; }
+  .tb-va-bot {
+    vertical-align: bottom; }
+  .tb-va-mid {
+    vertical-align: middle; }
   .tb-va-sub {
     vertical-align: sub; }
   .tb-va-sup {
     vertical-align: super; }
   .tb-va-top {
     vertical-align: top; }
-  .tb-va-bot {
-    vertical-align: bottom; }
-  .tb-va-ttop {
-    vertical-align: text-top; }
   .tb-va-tbot {
-    vertical-align: text-bottom; } }
+    vertical-align: text-bottom; }
+  .tb-va-ttop {
+    vertical-align: text-top; } }
 
 @media screen and (min-width: 64em) {
   .dt-va-base {
-    vertical-align: baeline; }
+    vertical-align: baseline; }
+  .dt-va-bot {
+    vertical-align: bottom; }
+  .dt-va-mid {
+    vertical-align: middle; }
   .dt-va-sub {
     vertical-align: sub; }
   .dt-va-sup {
     vertical-align: super; }
   .dt-va-top {
     vertical-align: top; }
-  .dt-va-bot {
-    vertical-align: bottom; }
-  .dt-va-ttop {
-    vertical-align: text-top; }
   .dt-va-tbot {
-    vertical-align: text-bottom; } }
+    vertical-align: text-bottom; }
+  .dt-va-ttop {
+    vertical-align: text-top; } }
