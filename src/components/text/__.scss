@@ -5,6 +5,7 @@ $text-bps:      $default-bps !default;
 
 
 @import "align";
+@import "break";
 @import "color";
 @import "decoration";
 @import "family";
@@ -27,6 +28,7 @@ $text-bps:      $default-bps !default;
     @include text-color();
     @include text-decoration();
     @include text-transform();
+    @include word-break();
     @include word-spacing();
 
 }

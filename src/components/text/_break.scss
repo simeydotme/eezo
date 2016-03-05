@@ -1,0 +1,42 @@
+
+$word-break-prop:   "wb" !default;
+$word-breaks: (
+
+    break:      break-all,
+    keep:       keep-all,
+    normal:     normal,
+
+) !default;
+
+
+
+@mixin word-break( $bps: $text-bps ) {
+
+    $p: hyphen-after( $word-break-prop );
+
+    @each $b in $bps {
+
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
+
+        @include breakpoint( $b ) {
+
+            $bp: hyphen-after( $b );
+
+            @each $trans in $word-breaks {
+
+                $key: nth( $trans, 1 );
+                $val: nth( $trans, 2 );
+
+                .#{ $bp }#{ $p }#{ $key } {
+                    word-break: $val;
+                }
+
+            }
+
+        }
+
+    }
+
+}

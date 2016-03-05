@@ -4442,6 +4442,31 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   .dt-txt-none {
     text-transform: none; } }
 
+.wb-break {
+  word-break: break-all; }
+
+.wb-keep {
+  word-break: keep-all; }
+
+.wb-normal {
+  word-break: normal; }
+
+@media screen and (min-width: 48em) {
+  .tb-wb-break {
+    word-break: break-all; }
+  .tb-wb-keep {
+    word-break: keep-all; }
+  .tb-wb-normal {
+    word-break: normal; } }
+
+@media screen and (min-width: 64em) {
+  .dt-wb-break {
+    word-break: break-all; }
+  .dt-wb-keep {
+    word-break: keep-all; }
+  .dt-wb-normal {
+    word-break: normal; } }
+
 .word-sp3- {
   word-spacing: -0.075em; }
 
