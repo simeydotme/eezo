@@ -1,0 +1,41 @@
+
+$word-wrap-prop:   "ww" !default;
+$word-wraps: (
+
+    break:      break-word,
+    normal:     normal,
+
+) !default;
+
+
+
+@mixin word-wrap( $bps: $text-bps ) {
+
+    $p: hyphen-after( $word-wrap-prop );
+
+    @each $b in $bps {
+
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
+
+        @include breakpoint( $b ) {
+
+            $bp: hyphen-after( $b );
+
+            @each $trans in $word-wraps {
+
+                $key: nth( $trans, 1 );
+                $val: nth( $trans, 2 );
+
+                .#{ $bp }#{ $p }#{ $key } {
+                    word-wrap: $val;
+                }
+
+            }
+
+        }
+
+    }
+
+}

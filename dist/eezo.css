@@ -4555,6 +4555,24 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   .dt-word-spn {
     word-spacing: normal; } }
 
+.ww-break {
+  word-wrap: break-word; }
+
+.ww-normal {
+  word-wrap: normal; }
+
+@media screen and (min-width: 48em) {
+  .tb-ww-break {
+    word-wrap: break-word; }
+  .tb-ww-normal {
+    word-wrap: normal; } }
+
+@media screen and (min-width: 64em) {
+  .dt-ww-break {
+    word-wrap: break-word; }
+  .dt-ww-normal {
+    word-wrap: normal; } }
+
 .fill-x,
 .fill-x path {
   fill: transparent; }
