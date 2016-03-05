@@ -26,6 +26,10 @@ $fonts: (
 
 ) !default;
 
+$custom-fonts: () !default;
+
+$fonts: map-merge( $fonts, $custom-fonts );
+
 
 
 @mixin font-family() {
