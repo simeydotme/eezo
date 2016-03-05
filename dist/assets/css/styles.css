@@ -1083,6 +1083,9 @@ h1, h2, h3, h4, h5, h6 {
 .bg-eezo-purple {
   background-color: #B8A2FD; }
 
+.bg-eezo-dark-purple {
+  background-color: #191627; }
+
 .bg-eezo-beige {
   background-color: #fec894; }
 
@@ -1236,6 +1239,9 @@ h1, h2, h3, h4, h5, h6 {
 .bor-eezo-purple {
   border-color: #B8A2FD; }
 
+.bor-eezo-dark-purple {
+  border-color: #191627; }
+
 .bor-eezo-beige {
   border-color: #fec894; }
 
@@ -1313,6 +1319,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .bor-t-eezo-purple {
   border-top-color: #B8A2FD; }
+
+.bor-t-eezo-dark-purple {
+  border-top-color: #191627; }
 
 .bor-t-eezo-beige {
   border-top-color: #fec894; }
@@ -1392,6 +1401,9 @@ h1, h2, h3, h4, h5, h6 {
 .bor-b-eezo-purple {
   border-bottom-color: #B8A2FD; }
 
+.bor-b-eezo-dark-purple {
+  border-bottom-color: #191627; }
+
 .bor-b-eezo-beige {
   border-bottom-color: #fec894; }
 
@@ -1470,6 +1482,9 @@ h1, h2, h3, h4, h5, h6 {
 .bor-l-eezo-purple {
   border-left-color: #B8A2FD; }
 
+.bor-l-eezo-dark-purple {
+  border-left-color: #191627; }
+
 .bor-l-eezo-beige {
   border-left-color: #fec894; }
 
@@ -1547,6 +1562,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .bor-r-eezo-purple {
   border-right-color: #B8A2FD; }
+
+.bor-r-eezo-dark-purple {
+  border-right-color: #191627; }
 
 .bor-r-eezo-beige {
   border-right-color: #fec894; }
@@ -4426,6 +4444,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .eezo-purple {
   color: #B8A2FD; }
 
+.eezo-dark-purple {
+  color: #191627; }
+
 .eezo-beige {
   color: #fec894; }
 
@@ -4735,6 +4756,10 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .fill-eezo-purple path {
   fill: #B8A2FD; }
 
+.fill-eezo-dark-purple,
+.fill-eezo-dark-purple path {
+  fill: #191627; }
+
 .fill-eezo-beige,
 .fill-eezo-beige path {
   fill: #fec894; }
@@ -4796,7 +4821,13 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   fill: #c7aa5c; }
 
 .va-base {
-  vertical-align: baeline; }
+  vertical-align: baseline; }
+
+.va-bot {
+  vertical-align: bottom; }
+
+.va-mid {
+  vertical-align: middle; }
 
 .va-sub {
   vertical-align: sub; }
@@ -4807,49 +4838,55 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .va-top {
   vertical-align: top; }
 
-.va-bot {
-  vertical-align: bottom; }
+.va-tbot {
+  vertical-align: text-bottom; }
 
 .va-ttop {
   vertical-align: text-top; }
 
-.va-tbot {
-  vertical-align: text-bottom; }
-
 @media screen and (min-width: 48em) {
   .tb-va-base {
-    vertical-align: baeline; }
+    vertical-align: baseline; }
+  .tb-va-bot {
+    vertical-align: bottom; }
+  .tb-va-mid {
+    vertical-align: middle; }
   .tb-va-sub {
     vertical-align: sub; }
   .tb-va-sup {
     vertical-align: super; }
   .tb-va-top {
     vertical-align: top; }
-  .tb-va-bot {
-    vertical-align: bottom; }
-  .tb-va-ttop {
-    vertical-align: text-top; }
   .tb-va-tbot {
-    vertical-align: text-bottom; } }
+    vertical-align: text-bottom; }
+  .tb-va-ttop {
+    vertical-align: text-top; } }
 
 @media screen and (min-width: 64em) {
   .dt-va-base {
-    vertical-align: baeline; }
+    vertical-align: baseline; }
+  .dt-va-bot {
+    vertical-align: bottom; }
+  .dt-va-mid {
+    vertical-align: middle; }
   .dt-va-sub {
     vertical-align: sub; }
   .dt-va-sup {
     vertical-align: super; }
   .dt-va-top {
     vertical-align: top; }
-  .dt-va-bot {
-    vertical-align: bottom; }
-  .dt-va-ttop {
-    vertical-align: text-top; }
   .dt-va-tbot {
-    vertical-align: text-bottom; } }
+    vertical-align: text-bottom; }
+  .dt-va-ttop {
+    vertical-align: text-top; } }
 
 header {
-  background-image: url("../img/nebular.jpg"); }
+  background-image: url("../img/nebular@0,25x.jpg");
+  background-size: cover; }
+  @media screen and (min-width: 48em) {
+    header {
+      background-image: url("../img/nebular.jpg");
+      background-size: auto; } }
   header svg path {
     fill: #161f23; }
 

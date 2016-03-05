@@ -59,7 +59,7 @@ gulp.task( "sass", function() {
     del( ["./dist/**/*.css"] );
 
     return gulp.src([
-            "./src/assets/*.scss"
+            "./src/assets/css/*.scss"
         ])
         .pipe( sass().on("error", sass.logError ) )
         .pipe( gulp.dest("./dist/assets/css") )
@@ -69,8 +69,8 @@ gulp.task( "sass", function() {
 
 gulp.task( "img", function() {
 
-    return gulp.src([ "./src/assets/*.*(jpg|svg|png|jpeg|gif)" ])
-        .pipe( gulp.dest("./dist/assets/img") );
+    return gulp.src([ "./src/assets/img/**/*.*(jpg|svg|png|jpeg|gif)" ])
+        .pipe( gulp.dest("./dist/assets/img/") );
 
 });
 
