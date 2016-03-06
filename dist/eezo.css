@@ -1,7 +1,7 @@
 /*!
  * [ eezo ]
  * - css framework for massless stylesheets
- * - 0.5.1-alpha | http://github.com/simeydotme/eezo
+ * - 0.5.2-alpha | http://github.com/simeydotme/eezo
  * - @simeydotme | http://simey.me
  */
 @charset "UTF-8";
@@ -141,6 +141,11 @@
  * mixin to load normalize in to the framework
  * - can decide to not load it if already have
  * - normalize as part of your workflow.
+ */
+/**
+ * source order matters for borders;
+ * the colours must come after the styles, else
+ * they will not be overridden.
  */
 /*
  * a set of opinions about
@@ -1207,360 +1212,6 @@ h1, h2, h3, h4, h5, h6 {
   .dt-bg-con {
     background-size: contain; } }
 
-.bor-x {
-  border-color: transparent; }
-
-.bor-blk {
-  border-color: #000; }
-
-.bor-black {
-  border-color: #1a1a1a; }
-
-.bor-cream {
-  border-color: #f7f2eb; }
-
-.bor-wht {
-  border-color: #fff; }
-
-.bor-white {
-  border-color: #f9f9f9; }
-
-.bor-grey {
-  border-color: #82848e; }
-
-.bor-dark {
-  border-color: #575c67; }
-
-.bor-light {
-  border-color: #b5b8bf; }
-
-.bor-pitch {
-  border-color: #161f23; }
-
-.bor-blue {
-  border-color: #1e9bd6; }
-
-.bor-green {
-  border-color: #1ed668; }
-
-.bor-mint {
-  border-color: #31e894; }
-
-.bor-orange {
-  border-color: #d66a1e; }
-
-.bor-pink {
-  border-color: #ec2666; }
-
-.bor-purple {
-  border-color: #5930d6; }
-
-.bor-red {
-  border-color: #d61e40; }
-
-.bor-teal {
-  border-color: #26ab92; }
-
-.bor-violet {
-  border-color: #981bd8; }
-
-.bor-yellow {
-  border-color: #d6d01e; }
-
-.bor-silver {
-  border-color: #dde3e6; }
-
-.bor-gold {
-  border-color: #c7aa5c; }
-
-.bor-t-x {
-  border-top-color: transparent; }
-
-.bor-t-blk {
-  border-top-color: #000; }
-
-.bor-t-black {
-  border-top-color: #1a1a1a; }
-
-.bor-t-cream {
-  border-top-color: #f7f2eb; }
-
-.bor-t-wht {
-  border-top-color: #fff; }
-
-.bor-t-white {
-  border-top-color: #f9f9f9; }
-
-.bor-t-grey {
-  border-top-color: #82848e; }
-
-.bor-t-dark {
-  border-top-color: #575c67; }
-
-.bor-t-light {
-  border-top-color: #b5b8bf; }
-
-.bor-t-pitch {
-  border-top-color: #161f23; }
-
-.bor-t-blue {
-  border-top-color: #1e9bd6; }
-
-.bor-t-green {
-  border-top-color: #1ed668; }
-
-.bor-t-mint {
-  border-top-color: #31e894; }
-
-.bor-t-orange {
-  border-top-color: #d66a1e; }
-
-.bor-t-pink {
-  border-top-color: #ec2666; }
-
-.bor-t-purple {
-  border-top-color: #5930d6; }
-
-.bor-t-red {
-  border-top-color: #d61e40; }
-
-.bor-t-teal {
-  border-top-color: #26ab92; }
-
-.bor-t-violet {
-  border-top-color: #981bd8; }
-
-.bor-t-yellow {
-  border-top-color: #d6d01e; }
-
-.bor-t-silver {
-  border-top-color: #dde3e6; }
-
-.bor-t-gold {
-  border-top-color: #c7aa5c; }
-
-.bor-b-x {
-  border-bottom-color: transparent; }
-
-.bor-b-blk {
-  border-bottom-color: #000; }
-
-.bor-b-black {
-  border-bottom-color: #1a1a1a; }
-
-.bor-b-cream {
-  border-bottom-color: #f7f2eb; }
-
-.bor-b-wht {
-  border-bottom-color: #fff; }
-
-.bor-b-white {
-  border-bottom-color: #f9f9f9; }
-
-.bor-b-grey {
-  border-bottom-color: #82848e; }
-
-.bor-b-dark {
-  border-bottom-color: #575c67; }
-
-.bor-b-light {
-  border-bottom-color: #b5b8bf; }
-
-.bor-b-pitch {
-  border-bottom-color: #161f23; }
-
-.bor-b-blue {
-  border-bottom-color: #1e9bd6; }
-
-.bor-b-green {
-  border-bottom-color: #1ed668; }
-
-.bor-b-mint {
-  border-bottom-color: #31e894; }
-
-.bor-b-orange {
-  border-bottom-color: #d66a1e; }
-
-.bor-b-pink {
-  border-bottom-color: #ec2666; }
-
-.bor-b-purple {
-  border-bottom-color: #5930d6; }
-
-.bor-b-red {
-  border-bottom-color: #d61e40; }
-
-.bor-b-teal {
-  border-bottom-color: #26ab92; }
-
-.bor-b-violet {
-  border-bottom-color: #981bd8; }
-
-.bor-b-yellow {
-  border-bottom-color: #d6d01e; }
-
-.bor-b-silver {
-  border-bottom-color: #dde3e6; }
-
-.bor-b-gold {
-  border-bottom-color: #c7aa5c; }
-
-.bor-l-x {
-  border-left-color: transparent; }
-
-.bor-l-blk {
-  border-left-color: #000; }
-
-.bor-l-black {
-  border-left-color: #1a1a1a; }
-
-.bor-l-cream {
-  border-left-color: #f7f2eb; }
-
-.bor-l-wht {
-  border-left-color: #fff; }
-
-.bor-l-white {
-  border-left-color: #f9f9f9; }
-
-.bor-l-grey {
-  border-left-color: #82848e; }
-
-.bor-l-dark {
-  border-left-color: #575c67; }
-
-.bor-l-light {
-  border-left-color: #b5b8bf; }
-
-.bor-l-pitch {
-  border-left-color: #161f23; }
-
-.bor-l-blue {
-  border-left-color: #1e9bd6; }
-
-.bor-l-green {
-  border-left-color: #1ed668; }
-
-.bor-l-mint {
-  border-left-color: #31e894; }
-
-.bor-l-orange {
-  border-left-color: #d66a1e; }
-
-.bor-l-pink {
-  border-left-color: #ec2666; }
-
-.bor-l-purple {
-  border-left-color: #5930d6; }
-
-.bor-l-red {
-  border-left-color: #d61e40; }
-
-.bor-l-teal {
-  border-left-color: #26ab92; }
-
-.bor-l-violet {
-  border-left-color: #981bd8; }
-
-.bor-l-yellow {
-  border-left-color: #d6d01e; }
-
-.bor-l-silver {
-  border-left-color: #dde3e6; }
-
-.bor-l-gold {
-  border-left-color: #c7aa5c; }
-
-.bor-r-x {
-  border-right-color: transparent; }
-
-.bor-r-blk {
-  border-right-color: #000; }
-
-.bor-r-black {
-  border-right-color: #1a1a1a; }
-
-.bor-r-cream {
-  border-right-color: #f7f2eb; }
-
-.bor-r-wht {
-  border-right-color: #fff; }
-
-.bor-r-white {
-  border-right-color: #f9f9f9; }
-
-.bor-r-grey {
-  border-right-color: #82848e; }
-
-.bor-r-dark {
-  border-right-color: #575c67; }
-
-.bor-r-light {
-  border-right-color: #b5b8bf; }
-
-.bor-r-pitch {
-  border-right-color: #161f23; }
-
-.bor-r-blue {
-  border-right-color: #1e9bd6; }
-
-.bor-r-green {
-  border-right-color: #1ed668; }
-
-.bor-r-mint {
-  border-right-color: #31e894; }
-
-.bor-r-orange {
-  border-right-color: #d66a1e; }
-
-.bor-r-pink {
-  border-right-color: #ec2666; }
-
-.bor-r-purple {
-  border-right-color: #5930d6; }
-
-.bor-r-red {
-  border-right-color: #d61e40; }
-
-.bor-r-teal {
-  border-right-color: #26ab92; }
-
-.bor-r-violet {
-  border-right-color: #981bd8; }
-
-.bor-r-yellow {
-  border-right-color: #d6d01e; }
-
-.bor-r-silver {
-  border-right-color: #dde3e6; }
-
-.bor-r-gold {
-  border-right-color: #c7aa5c; }
-
-.bor-rad0 {
-  border-radius: 0; }
-
-.bor-rad1 {
-  border-radius: 0.0625rem; }
-
-.bor-rad2 {
-  border-radius: 0.125rem; }
-
-.bor-rad3 {
-  border-radius: 0.1875rem; }
-
-.bor-rad4 {
-  border-radius: 0.25rem; }
-
-.bor-rad5 {
-  border-radius: 0.3125rem; }
-
-.bor-rad10 {
-  border-radius: 0.625rem; }
-
-.bor-circle {
-  border-radius: 100%; }
-
 .bor-0 {
   border: none; }
 
@@ -1914,6 +1565,360 @@ h1, h2, h3, h4, h5, h6 {
     border-right: 0.1875rem dashed; }
   .dt-bor-r3dot {
     border-right: 0.1875rem dotted; } }
+
+.bor-x {
+  border-color: transparent; }
+
+.bor-blk {
+  border-color: #000; }
+
+.bor-black {
+  border-color: #1a1a1a; }
+
+.bor-cream {
+  border-color: #f7f2eb; }
+
+.bor-wht {
+  border-color: #fff; }
+
+.bor-white {
+  border-color: #f9f9f9; }
+
+.bor-grey {
+  border-color: #82848e; }
+
+.bor-dark {
+  border-color: #575c67; }
+
+.bor-light {
+  border-color: #b5b8bf; }
+
+.bor-pitch {
+  border-color: #161f23; }
+
+.bor-blue {
+  border-color: #1e9bd6; }
+
+.bor-green {
+  border-color: #1ed668; }
+
+.bor-mint {
+  border-color: #31e894; }
+
+.bor-orange {
+  border-color: #d66a1e; }
+
+.bor-pink {
+  border-color: #ec2666; }
+
+.bor-purple {
+  border-color: #5930d6; }
+
+.bor-red {
+  border-color: #d61e40; }
+
+.bor-teal {
+  border-color: #26ab92; }
+
+.bor-violet {
+  border-color: #981bd8; }
+
+.bor-yellow {
+  border-color: #d6d01e; }
+
+.bor-silver {
+  border-color: #dde3e6; }
+
+.bor-gold {
+  border-color: #c7aa5c; }
+
+.bor-t-x {
+  border-top-color: transparent; }
+
+.bor-t-blk {
+  border-top-color: #000; }
+
+.bor-t-black {
+  border-top-color: #1a1a1a; }
+
+.bor-t-cream {
+  border-top-color: #f7f2eb; }
+
+.bor-t-wht {
+  border-top-color: #fff; }
+
+.bor-t-white {
+  border-top-color: #f9f9f9; }
+
+.bor-t-grey {
+  border-top-color: #82848e; }
+
+.bor-t-dark {
+  border-top-color: #575c67; }
+
+.bor-t-light {
+  border-top-color: #b5b8bf; }
+
+.bor-t-pitch {
+  border-top-color: #161f23; }
+
+.bor-t-blue {
+  border-top-color: #1e9bd6; }
+
+.bor-t-green {
+  border-top-color: #1ed668; }
+
+.bor-t-mint {
+  border-top-color: #31e894; }
+
+.bor-t-orange {
+  border-top-color: #d66a1e; }
+
+.bor-t-pink {
+  border-top-color: #ec2666; }
+
+.bor-t-purple {
+  border-top-color: #5930d6; }
+
+.bor-t-red {
+  border-top-color: #d61e40; }
+
+.bor-t-teal {
+  border-top-color: #26ab92; }
+
+.bor-t-violet {
+  border-top-color: #981bd8; }
+
+.bor-t-yellow {
+  border-top-color: #d6d01e; }
+
+.bor-t-silver {
+  border-top-color: #dde3e6; }
+
+.bor-t-gold {
+  border-top-color: #c7aa5c; }
+
+.bor-b-x {
+  border-bottom-color: transparent; }
+
+.bor-b-blk {
+  border-bottom-color: #000; }
+
+.bor-b-black {
+  border-bottom-color: #1a1a1a; }
+
+.bor-b-cream {
+  border-bottom-color: #f7f2eb; }
+
+.bor-b-wht {
+  border-bottom-color: #fff; }
+
+.bor-b-white {
+  border-bottom-color: #f9f9f9; }
+
+.bor-b-grey {
+  border-bottom-color: #82848e; }
+
+.bor-b-dark {
+  border-bottom-color: #575c67; }
+
+.bor-b-light {
+  border-bottom-color: #b5b8bf; }
+
+.bor-b-pitch {
+  border-bottom-color: #161f23; }
+
+.bor-b-blue {
+  border-bottom-color: #1e9bd6; }
+
+.bor-b-green {
+  border-bottom-color: #1ed668; }
+
+.bor-b-mint {
+  border-bottom-color: #31e894; }
+
+.bor-b-orange {
+  border-bottom-color: #d66a1e; }
+
+.bor-b-pink {
+  border-bottom-color: #ec2666; }
+
+.bor-b-purple {
+  border-bottom-color: #5930d6; }
+
+.bor-b-red {
+  border-bottom-color: #d61e40; }
+
+.bor-b-teal {
+  border-bottom-color: #26ab92; }
+
+.bor-b-violet {
+  border-bottom-color: #981bd8; }
+
+.bor-b-yellow {
+  border-bottom-color: #d6d01e; }
+
+.bor-b-silver {
+  border-bottom-color: #dde3e6; }
+
+.bor-b-gold {
+  border-bottom-color: #c7aa5c; }
+
+.bor-l-x {
+  border-left-color: transparent; }
+
+.bor-l-blk {
+  border-left-color: #000; }
+
+.bor-l-black {
+  border-left-color: #1a1a1a; }
+
+.bor-l-cream {
+  border-left-color: #f7f2eb; }
+
+.bor-l-wht {
+  border-left-color: #fff; }
+
+.bor-l-white {
+  border-left-color: #f9f9f9; }
+
+.bor-l-grey {
+  border-left-color: #82848e; }
+
+.bor-l-dark {
+  border-left-color: #575c67; }
+
+.bor-l-light {
+  border-left-color: #b5b8bf; }
+
+.bor-l-pitch {
+  border-left-color: #161f23; }
+
+.bor-l-blue {
+  border-left-color: #1e9bd6; }
+
+.bor-l-green {
+  border-left-color: #1ed668; }
+
+.bor-l-mint {
+  border-left-color: #31e894; }
+
+.bor-l-orange {
+  border-left-color: #d66a1e; }
+
+.bor-l-pink {
+  border-left-color: #ec2666; }
+
+.bor-l-purple {
+  border-left-color: #5930d6; }
+
+.bor-l-red {
+  border-left-color: #d61e40; }
+
+.bor-l-teal {
+  border-left-color: #26ab92; }
+
+.bor-l-violet {
+  border-left-color: #981bd8; }
+
+.bor-l-yellow {
+  border-left-color: #d6d01e; }
+
+.bor-l-silver {
+  border-left-color: #dde3e6; }
+
+.bor-l-gold {
+  border-left-color: #c7aa5c; }
+
+.bor-r-x {
+  border-right-color: transparent; }
+
+.bor-r-blk {
+  border-right-color: #000; }
+
+.bor-r-black {
+  border-right-color: #1a1a1a; }
+
+.bor-r-cream {
+  border-right-color: #f7f2eb; }
+
+.bor-r-wht {
+  border-right-color: #fff; }
+
+.bor-r-white {
+  border-right-color: #f9f9f9; }
+
+.bor-r-grey {
+  border-right-color: #82848e; }
+
+.bor-r-dark {
+  border-right-color: #575c67; }
+
+.bor-r-light {
+  border-right-color: #b5b8bf; }
+
+.bor-r-pitch {
+  border-right-color: #161f23; }
+
+.bor-r-blue {
+  border-right-color: #1e9bd6; }
+
+.bor-r-green {
+  border-right-color: #1ed668; }
+
+.bor-r-mint {
+  border-right-color: #31e894; }
+
+.bor-r-orange {
+  border-right-color: #d66a1e; }
+
+.bor-r-pink {
+  border-right-color: #ec2666; }
+
+.bor-r-purple {
+  border-right-color: #5930d6; }
+
+.bor-r-red {
+  border-right-color: #d61e40; }
+
+.bor-r-teal {
+  border-right-color: #26ab92; }
+
+.bor-r-violet {
+  border-right-color: #981bd8; }
+
+.bor-r-yellow {
+  border-right-color: #d6d01e; }
+
+.bor-r-silver {
+  border-right-color: #dde3e6; }
+
+.bor-r-gold {
+  border-right-color: #c7aa5c; }
+
+.bor-rad0 {
+  border-radius: 0; }
+
+.bor-rad1 {
+  border-radius: 0.0625rem; }
+
+.bor-rad2 {
+  border-radius: 0.125rem; }
+
+.bor-rad3 {
+  border-radius: 0.1875rem; }
+
+.bor-rad4 {
+  border-radius: 0.25rem; }
+
+.bor-rad5 {
+  border-radius: 0.3125rem; }
+
+.bor-rad10 {
+  border-radius: 0.625rem; }
+
+.bor-circle {
+  border-radius: 100%; }
 
 .cur-n {
   cursor: none; }

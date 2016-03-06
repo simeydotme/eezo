@@ -13,15 +13,19 @@ $border-coords: (
 ) !default;
 
 
-
+/**
+ * source order matters for borders;
+ * the colours must come after the styles, else
+ * they will not be overridden.
+ */
+@import "style";
 @import "color";
 @import "radius";
-@import "style";
 
 @mixin borders() {
 
+    @include border-style();
     @include border-color();
     @include border-radius();
-    @include border-style();
 
 }
