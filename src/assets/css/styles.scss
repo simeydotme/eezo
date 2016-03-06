@@ -4,6 +4,9 @@ $eezo-dark-purple:      #32295F;
 $eezo-beige:            #fec894;
 $eezo-pink:             #F77F9F;
 $eezo-blue:             #6CAEDA;
+$eezo-pitch:            #161f23;
+$eezo-pitch-lighter:    lighten( $eezo-pitch, 5% );
+$eezo-pitch-darker:     darken( $eezo-pitch, 5% );
 
 $custom-colors: (
 
@@ -12,6 +15,9 @@ $custom-colors: (
     eezo-beige:         $eezo-beige,
     eezo-pink:          $eezo-pink,
     eezo-blue:          $eezo-blue,
+    eezo-pitch:         $eezo-pitch,
+    eezo-pitch-lighter: $eezo-pitch-lighter,
+    eezo-pitch-darker:  $eezo-pitch-darker,
 
 );
 
@@ -20,10 +26,11 @@ $link-visited: $eezo-blue;
 $link-hover: $eezo-pink;
 
 @import "bower_components/eezo/src/eezo";
+
 $pitch: map-get( $colors, pitch );
 
 
-header {
+.landing-header {
 
     background-image: url( "../img/nebular@0,25x.jpg" );
     background-size: cover;
@@ -38,6 +45,22 @@ header {
     svg path {
 
         fill: $pitch;
+
+    }
+
+}
+
+.docs-header {
+
+    &__logo { 
+
+        width: 200px;
+
+    }
+
+    svg path {
+
+        fill: white;
 
     }
 

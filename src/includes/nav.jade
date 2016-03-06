@@ -1,11 +1,11 @@
 
-nav.container.center.pad-v20.pad-h20.txt-sans
+nav.pos-a.t0.r0.pad-20.txt-sans
 
-    ul.mar-0.pad-0.txt-r
+    ul.mar-0.pad-0.txt-r.float-r
 
-        each link, name in { "home": "./", "docs": "./dist/docs/" }
+        each link, name in { "home": "/", "docs": "/dist/docs/" }
 
             li.disp-ib
 
-                a( href= link ).pad-h30.pad-v20.link= name
+                a( href= link ).pad-h30.pad-v20.link.white= name
 

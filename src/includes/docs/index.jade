@@ -1,4 +1,10 @@
 
-include ./partials/head
+extends ../layout/main
 
-body
+block styles
+    link(rel="stylesheet" href="../assets/css/styles.css")
+
+append body
+
+    include ./partials/header
+
