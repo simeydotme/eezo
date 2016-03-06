@@ -1,34 +1,47 @@
 
-$eezo-purple:           #B8A2FD;
-$eezo-dark-purple:      #32295F;
-$eezo-beige:            #fec894;
-$eezo-pink:             #F77F9F;
-$eezo-blue:             #6CAEDA;
-$eezo-pitch:            #161f23;
-$eezo-pitch-lighter:    lighten( $eezo-pitch, 5% );
-$eezo-pitch-darker:     darken( $eezo-pitch, 5% );
+$purple:            #B8A2FD;
+$dark-purple:       #32295F;
+$beige:             #fec894;
+$pink:              #F77F9F;
+$blue:              #6CAEDA;
+$pitch:             #161f23;
+$pitch-lighter:     lighten( $pitch, 5% );
+$pitch-darker:      darken( $pitch, 5% );
 
 $custom-colors: (
 
-    eezo-purple:        $eezo-purple,
-    eezo-dark-purple:   $eezo-dark-purple,
-    eezo-beige:         $eezo-beige,
-    eezo-pink:          $eezo-pink,
-    eezo-blue:          $eezo-blue,
-    eezo-pitch:         $eezo-pitch,
-    eezo-pitch-lighter: $eezo-pitch-lighter,
-    eezo-pitch-darker:  $eezo-pitch-darker,
+    purple:         $purple,
+    dark-purple:    $dark-purple,
+    beige:          $beige,
+    pink:           $pink,
+    blue:           $blue,
+    pitch:          $pitch,
+    pitch-lighter:  $pitch-lighter,
+    pitch-darker:   $pitch-darker,
 
 );
 
-$link-normal: $eezo-blue;
-$link-visited: $eezo-blue;
-$link-hover: $eezo-pink;
+$link-normal:   $blue;
+$link-hover:    $pink;
 
 @import "bower_components/eezo/src/eezo";
 
 $pitch: map-get( $colors, pitch );
 
+
+
+
+
+
+nav {
+
+    ul {
+
+        list-style: none;
+
+    }
+
+}
 
 .landing-header {
 
@@ -60,18 +73,26 @@ $pitch: map-get( $colors, pitch );
 
     svg path {
 
-        fill: white;
+        fill: $blue;
 
     }
 
 }
 
-nav {
+.docs-sidebar {
+
+    width: 250px;
 
     ul {
 
         list-style: none;
 
     }
+
+}
+
+.docs-content {
+
+    margin-right: 350px;
 
 }

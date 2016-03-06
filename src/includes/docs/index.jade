@@ -1,10 +1,36 @@
 
-extends ../layout/main
+extends ./layout/columns
 
-block styles
-    link(rel="stylesheet" href="../assets/css/styles.css")
+append content
 
-append body
+    h2 Installation
 
-    include ./partials/header
+    p
+        | There's a couple of ways to get Eezo running,
+        | there's the classic method of downloading a css
+        | file and including, or the more advanced Bower method.
 
+
+    h3 Download a bundle
+
+    p
+        | Perhaps the simplest way to get Eezo running is
+        | to download and include one of the bundles from
+        | Github. There's a few options, listed below.
+
+    table.txt-sans.mb-12.txt-l
+        tr
+            th(scope=col).bor-b1.bor-b-dark Bundle Name
+            th(scope=col).bor-b1 Size
+            th(scope=col).bor-b1 Download
+
+        tr
+            th(scope=row).mb-7
+                div Core
+                .fw-n
+                    | The basic bundle for Eezo, containing the most
+                    | common css compositions, no extra weight.
+            td.txt-code 7.65kb
+            td: a(href="#").btn-alt.noline.pad-h20 Core
+
+    h3 Install with Bower
