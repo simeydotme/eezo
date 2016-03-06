@@ -35,16 +35,16 @@ $eezo-pitch:     #161f23;
 
 $base-colors: (
 
-    "x":        $eezo-x,
-    "blk":      $eezo-blk,
-    "black":    $eezo-black,
-    "cream":    $eezo-cream,
-    "wht":      $eezo-wht,
-    "white":    $eezo-white,
-    "grey":     $eezo-grey,
-    "dark":     $eezo-dark,
-    "light":    $eezo-light,
-    "pitch":    $eezo-pitch,
+    x:          $eezo-x,
+    blk:        $eezo-blk,
+    black:      $eezo-black,
+    cream:      $eezo-cream,
+    wht:        $eezo-wht,
+    white:      $eezo-white,
+    grey:       $eezo-grey,
+    dark:       $eezo-dark,
+    light:      $eezo-light,
+    pitch:      $eezo-pitch,
 
 );
 
@@ -74,18 +74,18 @@ $eezo-gold:     #c7aa5c;
 
 $extra-colors: (
 
-    "blue":     $eezo-blue,
-    "green":    $eezo-green,
-    "mint":     $eezo-mint,
-    "orange":   $eezo-orange,
-    "pink":     $eezo-pink,
-    "purple":   $eezo-purple,
-    "red":      $eezo-red,
-    "teal":     $eezo-teal,
-    "violet":   $eezo-violet,
-    "yellow":   $eezo-yellow,
-    "silver":   $eezo-silver,
-    "gold":     $eezo-gold,
+    blue:       $eezo-blue,
+    green:      $eezo-green,
+    mint:       $eezo-mint,
+    orange:     $eezo-orange,
+    pink:       $eezo-pink,
+    purple:     $eezo-purple,
+    red:        $eezo-red,
+    teal:       $eezo-teal,
+    violet:     $eezo-violet,
+    yellow:     $eezo-yellow,
+    silver:     $eezo-silver,
+    gold:       $eezo-gold,
 
 );
 
@@ -95,5 +95,5 @@ $colors: map-merge( $colors, $base-colors );
 $colors: map-merge( $colors, $custom-colors );
 
 @if ( $no-extra-colors != true ) {
-    $colors: map-merge( $colors, $extra-colors );
+    $colors: map-merge( $extra-colors, $colors );
 }
