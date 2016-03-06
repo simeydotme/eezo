@@ -1,10 +1,14 @@
 
 /**
  * import all the components of eezo.
- * - regardless of your project, this should
- * - always happen. each component is loaded
- * - via a mixin, so this import can be done
- * - safely without generating any CSS.
+ *
+ *      regardless of your project, this should
+ *      always happen. each component is loaded
+ *      via a mixin, so this import can be done
+ *      safely without generating any CSS.
+ *
+ *      it also gives access to the eezo variables.
+ *
  */
 
     @import "eezo-imports";

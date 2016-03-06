@@ -12,12 +12,12 @@ var _ = require("lodash"),
     sourcemaps = require("gulp-sourcemaps");
 
 var out =       "./dist",
-    minName =   "eezo.min.css",
+    minName =   function( x ) { return x + ".min.css"; },
     nanoOpts =  { safe: true },
     style =     { outputStyle: "nested" },
-    regular =   { title: "~~ 🐢 | "},
-    minified =  { title: "~~ 🐇 | "},
-    gzipped =   { title: "~~ 🐆 | ", gzip: true },
+    regular =   function( x ) { return { title: "~~ 🐢 | " + x + " |" }; },
+    minified =  function( x ) { return { title: "~~ 🐇 | " + x + " |" }; },
+    gzipped =   function( x ) { return { title: "~~ 🐆 | " + x + " |" , gzip: true }; },
 
     banner = function( type ) {
 
@@ -30,7 +30,49 @@ var out =       "./dist",
             interpolate: /{{=\s*?(.*?)\s*?}}/g
         })( pkg ));
 
-    };
+    },
+
+    maxTask = function( path, name ) {
+
+        return gulp.src( path )
+
+            .pipe( sourcemaps.init() )
+            .pipe( sass( style ).on( "error", sass.logError ) )
+            .pipe( prefix() )
+            .pipe( header( banner() ) )
+            .pipe( gulp.dest( out ) );
+
+    },
+
+    minTask = function( path, name ) {
+
+        return gulp.src( path )
+
+            .pipe( sourcemaps.init() )
+            .pipe( sass( style ).on( "error", sass.logError ) )
+            .pipe( prefix() )
+            .pipe( size( regular( name ) ) )
+            .pipe( nano( nanoOpts ) )
+            .pipe( header( banner() ) )
+            .pipe( size( minified( name ) ) )
+            .pipe( size( gzipped( name ) ) )
+            .pipe( rename( minName( name ) ) )
+            .pipe( sourcemaps.write("./") )
+            .pipe( gulp.dest( out ) );
+
+    },
+
+    bundles = [{
+
+        name: "eezo",
+        path: "./src/eezo.scss"
+
+    },{
+
+        name: "eezo-core",
+        path: "./src/bundles/eezo-core.scss"
+
+    }];
 
 gulp.task( "clean", function() {
 
@@ -40,31 +82,21 @@ gulp.task( "clean", function() {
 
 gulp.task( "max", ["clean"], function() {
 
-    return gulp.src("./src/eezo.scss")
+    _.each( bundles, function( obj, key ) {
 
-        .pipe( sourcemaps.init() )
-        .pipe( sass( style ).on( "error", sass.logError ) )
-        .pipe( prefix() )
-        .pipe( header( banner() ) )
-        .pipe( gulp.dest( out ) );
+        return maxTask( obj.path, obj.name );
+
+    });
 
 });
 
 gulp.task( "min", ["clean"], function() {
 
-    return gulp.src("./src/eezo.scss")
+    _.each( bundles, function( obj, key ) {
 
-        .pipe( sourcemaps.init() )
-        .pipe( sass( style ).on( "error", sass.logError ) )
-        .pipe( prefix() )
-        .pipe( size( regular ) )
-        .pipe( nano( nanoOpts ) )
-        .pipe( header( banner() ) )
-        .pipe( size( minified ) )
-        .pipe( size( gzipped ) )
-        .pipe( rename( minName ) )
-        .pipe( sourcemaps.write("./") )
-        .pipe( gulp.dest( out ) );
+        return minTask( obj.path, obj.name );
+
+    });
 
 });
 

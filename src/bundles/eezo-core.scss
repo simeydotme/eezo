@@ -1,0 +1,101 @@
+
+/**
+ * configure the core modules to have cut down
+ * maps, which will lighten the overall kb.
+ */
+
+    $no-extra-colors: true;
+
+    $border-styles: (
+        "":         solid,
+    );
+
+    $cursors: (
+        "d":        default,
+        "p":        pointer,
+        "t":        text,
+        "h":        help,
+        "g":        grab,
+        "gb":       grabbing,
+    );
+
+    $displays: (
+        "n":        none,
+        "i":        inline,
+        "b":        block,
+        "ib":       inline-block,
+        "tb":       table,
+        "tc":       table-cell,
+    );
+
+    $valigns: (
+        "base":     baseline,
+        "bot":      bottom,
+        "mid":      middle,
+        "top":      top,
+    );
+
+/**
+ * import all the components of eezo.
+ *
+ *      regardless of your project, this should
+ *      always happen. each component is loaded
+ *      via a mixin, so this import can be done
+ *      safely without generating any CSS.
+ *
+ *      it also gives access to the eezo variables.
+ *
+ */
+
+    @import "../eezo-imports";
+
+// ====================================================
+//      include each component's mixin one-by-one.
+//  this is the core bundle, with the most basic includes
+// ====================================================
+
+/*
+ * a set of opinions about
+ * default HTML styling
+ */
+
+    @include normalize();
+    @include opinions();
+    @include anchors();
+    @include clears();
+    @include headings();
+    @include hide();
+    @include visibility();
+
+/*
+ * no form styling
+ */
+
+/*
+ * no grid
+ */
+
+/*
+ * eezo's main component styling
+ */
+
+    @include background-color();
+    @include background-repeat();
+    @include background-size();
+
+    @include borders();
+    @include cursors();
+    @include displays();
+    @include floats();
+    @include links();
+
+    @include margin();
+
+    @include overflows();
+    @include paddings();
+
+    @include position();
+    @include positioning();
+
+    @include texts();
+    @include valigns();
