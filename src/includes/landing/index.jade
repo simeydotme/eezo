@@ -1,30 +1,32 @@
 
 extends ../layout/main
 
-append body
+block body
 
-    include ./partials/header
+    body.f3.lh3.pos-r.pad-b50.bg-pitch.light
 
-    section.container.row.center.pad-h20
+        include ./partials/header
 
-        .col.tb-6.pad-h50
+        section.container.row.center.pad-h20
 
-            h3.fw-thin What is it?
-            p
-                | Eezo is a composable set of html classes which can be
-                | used to define and build a website's style. Define your
-                | scales, colours, patterns, etc. Then reuse them over and
-                | over without writing CSS.
+            .col.tb-6.pad-h50
 
-        .col.tb-6.pad-h50
+                h3 What is it?
+                p
+                    | Eezo is a composable set of html classes which can be
+                    | used to define and build a website's style. Define your
+                    | scales, colours, patterns, etc. Then reuse them over and
+                    | over without writing CSS.
 
-            h3.fw-thin Why should I care?
-            p
-                | Developers should be spending less time writing
-                | css, and more time thinking about important stuff like
-                | performance, architecture and what to eat for lunch!
+            .col.tb-6.pad-h50
 
-            p: em
-                | And css is notoriously easy to f**k up.
+                h3 Why should I care?
+                p
+                    | Developers should be spending less time writing
+                    | css, and more time thinking about important stuff like
+                    | performance, architecture and what to eat for lunch!
+
+                p: em
+                    | And css is notoriously easy to f**k up.
 
 
