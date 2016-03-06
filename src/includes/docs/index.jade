@@ -11,29 +11,47 @@ append content
         | file and including, or the more advanced Bower method.
 
 
-    h3 Download a bundle
+    h3.mar-t100 Download a bundle
 
     p
         | Perhaps the simplest way to get Eezo running is
         | to download and include one of the bundles from
         | Github. There's a few options, listed below.
 
-    table.txt-sans.mb-12.txt-l
+    table.txt-sans.mb-12.txt-l.bor-b1.bor-dark.pad-b30.mar-v100
+
+        mixin table-head( name )
+            th(scope=col).pad-v10.bor-b1.bor-dark= name
+
+        mixin table-button( name, link )
+            td: a(href= link).mb-12.btn-alt.noline.pad-h20.txt-code.bg-x.bor-white.white= name
+
+        mixin table-size( size )
+            td.txt-code.pink= size
 
         tr
-            th(scope=col).pad-v10.bor-b1.bor-b-dark Bundle Name
-            th(scope=col).pad-v10.bor-b1.bor-b-dark Size
-            th(scope=col).pad-v10.bor-b1.bor-b-dark Download
+            +table-head("Bundle Name")
+            +table-head("Size")
+            +table-head("Download")
 
         tr
-            th(scope=row).mb-7
-                div Core
-                .fw-n
+            th(scope=row).mb-7.pad-t20
+                div.txt-code.f4 Core
+                .fw-n.lh1
                     | The basic bundle for Eezo, containing the most
                     | common css compositions, no extra weight.
 
-            td.txt-code.purple 7.65kb
+            +table-size("7.65kb")
+            +table-button("Core", "#")
 
-            td: a(href="#").mb-12.btn-alt.noline.pad-h20 Core
+        tr
+            th(scope=row).pad-t20
+                div.txt-code.f4 Core +
+                .fw-n.lh1
+                    | The basic bundle for Eezo, plus some extra
+                    | features...
 
-    h3 Install with Bower
+            +table-size("8.77kb")
+            +table-button("Core +", "#")
+
+    h3.mar-t100 Install with Bower
