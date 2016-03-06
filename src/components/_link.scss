@@ -1,7 +1,6 @@
 
-$link-normal:       map-get( $extra-colors, "blue" ) !default;
-$link-visited:      map-get( $extra-colors, "purple" ) !default;
-$link-hover:        map-get( $extra-colors, "teal" ) !default;
+$link-normal:       $eezo-blue !default;
+$link-hover:        $eezo-teal !default;
 
 
 
@@ -9,18 +8,11 @@ $link-hover:        map-get( $extra-colors, "teal" ) !default;
 
     %link {
 
-        &,
-        &:active {
+        & {
 
             color: $link-normal;
             text-decoration: none;
             transition: color 0.8s ease;
-
-        }
-
-        &:visited {
-
-            color: $link-visited;
 
         }
 

@@ -3,10 +3,10 @@ $button-pad-v:          $form-pad !default;
 $button-pad-h:          $form-pad * 3 !default;
 $button-radius:         $form-radius !default;
 
-$button-color:          map-get( $base-colors, "white" ) !default;
-$button-bg:             map-get( $base-colors, "pitch" ) !default;
-$button-alt-color:      map-get( $base-colors, "white" ) !default;
-$button-alt-bg:         map-get( $base-colors, "dark" ) !default;
+$button-color:          $eezo-white !default;
+$button-bg:             $eezo-pitch !default;
+$button-alt-color:      $eezo-white !default;
+$button-alt-bg:         $eezo-dark !default;
 
 $button-opacity-default:    0.9 !default;
 $button-opacity-active:     1 !default;

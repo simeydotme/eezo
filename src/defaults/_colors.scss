@@ -8,8 +8,8 @@ $colors:            ();
 
 /**
  * custom-colors can be defined so that your
- * own project can have it's brand colours
- * applied as backgrounds/borders/text/etc
+ * own project has it's brand colours available
+ * as backgrounds/borders/text/etc
  *
  * @type { key/value list }
  */
@@ -21,18 +21,30 @@ $custom-colors:     () !default;
  *
  * @type { key/value list }
  */
+
+$eezo-x:         transparent;
+$eezo-blk:       #000;
+$eezo-black:     #1a1a1a;
+$eezo-cream:     #f7f2eb;
+$eezo-wht:       #fff;
+$eezo-white:     #f9f9f9;
+$eezo-grey:      #82848e;
+$eezo-dark:      #575c67;
+$eezo-light:     #b5b8bf;
+$eezo-pitch:     #161f23;
+
 $base-colors: (
 
-    "x":        transparent,
-    "blk":      #000,
-    "black":    #1a1a1a,
-    "cream":    #f7f2eb,
-    "wht":      #fff,
-    "white":    #f9f9f9,
-    "grey":     #82848e,
-    "dark":     #575c67,
-    "light":    #b5b8bf,
-    "pitch":    #161f23,
+    "x":        $eezo-x,
+    "blk":      $eezo-blk,
+    "black":    $eezo-black,
+    "cream":    $eezo-cream,
+    "wht":      $eezo-wht,
+    "white":    $eezo-white,
+    "grey":     $eezo-grey,
+    "dark":     $eezo-dark,
+    "light":    $eezo-light,
+    "pitch":    $eezo-pitch,
 
 );
 
@@ -46,20 +58,34 @@ $base-colors: (
  *
  * @type { key/value list }
  */
+
+$eezo-blue:     #1e9bd6;
+$eezo-green:    #1ed668;
+$eezo-mint:     #31e894;
+$eezo-orange:   #d66a1e;
+$eezo-pink:     #ec2666;
+$eezo-purple:   #5930d6;
+$eezo-red:      #d61e40;
+$eezo-teal:     #26ab92;
+$eezo-violet:   #981bd8;
+$eezo-yellow:   #d6d01e;
+$eezo-silver:   #dde3e6;
+$eezo-gold:     #c7aa5c;
+
 $extra-colors: (
 
-    "blue":     #1e9bd6,
-    "green":    #1ed668,
-    "mint":     #31e894,
-    "orange":   #d66a1e,
-    "pink":     #ec2666,
-    "purple":   #5930d6,
-    "red":      #d61e40,
-    "teal":     #26ab92,
-    "violet":   #981bd8,
-    "yellow":   #d6d01e,
-    "silver":   #dde3e6,
-    "gold":     #c7aa5c,
+    "blue":     $eezo-blue,
+    "green":    $eezo-green,
+    "mint":     $eezo-mint,
+    "orange":   $eezo-orange,
+    "pink":     $eezo-pink,
+    "purple":   $eezo-purple,
+    "red":      $eezo-red,
+    "teal":     $eezo-teal,
+    "violet":   $eezo-violet,
+    "yellow":   $eezo-yellow,
+    "silver":   $eezo-silver,
+    "gold":     $eezo-gold,
 
 );
 

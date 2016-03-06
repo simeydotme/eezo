@@ -50,7 +50,7 @@
 
             }
 
-            $bp: map-get($breakpoints, $bp);
+            $bp: map-get( $breakpoints, $bp );
             $named: true;
 
         }

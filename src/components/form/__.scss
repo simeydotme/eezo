@@ -7,14 +7,14 @@ $form-pad-right:        $form-pad !default;
 
 $form-radius:           2px !default;
 
-$form-border-default:   map-get( $base-colors, "light" ) !default;
-$form-border-hover:     map-get( $base-colors, "dark" ) !default;
-$form-border-focus:     map-get( $colors, "blue" ) !default;
-$form-border-error:     map-get( $colors, "red" ) !default;
+$form-border-default:   $eezo-light !default;
+$form-border-hover:     $eezo-dark !default;
+$form-border-focus:     $eezo-blue !default;
+$form-border-error:     $eezo-red !default;
 
-$form-placeholder:      map-get( $base-colors, "light" ) !default;
-$form-color-default:    map-get( $base-colors, "black" ) !default;
-$form-bg-default:       map-get( $base-colors, "wht" ) !default;
+$form-placeholder:      $eezo-light !default;
+$form-color-default:    $eezo-black !default;
+$form-bg-default:       $eezo-wht !default;
 
 
 

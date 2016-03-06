@@ -66,8 +66,8 @@
  */
 /**
  * custom-colors can be defined so that your
- * own project can have it's brand colours
- * applied as backgrounds/borders/text/etc
+ * own project has it's brand colours available
+ * as backgrounds/borders/text/etc
  *
  * @type { key/value list }
  */
@@ -2060,14 +2060,11 @@ h1, h2, h3, h4, h5, h6 {
   .dt-float-n {
     float: none; } }
 
-a:not([class]), .link, a:active:not([class]), .link:active {
+a:not([class]), .link {
   color: #1e9bd6;
   text-decoration: none;
   -webkit-transition: color 0.8s ease;
   transition: color 0.8s ease; }
-
-a:visited:not([class]), .link:visited {
-  color: #5930d6; }
 
 a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   color: #26ab92;
