@@ -34,6 +34,6 @@
     "light"
   ],
   "dependencies": {
-    "eezo": "https://github.com/simeydotme/eezo.git#~0.5.2-alpha"
+    "eezo": "https://github.com/simeydotme/eezo.git#~0.5.3-alpha"
   }
 }
