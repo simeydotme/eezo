@@ -2,7 +2,9 @@ var del = require("del"),
     gulp = require("gulp"),
     jade = require("gulp-jade"),
     sass = require("gulp-sass"),
-    live = require("gulp-livereload");
+    live = require("gulp-livereload"),
+    concat = require("gulp-concat"),
+    uglify = require("gulp-uglify");
 
 
 
@@ -59,10 +61,27 @@ gulp.task( "sass", function() {
     del( ["./dist/**/*.css"] );
 
     return gulp.src([
-            "./src/assets/css/*.scss"
+            "./src/assets/css/styles.scss"
         ])
         .pipe( sass().on("error", sass.logError ) )
         .pipe( gulp.dest("./dist/assets/css") )
+        .pipe( live() );
+
+});
+
+gulp.task( "js", function() {
+
+    del( ["./dist/**/*.js"] );
+
+    return gulp.src([
+            "./bower_components/jquery/dist/jquery.js",
+            "./bower_components/google-code-prettify/src/prettify.js",
+            "./bower_components/google-code-prettify/src/lang-css.js",
+            "./src/assets/js/app.js"
+        ])
+        .pipe( concat("app.js") )
+        .pipe( uglify() )
+        .pipe( gulp.dest("./dist/assets/js") )
         .pipe( live() );
 
 });
@@ -80,7 +99,8 @@ gulp.task( "spy", function() {
     gulp.watch( "src/**/*.*", [
         "landing",
         "docs",
-        "sass"
+        "sass",
+        "js"
     ]);
 
 });

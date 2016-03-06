@@ -27,7 +27,7 @@ append content
             td: a(href= link).mb-12.btn-alt.noline.pad-h20.txt-code.bg-x.bor-pitch.pitch= name
 
         mixin table-size( size )
-            td.txt-code.purple= size
+            td.txt-code.dark-purple= size
 
         tr
             +table-head("Bundle Name")
@@ -55,3 +55,18 @@ append content
             +table-button("Core +", "#")
 
     h3.mar-t100 Install with Bower
+
+    pre(data-lang="sh").code
+        | bower install --save eezo
+
+    p
+        | Installing with bower opens up the possibility of customising
+        | Eezo's default options, allowing complete control over the 
+        | different components.
+
+    pre(data-lang="scss").code
+        | /* import eezo as .scss for complete control */
+        | @import "./bower_components/eezo/src/eezo";
+        | 
+        | /* or just include a bundle from the dist folder */
+        | @import "./bower_components/eezo/dist/eezo-core";

@@ -1122,10 +1122,16 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #161f23; }
 
 .bg-dark-purple {
-  background-color: #32295F; }
+  background-color: #7930E8; }
 
 .bg-beige {
   background-color: #fec894; }
+
+.bg-dark-blue {
+  background-color: #0D47A1; }
+
+.bg-link-blue {
+  background-color: #0093FF; }
 
 .bg-pitch-lighter {
   background-color: #202d33; }
@@ -1629,10 +1635,16 @@ h1, h2, h3, h4, h5, h6 {
   border-color: #161f23; }
 
 .bor-dark-purple {
-  border-color: #32295F; }
+  border-color: #7930E8; }
 
 .bor-beige {
   border-color: #fec894; }
+
+.bor-dark-blue {
+  border-color: #0D47A1; }
+
+.bor-link-blue {
+  border-color: #0093FF; }
 
 .bor-pitch-lighter {
   border-color: #202d33; }
@@ -1707,10 +1719,16 @@ h1, h2, h3, h4, h5, h6 {
   border-top-color: #161f23; }
 
 .bor-t-dark-purple {
-  border-top-color: #32295F; }
+  border-top-color: #7930E8; }
 
 .bor-t-beige {
   border-top-color: #fec894; }
+
+.bor-t-dark-blue {
+  border-top-color: #0D47A1; }
+
+.bor-t-link-blue {
+  border-top-color: #0093FF; }
 
 .bor-t-pitch-lighter {
   border-top-color: #202d33; }
@@ -1785,10 +1803,16 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom-color: #161f23; }
 
 .bor-b-dark-purple {
-  border-bottom-color: #32295F; }
+  border-bottom-color: #7930E8; }
 
 .bor-b-beige {
   border-bottom-color: #fec894; }
+
+.bor-b-dark-blue {
+  border-bottom-color: #0D47A1; }
+
+.bor-b-link-blue {
+  border-bottom-color: #0093FF; }
 
 .bor-b-pitch-lighter {
   border-bottom-color: #202d33; }
@@ -1863,10 +1887,16 @@ h1, h2, h3, h4, h5, h6 {
   border-left-color: #161f23; }
 
 .bor-l-dark-purple {
-  border-left-color: #32295F; }
+  border-left-color: #7930E8; }
 
 .bor-l-beige {
   border-left-color: #fec894; }
+
+.bor-l-dark-blue {
+  border-left-color: #0D47A1; }
+
+.bor-l-link-blue {
+  border-left-color: #0093FF; }
 
 .bor-l-pitch-lighter {
   border-left-color: #202d33; }
@@ -1941,10 +1971,16 @@ h1, h2, h3, h4, h5, h6 {
   border-right-color: #161f23; }
 
 .bor-r-dark-purple {
-  border-right-color: #32295F; }
+  border-right-color: #7930E8; }
 
 .bor-r-beige {
   border-right-color: #fec894; }
+
+.bor-r-dark-blue {
+  border-right-color: #0D47A1; }
+
+.bor-r-link-blue {
+  border-right-color: #0093FF; }
 
 .bor-r-pitch-lighter {
   border-right-color: #202d33; }
@@ -2109,7 +2145,7 @@ h1, h2, h3, h4, h5, h6 {
     float: none; } }
 
 a:not([class]), .link {
-  color: #6CAEDA;
+  color: #0093FF;
   text-decoration: none;
   transition: color 0.8s ease; }
 
@@ -4462,10 +4498,16 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   color: #161f23; }
 
 .dark-purple {
-  color: #32295F; }
+  color: #7930E8; }
 
 .beige {
   color: #fec894; }
+
+.dark-blue {
+  color: #0D47A1; }
+
+.link-blue {
+  color: #0093FF; }
 
 .pitch-lighter {
   color: #202d33; }
@@ -4783,11 +4825,19 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 
 .fill-dark-purple,
 .fill-dark-purple path {
-  fill: #32295F; }
+  fill: #7930E8; }
 
 .fill-beige,
 .fill-beige path {
   fill: #fec894; }
+
+.fill-dark-blue,
+.fill-dark-blue path {
+  fill: #0D47A1; }
+
+.fill-link-blue,
+.fill-link-blue path {
+  fill: #0093FF; }
 
 .fill-pitch-lighter,
 .fill-pitch-lighter path {
@@ -4856,6 +4906,174 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     vertical-align: text-bottom; }
   .dt-va-ttop {
     vertical-align: text-top; } }
+
+pre .pln {
+  color: #b5b8bf; }
+
+@media screen {
+  pre {
+    /* string content */
+    /* a keyword */
+    /* a comment */
+    /* a type name */
+    /* a literal value */
+    /* punctuation */
+    /* lisp open bracket */
+    /* lisp close bracket */
+    /* a markup tag name */
+    /* a markup attribute name */
+    /* a markup attribute value */
+    /* a declaration */
+    /* a variable name */
+    /* a function name */ }
+    pre .str {
+      color: #B8A2FD; }
+    pre .kwd {
+      color: #cc99cc; }
+    pre .com {
+      color: #757B88; }
+    pre .typ {
+      color: #6699cc; }
+    pre .lit {
+      color: #F77F9F; }
+    pre .pun {
+      color: #b5b8bf; }
+    pre .opn {
+      color: #b5b8bf; }
+    pre .clo {
+      color: #b5b8bf; }
+    pre .tag {
+      color: #f2777a; }
+    pre .atn {
+      color: #f99157; }
+    pre .atv {
+      color: #55ccdd; }
+    pre .dec {
+      color: #f99157; }
+    pre .var {
+      color: #f2777a; }
+    pre .fun {
+      color: #6699cc; } }
+
+@media screen {
+  pre.lang-css {
+    /* a keyword */
+    /* a literal value */ }
+    pre.lang-css .pln {
+      color: #b5b8bf; }
+    pre.lang-css .kwd {
+      color: #b5b8bf; }
+    pre.lang-css .lit {
+      color: #F77F9F; } }
+
+code .pln {
+  color: #b5b8bf; }
+
+@media screen {
+  code {
+    /* string content */
+    /* a keyword */
+    /* a comment */
+    /* a type name */
+    /* a literal value */
+    /* punctuation */
+    /* lisp open bracket */
+    /* lisp close bracket */
+    /* a markup tag name */
+    /* a markup attribute name */
+    /* a markup attribute value */
+    /* a declaration */
+    /* a variable name */
+    /* a function name */ }
+    code .str {
+      color: #F84E5F; }
+    code .kwd {
+      color: #F84E5F; }
+    code .com {
+      color: #757B88; }
+    code .typ {
+      color: #30566D; }
+    code .lit {
+      color: #30566D; }
+    code .pun {
+      color: #333; }
+    code .opn {
+      color: #cccccc; }
+    code .clo {
+      color: #cccccc; }
+    code .tag {
+      color: #f2777a; }
+    code .atn {
+      color: #f99157; }
+    code .atv {
+      color: #66cccc; }
+    code .dec {
+      color: #f99157; }
+    code .var {
+      color: #f2777a; }
+    code .fun {
+      color: #6699cc; } }
+
+/* Use higher contrast and text-weight for printable form. */
+@media print, projection {
+  .str {
+    color: #006600; }
+  .kwd {
+    color: #006;
+    font-weight: bold; }
+  .com {
+    color: #600;
+    font-style: italic; }
+  .typ {
+    color: #404;
+    font-weight: bold; }
+  .lit {
+    color: #004444; }
+  .pun, .opn, .clo {
+    color: #444400; }
+  .tag {
+    color: #006;
+    font-weight: bold; }
+  .atn {
+    color: #440044; }
+  .atv {
+    color: #006600; } }
+
+/* Style */
+pre.code {
+  font-size: 1.125rem;
+  background: #202d33;
+  color: #b5b8bf;
+  padding: 20px;
+  border-radius: 3px;
+  overflow-x: auto; }
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #FFF; }
+
+/* IE indents via margin-left */
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L4,
+li.L5,
+li.L6,
+li.L7,
+li.L8,
+li.L9 {
+  /* */ }
+
+/* Alternate shading for lines */
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9 {
+  /* */ }
 
 nav ul {
   list-style: none; }

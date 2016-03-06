@@ -57,7 +57,7 @@
               common css compositions, no extra weight.
             </div>
           </th>
-                  <td class="txt-code purple">7.65kb</td>
+                  <td class="txt-code dark-purple">7.65kb</td>
                   <td><a href="#" class="mb-12 btn-alt noline pad-h20 txt-code bg-x bor-pitch pitch">Core</a></td>
         </tr>
         <tr>
@@ -68,11 +68,22 @@
               features...
             </div>
           </th>
-                  <td class="txt-code purple">8.77kb</td>
+                  <td class="txt-code dark-purple">8.77kb</td>
                   <td><a href="#" class="mb-12 btn-alt noline pad-h20 txt-code bg-x bor-pitch pitch">Core +</a></td>
         </tr>
       </table>
       <h3 class="mar-t100">Install with Bower</h3>
+      <pre data-lang="sh" class="code">bower install --save eezo</pre>
+      <p>
+        Installing with bower opens up the possibility of customising
+        Eezo's default options, allowing complete control over the 
+        different components.
+      </p>
+      <pre data-lang="scss" class="code">/* import eezo as .scss for complete control */
+@import "./bower_components/eezo/src/eezo";
+ 
+/* or just include a bundle from the dist folder */
+@import "./bower_components/eezo/dist/eezo-core";</pre>
     </div>
     <div class="docs-sidebar pos-a t0 r0 pad-t30">
       <ul class="mar-0 pad-0 pad-t50 f2 txt-sans">
@@ -80,4 +91,7 @@
       </ul>
     </div>
   </section>
+  <footer>
+    <script src="../../dist/assets/js/app.js"></script>
+  </footer>
 </html>

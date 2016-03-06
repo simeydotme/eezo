@@ -1,9 +1,11 @@
 
 $purple:            #B8A2FD;
-$dark-purple:       #32295F;
+$dark-purple:       #7930E8;
 $beige:             #fec894;
 $pink:              #F77F9F;
 $blue:              #6CAEDA;
+$dark-blue:         #0D47A1;
+$link-blue:         #0093FF;
 $pitch:             #161f23;
 $pitch-lighter:     lighten( $pitch, 5% );
 $pitch-darker:      darken( $pitch, 5% );
@@ -15,17 +17,19 @@ $custom-colors: (
     beige:          $beige,
     pink:           $pink,
     blue:           $blue,
+    dark-blue:      $dark-blue,
+    link-blue:      $link-blue,
     pitch:          $pitch,
     pitch-lighter:  $pitch-lighter,
     pitch-darker:   $pitch-darker,
 
 );
 
-$link-normal:   $blue;
+$link-normal:   $link-blue;
 $link-hover:    $pink;
 
 @import "bower_components/eezo/src/eezo";
-
+@import "pretty";
 
 
 
