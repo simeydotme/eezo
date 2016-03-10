@@ -43,7 +43,8 @@ gulp.task( "docs", function() {
 
     return gulp.src([
             "src/includes/docs/**/*.jade",
-            "!**/partials/**/*"
+            "!**/partials/**/*",
+            "!**/layout/**/*"
         ])
         .pipe( jade({
             pretty: true,
