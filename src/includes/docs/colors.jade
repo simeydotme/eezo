@@ -1,0 +1,51 @@
+
+extends ./layout/columns
+
+mixin bgcolor( bg, fg, hex )
+
+    div( class = "mb-12 tb-3 col end pad-v30 bg-" + bg + " " + fg )
+        span.disp-b.mar-b10 .bg-#{bg}
+        span.disp-b.txt-code= hex
+
+
+append content
+
+    h2.ls3 Colours
+
+    p
+        | Eezo comes with the ability to change colours of some
+        | properties such as <strong>text</strong>, <strong>background-color</strong>
+        | and <strong>borders</strong>. The colours can also be customised.
+
+
+    h3.ls2.mar-t100 Default Colours
+
+    .row.txt-c.txt-sans.bor-rad3.of-h
+
+        +bgcolor( "x", "white", "transparent" )
+        +bgcolor( "blk", "white", "#000000" )
+        +bgcolor( "black", "white", "#1a1a1a" )
+        +bgcolor( "pitch", "white", "#161f23" )
+        +bgcolor( "dark", "white", "#575c67" )
+        +bgcolor( "grey", "white", "#82848e" )
+        +bgcolor( "light", "black", "#b5b8bf" )
+        +bgcolor( "silver", "black", "#d61e40" )
+        +bgcolor( "white", "black", "#f9f9f9" )
+        +bgcolor( "wht", "black", "#ffffff" )
+        +bgcolor( "gold", "black", "#d61e40" )
+
+    h3.ls2.mar-t100 Extra Colours
+
+    .row.txt-c.txt-sans.bor-rad3.of-h
+
+        +bgcolor( "yellow", "black", "#d61e40" )
+        +bgcolor( "orange", "white", "#d61e40" )
+        +bgcolor( "purple", "white", "#d61e40" )
+        +bgcolor( "violet", "white", "#d61e40" )
+        +bgcolor( "pink", "white", "#d61e40" )
+        +bgcolor( "red", "white", "#d61e40" )
+        +bgcolor( "blue", "white", "#d61e40" )
+        +bgcolor( "teal", "white", "#d61e40" )
+        +bgcolor( "mint", "black", "#d61e40" )
+        +bgcolor( "green", "black", "#d61e40" )
+

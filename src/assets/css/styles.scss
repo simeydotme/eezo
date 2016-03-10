@@ -12,14 +12,14 @@ $pitch-darker:      darken( $pitch, 5% );
 
 $custom-colors: (
 
-    purple:         $purple,
+    docs-purple:    $purple,
     dark-purple:    $dark-purple,
-    beige:          $beige,
-    pink:           $pink,
-    blue:           $blue,
+    docs-beige:     $beige,
+    docs-pink:      $pink,
+    docs-blue:      $blue,
     dark-blue:      $dark-blue,
     link-blue:      $link-blue,
-    pitch:          $pitch,
+    docs-pitch:     $pitch,
     pitch-lighter:  $pitch-lighter,
     pitch-darker:   $pitch-darker,
 
@@ -34,6 +34,14 @@ $link-hover:    $pink;
 
 
 
+
+code {
+
+    color: $purple;
+    background: $pitch-darker;
+    padding: 0.2em 0.5em;
+
+}
 
 nav {
 
