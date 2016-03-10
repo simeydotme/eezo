@@ -50,7 +50,7 @@
                     .addClass( "prettyprint" )
                     .removeClass( "code" )
                     .addClass( "lang-" + lang )
-                    .addClass( "txt-code fw-thin f1 bg-pitch light pad-v20 pad-h30 bor-rad3" );
+                    .addClass( "txt-code fw-thin f1 bg-pitch-darker light pad-v20 pad-h30 bor-rad3" );
 
             });
 

@@ -1,5 +1,5 @@
 
-$bg:        $pitch;
+$bg:        $pitch-darker;
 $comment:   #757B88;
 $plain:     $eezo-light;
 
@@ -134,7 +134,7 @@ code {
 pre.code {
 
   font-size: 1.125rem;
-  background: $pitch-lighter;
+  background: $bg;
   color: $eezo-light;
   padding: 20px;
   border-radius: 3px;
