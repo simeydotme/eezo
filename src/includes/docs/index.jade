@@ -24,10 +24,10 @@ append content
             th(scope=col).pad-v10.bor-b1.bor-dark= name
 
         mixin table-button( name, link )
-            td: a(href= link).mb-12.btn-alt.noline.pad-h20.txt-code.bg-x.bor-pitch.pitch= name
+            td: a(href= link).mb-12.btn-alt.noline.pad-h20.txt-code.bg-x= name
 
         mixin table-size( size )
-            td.txt-code.dark-purple= size
+            td.txt-code.purple= size
 
         tr
             +table-head("Bundle Name")

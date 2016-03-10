@@ -1,6 +1,36 @@
+mixin header( name, border )
 
-ul.mar-0.pad-0.pad-t50.f2.txt-sans
+    li.mar-t20
+
+        if border
+
+            h4.pad-t20.f3.fw-bold.bor-t1.bor-t-dark= name
+
+        else
+
+            h4.mar-t20.f3.fw-bold= name
+
+mixin item( name, url )
 
     li
 
-        a(href="#") Installation
+        if url
+
+            a(href=url)= name
+
+        else
+
+            a(href="#")= name
+
+
+
+
+ul.mar-0.pad-0.pad-t50.f2.txt-sans
+
+    +header( "Getting Started" )
+
+    +item( "Installation" )
+
+    +header( "Styles", true )
+
+    +item( "Colours" )
