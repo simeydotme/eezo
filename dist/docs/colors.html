@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>eezo | massless css framework</title>
+    <meta description="a lightweight and responsive css framework">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#32295F">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+  </head>
+  <body class="f3 lh3 pos-r pad-b50 bg-pitch light"></body>
+  <header class="docs-header bg-pitch-darker">
+    <div class="container center pos-r pad-h50">
+      <nav class="pos-a t0 r0 pad-30 txt-sans">
+        <ul class="mar-0 pad-0 txt-r float-r">
+          <li class="disp-ib"><a href="/" class="pad-h30 pad-v20 link white">home</a></li>
+          <li class="disp-ib"><a href="/dist/docs/" class="pad-h30 pad-v20 link white">docs</a></li>
+        </ul>
+      </nav>
+      <h1 class="docs-header__logo pad-v10 mar-0"><svg id="eezo-type" data-name="eezo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 535.78 98">
+  <title>eezo</title>
+  <g>
+    <path class="eezo-e1" d="M31.08,88.06c-1.12,2.52-2.8,6.44-3.22,7.28C27.16,96.6,25.62,98,22.4,98H0V2.8A3.06,3.06,0,0,1,3.08,0H29.26L25.9,7.28c-0.56,1.26-2.1,2.8-5.32,2.8H12.46a2.28,2.28,0,0,0-2.38,2.38V41.58H25.2C24.08,44.1,22.4,48.16,22,49c-0.7,1.26-2.1,2.66-5.32,2.66h-4.2A2.45,2.45,0,0,0,10.08,54v34h21Z" fill="#222"/>
+    <path class="eezo-e2" d="M200.48,88.06c-1.12,2.52-2.8,6.44-3.22,7.28C196.56,96.6,195,98,191.8,98H169.4V2.8A3.06,3.06,0,0,1,172.48,0h26.18L195.3,7.28c-0.56,1.26-2.1,2.8-5.32,2.8h-8.12a2.28,2.28,0,0,0-2.38,2.38V41.58H194.6c-1.12,2.52-2.8,6.58-3.22,7.42-0.7,1.26-2.1,2.66-5.32,2.66h-4.2A2.45,2.45,0,0,0,179.48,54v34h21Z" fill="#222"/>
+    <path class="eezo-z" d="M342,85.4c-0.42,1.68.42,2.66,1.82,2.66h27.3l-3.22,7.14c-0.7,1.4-2.1,2.8-5.32,2.8H326.06L354.9,12.46a1.8,1.8,0,0,0-2-2.38H341.6c-3.22,0-4.76-1.54-5.46-2.8-0.42-.84-2.1-4.76-3.22-7.28H371Z" fill="#222"/>
+    <path class="eezo-o" d="M523.6,0a12.62,12.62,0,0,1,12.18,12.46V85.68A12.59,12.59,0,0,1,523.6,98h-7.7a12.68,12.68,0,0,1-12.6-12.32V12.46A12.52,12.52,0,0,1,515.9,0h7.7Zm-3.36,89.18a5.35,5.35,0,0,0,5.32-5.46V14.28a5.35,5.35,0,0,0-5.32-5.46H518.7a5.53,5.53,0,0,0-5.32,5.46V83.72a5.53,5.53,0,0,0,5.32,5.46h1.54Z" fill="#222"/>
+  </g>
+</svg>
+<span class="hidden">Eezo</span>
+      </h1>
+    </div>
+  </header>
+  <section class="docs-body container pad-l50 pad-t30 center pos-r">
+    <div class="docs-sidebar pos-a t0 r0 pad-t30">
+      <ul class="mar-0 pad-0 pad-t50 f2 txt-sans">
+              <li class="mar-t20">
+                <h4 class="mar-t20 f3 fw-bold">Getting Started</h4>
+              </li>
+              <li><a href="#">Installation</a>
+              </li>
+              <li class="mar-t20">
+                <h4 class="pad-t20 f3 fw-bold bor-t1 bor-t-dark">Styles</h4>
+              </li>
+              <li><a href="colors.html">Colours</a>
+              </li>
+      </ul>
+    </div>
+    <div class="docs-content f2">
+      <h2 class="ls3">Colours</h2>
+      <p class="f3">
+        Eezo comes with the ability to change colours of some
+        properties such as <strong>text</strong>, <strong>background-color</strong>
+        and <strong>borders</strong>. The colours can also be customised in sass
+        by changing the default values or adding more colours.
+      </p>
+      <h3 class="ls2 mar-t100">Default Colours</h3>
+      <p>
+        These are the default colours that come with eezo, they are
+        mostly just nice defaults for general UI purposes
+        with a slightly cool hue for greys.
+      </p>
+      <p>
+        The <code>black</code> and <code>white</code> colors are bot set 
+        to "nicer" shade with zero saturation. Where as the greys are 
+        slightly saturated with a cool hue. (<a href="http://ianstormtaylor.com/design-tip-never-use-black/">
+        why? read this.</a>)
+      </p>
+      <table class="mar-t50 mb-12 txt-l txt-sans">
+        <thead>
+          <tr>
+            <th class="pad-10 bor-b1">class name</th>
+            <th class="pad-10 bor-b1">hex value</th>
+            <th class="pad-10 bor-b1">example</th>
+          </tr>
+        </thead>
+        <tbody class="txt-code">
+          <tr>
+            <td class="pad-v5 pad-h10">x</td>
+            <td class="pad-v5 pad-h10">transparent</td>
+            <td class="pad-v5 pad-h10 bg-x"></td>
+          </tr>
+          <tr>
+            <td class="pad-v5 pad-h10">wht</td>
+            <td class="pad-v5 pad-h10">#ffffff</td>
+            <td class="pad-v5 pad-h10 bg-wht"></td>
+          </tr>
+          <tr>
+            <td class="pad-v5 pad-h10">white</td>
+            <td class="pad-v5 pad-h10">#f9f9f9</td>
+            <td class="pad-v5 pad-h10 bg-white"></td>
+          </tr>
+          <tr>
+            <td class="pad-v5 pad-h10">light</td>
+            <td class="pad-v5 pad-h10">#b5b8bf</td>
+            <td class="pad-v5 pad-h10 bg-light"></td>
+          </tr>
+          <tr>
+            <td class="pad-v5 pad-h10">grey</td>
+            <td class="pad-v5 pad-h10">#82848e</td>
+            <td class="pad-v5 pad-h10 bg-grey"></td>
+          </tr>
+          <tr>
+            <td class="pad-v5 pad-h10">dark</td>
+            <td class="pad-v5 pad-h10">#575c67</td>
+            <td class="pad-v5 pad-h10 bg-dark"></td>
+          </tr>
+          <tr>
+            <td class="pad-v5 pad-h10">pitch</td>
+            <td class="pad-v5 pad-h10">#161f23</td>
+            <td class="pad-v5 pad-h10 bg-pitch"></td>
+          </tr>
+          <tr>
+            <td class="pad-v5 pad-h10">black</td>
+            <td class="pad-v5 pad-h10">#1a1a1a</td>
+            <td class="pad-v5 pad-h10 bg-black"></td>
+          </tr>
+          <tr>
+            <td class="pad-v5 pad-h10">blk</td>
+            <td class="pad-v5 pad-h10">#000000</td>
+            <td class="pad-v5 pad-h10 bg-blk"></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 class="ls2 mar-t100">Extra Colours</h3>
+      <p>
+        The extra colours are just some "<em>pretty OK</em>"
+        colours to jump-start your ui. They
+        only come with the <strong class="txt-sans">Core+</strong> bundle
+        and can be easily overridden with customisation in sass.
+      </p>
+      <table class="mb-12 txt-l txt-sans">
+        <thead>
+          <tr>
+            <th class="pad-10 bor-b1">class name</th>
+            <th class="pad-10 bor-b1">hex value</th>
+            <th class="pad-10 bor-b1">example</th>
+          </tr>
+        </thead>
+        <tbody class="txt-code">
+          <tr>
+            <td class="pad-v5 pad-h10">silver</td>
+            <td class="pad-v5 pad-h10">#dde3e6</td>
+            <td class="pad-v5 pad-h10 bg-silver"></td>
+          </tr>
+          <tr>
+            <td class="pad-v5 pad-h10">gold</td>
+            <td class="pad-v5 pad-h10">#c7aa5c</td>
+            <td class="pad-v5 pad-h10 bg-gold"></td>
+          </tr>
+          <tr>
+            <td class="pad-v5 pad-h10">yellow</td>
+            <td class="pad-v5 pad-h10">#d6d01e</td>
+            <td class="pad-v5 pad-h10 bg-yellow"></td>
+          </tr>
+          <tr>
+            <td class="pad-v5 pad-h10">orange</td>
+            <td class="pad-v5 pad-h10">#d66a1e</td>
+            <td class="pad-v5 pad-h10 bg-orange"></td>
+          </tr>
+          <tr>
+            <td class="pad-v5 pad-h10">red</td>
+            <td class="pad-v5 pad-h10">#d61e40</td>
+            <td class="pad-v5 pad-h10 bg-red"></td>
+          </tr>
+          <tr>
+            <td class="pad-v5 pad-h10">pink</td>
+            <td class="pad-v5 pad-h10">#ec2666</td>
+            <td class="pad-v5 pad-h10 bg-pink"></td>
+          </tr>
+          <tr>
+            <td class="pad-v5 pad-h10">violet</td>
+            <td class="pad-v5 pad-h10">#981bd8</td>
+            <td class="pad-v5 pad-h10 bg-violet"></td>
+          </tr>
+          <tr>
+            <td class="pad-v5 pad-h10">purple</td>
+            <td class="pad-v5 pad-h10">#5930d6</td>
+            <td class="pad-v5 pad-h10 bg-purple"></td>
+          </tr>
+          <tr>
+            <td class="pad-v5 pad-h10">blue</td>
+            <td class="pad-v5 pad-h10">#1e9bd6</td>
+            <td class="pad-v5 pad-h10 bg-blue"></td>
+          </tr>
+          <tr>
+            <td class="pad-v5 pad-h10">teal</td>
+            <td class="pad-v5 pad-h10">#17b5b5</td>
+            <td class="pad-v5 pad-h10 bg-teal"></td>
+          </tr>
+          <tr>
+            <td class="pad-v5 pad-h10">mint</td>
+            <td class="pad-v5 pad-h10">#31e894</td>
+            <td class="pad-v5 pad-h10 bg-mint"></td>
+          </tr>
+          <tr>
+            <td class="pad-v5 pad-h10">green</td>
+            <td class="pad-v5 pad-h10">#1ed668</td>
+            <td class="pad-v5 pad-h10 bg-green"></td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 class="ls3 mar-t100">Background Colours</h2>
+      <p>
+        Background colours can be applied to any
+        valid html element with the class: `bg-x` where
+        "x" is replaced with the desired colour. Eg:
+      </p>
+      <pre data-lang="html" class="code">&lt;body class="bg-white"&gt;
+  has a white background.
+&lt;/body&gt;</pre>
+      <div class="row txt-c txt-sans">
+        <div class="mb-12 tb-3 col end pad-v30 bg-x white"><span class="disp-b mar-b10">.bg-x</span><span class="disp-b txt-code">transparent</span></div>
+        <div class="mb-12 tb-3 col end pad-v30 bg-blk white"><span class="disp-b mar-b10">.bg-blk</span><span class="disp-b txt-code">#000000</span></div>
+        <div class="mb-12 tb-3 col end pad-v30 bg-black white"><span class="disp-b mar-b10">.bg-black</span><span class="disp-b txt-code">#1a1a1a</span></div>
+        <div class="mb-12 tb-3 col end pad-v30 bg-pitch white"><span class="disp-b mar-b10">.bg-pitch</span><span class="disp-b txt-code">#161f23</span></div>
+        <div class="mb-12 tb-3 col end pad-v30 bg-dark white"><span class="disp-b mar-b10">.bg-dark</span><span class="disp-b txt-code">#575c67</span></div>
+        <div class="mb-12 tb-3 col end pad-v30 bg-grey white"><span class="disp-b mar-b10">.bg-grey</span><span class="disp-b txt-code">#82848e</span></div>
+        <div class="mb-12 tb-3 col end pad-v30 bg-light black"><span class="disp-b mar-b10">.bg-light</span><span class="disp-b txt-code">#b5b8bf</span></div>
+        <div class="mb-12 tb-3 col end pad-v30 bg-white black"><span class="disp-b mar-b10">.bg-white</span><span class="disp-b txt-code">#f9f9f9</span></div>
+        <div class="mb-12 tb-3 col end pad-v30 bg-wht black"><span class="disp-b mar-b10">.bg-wht</span><span class="disp-b txt-code">#ffffff</span></div>
+      </div>
+      <div class="row mar-t50 txt-c txt-sans">
+        <div class="mb-12 tb-3 col end pad-v30 bg-silver black"><span class="disp-b mar-b10">.bg-silver</span><span class="disp-b txt-code">#dde3e6</span></div>
+        <div class="mb-12 tb-3 col end pad-v30 bg-gold black"><span class="disp-b mar-b10">.bg-gold</span><span class="disp-b txt-code">#c7aa5c</span></div>
+        <div class="mb-12 tb-3 col end pad-v30 bg-yellow black"><span class="disp-b mar-b10">.bg-yellow</span><span class="disp-b txt-code">#d6d01e</span></div>
+        <div class="mb-12 tb-3 col end pad-v30 bg-orange white"><span class="disp-b mar-b10">.bg-orange</span><span class="disp-b txt-code">#d66a1e</span></div>
+        <div class="mb-12 tb-3 col end pad-v30 bg-red white"><span class="disp-b mar-b10">.bg-red</span><span class="disp-b txt-code">#d61e40</span></div>
+        <div class="mb-12 tb-3 col end pad-v30 bg-pink white"><span class="disp-b mar-b10">.bg-pink</span><span class="disp-b txt-code">#ec2666</span></div>
+        <div class="mb-12 tb-3 col end pad-v30 bg-violet white"><span class="disp-b mar-b10">.bg-violet</span><span class="disp-b txt-code">#981bd8</span></div>
+        <div class="mb-12 tb-3 col end pad-v30 bg-purple white"><span class="disp-b mar-b10">.bg-purple</span><span class="disp-b txt-code">#5930d6</span></div>
+        <div class="mb-12 tb-3 col end pad-v30 bg-blue white"><span class="disp-b mar-b10">.bg-blue</span><span class="disp-b txt-code">#1e9bd6</span></div>
+        <div class="mb-12 tb-3 col end pad-v30 bg-teal white"><span class="disp-b mar-b10">.bg-teal</span><span class="disp-b txt-code">#17b5b5</span></div>
+        <div class="mb-12 tb-3 col end pad-v30 bg-mint black"><span class="disp-b mar-b10">.bg-mint</span><span class="disp-b txt-code">#31e894</span></div>
+        <div class="mb-12 tb-3 col end pad-v30 bg-green black"><span class="disp-b mar-b10">.bg-green</span><span class="disp-b txt-code">#1ed668</span></div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <script src="../../dist/assets/js/app.js"></script>
+  </footer>
+</html>
