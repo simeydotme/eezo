@@ -1,37 +1,42 @@
 
-$bg:        $pitch-darker;
-$comment:   #757B88;
-$plain:     $eezo-light;
+$code-bg:         $pitch-darker;
+$code-plain:      $eezo-light;
+$code-comment:    #757B88;
+$code-green:      #8CE7CA;
+$code-blue:       #98D8F7;
+$code-yellow:     #F5E9BD;
+$code-purple:     $purple;
+$code-pink:       $pink;
 
 pre {
 
-  .pln { color: $plain; }
+  .pln { color: $code-plain; }
 
   @media screen {
     /* string content */
-    .str { color: $purple; }
+    .str { color: $code-purple; }
     /* a keyword */
     .kwd { color: #cc99cc; }
     /* a comment */
-    .com { color: $comment; }
+    .com { color: $code-comment; }
     /* a type name */
     .typ { color: #6699cc; }
     /* a literal value */
-    .lit { color: $pink; }
+    .lit { color: $code-pink; }
     /* punctuation */
-    .pun { color: $plain; }
+    .pun { color: $code-plain; }
     /* lisp open bracket */
-    .opn { color: $plain; }
+    .opn { color: $code-plain; }
     /* lisp close bracket */
-    .clo { color: $plain; }
+    .clo { color: $code-plain; }
     /* a markup tag name */
-    .tag { color: #f2777a; }
+    .tag { color: $code-green; }
     /* a markup attribute name */
-    .atn { color: #f99157; }
+    .atn { color: $code-blue; }
     /* a markup attribute value */
-    .atv { color: #55ccdd; }
+    .atv { color: $code-yellow; }
     /* a declaration */
-    .dec { color: #f99157; }
+    .dec { color: $code-green; }
     /* a variable name */
     .var { color: #f2777a; }
     /* a function name */
@@ -41,53 +46,16 @@ pre {
   &.lang-css {
     @media screen {
 
-      .pln { color: $plain; }
+      .pln { color: $code-plain; }
       /* a keyword */
-      .kwd { color: $plain; }
+      .kwd { color: $code-plain; }
       /* a literal value */
-      .lit { color: $pink; }
+      .lit { color: $code-pink; }
 
     }
   }
 }
 
-code {
-
-  .pln {
-    color: $plain;
-  }
-
-  @media screen {
-    /* string content */
-    .str { color: #F84E5F; }
-    /* a keyword */
-    .kwd { color: #F84E5F; }
-    /* a comment */
-    .com { color: $comment; }
-    /* a type name */
-    .typ { color: #30566D; }
-    /* a literal value */
-    .lit { color: #30566D; }
-    /* punctuation */
-    .pun { color: #333; }
-    /* lisp open bracket */
-    .opn { color: #cccccc; }
-    /* lisp close bracket */
-    .clo { color: #cccccc; }
-    /* a markup tag name */
-    .tag { color: #f2777a; }
-    /* a markup attribute name */
-    .atn { color: #f99157; }
-    /* a markup attribute value */
-    .atv { color: #66cccc; }
-    /* a declaration */
-    .dec { color: #f99157; }
-    /* a variable name */
-    .var { color: #f2777a; }
-    /* a function name */
-    .fun { color: #6699cc; }  
-  }
-}
 /* Use higher contrast and text-weight for printable form. */
 @media print, projection {
   .str {
@@ -134,7 +102,7 @@ code {
 pre.code {
 
   font-size: 1.125rem;
-  background: $bg;
+  background: $code-bg;
   color: $eezo-light;
   padding: 20px;
   border-radius: 3px;

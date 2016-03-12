@@ -1,6 +1,13 @@
 
 extends ./layout/columns
 
+mixin table-row( bg, hex )
+
+    tr
+        td.pad-v5.pad-h10= bg
+        td.pad-v5.pad-h10= hex
+        td.pad-v5.pad-h10( class="bg-" + bg )
+
 mixin bgcolor( bg, fg, hex )
 
     div( class = "mb-12 tb-3 col end pad-v30 bg-" + bg + " " + fg )
@@ -12,15 +19,100 @@ append content
 
     h2.ls3 Colours
 
-    p
+    p.f3
         | Eezo comes with the ability to change colours of some
         | properties such as <strong>text</strong>, <strong>background-color</strong>
-        | and <strong>borders</strong>. The colours can also be customised.
+        | and <strong>borders</strong>. The colours can also be customised in sass
+        | by changing the default values or adding more colours.
 
 
     h3.ls2.mar-t100 Default Colours
 
-    .row.txt-c.txt-sans.bor-rad3.of-h
+    p
+        | These are the default colours that come with eezo, they are
+        | mostly just nice defaults for general UI purposes
+        | with a slightly cool hue for greys.
+
+    p
+        | The <code>black</code> and <code>white</code> colors are bot set 
+        | to "nicer" shade with zero saturation. Where as the greys are 
+        | slightly saturated with a cool hue. (<a href="http://ianstormtaylor.com/design-tip-never-use-black/">
+        | why? read this.</a>)
+
+    table.mar-t50.mb-12.txt-l.txt-sans
+
+        thead
+
+            tr
+
+                th.pad-10.bor-b1 class name
+                th.pad-10.bor-b1 hex value
+                th.pad-10.bor-b1 example
+
+        tbody.txt-code
+
+            +table-row( "x", "transparent" )
+            +table-row( "wht", "#ffffff" )
+            +table-row( "white", "#f9f9f9" )
+            +table-row( "light", "#b5b8bf" )
+            +table-row( "grey", "#82848e" )
+            +table-row( "dark", "#575c67" )
+            +table-row( "pitch", "#161f23" )
+            +table-row( "black", "#1a1a1a" )
+            +table-row( "blk", "#000000" )
+
+    h3.ls2.mar-t100 Extra Colours
+
+    p
+        | The extra colours are just some "<em>pretty OK</em>"
+        | colours to jump-start your ui. They
+        | only come with the <strong class="txt-sans">Core+</strong> bundle
+        | and can be easily overridden with customisation in sass.
+
+    table.mb-12.txt-l.txt-sans
+
+        thead
+
+            tr
+
+                th.pad-10.bor-b1 class name
+                th.pad-10.bor-b1 hex value
+                th.pad-10.bor-b1 example
+
+        tbody.txt-code
+
+            +table-row( "silver", "#dde3e6" )
+            +table-row( "gold", "#c7aa5c" )
+            +table-row( "yellow", "#d6d01e" )
+            +table-row( "orange", "#d66a1e" )
+            +table-row( "red", "#d61e40" )
+            +table-row( "pink", "#ec2666" )
+            +table-row( "violet", "#981bd8" )
+            +table-row( "purple", "#5930d6" )
+            +table-row( "blue", "#1e9bd6" )
+            +table-row( "teal", "#17b5b5" )
+            +table-row( "mint", "#31e894" )
+            +table-row( "green", "#1ed668" )
+
+
+
+
+
+
+
+    h2.ls3.mar-t100 Background Colours
+
+    p
+        | Background colours can be applied to any
+        | valid html element with the class: `bg-x` where
+        | "x" is replaced with the desired colour. Eg:
+
+    pre(data-lang="html").code
+        | &lt;body class="bg-white"&gt;
+        |   has a white background.
+        | &lt;/body&gt;
+
+    .row.txt-c.txt-sans
 
         +bgcolor( "x", "white", "transparent" )
         +bgcolor( "blk", "white", "#000000" )
@@ -29,23 +121,21 @@ append content
         +bgcolor( "dark", "white", "#575c67" )
         +bgcolor( "grey", "white", "#82848e" )
         +bgcolor( "light", "black", "#b5b8bf" )
-        +bgcolor( "silver", "black", "#d61e40" )
         +bgcolor( "white", "black", "#f9f9f9" )
         +bgcolor( "wht", "black", "#ffffff" )
-        +bgcolor( "gold", "black", "#d61e40" )
 
-    h3.ls2.mar-t100 Extra Colours
+    .row.mar-t50.txt-c.txt-sans
 
-    .row.txt-c.txt-sans.bor-rad3.of-h
-
-        +bgcolor( "yellow", "black", "#d61e40" )
-        +bgcolor( "orange", "white", "#d61e40" )
-        +bgcolor( "purple", "white", "#d61e40" )
-        +bgcolor( "violet", "white", "#d61e40" )
-        +bgcolor( "pink", "white", "#d61e40" )
+        +bgcolor( "silver", "black", "#dde3e6" )
+        +bgcolor( "gold", "black", "#c7aa5c" )
+        +bgcolor( "yellow", "black", "#d6d01e" )
+        +bgcolor( "orange", "white", "#d66a1e" )
         +bgcolor( "red", "white", "#d61e40" )
-        +bgcolor( "blue", "white", "#d61e40" )
-        +bgcolor( "teal", "white", "#d61e40" )
-        +bgcolor( "mint", "black", "#d61e40" )
-        +bgcolor( "green", "black", "#d61e40" )
+        +bgcolor( "pink", "white", "#ec2666" )
+        +bgcolor( "violet", "white", "#981bd8" )
+        +bgcolor( "purple", "white", "#5930d6" )
+        +bgcolor( "blue", "white", "#1e9bd6" )
+        +bgcolor( "teal", "white", "#17b5b5" )
+        +bgcolor( "mint", "black", "#31e894" )
+        +bgcolor( "green", "black", "#1ed668" )
 

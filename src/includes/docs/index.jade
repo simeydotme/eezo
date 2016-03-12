@@ -27,7 +27,7 @@ append content
             td: a(href= link).mb-12.btn-alt.noline.pad-h20.txt-code.bg-x= name
 
         mixin table-size( size )
-            td.txt-code.purple= size
+            td.txt-code.docs-purple= size
 
         tr
             +table-head("Bundle Name")
@@ -41,7 +41,7 @@ append content
                     | The basic bundle for Eezo, containing the most
                     | common css compositions, no extra weight.
 
-            +table-size("7.65kb")
+            +table-size("~ 7.65kb")
             +table-button("Core", "#")
 
         tr
@@ -51,7 +51,7 @@ append content
                     | The basic bundle for Eezo, plus some extra
                     | features...
 
-            +table-size("8.77kb")
+            +table-size("~ 8.77kb")
             +table-button("Core +", "#")
 
     h3.mar-t100 Install with Bower
