@@ -1,6 +1,9 @@
 
 extends ./layout/columns
 
+
+
+
 mixin table-row( bg, hex )
 
     tr
@@ -8,11 +11,25 @@ mixin table-row( bg, hex )
         td.pad-v5.pad-h10= hex
         td.pad-v5.pad-h10( class="bg-" + bg )
 
-mixin bgcolor( bg, fg, hex )
+mixin txtcolor( fg, bg )
 
-    div( class = "mb-12 tb-3 col end pad-v30 bg-" + bg + " " + fg )
-        span.disp-b.mar-b10 .bg-#{bg}
-        span.disp-b.txt-code= hex
+    div.mb-12.tb-3.col.end.pad-v20( class = "bg-" + bg + " " + fg )
+        span.disp-b .#{fg}
+
+mixin bgcolor( bg, fg )
+
+    div.mb-12.tb-3.col.end.pad-v30( class = "bg-" + bg + " " + fg )
+        span.disp-b .bg-#{bg}
+
+mixin borcolor( color )
+
+    div.mb-12.tb-3.col.end.pad-5
+        span.disp-b.mar-5.pad-v15.bor-1( class = "bor-" + color ) .bor-#{color}
+
+
+
+
+
 
 
 append content
@@ -100,42 +117,248 @@ append content
 
 
 
-    h2.ls3.mar-t100 Background Colours
+    h2.ls3.mar-t100 Text Colours
 
     p
-        | Background colours can be applied to any
-        | valid html element with the class: `bg-x` where
-        | "x" is replaced with the desired colour. Eg:
+        | Text (forground) colours can easily be applied
+        | by supplying a classname of the colour you want.
+
+    pre(data-lang="html").code
+        | &lt;body class="black"&gt;
+        |   has black text.
+        | &lt;/body&gt;
+
+    .row.mar-t50.txt-c.txt-sans
+
+        +txtcolor( "x" )
+        +txtcolor( "blk" )
+        +txtcolor( "black" )
+        +txtcolor( "pitch" )
+        +txtcolor( "dark" )
+        +txtcolor( "grey" )
+        +txtcolor( "light" )
+        +txtcolor( "white" )
+        +txtcolor( "wht" )
+
+    .row.mar-t50.txt-c.txt-sans
+
+        +txtcolor( "silver" )
+        +txtcolor( "gold" )
+        +txtcolor( "yellow" )
+        +txtcolor( "orange" )
+        +txtcolor( "red" )
+        +txtcolor( "pink" )
+        +txtcolor( "violet" )
+        +txtcolor( "purple" )
+        +txtcolor( "blue" )
+        +txtcolor( "teal" )
+        +txtcolor( "mint" )
+        +txtcolor( "green" )
+
+
+
+
+
+
+
+
+
+    h2.ls3.mar-t100 Background Colours
+
+    :marked
+        Like text colours, background colours can be applied to any
+        valid html element using the class: `bg-x`. Where
+        "`x`" is replaced with the desired colour. Eg:
 
     pre(data-lang="html").code
         | &lt;body class="bg-white"&gt;
         |   has a white background.
         | &lt;/body&gt;
 
-    .row.txt-c.txt-sans
+    .row.mar-t50.txt-c.txt-sans
 
-        +bgcolor( "x", "white", "transparent" )
-        +bgcolor( "blk", "white", "#000000" )
-        +bgcolor( "black", "white", "#1a1a1a" )
-        +bgcolor( "pitch", "white", "#161f23" )
-        +bgcolor( "dark", "white", "#575c67" )
-        +bgcolor( "grey", "white", "#82848e" )
-        +bgcolor( "light", "black", "#b5b8bf" )
-        +bgcolor( "white", "black", "#f9f9f9" )
-        +bgcolor( "wht", "black", "#ffffff" )
+        +bgcolor( "x" )
+        +bgcolor( "blk" )
+        +bgcolor( "black" )
+        +bgcolor( "pitch" )
+        +bgcolor( "dark", "white" )
+        +bgcolor( "grey", "white" )
+        +bgcolor( "light", "pitch" )
+        +bgcolor( "white", "pitch" )
+        +bgcolor( "wht", "pitch" )
 
     .row.mar-t50.txt-c.txt-sans
 
-        +bgcolor( "silver", "black", "#dde3e6" )
-        +bgcolor( "gold", "black", "#c7aa5c" )
-        +bgcolor( "yellow", "black", "#d6d01e" )
-        +bgcolor( "orange", "white", "#d66a1e" )
-        +bgcolor( "red", "white", "#d61e40" )
-        +bgcolor( "pink", "white", "#ec2666" )
-        +bgcolor( "violet", "white", "#981bd8" )
-        +bgcolor( "purple", "white", "#5930d6" )
-        +bgcolor( "blue", "white", "#1e9bd6" )
-        +bgcolor( "teal", "white", "#17b5b5" )
-        +bgcolor( "mint", "black", "#31e894" )
-        +bgcolor( "green", "black", "#1ed668" )
+        +bgcolor( "silver", "pitch" )
+        +bgcolor( "gold", "pitch" )
+        +bgcolor( "yellow", "pitch" )
+        +bgcolor( "orange", "white" )
+        +bgcolor( "red", "white" )
+        +bgcolor( "pink", "white" )
+        +bgcolor( "violet", "white" )
+        +bgcolor( "purple", "white" )
+        +bgcolor( "blue", "white" )
+        +bgcolor( "teal", "white" )
+        +bgcolor( "mint", "pitch" )
+        +bgcolor( "green", "pitch" )
+
+
+
+
+
+
+
+
+
+
+    h2.ls3.mar-t100 Border Colours
+
+    :marked
+        It's possible to change the colour of borders
+        by using the `bor-x` css class, replacing "`x`"
+        with the colour desired.
+
+    pre(data-lang="html").code
+        | &lt;body class="bor-1 bor-purple"&gt;
+        |   has a purple border.
+        | &lt;/body&gt;
+
+    .row.mar-t50.txt-c.txt-sans
+
+        +borcolor( "x" )
+        +borcolor( "blk" )
+        +borcolor( "black" )
+        +borcolor( "pitch" )
+        +borcolor( "dark" )
+        +borcolor( "grey" )
+        +borcolor( "light" )
+        +borcolor( "white" )
+        +borcolor( "wht" )
+
+    .row.mar-t50.txt-c.txt-sans
+
+        +borcolor( "silver" )
+        +borcolor( "gold" )
+        +borcolor( "yellow" )
+        +borcolor( "orange" )
+        +borcolor( "red" )
+        +borcolor( "pink" )
+        +borcolor( "violet" )
+        +borcolor( "purple" )
+        +borcolor( "blue" )
+        +borcolor( "teal" )
+        +borcolor( "mint" )
+        +borcolor( "green" )
+
+
+
+
+
+
+
+
+
+
+
+    h2.ls3.mar-t100 SVG Fill Colours
+
+    :marked
+        Finally, we can also supply a colour
+        for the `fill` property of `<svg>` elements. This can
+        be applied directly to a path, or to the
+        svg parent element to fill all it's children paths.
+
+    pre(data-lang="html").code
+        | &lt;svg class="fill-red"&gt;
+        |   svg is filled red.
+        | &lt;/svg&gt;
+
+    .row.mar-t50.txt-c.txt-sans
+
+        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
+            div.fill-x( style = "max-width: 100px; max-height: 90px;" )
+                include ../../assets/img/animals/panda.svg
+
+        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
+            div.fill-blk( style = "max-width: 100px; max-height: 90px;" )
+                include ../../assets/img/animals/gorilla.svg
+
+        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
+            div.fill-black( style = "max-width: 100px; max-height: 90px;" )
+                include ../../assets/img/animals/wolf.svg
+
+        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
+            div.fill-pitch( style = "max-width: 100px; max-height: 90px;" )
+                include ../../assets/img/animals/rhino.svg
+
+        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
+            div.fill-dark( style = "max-width: 100px; max-height: 90px;" )
+                include ../../assets/img/animals/bunny.svg
+
+        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
+            div.fill-grey( style = "max-width: 100px; max-height: 90px;" )
+                include ../../assets/img/animals/moose.svg
+
+        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
+            div.fill-light( style = "max-width: 100px; max-height: 90px;" )
+                include ../../assets/img/animals/monkey.svg
+
+        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
+            div.fill-white( style = "max-width: 100px; max-height: 90px;" )
+                include ../../assets/img/animals/sloth.svg
+
+        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
+            div.fill-wht( style = "max-width: 100px; max-height: 90px;" )
+                include ../../assets/img/animals/jaguar.svg
+
+
+    .row.mar-t50.txt-c.txt-sans
+
+        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
+            div.fill-silver( style = "max-width: 100px; max-height: 90px;" )
+                include ../../assets/img/animals/bear.svg
+
+        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
+            div.fill-gold( style = "max-width: 100px; max-height: 90px;" )
+                include ../../assets/img/animals/lion.svg
+
+        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
+            div.fill-yellow( style = "max-width: 100px; max-height: 90px;" )
+                include ../../assets/img/animals/squirrel.svg
+
+        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
+            div.fill-orange( style = "max-width: 100px; max-height: 90px;" )
+                include ../../assets/img/animals/tiger.svg
+
+        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
+            div.fill-red( style = "max-width: 100px; max-height: 90px;" )
+                include ../../assets/img/animals/fox.svg
+
+        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
+            div.fill-pink( style = "max-width: 100px; max-height: 90px;" )
+                include ../../assets/img/animals/zebra.svg
+
+        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
+            div.fill-violet( style = "max-width: 100px; max-height: 90px;" )
+                include ../../assets/img/animals/giraffe.svg
+
+        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
+            div.fill-purple( style = "max-width: 100px; max-height: 90px;" )
+                include ../../assets/img/animals/deer.svg
+
+        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
+            div.fill-blue( style = "max-width: 100px; max-height: 90px;" )
+                include ../../assets/img/animals/raccoon.svg
+
+        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
+            div.fill-teal( style = "max-width: 100px; max-height: 90px;" )
+                include ../../assets/img/animals/badger.svg
+
+        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
+            div.fill-mint( style = "max-width: 100px; max-height: 90px;" )
+                include ../../assets/img/animals/koala.svg
+
+        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
+            div.fill-green( style = "max-width: 100px; max-height: 90px;" )
+                include ../../assets/img/animals/snake.svg
 
