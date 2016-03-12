@@ -3,6 +3,7 @@
 @import "fieldsets";
 @import "headings";
 @import "helpers";
+@import "tables";
 
 
 
@@ -22,5 +23,13 @@
         font-family: $font-serif;
 
     }
+
+    @include anchors();
+    @include fieldsets();
+    @include clears();
+    @include headings();
+    @include hide();
+    @include tables();
+    @include visibility();
 
 }

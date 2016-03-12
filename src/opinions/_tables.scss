@@ -1,0 +1,26 @@
+
+
+
+@mixin tables() {
+
+    table {
+
+        text-align: left;
+        border-spacing: 0;
+
+    }
+
+    th,
+    td {
+
+        padding: 0.5rem;
+
+    }
+
+    th {
+
+        border-bottom: 1px solid;
+
+    }
+
+}
