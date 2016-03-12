@@ -531,6 +531,66 @@ html,
 body {
   font-family: "Noto Serif", Merriweather, Georgia, serif; }
 
+fieldset {
+  margin: 0;
+  padding: 1rem; }
+
+.clear:before, .clear:after {
+  content: " ";
+  display: table; }
+
+.clear:after {
+  clear: both; }
+
+/*
+ * some default link styling
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Noto Sans", "Open Sans", Lato, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: inherit; }
+
+.hide {
+  display: none !important; }
+
+@media screen and (min-width: 0em) and (max-width: 47.9375em) {
+  .mb-only-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 48em) {
+  .tb-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 48em) and (max-width: 63.9375em) {
+  .tb-only-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 64em) {
+  .dt-hide {
+    display: none !important; } }
+
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {
+  .dt-only-hide {
+    display: none !important; } }
+
+table {
+  text-align: left;
+  border-spacing: 0; }
+
+th,
+td {
+  padding: 0.5rem; }
+
+th {
+  border-bottom: 1px solid; }
+
+.hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  position: fixed; }
+
+.invisible {
+  visibility: hidden; }
+
 .clear:before, .clear:after {
   content: " ";
   display: table; }
@@ -1067,7 +1127,7 @@ a:not([class]), .link {
   transition: color 0.8s ease; }
 
 a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
-  color: #26ab92;
+  color: #17b5b5;
   -webkit-transition: color 0.2s ease;
   transition: color 0.2s ease; }
 

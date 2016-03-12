@@ -568,6 +568,17 @@ h1, h2, h3, h4, h5, h6 {
   .dt-only-hide {
     display: none !important; } }
 
+table {
+  text-align: left;
+  border-spacing: 0; }
+
+th,
+td {
+  padding: 0.5rem; }
+
+th {
+  border-bottom: 1px solid; }
+
 .hidden {
   clip: rect(1px, 1px, 1px, 1px);
   overflow: hidden;
@@ -1097,7 +1108,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #d61e40; }
 
 .bg-teal {
-  background-color: #26ab92; }
+  background-color: #17b5b5; }
 
 .bg-violet {
   background-color: #981bd8; }
@@ -1592,7 +1603,7 @@ h1, h2, h3, h4, h5, h6 {
   border-color: #d61e40; }
 
 .bor-teal {
-  border-color: #26ab92; }
+  border-color: #17b5b5; }
 
 .bor-violet {
   border-color: #981bd8; }
@@ -1658,7 +1669,7 @@ h1, h2, h3, h4, h5, h6 {
   border-top-color: #d61e40; }
 
 .bor-t-teal {
-  border-top-color: #26ab92; }
+  border-top-color: #17b5b5; }
 
 .bor-t-violet {
   border-top-color: #981bd8; }
@@ -1724,7 +1735,7 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom-color: #d61e40; }
 
 .bor-b-teal {
-  border-bottom-color: #26ab92; }
+  border-bottom-color: #17b5b5; }
 
 .bor-b-violet {
   border-bottom-color: #981bd8; }
@@ -1790,7 +1801,7 @@ h1, h2, h3, h4, h5, h6 {
   border-left-color: #d61e40; }
 
 .bor-l-teal {
-  border-left-color: #26ab92; }
+  border-left-color: #17b5b5; }
 
 .bor-l-violet {
   border-left-color: #981bd8; }
@@ -1856,7 +1867,7 @@ h1, h2, h3, h4, h5, h6 {
   border-right-color: #d61e40; }
 
 .bor-r-teal {
-  border-right-color: #26ab92; }
+  border-right-color: #17b5b5; }
 
 .bor-r-violet {
   border-right-color: #981bd8; }
@@ -2076,7 +2087,7 @@ a:not([class]), .link {
   transition: color 0.8s ease; }
 
 a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
-  color: #26ab92;
+  color: #17b5b5;
   -webkit-transition: color 0.2s ease;
   transition: color 0.2s ease; }
 
@@ -4380,7 +4391,7 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   color: #d61e40; }
 
 .teal {
-  color: #26ab92; }
+  color: #17b5b5; }
 
 .violet {
   color: #981bd8; }
@@ -4674,7 +4685,7 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 
 .fill-teal,
 .fill-teal path {
-  fill: #26ab92; }
+  fill: #17b5b5; }
 
 .fill-violet,
 .fill-violet path {
