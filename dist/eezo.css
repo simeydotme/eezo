@@ -1,7 +1,7 @@
 /*!
  * [ eezo ]
  * - css framework for massless stylesheets
- * - 0.6.0-alpha | http://github.com/simeydotme/eezo
+ * - 0.6.2-alpha | http://github.com/simeydotme/eezo
  * - @simeydotme | http://simey.me
  */
 @charset "UTF-8";
@@ -133,7 +133,7 @@
  * @type { key/value list }
  */
 /**
- * $font-sizes for generating font scale
+ * $text-scale for generating font scale
  * and line-height scale.
  *
  * please don't make text smaller than 12px
@@ -576,7 +576,7 @@ th,
 td {
   padding: 0.5rem; }
 
-th {
+thead th {
   border-bottom: 1px solid; }
 
 .hidden {
