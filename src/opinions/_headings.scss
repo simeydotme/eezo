@@ -7,11 +7,11 @@
 
     @function heading( $n ) {
 
-        $l:         length( $font-sizes );
-        $item:      nth( $font-sizes, ( $l - $n ) );
+        $l:         length( $text-scale );
+        $item:      nth( $text-scale, ( $l - $n ) );
         $key:       nth( $item, 1 );
 
-        @return ".#{ $text-size-prop }#{ $key }";
+        @return ".#{ $font-size-prop }#{ $key }";
     }
 
     h1 { @extend #{ heading(1) }; }

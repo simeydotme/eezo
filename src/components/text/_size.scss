@@ -1,10 +1,12 @@
 
-$text-size-prop:        "f" !default;
-$text-sizes:            $font-sizes !default;
+// $font-sizes inherits from the $text-scale set
+// in the defaults file.
+$font-size-prop:        "f" !default;
+$font-sizes:            $text-scale !default;
 
 @mixin font-size( $bps: $text-bps ) {
 
-    $p: $text-size-prop;
+    $p: $font-size-prop;
 
     @each $b in $bps {
 
@@ -16,7 +18,7 @@ $text-sizes:            $font-sizes !default;
 
             $bp: hyphen-after( $b );
 
-            @each $size in $text-sizes {
+            @each $size in $font-sizes {
 
                 $key: nth( $size, 1 );
                 $val: nth( $size, 2 );

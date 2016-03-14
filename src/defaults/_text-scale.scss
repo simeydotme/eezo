@@ -1,6 +1,6 @@
 
 /**
- * $font-sizes for generating font scale
+ * $text-scale for generating font scale
  * and line-height scale.
  *
  * please don't make text smaller than 12px
@@ -8,7 +8,7 @@
  *
  * @type { key/value list }
  */
-$font-sizes: (
+$text-scale: (
 
     "2-":   0.75rem,
     "1-":   0.875rem,
