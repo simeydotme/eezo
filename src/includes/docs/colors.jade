@@ -26,6 +26,12 @@ mixin borcolor( color )
     div.mb-12.tb-3.col.end.pad-5
         span.disp-b.mar-5.pad-v15.bor-1( class = "bor-" + color ) .bor-#{color}
 
+mixin svgcolor( color )
+
+    div.mb-4.tb-2.col.end.pad-0.mar-v10.pos-r( style = "height: 100px;" )
+        div.pos-a.b0( style = "width: 100px; height: 90px;" class = "fill-" + color )
+            block
+
 
 
 
@@ -275,90 +281,71 @@ append content
 
     .row.mar-t50.txt-c.txt-sans
 
-        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
-            div.fill-x( style = "max-width: 100px; max-height: 90px;" )
-                include ../../assets/img/animals/panda.svg
+        +svgcolor( "x" )
+            include ../../assets/img/animals/panda.svg
 
-        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
-            div.fill-blk( style = "max-width: 100px; max-height: 90px;" )
-                include ../../assets/img/animals/gorilla.svg
+        +svgcolor( "blk" )
+            include ../../assets/img/animals/gorilla.svg
 
-        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
-            div.fill-black( style = "max-width: 100px; max-height: 90px;" )
-                include ../../assets/img/animals/wolf.svg
+        +svgcolor( "black" )
+            include ../../assets/img/animals/wolf.svg
 
-        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
-            div.fill-pitch( style = "max-width: 100px; max-height: 90px;" )
-                include ../../assets/img/animals/rhino.svg
+        +svgcolor( "pitch" )
+            include ../../assets/img/animals/rhino.svg
 
-        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
-            div.fill-dark( style = "max-width: 100px; max-height: 90px;" )
-                include ../../assets/img/animals/bunny.svg
+        +svgcolor( "dark" )
+            include ../../assets/img/animals/bunny.svg
 
-        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
-            div.fill-grey( style = "max-width: 100px; max-height: 90px;" )
-                include ../../assets/img/animals/moose.svg
+        +svgcolor( "grey" )
+            include ../../assets/img/animals/moose.svg
 
-        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
-            div.fill-light( style = "max-width: 100px; max-height: 90px;" )
-                include ../../assets/img/animals/monkey.svg
+        +svgcolor( "light" )
+            include ../../assets/img/animals/monkey.svg
 
-        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
-            div.fill-white( style = "max-width: 100px; max-height: 90px;" )
-                include ../../assets/img/animals/sloth.svg
+        +svgcolor( "white" )
+            include ../../assets/img/animals/sloth.svg
 
-        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
-            div.fill-wht( style = "max-width: 100px; max-height: 90px;" )
-                include ../../assets/img/animals/jaguar.svg
+        +svgcolor( "wht" )
+            include ../../assets/img/animals/jaguar.svg
 
 
     .row.mar-t50.txt-c.txt-sans
 
-        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
-            div.fill-silver( style = "max-width: 100px; max-height: 90px;" )
-                include ../../assets/img/animals/bear.svg
+        +svgcolor( "silver" )
+            include ../../assets/img/animals/bear.svg
 
-        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
-            div.fill-gold( style = "max-width: 100px; max-height: 90px;" )
-                include ../../assets/img/animals/lion.svg
+        +svgcolor( "gold" )
+            include ../../assets/img/animals/lion.svg
 
-        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
-            div.fill-yellow( style = "max-width: 100px; max-height: 90px;" )
-                include ../../assets/img/animals/squirrel.svg
+        +svgcolor( "yellow" )
+            include ../../assets/img/animals/squirrel.svg
 
-        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
-            div.fill-orange( style = "max-width: 100px; max-height: 90px;" )
-                include ../../assets/img/animals/tiger.svg
+        +svgcolor( "orange" )
+            include ../../assets/img/animals/tiger.svg
 
-        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
-            div.fill-red( style = "max-width: 100px; max-height: 90px;" )
-                include ../../assets/img/animals/fox.svg
+        +svgcolor( "red" )
+            include ../../assets/img/animals/fox.svg
 
-        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
-            div.fill-pink( style = "max-width: 100px; max-height: 90px;" )
-                include ../../assets/img/animals/zebra.svg
+        +svgcolor( "pink" )
+            include ../../assets/img/animals/zebra.svg
 
-        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
-            div.fill-violet( style = "max-width: 100px; max-height: 90px;" )
-                include ../../assets/img/animals/giraffe.svg
+        +svgcolor( "violet" )
+            include ../../assets/img/animals/giraffe.svg
 
-        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
-            div.fill-purple( style = "max-width: 100px; max-height: 90px;" )
-                include ../../assets/img/animals/deer.svg
+        +svgcolor( "purple" )
+            include ../../assets/img/animals/deer.svg
 
-        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
-            div.fill-blue( style = "max-width: 100px; max-height: 90px;" )
-                include ../../assets/img/animals/raccoon.svg
+        +svgcolor( "blue" )
+            include ../../assets/img/animals/raccoon.svg
 
-        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
-            div.fill-teal( style = "max-width: 100px; max-height: 90px;" )
-                include ../../assets/img/animals/badger.svg
+        +svgcolor( "teal" )
+            include ../../assets/img/animals/badger.svg
 
-        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
-            div.fill-mint( style = "max-width: 100px; max-height: 90px;" )
-                include ../../assets/img/animals/koala.svg
+        +svgcolor( "mint" )
+            include ../../assets/img/animals/koala.svg
 
-        div.mb-4.tb-2.col.end.mar-v10( style = "height: 100px;" )
-            div.fill-green( style = "max-width: 100px; max-height: 90px;" )
-                include ../../assets/img/animals/snake.svg
+        +svgcolor( "green" )
+            include ../../assets/img/animals/snake.svg
+
+    p.f1.fs-i.txt-c.mar-v50 SVGs designed by <a href="http://www.flaticon.com/authors/freepik">freepik</a>
 

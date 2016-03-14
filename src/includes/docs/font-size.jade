@@ -1,0 +1,82 @@
+
+extends ./layout/columns
+
+
+
+
+mixin table-row( css, size )
+
+    - rem = size / 16
+
+    tr
+        td.pad-v5.pad-h10= css
+        td.pad-v5.pad-h10= rem + "rem"
+        td.pad-v5.pad-h10= size + "px"
+
+
+
+
+
+append content
+
+    h2.ls3 Font Size
+
+
+    table.mar-t50.mb-12.txt-l.txt-sans
+
+        thead
+
+            tr
+
+                th.pad-10.bor-b1 class name
+                th.pad-10.bor-b1 in rems
+                th.pad-10.bor-b1 in pixels
+
+        tbody.txt-code
+
+            +table-row( ".f2-", 12 )
+            +table-row( ".f1-", 14 )
+            +table-row( ".f0", 16 )
+            +table-row( ".f1", 18 )
+            +table-row( ".f2", 20 )
+            +table-row( ".f3", 24 )
+            +table-row( ".f4", 28 )
+            +table-row( ".f5", 32 )
+            +table-row( ".f6", 40 )
+            +table-row( ".f7", 48 )
+            +table-row( ".f8", 64 )
+
+
+
+
+    h3.ls2.mar-t100 Default Class
+
+    pre(data-lang="html").code
+        | &lt;body class="f0"&gt;
+        | 
+        |   text is normal
+        | 
+        |   &lt;h1 class="f8"&gt; text is huge &lt;h1&gt;
+        |   &lt;small class="f2-"&gt; text is tiny &lt;/small&gt;
+        | 
+        | &lt;/body&gt;
+
+
+
+
+    h3.ls2.mar-t100 Customising
+
+    :marked
+        To change the prefix from `f` to something else, you
+        may use the `$font-size-prop` variable to override. Also
+        the `$font-sizes` variable can be overridden with a map
+        to change the scale.
+
+    pre(data-lang="scss").code
+        | // $font-sizes inherits from the $text-scale set
+        | // in the defaults file.
+        | $font-size-prop:        "f" !default;
+        | $font-sizes:            $text-scale !default;
+
+    :marked
+        `/src/components/text/_size.scss`
