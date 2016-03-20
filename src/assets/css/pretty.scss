@@ -20,7 +20,7 @@ pre {
     /* a comment */
     .com { color: $code-comment; }
     /* a type name */
-    .typ { color: #6699cc; }
+    .typ { color: $code-blue; }
     /* a literal value */
     .lit { color: $code-pink; }
     /* punctuation */
@@ -48,7 +48,7 @@ pre {
 
       .pln { color: $code-plain; }
       /* a keyword */
-      .kwd { color: $code-plain; }
+      .kwd { color: $code-blue; }
       /* a literal value */
       .lit { color: $code-pink; }
 
