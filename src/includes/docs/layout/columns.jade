@@ -2,19 +2,19 @@
 extends ../../layout/main
 
 block styles
-    link(rel="stylesheet" href="../assets/css/styles.css")
+    link(rel="stylesheet" href="/dist/assets/css/styles.css")
 
 append body
 
     include ../partials/header
 
-    section.docs-body.container.pad-l50.pad-t30.center.pos-r
+    section.docs-body.container.pad-20.dt-pad-50.center.pos-r
 
-        .docs-sidebar.pos-a.t0.r0.pad-t30
+        .docs-sidebar.pos-a.t30.r20.dt-r50
 
             include ../partials/sidebar
 
-        .docs-content.f2
+        .docs-content.f1
 
             block content
 

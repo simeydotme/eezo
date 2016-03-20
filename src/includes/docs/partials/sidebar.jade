@@ -2,28 +2,31 @@ mixin header( name, border )
 
     li.mar-t20
         if border
-            h4.pad-t20.f3.fw-bold.bor-t1.bor-t-dark= name
+            h4.mar-b10.pad-t20.f2.fw-bold.bor-t1.bor-t-dark= name
         else
-            h4.mar-t20.f3.fw-bold= name
+            h4.mar-b10.mar-t20.f2.fw-bold= name
 
 mixin item( name, url )
 
     li
         if url
-            a(href=url)= name
+            a( href="/dist/docs" + url )= name
         else
             a(href="#")= name
 
 
 
 
-ul.mar-0.pad-0.pad-t50.f2.txt-sans
+ul.mar-0.pad-0.pad-t50.txt-sans
 
     +header( "Getting Started" )
 
     +item( "Installation" )
 
     +header( "Styles", true )
+    +header( "Text" )
 
-    +item( "Font Sizes", "font-size.html" )
-    +item( "Colours", "colors.html" )
+    +item( "Font Size", "/text/font-size.html" )
+
+    +header( "Colour" )
+    +item( "Colours", "/colors.html" )
