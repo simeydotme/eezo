@@ -57,92 +57,89 @@
       </ul>
     </div>
     <div class="docs-content f1">
-      <h2 class="ls3">Font Size</h2>
+      <h2 class="ls3">Text Align</h2>
       <table class="mar-t50 mb-12 txt-l txt-sans">
         <thead>
           <tr>
             <th class="pad-10 bor-b1">class name</th>
-            <th class="pad-10 bor-b1">in rems</th>
-            <th class="pad-10 bor-b1">in pixels</th>
+            <th class="pad-10 bor-b1">alignment value</th>
           </tr>
         </thead>
         <tbody class="txt-code">
           <tr>
-            <td class="pad-v5 pad-h10">.f2-</td>
-            <td class="pad-v5 pad-h10">0.75rem</td>
-            <td class="pad-v5 pad-h10">12px</td>
+            <td class="pad-10 pad-b0 va-top whs-nowrap">.txt-l</td>
+            <td class="pad-10 pad-b0 va-top">
+              <div class="code">left</div>
+            </td>
           </tr>
           <tr>
-            <td class="pad-v5 pad-h10">.f1-</td>
-            <td class="pad-v5 pad-h10">0.875rem</td>
-            <td class="pad-v5 pad-h10">14px</td>
+            <td class="pad-10 pad-b0 va-top whs-nowrap">.txt-r</td>
+            <td class="pad-10 pad-b0 va-top">
+              <div class="code">right</div>
+            </td>
           </tr>
           <tr>
-            <td class="pad-v5 pad-h10">.f0</td>
-            <td class="pad-v5 pad-h10">1rem</td>
-            <td class="pad-v5 pad-h10">16px</td>
+            <td class="pad-10 pad-b0 va-top whs-nowrap">.txt-c</td>
+            <td class="pad-10 pad-b0 va-top">
+              <div class="code">center</div>
+            </td>
           </tr>
           <tr>
-            <td class="pad-v5 pad-h10">.f1</td>
-            <td class="pad-v5 pad-h10">1.125rem</td>
-            <td class="pad-v5 pad-h10">18px</td>
+            <td class="pad-10 pad-b0 va-top whs-nowrap">.txt-j</td>
+            <td class="pad-10 pad-b0 va-top">
+              <div class="code">justify</div>
+            </td>
           </tr>
           <tr>
-            <td class="pad-v5 pad-h10">.f2</td>
-            <td class="pad-v5 pad-h10">1.25rem</td>
-            <td class="pad-v5 pad-h10">20px</td>
+            <td class="pad-10 pad-b0 va-top whs-nowrap">.txt-ja</td>
+            <td class="pad-10 pad-b0 va-top">
+              <div class="code">justify-all</div>
+            </td>
           </tr>
           <tr>
-            <td class="pad-v5 pad-h10">.f3</td>
-            <td class="pad-v5 pad-h10">1.5rem</td>
-            <td class="pad-v5 pad-h10">24px</td>
+            <td class="pad-10 pad-b0 va-top whs-nowrap">.txt-s</td>
+            <td class="pad-10 pad-b0 va-top">
+              <div class="code">start</div>
+            </td>
           </tr>
           <tr>
-            <td class="pad-v5 pad-h10">.f4</td>
-            <td class="pad-v5 pad-h10">1.75rem</td>
-            <td class="pad-v5 pad-h10">28px</td>
-          </tr>
-          <tr>
-            <td class="pad-v5 pad-h10">.f5</td>
-            <td class="pad-v5 pad-h10">2rem</td>
-            <td class="pad-v5 pad-h10">32px</td>
-          </tr>
-          <tr>
-            <td class="pad-v5 pad-h10">.f6</td>
-            <td class="pad-v5 pad-h10">2.5rem</td>
-            <td class="pad-v5 pad-h10">40px</td>
-          </tr>
-          <tr>
-            <td class="pad-v5 pad-h10">.f7</td>
-            <td class="pad-v5 pad-h10">3rem</td>
-            <td class="pad-v5 pad-h10">48px</td>
-          </tr>
-          <tr>
-            <td class="pad-v5 pad-h10">.f8</td>
-            <td class="pad-v5 pad-h10">4rem</td>
-            <td class="pad-v5 pad-h10">64px</td>
+            <td class="pad-10 pad-b0 va-top whs-nowrap">.txt-e</td>
+            <td class="pad-10 pad-b0 va-top">
+              <div class="code">end</div>
+            </td>
           </tr>
         </tbody>
       </table>
-      <h3 class="ls2 mar-t100">Default Class</h3>
-      <pre data-lang="html" class="code">&lt;body class="f0"&gt;
- 
-  text is normal
- 
-  &lt;h1 class="f8"&gt; text is huge &lt;h1&gt;
-  &lt;small class="f2-"&gt; text is tiny &lt;/small&gt;
- 
-&lt;/body&gt;</pre>
-      <h3 class="ls2 mar-t100">Customising</h3><p>To change the prefix from <code>f</code> to something else, you
-may use the <code>$font-size-prop</code> variable to override. Also
-the <code>$font-sizes</code> variable can be overridden with a map
-to change the scale.</p>
+      <h3 class="ls2 mar-t100">Default Classes</h3>
+      <pre data-lang="html" class="code">  &lt;p class="txt-l"&gt; aligned left &lt;p&gt;
+  &lt;p class="txt-r"&gt; aligned right &lt;/p&gt;
+  &lt;p class="txt-c"&gt; centered &lt;/p&gt;
+  &lt;p class="txt-j"&gt; justified &lt;/p&gt;</pre>
+      <h3 class="ls2 mar-t100">Customising</h3>
+      <h4 class="ls2">Default Classes</h4><p>To change the prefix from <code>txt</code> to something else, you
+may use the <code>$text-align-prop</code> variable to override:</p>
 
-      <pre data-lang="sass" class="code">// $font-sizes inherits from the $text-scale set
-// in the defaults file.
-$font-size-prop:        "f" !default;
-$font-sizes:            $text-scale !default;</pre>
-      <hr class="bg-x bor-0 bor-b1 bor-grey mar-v50"/><p><code>/src/components/text/_size.scss</code></p>
+      <pre data-lang="sass" class="code">// change the default class:
+// .txt-*  ->  .ta-*
+$text-align-prop: "ta";</pre>
+      <h4 class="ls2">Custom Alignment</h4><p>You may not always need all the alignment
+values, so to save some bytes you may supply a custom
+<code>$text-aligns</code> map to add your own custom font sets:</p>
+
+      <pre data-lang="sass" class="code">// change the alignments map so there's,
+// only left, right, center.
+$text-aligns: (
+   l: left,
+   r: right,
+   c: center
+);</pre>
+      <h4 class="ls2">Combined</h4><p>The previous two customisations combined:</p>
+
+      <pre data-lang="sass" class="code">// would result in css like:
+.ta-l { text-align: left; }
+.ta-r { text-align: right; }
+.ta-c { text-align: center; }</pre>
+      <hr class="bg-x bor-0 bor-b1 bor-grey mar-v50"/><p><code>/src/components/text/_align.scss</code></p>
 
     </div>
   </section>
