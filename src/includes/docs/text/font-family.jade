@@ -1,0 +1,105 @@
+
+extends ../layout/columns
+
+
+mixin table-row( name, value )
+
+    tr
+        td.pad-20.pad-b0.va-top.whs-nowrap= name
+        td.pad-20.pad-b0.va-top
+            .code= value
+
+
+
+
+
+append content
+
+    h2.ls3 Font Family
+
+    :marked
+        The font stacks that come by default with Eezo have been
+        defined to **maximize compatibility** and aesthetics. For the
+        sans/serif type [Noto comes first](https://www.google.com/get/noto/), 
+        followed by some popular/common open fonts, and then 
+        finally some pleasant system defaults.
+
+        Even if you're not a developer/author from The East designing for
+        eastern screens with CJK text; your website is
+        still probably being viewed and translated by users from there.
+        So there's also pleasant CJK system defaults.
+
+    table.mar-t50.mb-12.txt-l.txt-sans
+
+        thead
+
+            tr
+
+                th.pad-20.bor-b1 class name
+                th.pad-20.bor-b1 font stack
+
+        tbody.txt-code
+
+            +table-row( ".txt-code", "Menlo, Monaco, Consolas, monospace" )
+            +table-row( ".txt-heading", "Proxima Nova, Lato, Avenir, Arial, sans-serif, 微软雅黑体, 微软雅黑, Microsoft YaHei, 黑体, SimHei, 冬青黑体, Hiragino Sans GB, 华文黑体, STHeiti, sans-serif" )
+            +table-row( ".txt-sans", "Noto Sans, Open Sans, Lato, Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif, 微软雅黑体, 微软雅黑, Microsoft YaHei, 黑体, SimHei, 冬青黑体, Hiragino Sans GB, 华文黑体, STHeiti, sans-serif" )
+            +table-row( ".txt-serif", "Noto Serif, Merriweather, Georgia, serif, 新細明體, PMingLiU, 华文细黑, STXihei, 宋体, SimSun, serif" )
+
+
+
+
+    h3.ls2.mar-t100 Default Classes
+
+    pre(data-lang="html").code
+        | &lt;body class="txt-serif"&gt;
+        | 
+        |   &lt;h1 class="txt-heading"&gt; heading &lt;h1&gt;
+        |   &lt;p class="txt-sans"&gt; sub-heading &lt;/p&gt;
+        |   &lt;pre class="txt-code"&gt; code style &lt;/pre&gt;
+        | 
+        | &lt;/body&gt;
+
+
+
+
+    h3.ls2.mar-t100 Customising
+
+    h4.ls2 Default Classes
+
+    :marked
+        To change the prefix from `txt` to something else, you
+        may use the `$font-family-prop` variable to override.
+
+    pre(data-lang="sass").code
+        | // change the default class:
+        | // .txt-*  ->  .ff-*
+        | $font-family-prop: "ff";
+
+    h4.ls2 Custom Fonts
+
+    :marked
+        Supply a `$custom-fonts` map to
+        add your own custom font sets:
+
+    pre(data-lang="sass").code
+        | // change the sans-serif font family, and
+        | // add a new font-family:
+        | $custom-fonts: (
+        |   sans: "Helvetica",
+        |   chuck: "Chuck Norris"
+        | );
+
+    h4.ls2 Combined
+
+    :marked
+        The previous two customisations combined:
+
+    pre(data-lang="sass").code
+        | // would result in css like:
+        | .ff-sans { font-family: "Helvetica"; }
+        | .ff-chuck { font-family: "Chuck Norris"; }
+
+
+    +source-file
+        :marked
+            `/src/components/text/_family.scss`

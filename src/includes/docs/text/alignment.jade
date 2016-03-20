@@ -1,0 +1,96 @@
+
+extends ../layout/columns
+
+
+
+
+mixin table-row( name, value )
+
+    tr
+        td.pad-10.pad-b0.va-top.whs-nowrap= name
+        td.pad-10.pad-b0.va-top
+            .code= value
+
+
+
+
+
+append content
+
+    h2.ls3 Text Align
+
+    table.mar-t50.mb-12.txt-l.txt-sans
+
+        thead
+
+            tr
+
+                th.pad-10.bor-b1 class name
+                th.pad-10.bor-b1 alignment value
+
+        tbody.txt-code
+
+            +table-row( ".txt-l", "left" )
+            +table-row( ".txt-r", "right" )
+            +table-row( ".txt-c", "center" )
+            +table-row( ".txt-j", "justify" )
+            +table-row( ".txt-ja", "justify-all" )
+            +table-row( ".txt-s", "start" )
+            +table-row( ".txt-e", "end" )
+
+
+    h3.ls2.mar-t100 Default Classes
+
+    pre(data-lang="html").code
+        |   &lt;p class="txt-l"&gt; aligned left &lt;p&gt;
+        |   &lt;p class="txt-r"&gt; aligned right &lt;/p&gt;
+        |   &lt;p class="txt-c"&gt; centered &lt;/p&gt;
+        |   &lt;p class="txt-j"&gt; justified &lt;/p&gt;
+
+
+
+
+    h3.ls2.mar-t100 Customising
+
+    h4.ls2 Default Classes
+
+    :marked
+        To change the prefix from `txt` to something else, you
+        may use the `$text-align-prop` variable to override:
+
+    pre(data-lang="sass").code
+        | // change the default class:
+        | // .txt-*  ->  .ta-*
+        | $text-align-prop: "ta";
+
+    h4.ls2 Custom Alignment
+
+    :marked
+        You may not always need all the alignment
+        values, so to save some bytes you may supply a custom
+        `$text-aligns` map to add your own custom font sets:
+
+    pre(data-lang="sass").code
+        | // change the alignments map so there's,
+        | // only left, right, center.
+        | $text-aligns: (
+        |    l: left,
+        |    r: right,
+        |    c: center
+        | );
+
+    h4.ls2 Combined
+
+    :marked
+        The previous two customisations combined:
+
+    pre(data-lang="sass").code
+        | // would result in css like:
+        | .ta-l { text-align: left; }
+        | .ta-r { text-align: right; }
+        | .ta-c { text-align: center; }
+
+
+    +source-file
+        :marked
+            `/src/components/text/_align.scss`
