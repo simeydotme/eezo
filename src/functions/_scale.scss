@@ -1,0 +1,19 @@
+
+$modular-scale:     1.2 !default;
+$modular-unit:      rems( $rem ) !default;
+
+// Modular Scale function, for producing numbers on a scale.
+// @param {Number} $value - Integer Number representing the positive
+//                          or negative position on the scale
+// @param {Number} $unit - Unit to multiply the scale by.
+// @returns {Number} - The unit multiplied by the position on the scale
+// - inspired by Modular Scale / http://www.modularscale.com/?1&em&1.2&sass&text
+
+@function scale( $value, $unit: $modular-unit ) {
+
+    @debug $value;
+    @debug $unit;
+
+    @return power( $modular-scale , $value ) * $unit;
+
+}

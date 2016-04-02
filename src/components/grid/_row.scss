@@ -3,6 +3,7 @@
 
     .#{ $row-prop } {
 
+        display: block;
         @include clearfix();
 
     }

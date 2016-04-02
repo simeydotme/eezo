@@ -3,32 +3,23 @@
  * $distances is used to create spacings
  * across components such as margin/padding/position
  *
- * the defaults are quite reasonable.
- *
- * if you ever think you need to adjust something by 1px;
- *     you're wrong. move it by 2.
- *
- * if you think you need to move something by 3/4px;
- *     wrong, use 2/5.
- *
- * from there on up, pick the closest size for aesthetically
- * consistent and pleasing distances across your app.
- *
- * or just override in your own stylesheet.
+ * the defaults are quite reasonable,
+ * but you can just override in your own stylesheet.
  *
  * @type { key/value list }
  */
 $distances: (
 
     "0":        0,
-    "2":        rems( 2px ),
-    "5":        rems( 5px ),
-    "10":       rems( 10px ),
-    "15":       rems( 15px ),
-    "20":       rems( 20px ),
-    "30":       rems( 30px ),
-    "50":       rems( 50px ),
-    "100":      rems( 100px ),
+    "1":        0.125rem,
+    "2":        0.25rem,
+    "3":        0.75rem,
+    "4":        1rem,
+    "5":        1.25rem,
+    "6":        2rem,
+    "7":        3rem,
+    "8":        4rem,
+    "9":        6rem,
 
 ) !default;
 
@@ -42,10 +33,10 @@ $distances: (
  */
 $distances-neg: (
 
-    "2-":       rems( -2px ),
-    "5-":       rems( -5px ),
-    "10-":      rems( -10px ),
-    "15-":      rems( -15px ),
-    "20-":      rems( -20px ),
+    "1-":        -0.125rem,
+    "2-":        -0.25rem,
+    "3-":        -0.75rem,
+    "4-":        -1rem,
+    "5-":        -1.25rem,
 
 ) !default;

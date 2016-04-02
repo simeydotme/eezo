@@ -1,0 +1,34 @@
+
+// Math Power function for exponential numbers
+// @param {Number} $num - Floating Point Number to raise to the power
+// @param {Number} $nth - Integer Number representing the nth power
+// @returns {Number} - The Floating Point nth power of $num
+// - inspired by Hugo Giraudel / https://css-tricks.com/snippets/sass/power-function/
+
+@function power( $num, $nth ) {
+
+  $raised: 1;
+
+  @if $nth > 0 {
+
+    @for $i from 1 through $nth {
+
+      $raised: $raised * $num;
+
+    }
+
+  }
+
+  @else if $nth < 0 {
+
+    @for $i from $nth through -1 {
+
+      $raised: $raised / $num;
+
+    }
+
+  }
+
+  @return $raised;
+
+}

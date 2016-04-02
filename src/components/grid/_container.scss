@@ -3,7 +3,7 @@
 
     .#{ $container-prop } {
 
-        max-width: $max-width;
+        max-width: rems( $max-width );
 
     }
 
