@@ -7,30 +7,33 @@ extends ./layout/columns
 mixin table-row( bg, hex )
 
     tr
-        td.pad-v5.pad-h10= bg
-        td.pad-v5.pad-h10= hex
-        td.pad-v5.pad-h10( class="bg-" + bg )
+        td.pad-v2.pad-h3= bg
+        td.pad-v2.pad-h3= hex
+        td.pad-v2.pad-h3.bor-1dot.bor-t0.bor-light( class="bg-" + bg )
 
-mixin txtcolor( fg, bg )
+mixin txtcolor( color, bg )
 
-    div.mb-12.tb-3.col.end.pad-v20( class = "bg-" + bg + " " + fg )
-        span.disp-b .#{fg}
+    div.mb-6.tb-3.col.end.pad-v6( class = "bg-" + bg + " " + color )
+        span.disp-b.f3.txt-code.fw-b .#{color}
 
-mixin bgcolor( bg, fg )
+mixin bgcolor( bg, color )
 
-    div.mb-12.tb-3.col.end.pad-v30( class = "bg-" + bg + " " + fg )
-        span.disp-b .bg-#{bg}
+    div.mb-6.tb-3.col.end.pad-v7( class = "bg-" + bg + " " + color )
+        span.disp-b.txt-code .bg-#{bg}
 
 mixin borcolor( color )
 
-    div.mb-12.tb-3.col.end.pad-5
-        span.disp-b.mar-5.pad-v15.bor-1( class = "bor-" + color ) .bor-#{color}
+    div.mb-6.tb-3.col.end.pad-2
+        span.disp-b.mar-2.pad-v4.bor-1.txt-code( class = "bor-" + color ) .bor-#{color}
 
-mixin svgcolor( color )
+mixin svgcolor( color, bg )
 
-    div.mb-4.tb-2.col.end.pad-0.mar-v10.pos-r( style = "height: 100px;" )
-        div.pos-a.b0( style = "width: 100px; height: 90px;" class = "fill-" + color )
+    div.mb-6.tb-3.col.end.pad-4.pad-b0( class = "bg-" + bg )
+        div.center( class = "fill-" + color  style = "height: 100px; width: 100px;")
+
             block
+
+        p.txt-code .fill-#{color}
 
 
 
@@ -40,37 +43,41 @@ mixin svgcolor( color )
 
 append content
 
-    h2.ls3 Colours
-
-    p.f3
-        | Eezo comes with the ability to change colours of some
-        | properties such as <strong>text</strong>, <strong>background-color</strong>
-        | and <strong>borders</strong>. The colours can also be customised in sass
-        | by changing the default values or adding more colours.
 
 
-    h3.ls2.mar-t100 Default Colours
+    +main-title( "Colours" )
 
-    p
-        | These are the default colours that come with eezo, they are
-        | mostly just nice defaults for general UI purposes
-        | with a slightly cool hue for greys.
+    +intro-text
+        :marked
+            Eezo comes with the ability to change colours of some
+            properties such as **text**, **background-color**
+            and **borders**. The colours can also be customised in sass
+            by changing the default values or adding more colours.
 
-    p
-        | The <code>black</code> and <code>white</code> colors are bot set 
-        | to "nicer" shade with zero saturation. Where as the greys are 
-        | slightly saturated with a cool hue. (<a href="http://ianstormtaylor.com/design-tip-never-use-black/">
-        | why? read this.</a>)
 
-    table.mar-t50.mb-12.txt-l.txt-sans
+
+
+    +sub-title( "Default Colours" )
+
+    :marked
+        These are the default colours that come with Eezo, they are
+        mostly just nice defaults for general UI purposes
+        with a slightly cool hue for greys.
+
+        The `black` and `white` colors are both set
+        to a *"nicer"* shade with no saturation. And the greys are 
+        slightly saturated with a cool hue. [why? read 
+        this.](http://ianstormtaylor.com/design-tip-never-use-black/)
+
+    +table
 
         thead
 
             tr
 
-                th.pad-10.bor-b1 class name
-                th.pad-10.bor-b1 hex value
-                th.pad-10.bor-b1 example
+                +table-head class name
+                +table-head hex value
+                +table-head example
 
         tbody.txt-code
 
@@ -84,15 +91,18 @@ append content
             +table-row( "black", "#1a1a1a" )
             +table-row( "blk", "#000000" )
 
-    h3.ls2.mar-t100 Extra Colours
 
-    p
-        | The extra colours are just some "<em>pretty OK</em>"
-        | colours to jump-start your ui. They
-        | only come with the <strong class="txt-sans">Core+</strong> bundle
-        | and can be easily overridden with customisation in sass.
 
-    table.mb-12.txt-l.txt-sans
+
+    +sub-title( "Extra Colours" )
+
+    :marked
+        The extra colours are just some *"pretty OK"*
+        colours to jump-start your ui. They only come with 
+        the <strong class="txt-sans">Core+</strong> bundle
+        and can be easily overridden with customisation in sass.
+
+    +table
 
         thead
 
@@ -120,33 +130,32 @@ append content
 
 
 
+    +sub-title( "Text Colours" )
+
+    :marked
+        Text (forground) colours can easily be styled
+        by supplying a classname of the colour you want. This
+        also applies for any custom colours you define.
 
 
+    :prismjs( language = "html" )
+        <body class="black">
+          has black text.
+        </body>
 
-    h2.ls3.mar-t100 Text Colours
+    .row.mar-t6.txt-c.txt-sans
 
-    p
-        | Text (forground) colours can easily be applied
-        | by supplying a classname of the colour you want.
-
-    pre(data-lang="html").code
-        | &lt;body class="black"&gt;
-        |   has black text.
-        | &lt;/body&gt;
-
-    .row.mar-t50.txt-c.txt-sans
-
-        +txtcolor( "x" )
-        +txtcolor( "blk" )
-        +txtcolor( "black" )
-        +txtcolor( "pitch" )
-        +txtcolor( "dark" )
+        +txtcolor( "x", "silver" )
+        +txtcolor( "wht", "silver" )
+        +txtcolor( "white", "silver" )
+        +txtcolor( "light", "silver" )
         +txtcolor( "grey" )
-        +txtcolor( "light" )
-        +txtcolor( "white" )
-        +txtcolor( "wht" )
+        +txtcolor( "dark" )
+        +txtcolor( "pitch" )
+        +txtcolor( "black" )
+        +txtcolor( "blk" )
 
-    .row.mar-t50.txt-c.txt-sans
+    .row.mar-t6.txt-c.txt-sans
 
         +txtcolor( "silver" )
         +txtcolor( "gold" )
@@ -164,36 +173,31 @@ append content
 
 
 
-
-
-
-
-
-    h2.ls3.mar-t100 Background Colours
+    +sub-title( "Background Colours" )
 
     :marked
         Like text colours, background colours can be applied to any
         valid html element using the class: `bg-x`. Where
-        "`x`" is replaced with the desired colour. Eg:
+        `x` is replaced with the desired colour. Eg:
 
-    pre(data-lang="html").code
-        | &lt;body class="bg-white"&gt;
-        |   has a white background.
-        | &lt;/body&gt;
+    :prismjs( language = "html" )
+        <body class="bg-white">
+          has a white background.
+        </body>
 
-    .row.mar-t50.txt-c.txt-sans
+    .row.mar-t7.txt-c.txt-sans
 
         +bgcolor( "x" )
-        +bgcolor( "blk" )
-        +bgcolor( "black" )
-        +bgcolor( "pitch" )
-        +bgcolor( "dark", "white" )
-        +bgcolor( "grey", "white" )
-        +bgcolor( "light", "pitch" )
-        +bgcolor( "white", "pitch" )
         +bgcolor( "wht", "pitch" )
+        +bgcolor( "white", "pitch" )
+        +bgcolor( "light", "pitch" )
+        +bgcolor( "grey", "white" )
+        +bgcolor( "dark", "white" )
+        +bgcolor( "pitch" )
+        +bgcolor( "black" )
+        +bgcolor( "blk" )
 
-    .row.mar-t50.txt-c.txt-sans
+    .row.mar-t7.txt-c.txt-sans
 
         +bgcolor( "silver", "pitch" )
         +bgcolor( "gold", "pitch" )
@@ -211,37 +215,31 @@ append content
 
 
 
-
-
-
-
-
-
-    h2.ls3.mar-t100 Border Colours
+    +sub-title( "Border Colours" )
 
     :marked
         It's possible to change the colour of borders
-        by using the `bor-x` css class, replacing "`x`"
+        by using the `bor-x` css class, replacing `x`
         with the colour desired.
 
-    pre(data-lang="html").code
-        | &lt;body class="bor-1 bor-purple"&gt;
-        |   has a purple border.
-        | &lt;/body&gt;
+    :prismjs( language = "html" )
+        <body class="bor-1 bor-purple">
+          has a purple border.
+        </body>
 
-    .row.mar-t50.txt-c.txt-sans
+    .row.mar-t7.txt-c.txt-sans
 
         +borcolor( "x" )
-        +borcolor( "blk" )
-        +borcolor( "black" )
-        +borcolor( "pitch" )
-        +borcolor( "dark" )
-        +borcolor( "grey" )
-        +borcolor( "light" )
-        +borcolor( "white" )
         +borcolor( "wht" )
+        +borcolor( "white" )
+        +borcolor( "light" )
+        +borcolor( "grey" )
+        +borcolor( "dark" )
+        +borcolor( "pitch" )
+        +borcolor( "black" )
+        +borcolor( "blk" )
 
-    .row.mar-t50.txt-c.txt-sans
+    .row.mar-t7.txt-c.txt-sans
 
         +borcolor( "silver" )
         +borcolor( "gold" )
@@ -259,57 +257,50 @@ append content
 
 
 
-
-
-
-
-
-
-
-    h2.ls3.mar-t100 SVG Fill Colours
+    +sub-title( "SVG Fill Colours" )
 
     :marked
         Finally, we can also supply a colour
         for the `fill` property of `<svg>` elements. This can
         be applied directly to a path, or to the
-        svg parent element to fill all it's children paths.
+        svg parent element to fill all its children's paths.
 
-    pre(data-lang="html").code
-        | &lt;svg class="fill-red"&gt;
-        |   svg is filled red.
-        | &lt;/svg&gt;
+    :prismjs( language = "html" )
+        <svg class="fill-red">
+          svg is filled red.
+        </svg>
 
-    .row.mar-t50.txt-c.txt-sans
+    .row.mar-t7.txt-c.txt-sans
 
-        +svgcolor( "x" )
+        +svgcolor( "x", "silver" )
             include ../../assets/img/animals/panda.svg
 
-        +svgcolor( "blk" )
-            include ../../assets/img/animals/gorilla.svg
+        +svgcolor( "wht", "silver" )
+            include ../../assets/img/animals/jaguar.svg
 
-        +svgcolor( "black" )
-            include ../../assets/img/animals/wolf.svg
+        +svgcolor( "white", "silver" )
+            include ../../assets/img/animals/sloth.svg
 
-        +svgcolor( "pitch" )
-            include ../../assets/img/animals/rhino.svg
-
-        +svgcolor( "dark" )
-            include ../../assets/img/animals/bunny.svg
+        +svgcolor( "light", "silver" )
+            include ../../assets/img/animals/monkey.svg
 
         +svgcolor( "grey" )
             include ../../assets/img/animals/moose.svg
 
-        +svgcolor( "light" )
-            include ../../assets/img/animals/monkey.svg
+        +svgcolor( "dark" )
+            include ../../assets/img/animals/bunny.svg
 
-        +svgcolor( "white" )
-            include ../../assets/img/animals/sloth.svg
+        +svgcolor( "pitch" )
+            include ../../assets/img/animals/rhino.svg
 
-        +svgcolor( "wht" )
-            include ../../assets/img/animals/jaguar.svg
+        +svgcolor( "black" )
+            include ../../assets/img/animals/wolf.svg
+
+        +svgcolor( "blk" )
+            include ../../assets/img/animals/gorilla.svg
 
 
-    .row.mar-t50.txt-c.txt-sans
+    .row.mar-t7.txt-c.txt-sans
 
         +svgcolor( "silver" )
             include ../../assets/img/animals/bear.svg
@@ -347,5 +338,5 @@ append content
         +svgcolor( "green" )
             include ../../assets/img/animals/snake.svg
 
-    p.f1.fs-i.txt-c.mar-v50 SVGs designed by <a href="http://www.flaticon.com/authors/freepik">freepik</a>
+    p.f1.fs-i.txt-c.mar-v7 SVGs designed by <a href="http://www.flaticon.com/authors/freepik">freepik</a>
 

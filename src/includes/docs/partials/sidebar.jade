@@ -1,14 +1,15 @@
 mixin header( name, border )
 
-    li.mar-t20
+    li.mar-t6
         if border
-            h4.mar-b10.pad-t20.f2.fw-bold.bor-t1.bor-t-dark= name
+            hr.bor-t1.bor-t-light
+            h4.pad-l4.mar-b2.f2.fw-bold= name
         else
-            h4.mar-b10.mar-t20.f2.fw-bold= name
+            h4.pad-l4.mar-b2.mar-t6.f2.fw-bold= name
 
 mixin item( name, url )
 
-    li
+    li.pad-l4
         if url
             a( href="/dist/docs" + url )= name
         else
@@ -17,7 +18,7 @@ mixin item( name, url )
 
 
 
-ul.mar-0.pad-0.pad-t50.txt-sans
+ul.mar-0.pad-0.txt-sans
 
     +header( "Getting Started" )
 

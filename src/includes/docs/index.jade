@@ -3,7 +3,7 @@ extends ./layout/columns
 
 append content
 
-    h2.ls3 Installation
+    +main-title( "Installation" )
 
     p
         | There's a couple of ways to get Eezo running,
@@ -11,7 +11,7 @@ append content
         | file and including, or the more advanced Bower method.
 
 
-    h3.mar-t100 Download a bundle
+    +sub-title( "Download a bundle" )
 
     p
         | Perhaps the simplest way to get Eezo running is
@@ -54,7 +54,7 @@ append content
             +table-size("~ 8.77kb")
             +table-button("Core +", "#")
 
-    h3.mar-t100 Install with Bower
+    +sub-title( "Install with Bower" )
 
     pre(data-lang="sh").code
         | bower install --save eezo

@@ -1,7 +1,53 @@
 
+mixin main-title( text )
 
-mixin source-file
+    h2.ls3= text
 
-    hr.bg-x.bor-0.bor-b1.bor-grey.mar-v50
+mixin sub-title( text )
 
-    block
+    h3.mar-t9= text
+
+mixin small-title( text )
+
+    h4.ls1= text
+
+mixin intro-text
+
+    div.f3.txt-j
+        block
+
+
+
+mixin table
+
+    table.mar-t8.mb-12.txt-l.txt-sans
+        block
+
+mixin table-cell
+
+    td.pad-3
+        block
+
+mixin table-head
+
+    th.pad-3.bor-b1
+        block
+
+
+
+
+mixin code-block( type )
+
+    pre.code( data-lang = type )
+        #{block}
+
+
+mixin source-file( path )
+
+    hr.bg-x.bor-0.bor-b1.bor-light.mar-t9.mar-b8
+
+    p.txt-sans
+
+        | view the source on github: 
+
+        code: a( href="https://github.com/simeydotme/eezo/tree/master/" + path )=path
