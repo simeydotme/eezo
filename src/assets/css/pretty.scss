@@ -1,24 +1,45 @@
 
-$code-bg:         $pitch-darker;
-$code-plain:      $eezo-light;
-$code-comment:    #757B88;
-$code-green:      #8CE7CA;
-$code-blue:       #98D8F7;
+$code-bg:         #37474F;
+$code-plain:      #CFD8DC;
+$code-comment:    #78909C;
+$code-green:      #8CEBCE;
+$code-blue:       #7AC3F9;
 $code-yellow:     #F5E9BD;
-$code-purple:     $purple;
-$code-pink:       $pink;
+$code-purple:     #D7A1FF;
+$code-pink:       #FF9AE8;
+$code-red:        #FF7B7B;
 
-pre {
 
-  .pln { color: $code-plain; }
+pre[ class *= "language-" ] {
+
+  font-size: 1.125rem;
+  background: $code-bg;
+  color: $code-plain;
+  padding: 20px;
+  border-radius: 3px;
+  overflow-x: auto;
+
 
   @media screen {
+
+    .comment { color: $code-comment; }
+
+    .tag { color: $code-green; }
+    .attr-name { color: $code-blue; }
+    .attr-value { color: $code-yellow; }
+    .attr-value .punctuation { color: $code-plain; }
+
+    .variable { color: $code-green; }
+    .string { color: $code-yellow; }
+    .property { color: $code-blue; }
+    .selector { color: $code-green; }
+
+
     /* string content */
     .str { color: $code-purple; }
     /* a keyword */
     .kwd { color: #cc99cc; }
     /* a comment */
-    .com { color: $code-comment; }
     /* a type name */
     .typ { color: $code-blue; }
     /* a literal value */
@@ -29,8 +50,6 @@ pre {
     .opn { color: $code-plain; }
     /* lisp close bracket */
     .clo { color: $code-plain; }
-    /* a markup tag name */
-    .tag { color: $code-green; }
     /* a markup attribute name */
     .atn { color: $code-blue; }
     /* a markup attribute value */
@@ -98,44 +117,5 @@ pre {
     color: #006600;
   }
 }
-/* Style */
-pre.code {
 
-  font-size: 1.125rem;
-  background: $code-bg;
-  color: $eezo-light;
-  padding: 20px;
-  border-radius: 3px;
-  overflow-x: auto;
 
-}
-
-/* Specify class=linenums on a pre to get line numbering */
-ol.linenums {
-  margin-top: 0;
-  margin-bottom: 0;
-  color: #FFF;
-}
-
-/* IE indents via margin-left */
-li.L0,
-li.L1,
-li.L2,
-li.L3,
-li.L4,
-li.L5,
-li.L6,
-li.L7,
-li.L8,
-li.L9 {
-  /* */
-}
-
-/* Alternate shading for lines */
-li.L1,
-li.L3,
-li.L5,
-li.L7,
-li.L9 {
-  /* */
-}

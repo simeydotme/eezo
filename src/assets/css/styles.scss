@@ -1,32 +1,13 @@
 
-$purple:            #B8A2FD;
-$dark-purple:       #7930E8;
-$beige:             #fec894;
-$pink:              #F77F9F;
-$blue:              #6CAEDA;
-$dark-blue:         #0D47A1;
-$link-blue:         #0093FF;
-$pitch:             #161f23;
-$pitch-lighter:     lighten( $pitch, 5% );
-$pitch-darker:      darken( $pitch, 5% );
+
 
 $custom-colors: (
 
-    docs-purple:    $purple,
-    dark-purple:    $dark-purple,
-    docs-beige:     $beige,
-    docs-pink:      $pink,
-    docs-blue:      $blue,
-    dark-blue:      $dark-blue,
-    link-blue:      $link-blue,
-    docs-pitch:     $pitch,
-    pitch-lighter:  $pitch-lighter,
-    pitch-darker:   $pitch-darker,
+
 
 );
 
-$link-normal:   $link-blue;
-$link-hover:    $pink;
+
 
 @import "bower_components/eezo/src/eezo";
 @import "pretty";
@@ -35,13 +16,21 @@ $link-hover:    $pink;
 
 
 
-code {
+code:not( [ class *= "language-" ] ) {
 
-    color: $purple;
-    background: $pitch-darker;
+    background: #eee;
+    border: 1px dotted #ccc;
+    border-radius: 3px;
     padding: 0.2em 0.5em;
 
 }
+
+code[ class *= "language-" ] {
+
+    display: block;
+
+}
+
 
 nav {
 
@@ -50,6 +39,15 @@ nav {
         list-style: none;
 
     }
+
+}
+
+.main-nav {
+
+    position: absolute;
+    top: 50%;
+    right: 3rem;
+    transform: translateY(-50%);
 
 }
 
@@ -67,7 +65,7 @@ nav {
 
     svg path {
 
-        fill: $pitch;
+        fill: black;
 
     }
 
@@ -77,13 +75,13 @@ nav {
 
     &__logo { 
 
-        width: 200px;
+        width: 14rem;
 
     }
 
     svg path {
 
-        fill: $blue;
+        fill: black;
 
     }
 
@@ -91,7 +89,7 @@ nav {
 
 .docs-sidebar {
 
-    width: 250px;
+    width: 16rem;
 
     ul {
 
@@ -103,6 +101,6 @@ nav {
 
 .docs-content {
 
-    margin-right: 350px;
+    margin-right: 24rem;
 
 }

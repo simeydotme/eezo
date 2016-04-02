@@ -60,7 +60,7 @@
 
         $("code.code").pretty();
         $("pre.code").prettyPre().pretty();
-        prettyPrint();
+        //prettyPrint();
 
     });
 
