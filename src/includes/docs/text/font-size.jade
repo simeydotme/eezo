@@ -2,16 +2,15 @@
 extends ../layout/columns
 
 
-
-
 mixin table-row( css, size )
 
     - rem = size / 16
 
     tr
-        td.pad-v5.pad-h10= css
-        td.pad-v5.pad-h10= rem + "rem"
-        td.pad-v5.pad-h10= size + "px"
+        td.pad-3.pad-v2= css
+        td.pad-3.pad-v2= rem + "rem"
+        td.pad-3.pad-v2= size + "px"
+
 
 
 
@@ -19,18 +18,29 @@ mixin table-row( css, size )
 
 append content
 
-    h2.ls3 Font Size
+    +main-title( "Font Size" )
 
+    +intro-text
+        :marked
+            Out of the box, Eezo will come with the
+            text scale defined below. This is based
+            on a fairly standard _multiple of 16_ scale
+            with some sensible in-between values.
 
-    table.mar-t50.mb-12.txt-l.txt-sans
+    :marked
+        I highly **suggest not to use the smaller values**
+        if possible, and have not provided anything smaller
+        than 12px. It's not good.
+
+    +table
 
         thead
 
             tr
 
-                th.pad-10.bor-b1 class name
-                th.pad-10.bor-b1 in rems
-                th.pad-10.bor-b1 in pixels
+                th.pad-3.bor-b1 class name
+                th.pad-3.bor-b1 in rems
+                th.pad-3.bor-b1 in pixels
 
         tbody.txt-code
 
@@ -40,46 +50,85 @@ append content
             +table-row( ".f1", 18 )
             +table-row( ".f2", 20 )
             +table-row( ".f3", 24 )
-            +table-row( ".f4", 28 )
-            +table-row( ".f5", 32 )
-            +table-row( ".f6", 40 )
-            +table-row( ".f7", 48 )
-            +table-row( ".f8", 64 )
+            +table-row( ".f4", 32 )
+            +table-row( ".f5", 40 )
+            +table-row( ".f6", 48 )
+            +table-row( ".f7", 64 )
+            +table-row( ".f8", 80 )
 
+    +sub-title( "Usage example" )
 
+    :marked
+        Eezo is designed to have and extremely flat
+        specificity tree, which means that if you define
+        a `font-size` on an element; it should cascade
+        to all children (except headings).
 
+    :prismjs( language = "html" )
+        <body class="f0">
 
-    h3.ls2.mar-t100 Default Class
+          <p>text is normal</p>
+          <h1 class="f8"> text is huge <h1>
+          <small class="f2-"> text is tiny </small>
 
-    pre(data-lang="html").code
-        | &lt;body class="f0"&gt;
-        | 
-        |   text is normal
-        | 
-        |   &lt;h1 class="f8"&gt; text is huge &lt;h1&gt;
-        |   &lt;small class="f2-"&gt; text is tiny &lt;/small&gt;
-        | 
-        | &lt;/body&gt;
+        </body>
 
+    +sub-title( "Media Queries" )
 
+    :marked
+        Font sizes are also applied across the
+        defined breakpoints allowing different font
+        sizes at different breakpoints.
+        ([_see the media query section for details_](xxmqxx))
 
+    :prismjs( language = "html" )
+        <body class="f0 tb-f1 dt-f2">
+            Font is:
+                - 1rem on mobile
+                - 1.125rem on tablet
+                - 1.25rem on desktop
+        </body>
 
-    h3.ls2.mar-t100 Customising
+    +sub-title( "Customising" )
+
+    +small-title( "Default Classes" )
 
     :marked
         To change the prefix from `f` to something else, you
-        may use the `$font-size-prop` variable to override. Also
-        the `$font-sizes` variable can be overridden with a map
+        may use the `$font-size-prop` variable to override.
+
+    :prismjs( language = "scss" )
+        // change the default class:
+        // .f*  ->  .size-*
+        $font-size-prop: "size-";
+
+    +small-title( "Custom Size Scale" )
+
+    :marked
+        Also the `$font-sizes` variable can be overridden with a map
         to change the scale.
 
-    pre(data-lang="sass").code
-        | // $font-sizes inherits from the $text-scale set
-        | // in the defaults file.
-        | $font-size-prop:        "f" !default;
-        | $font-sizes:            $text-scale !default;
+    :prismjs( language = "scss" )
+        // change the font scale to be multiples of 3px.
+        $font-sizes: (
+          "6": 6px,
+          "9": 9px,
+          "12": 12px,
+          "15": 15px,
+          "18": 18px
+        );
 
+    +small-title( "Combined" )
 
+    :marked
+        The previous two customisations combined:
 
-    +source-file
-        :marked
-            `/src/components/text/_size.scss`
+    :prismjs( language = "scss" )
+        // would result in css like:
+        .size-6 { font-size: 6px; }
+        .size-9 { font-size: 9px; }
+        .size-12 { font-size: 12px; }
+        .size-15 { font-size: 15px; }
+        .size-18 { font-size: 18px; }
+
+    +source-file( "/src/components/text/_size.scss" )

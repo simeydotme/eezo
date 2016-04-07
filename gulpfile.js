@@ -78,11 +78,10 @@ gulp.task( "js", function() {
     return gulp.src([
             "./bower_components/jquery/dist/jquery.js",
             "./bower_components/prism/prism.js",
+            "./bower_components/prism/components/prism-css.js",
+            "./bower_components/prism/components/prism-css-extras.js",
             "./bower_components/prism/components/prism-scss.js",
             "./bower_components/prism/components/prism-sass.js",
-            // "./bower_components/google-code-prettify/src/prettify.js",
-            // "./bower_components/google-code-prettify-language-handlers/lang-css.js",
-            // "./bower_components/google-code-prettify-language-handlers/lang-scss.js",
             "./src/assets/js/app.js"
         ])
         .pipe( concat("app.js") )

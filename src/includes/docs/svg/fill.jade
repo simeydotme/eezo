@@ -1,0 +1,156 @@
+
+extends ../layout/columns
+
+
+mixin svgcolor( color, bg )
+
+    div.mb-6.tb-3.col.end.pad-4.pad-b0( class = "bg-" + bg )
+        div.center( class = "fill-" + color  style = "height: 100px; width: 100px;")
+
+            block
+
+        p.txt-code .fill-#{color}
+
+
+
+
+append content
+
+    +main-title( "SVG Fill" )
+
+    +intro-text
+        :marked
+            The `fill` property of `<svg>` elements can be styled
+            with css, just like `background`/`color` properties.
+
+    :marked
+        The `fill` class can be applied directly to a `<path>`, or to the
+        parent `<svg>` element to fill all its children's `<path>`s. Which colours
+        are available depends on [the colours module](../colors.html),
+        and any customisation that has been applied.
+
+    .row.mar-t8.txt-c.txt-sans
+
+        +svgcolor( "x", "silver" )
+            include ../../../assets/img/animals/panda.svg
+
+        +svgcolor( "wht", "silver" )
+            include ../../../assets/img/animals/jaguar.svg
+
+        +svgcolor( "white", "silver" )
+            include ../../../assets/img/animals/sloth.svg
+
+        +svgcolor( "cream", "silver" )
+            include ../../../assets/img/animals/elephant.svg
+
+        +svgcolor( "light" )
+            include ../../../assets/img/animals/monkey.svg
+
+        +svgcolor( "grey" )
+            include ../../../assets/img/animals/moose.svg
+
+        +svgcolor( "dark" )
+            include ../../../assets/img/animals/bunny.svg
+
+        +svgcolor( "pitch" )
+            include ../../../assets/img/animals/rhino.svg
+
+        +svgcolor( "black" )
+            include ../../../assets/img/animals/wolf.svg
+
+        +svgcolor( "blk" )
+            include ../../../assets/img/animals/gorilla.svg
+
+
+    .row.mar-t7.txt-c.txt-sans
+
+        +svgcolor( "silver" )
+            include ../../../assets/img/animals/bear.svg
+
+        +svgcolor( "gold" )
+            include ../../../assets/img/animals/lion.svg
+
+        +svgcolor( "yellow" )
+            include ../../../assets/img/animals/squirrel.svg
+
+        +svgcolor( "orange" )
+            include ../../../assets/img/animals/tiger.svg
+
+        +svgcolor( "red" )
+            include ../../../assets/img/animals/fox.svg
+
+        +svgcolor( "pink" )
+            include ../../../assets/img/animals/zebra.svg
+
+        +svgcolor( "violet" )
+            include ../../../assets/img/animals/giraffe.svg
+
+        +svgcolor( "purple" )
+            include ../../../assets/img/animals/deer.svg
+
+        +svgcolor( "blue" )
+            include ../../../assets/img/animals/raccoon.svg
+
+        +svgcolor( "teal" )
+            include ../../../assets/img/animals/badger.svg
+
+        +svgcolor( "mint" )
+            include ../../../assets/img/animals/koala.svg
+
+        +svgcolor( "green" )
+            include ../../../assets/img/animals/snake.svg
+
+    p.f1.fs-i.txt-c.mar-v7 SVGs designed by <a href="http://www.flaticon.com/authors/freepik">freepik</a>
+
+
+
+    +sub-title( "Usage example" )
+
+    :prismjs( language = "html" )
+        <svg class="fill-red">
+          <path> <!-- svg path is red --> </path>
+          <path> <!-- svg path is red --> </path>
+          <path class="fill-purple"> <!-- svg path is red --> </path>
+          <path class="fill-teal"> <!-- svg path is teal --> </path>
+        </svg>
+
+    +sub-title( "Customising" )
+
+    +small-title( "Default Classes" )
+
+    :marked
+        The fill colours are prefixed with `fill-` by
+        default, but this can be changed with the
+        `$svg-fill-prop` variable.
+
+    :prismjs( language = "scss" )
+        // change the class prefix to .svg-
+        $svg-fill-prop: "svg";
+
+    +small-title( "Custom Background Colours" )
+
+    :marked
+        As with all colours, the fill property inherits [the
+        default `$colors` map](../colors.html). You may customise the colours
+        used for fills by supplying a `$svg-fill-colors` map instead.
+
+    :prismjs( language = "scss" )
+        // change the fill colours to only gun-metal and black.
+        $svg-fill-colors: (
+          gun-metal: #45494a,
+          black: #000
+        );
+
+    +small-title( "Combined" )
+
+    :marked
+        After changing the prefix property and the map
+        of colours in the previous two customisations, we
+        would end up with the following css.
+
+    :prismjs( language = "css" )
+        /* would result in css like: */
+        .svg-gun-metal  { fill: #45494a; }
+        .svg-black      { fill: #000; }
+
+    +source-file( "/src/components/svg/_fill.scss" )

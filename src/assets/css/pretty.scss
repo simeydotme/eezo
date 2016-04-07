@@ -2,9 +2,10 @@
 $code-bg:         #37474F;
 $code-plain:      #CFD8DC;
 $code-comment:    #78909C;
-$code-green:      #8CEBCE;
-$code-blue:       #7AC3F9;
-$code-yellow:     #F5E9BD;
+$code-punc:       darken( $code-plain , 10% );
+$code-green:      #59F1C2;
+$code-blue:       #69D9FB;
+$code-yellow:     #FFBB75;
 $code-purple:     #D7A1FF;
 $code-pink:       #FF9AE8;
 $code-red:        #FF7B7B;
@@ -27,12 +28,23 @@ pre[ class *= "language-" ] {
     .tag { color: $code-green; }
     .attr-name { color: $code-blue; }
     .attr-value { color: $code-yellow; }
-    .attr-value .punctuation { color: $code-plain; }
+    .attr-value .punctuation { color: $code-punc; }
 
     .variable { color: $code-green; }
     .string { color: $code-yellow; }
     .property { color: $code-blue; }
     .selector { color: $code-green; }
+    .hexcode { color: $code-purple; }
+    .number { color: $code-purple; }
+
+    .atrule {
+      .rule {
+        color: $code-red;
+      }
+      .property {
+        color: $code-green;
+      }
+    }
 
 
     /* string content */

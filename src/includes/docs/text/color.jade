@@ -1,0 +1,119 @@
+
+extends ../layout/columns
+
+
+mixin txtcolor( color, bg )
+
+    div.mb-6.tb-3.col.end.pad-v6( class = "bg-" + bg + " " + color )
+        span.disp-b.f3.txt-code.fw-b .#{color}
+
+
+
+
+append content
+
+    +main-title( "Text Colours" )
+
+    +intro-text
+        :marked
+            Text (foreground) colours can easily be styled
+            by supplying a classname of the colour you want. This
+            also applies for any custom colours you define.
+
+    :marked
+        The colours available to choose from depend on
+        [the colours module](../colors.html), and any customisation that
+        has been applied.
+
+        Obviously text colours will also be inherited by borders
+        if no [border colour](../border/color.html) is supplied.
+
+    .row.mar-t9.txt-c.txt-sans
+
+        +txtcolor( "x", "silver" )
+        +txtcolor( "cream", "silver" )
+        +txtcolor( "wht", "silver" )
+        +txtcolor( "white", "silver" )
+        +txtcolor( "light" )
+        +txtcolor( "grey" )
+        +txtcolor( "dark" )
+        +txtcolor( "pitch" )
+        +txtcolor( "black" )
+        +txtcolor( "blk" )
+
+    .row.mar-t6.txt-c.txt-sans
+
+        +txtcolor( "silver" )
+        +txtcolor( "gold" )
+        +txtcolor( "yellow" )
+        +txtcolor( "orange" )
+        +txtcolor( "red" )
+        +txtcolor( "pink" )
+        +txtcolor( "violet" )
+        +txtcolor( "purple" )
+        +txtcolor( "blue" )
+        +txtcolor( "teal" )
+        +txtcolor( "mint" )
+        +txtcolor( "green" )
+
+    +sub-title( "Usage example" )
+
+    :marked
+        Out of the box, Eezo will come with the classes
+        defined above, and here's an example of how to use
+        them in your `html`
+
+    :prismjs( language = "html" )
+        <body class="black">
+          has black text.
+        </body>
+
+    +sub-title( "Customising" )
+
+    +small-title( "Default Classes" )
+
+    :marked
+        To add a prefix in front of the text colours,
+        you may use the `$text-color-prop` variable.
+
+    :prismjs( language = "scss" )
+        // change the class prefix to .clr-
+        $text-color-prop: "clr";
+
+    +small-title( "Custom Text Colours" )
+
+    :marked
+        Also the `$text-colors` variable can supplied a map
+        to override the font colors. By default `$text-colors`
+        will inherit from [the base `$colors` map](../colors.html).
+
+    :prismjs( language = "scss" )
+        // change the font colors to Fifty Shades of Grey.
+        $text-colors: (
+          grey-1: #eeeeee,
+          grey-2: #eaeaea,
+          grey-3: #e6e6e6,
+          grey-16: #cccccc,
+          grey-21: #999999,
+          grey-49: #1a1a1a,
+          grey-50: #111111
+        );
+
+    +small-title( "Combined" )
+
+    :marked
+        After changing the prefix property and the map
+        of colours in the previous two customisations, we
+        would result in the following css.
+
+    :prismjs( language = "css" )
+        /* would result in css like: */
+        .clr-grey-1   { color: #eeeeee; }
+        .clr-grey-2   { color: #eaeaea; }
+        .clr-grey-3   { color: #e6e6e6; }
+        .clr-grey-16  { color: #cccccc; }
+        .clr-grey-21  { color: #999999; }
+        .clr-grey-49  { color: #1a1a1a; }
+        .clr-grey-50  { color: #111111; }
+
+    +source-file( "/src/components/text/_color.scss" )

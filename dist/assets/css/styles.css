@@ -5049,27 +5049,35 @@ pre[class*="language-"] {
       pre[class*="language-"] .comment {
         color: #78909C; }
       pre[class*="language-"] .tag {
-        color: #8CEBCE; }
+        color: #59F1C2; }
       pre[class*="language-"] .attr-name {
-        color: #7AC3F9; }
+        color: #69D9FB; }
       pre[class*="language-"] .attr-value {
-        color: #F5E9BD; }
+        color: #FFBB75; }
       pre[class*="language-"] .attr-value .punctuation {
-        color: #CFD8DC; }
+        color: #b2c0c6; }
       pre[class*="language-"] .variable {
-        color: #8CEBCE; }
+        color: #59F1C2; }
       pre[class*="language-"] .string {
-        color: #F5E9BD; }
+        color: #FFBB75; }
       pre[class*="language-"] .property {
-        color: #7AC3F9; }
+        color: #69D9FB; }
       pre[class*="language-"] .selector {
-        color: #8CEBCE; }
+        color: #59F1C2; }
+      pre[class*="language-"] .hexcode {
+        color: #D7A1FF; }
+      pre[class*="language-"] .number {
+        color: #D7A1FF; }
+      pre[class*="language-"] .atrule .rule {
+        color: #FF7B7B; }
+      pre[class*="language-"] .atrule .property {
+        color: #59F1C2; }
       pre[class*="language-"] .str {
         color: #D7A1FF; }
       pre[class*="language-"] .kwd {
         color: #cc99cc; }
       pre[class*="language-"] .typ {
-        color: #7AC3F9; }
+        color: #69D9FB; }
       pre[class*="language-"] .lit {
         color: #FF9AE8; }
       pre[class*="language-"] .pun {
@@ -5079,11 +5087,11 @@ pre[class*="language-"] {
       pre[class*="language-"] .clo {
         color: #CFD8DC; }
       pre[class*="language-"] .atn {
-        color: #7AC3F9; }
+        color: #69D9FB; }
       pre[class*="language-"] .atv {
-        color: #F5E9BD; }
+        color: #FFBB75; }
       pre[class*="language-"] .dec {
-        color: #8CEBCE; }
+        color: #59F1C2; }
       pre[class*="language-"] .var {
         color: #f2777a; }
       pre[class*="language-"] .fun {
@@ -5095,7 +5103,7 @@ pre[class*="language-"] {
       pre[class*="language-"].lang-css .pln {
         color: #CFD8DC; }
       pre[class*="language-"].lang-css .kwd {
-        color: #7AC3F9; }
+        color: #69D9FB; }
       pre[class*="language-"].lang-css .lit {
         color: #FF9AE8; } }
 
@@ -5128,7 +5136,7 @@ code:not([class*="language-"]) {
   background: #eee;
   border: 1px dotted #ccc;
   border-radius: 3px;
-  padding: 0.2em 0.5em; }
+  padding: 0.15em 0.4em; }
 
 code[class*="language-"] {
   display: block; }

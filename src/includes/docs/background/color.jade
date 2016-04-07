@@ -1,0 +1,103 @@
+
+extends ../layout/columns
+
+
+mixin bgcolor( bg, color )
+
+    div.mb-6.tb-3.col.end.pad-v7( class = "bg-" + bg + " " + color )
+        span.disp-b .bg-#{bg}
+
+
+
+
+append content
+
+    +main-title( "Background Colours" )
+
+
+    +intro-text
+        :marked
+            Like text colours, background colours can be applied to any
+            valid html element using the class: `bg-x`. Where
+            `x` is replaced with the desired colour.
+
+    :marked
+        The colours available to choose from depend on
+        [the colours module](../colors.html), and any customisation that
+        has been applied.
+
+    .row.mar-t7.txt-c.txt-code
+
+        +bgcolor( "x" )
+        +bgcolor( "wht", "pitch" )
+        +bgcolor( "white", "pitch" )
+        +bgcolor( "cream", "pitch" )
+        +bgcolor( "light", "pitch" )
+        +bgcolor( "grey", "white" )
+        +bgcolor( "dark", "white" )
+        +bgcolor( "pitch", "white" )
+        +bgcolor( "black", "white" )
+        +bgcolor( "blk", "white" )
+
+    .row.mar-t7.txt-c.txt-code
+
+        +bgcolor( "silver", "pitch" )
+        +bgcolor( "gold", "pitch" )
+        +bgcolor( "yellow", "pitch" )
+        +bgcolor( "orange", "white" )
+        +bgcolor( "red", "white" )
+        +bgcolor( "pink", "white" )
+        +bgcolor( "violet", "white" )
+        +bgcolor( "purple", "white" )
+        +bgcolor( "blue", "white" )
+        +bgcolor( "teal", "white" )
+        +bgcolor( "mint", "pitch" )
+        +bgcolor( "green", "pitch" )
+
+    +sub-title( "Usage example" )
+
+    :prismjs( language = "html" )
+        <body class="bg-white">
+          has a white background.
+        </body>
+
+    +sub-title( "Customising" )
+
+    +small-title( "Default Classes" )
+
+    :marked
+        The background colours are prefixed with `bg-` by
+        default, but this can be changed with the
+        `$background-color-prop` variable.
+
+    :prismjs( language = "scss" )
+        // change the class prefix to .b-
+        $background-color-prop: "b";
+
+    +small-title( "Custom Background Colours" )
+
+    :marked
+        As with all colours, the backgrounds inherit [the
+        default `$colors` map](../colors.html). You may customise the colours
+        used for backgrounds by supplying a `$background-colors` map instead.
+
+    :prismjs( language = "scss" )
+        // change the background colours to only gold and crimson.
+        $background-colors: (
+          gold: #DAC36E,
+          crimson: #C1001B
+        );
+
+    +small-title( "Combined" )
+
+    :marked
+        After changing the prefix property and the map
+        of colours in the previous two customisations, we
+        would end up with the following css.
+
+    :prismjs( language = "css" )
+        /* would result in css like: */
+        .b-gold     { color: #DAC36E; }
+        .b-crimson  { color: #C1001B; }
+
+    +source-file( "/src/components/background/_color.scss" )

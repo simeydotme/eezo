@@ -1,0 +1,107 @@
+
+extends ../layout/columns
+
+
+mixin borcolor( color )
+
+    div.mb-6.tb-3.col.end.pad-0
+        span.mar-2.disp-b.pad-v4.bor-1( class = "bor-" + color ) .bor-#{color}
+
+
+
+
+append content
+
+    +main-title( "Border Colours" )
+
+
+    +intro-text
+        :marked
+            It's possible to change the colour of borders
+            by using the `bor-x` css class, replacing `x`
+            with the colour desired.
+
+    :marked
+        The colours available to choose from depend on
+        [the colours module](../colors.html), and any customisation that
+        has been applied.
+
+    .row.mar-t7.txt-c.txt-code
+
+        +borcolor( "x" )
+        +borcolor( "cream" )
+        +borcolor( "wht" )
+        +borcolor( "white" )
+        +borcolor( "light" )
+        +borcolor( "grey" )
+        +borcolor( "dark" )
+        +borcolor( "pitch" )
+        +borcolor( "black" )
+        +borcolor( "blk" )
+
+    .row.mar-t7.txt-c.txt-code
+
+        +borcolor( "silver" )
+        +borcolor( "gold" )
+        +borcolor( "yellow" )
+        +borcolor( "orange" )
+        +borcolor( "red" )
+        +borcolor( "pink" )
+        +borcolor( "violet" )
+        +borcolor( "purple" )
+        +borcolor( "blue" )
+        +borcolor( "teal" )
+        +borcolor( "mint" )
+        +borcolor( "green" )
+
+    +sub-title( "Usage example" )
+
+    :marked
+        Without any customisation, Eezo will come
+        with the classes described above, here's
+        and example of how to use them
+
+    :prismjs( language = "html" )
+        <body class="bor-1 bor-purple">
+          has a purple border.
+        </body>
+
+    +sub-title( "Customising" )
+
+    +small-title( "Default Classes" )
+
+    :marked
+        To change the prefix in front of border colours,
+        you may use the `$border-color-prop` variable.
+
+    :prismjs( language = "scss" )
+        // change the class prefix to .bclr-
+        $border-color-prop: "bclr";
+
+    +small-title( "Custom Border Colours" )
+
+    :marked
+        Just like text colours, borders will also inherit [the
+        default `$colors` map](../colors.html). You may customise the colours
+        used for borders by supplying a `$border-colors` map instead.
+
+    :prismjs( language = "scss" )
+        // change the border colours to only red and blue.
+        $text-colors: (
+          red: #ff0000,
+          blue: #0000ff
+        );
+
+    +small-title( "Combined" )
+
+    :marked
+        After changing the prefix property and the map
+        of colours in the previous two customisations, we
+        would end up with the following css.
+
+    :prismjs( language = "css" )
+        /* would result in css like: */
+        .bclr-red   { color: #ff0000; }
+        .bclr-blue  { color: #0000ff; }
+
+    +source-file( "/src/components/border/_color.scss" )

@@ -5,8 +5,8 @@ extends ../layout/columns
 mixin table-row( name, value )
 
     tr
-        td.pad-5.pad-b0.va-top.whs-nowrap= name
-        td.pad-5.pad-b0.va-top
+        td.pad-h5.pad-v3.va-top.whs-nowrap= name
+        td.pad-h5.pad-v3.va-top
             .code= value
 
 
@@ -38,8 +38,8 @@ append content
 
             tr
 
-                th.pad-5.bor-b1 class name
-                th.pad-5.bor-b1 font stack
+                th.pad-v3.pad-h5.bor-b1 class name
+                th.pad-v3.pad-h5.bor-b1 font stack
 
         tbody.txt-code
 
@@ -51,7 +51,12 @@ append content
 
 
 
-    +sub-title( "Default Classes" )
+    +sub-title( "Usage example" )
+
+    :marked
+        Out of the box, Eezo will come with the classes
+        defined above, and here's an example of how to use
+        them in your `html`
 
     :prismjs( language = "html" )
         <body class="txt-serif">
@@ -75,7 +80,7 @@ append content
         // .txt-*  ->  .ff-*
         $font-family-prop: "ff";
 
-    h4.ls2 Custom Fonts
+    +small-title( "Custom Fonts" )
 
     :marked
         Supply a `$custom-fonts` map to
@@ -89,7 +94,7 @@ append content
           chuck: "Chuck Norris"
         );
 
-    h4.ls2 Combined
+    +small-title( "Combined" )
 
     :marked
         The previous two customisations combined:

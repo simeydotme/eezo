@@ -2,13 +2,11 @@
 extends ../layout/columns
 
 
-
-
 mixin table-row( name, value )
 
     tr
-        td.pad-10.pad-b0.va-top.whs-nowrap= name
-        td.pad-10.pad-b0.va-top
+        td.pad-3.pad-v2.va-top.whs-nowrap= name
+        td.pad-3.pad-v2.va-top
             .code= value
 
 
@@ -17,16 +15,22 @@ mixin table-row( name, value )
 
 append content
 
-    h2.ls3 Text Align
+    +main-title( "Text Align" )
 
-    table.mar-t50.mb-12.txt-l.txt-sans
+    +intro-text
+        :marked
+            Eezo comes with decent coverage of the text
+            alignment properties by default, they are listed
+            below but can obviously be extended with customisation.
+
+    +table
 
         thead
 
             tr
 
-                th.pad-10.bor-b1 class name
-                th.pad-10.bor-b1 alignment value
+                th.pad-3.bor-b1 class name
+                th.pad-3.bor-b1 alignment value
 
         tbody.txt-code
 
@@ -39,58 +43,68 @@ append content
             +table-row( ".txt-e", "end" )
 
 
-    h3.ls2.mar-t100 Default Classes
+    +sub-title( "Usage example" )
 
-    pre(data-lang="html").code
-        |   &lt;p class="txt-l"&gt; aligned left &lt;p&gt;
-        |   &lt;p class="txt-r"&gt; aligned right &lt;/p&gt;
-        |   &lt;p class="txt-c"&gt; centered &lt;/p&gt;
-        |   &lt;p class="txt-j"&gt; justified &lt;/p&gt;
+    :prismjs( language = "html" )
+        <p class="txt-l"> aligned left <p>
+        <p class="txt-r"> aligned right </p>
+        <p class="txt-c"> centered </p>
+        <p class="txt-j"> justified </p>
 
+    +sub-title( "Media Queries" )
 
+    :marked
+        Alignment is also applied across the
+        defined breakpoints allowing different
+        alignments at different breakpoints.
+        ([_see the media query section for details_](xxmqxx))
 
+    :prismjs( language = "html" )
+        <nav class="txt-c tb-txt-l dt-txt-r">
+            Font is aligned:
+                - center on mobile
+                - left on tablet
+                - right on desktop
+        </nav>
 
-    h3.ls2.mar-t100 Customising
+    +sub-title( "Customising" )
 
-    h4.ls2 Default Classes
+    +small-title( "Default Classes" )
 
     :marked
         To change the prefix from `txt` to something else, you
         may use the `$text-align-prop` variable to override:
 
-    pre(data-lang="sass").code
-        | // change the default class:
-        | // .txt-*  ->  .ta-*
-        | $text-align-prop: "ta";
+    :prismjs( language = "scss" )
+        // change the default class:
+        // .txt-*  ->  .ta-*
+        $text-align-prop: "ta";
 
-    h4.ls2 Custom Alignment
+    +small-title( "Custom Alignment" )
 
     :marked
         You may not always need all the alignment
         values, so to save some bytes you may supply a custom
-        `$text-aligns` map to add your own custom font sets:
+        `$text-aligns` map to define your alignments:
 
-    pre(data-lang="sass").code
-        | // change the alignments map so there's,
-        | // only left, right, center.
-        | $text-aligns: (
-        |    l: left,
-        |    r: right,
-        |    c: center
-        | );
+    :prismjs( language = "scss" )
+        // change the alignments map so there's,
+        // only left, right, center.
+        $text-aligns: (
+           l: left,
+           r: right,
+           c: center
+        );
 
-    h4.ls2 Combined
+    +small-title( "Combined" )
 
     :marked
         The previous two customisations combined:
 
-    pre(data-lang="sass").code
-        | // would result in css like:
-        | .ta-l { text-align: left; }
-        | .ta-r { text-align: right; }
-        | .ta-c { text-align: center; }
+    :prismjs( language = "scss" )
+        // would result in css like:
+        .ta-l { text-align: left; }
+        .ta-r { text-align: right; }
+        .ta-c { text-align: center; }
 
-
-    +source-file
-        :marked
-            `/src/components/text/_align.scss`
+    +source-file( "/src/components/text/_align.scss" )
