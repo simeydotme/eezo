@@ -1,6 +1,6 @@
 
 $svg-fill-prop:         "fill" !default;
-$svg-fill-colors:       $svg-colors !default;
+$svg-fill-colors:       $colors !default;
 
 
 
@@ -14,7 +14,7 @@ $svg-fill-colors:       $svg-colors !default;
         $val: nth( $clr, 2 );
 
         .#{ $p }#{ $key },
-        .#{ $p }#{ $key } path {
+        .#{ $p }#{ $key } path:not([ class *= #{ #{ $p } } ]) {
 
             fill: $val;
 
