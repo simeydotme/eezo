@@ -1,6 +1,18 @@
 
 $line-height-prop:      "lh" !default;
-$line-heights:          $text-scale !default;
+$line-heights: (
+
+    "2-":   0.5,
+    "1-":   0.75,
+    "0":    1,
+    "1":    1.25,
+    "2":    1.4,
+    "3":    1.5,
+    "4":    1.6,
+    "5":    2,
+    "6":    3,
+
+) !default;
 
 
 
@@ -24,7 +36,7 @@ $line-heights:          $text-scale !default;
                 $val: nth( $height, 2 );
 
                 .#{ $bp }#{ $p }#{ $key } {
-                    line-height: strip( $val );
+                    line-height: $val;
                 }
 
             }
