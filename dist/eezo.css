@@ -1,7 +1,7 @@
 /*!
  * [ eezo ]
  * - css framework for massless stylesheets
- * - 0.6.3-alpha | http://github.com/simeydotme/eezo
+ * - 0.6.5-alpha | http://github.com/simeydotme/eezo
  * - @simeydotme | http://simey.me
  */
 @charset "UTF-8";
@@ -4644,85 +4644,71 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     letter-spacing: normal; } }
 
 .lh2- {
-  line-height: 0.75; }
+  line-height: 0.5; }
 
 .lh1- {
-  line-height: 0.875; }
+  line-height: 0.75; }
 
 .lh0 {
   line-height: 1; }
 
 .lh1 {
-  line-height: 1.125; }
+  line-height: 1.25; }
 
 .lh2 {
-  line-height: 1.25; }
+  line-height: 1.4; }
 
 .lh3 {
   line-height: 1.5; }
 
 .lh4 {
-  line-height: 2; }
+  line-height: 1.6; }
 
 .lh5 {
-  line-height: 2.5; }
+  line-height: 2; }
 
 .lh6 {
   line-height: 3; }
 
-.lh7 {
-  line-height: 4; }
-
-.lh8 {
-  line-height: 5; }
-
 @media screen and (min-width: 48em) {
   .tb-lh2- {
-    line-height: 0.75; }
+    line-height: 0.5; }
   .tb-lh1- {
-    line-height: 0.875; }
+    line-height: 0.75; }
   .tb-lh0 {
     line-height: 1; }
   .tb-lh1 {
-    line-height: 1.125; }
-  .tb-lh2 {
     line-height: 1.25; }
+  .tb-lh2 {
+    line-height: 1.4; }
   .tb-lh3 {
     line-height: 1.5; }
   .tb-lh4 {
-    line-height: 2; }
+    line-height: 1.6; }
   .tb-lh5 {
-    line-height: 2.5; }
+    line-height: 2; }
   .tb-lh6 {
-    line-height: 3; }
-  .tb-lh7 {
-    line-height: 4; }
-  .tb-lh8 {
-    line-height: 5; } }
+    line-height: 3; } }
 
 @media screen and (min-width: 64em) {
   .dt-lh2- {
-    line-height: 0.75; }
+    line-height: 0.5; }
   .dt-lh1- {
-    line-height: 0.875; }
+    line-height: 0.75; }
   .dt-lh0 {
     line-height: 1; }
   .dt-lh1 {
-    line-height: 1.125; }
-  .dt-lh2 {
     line-height: 1.25; }
+  .dt-lh2 {
+    line-height: 1.4; }
   .dt-lh3 {
     line-height: 1.5; }
   .dt-lh4 {
-    line-height: 2; }
+    line-height: 1.6; }
   .dt-lh5 {
-    line-height: 2.5; }
+    line-height: 2; }
   .dt-lh6 {
-    line-height: 3; }
-  .dt-lh7 {
-    line-height: 4; }
-  .dt-lh8 {
-    line-height: 5; } }
+    line-height: 3; } }
 
 .txt-l {
   text-align: left; }
