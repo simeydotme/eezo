@@ -2216,6 +2216,12 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   margin-left: 6rem;
   margin-right: 6rem; }
 
+.mar-10 {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  margin-left: 10rem;
+  margin-right: 10rem; }
+
 .mar-v0 {
   margin-top: 0;
   margin-bottom: 0; }
@@ -2255,6 +2261,10 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .mar-v9 {
   margin-top: 6rem;
   margin-bottom: 6rem; }
+
+.mar-v10 {
+  margin-top: 10rem;
+  margin-bottom: 10rem; }
 
 .mar-h0 {
   margin-left: 0;
@@ -2296,6 +2306,10 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   margin-left: 6rem;
   margin-right: 6rem; }
 
+.mar-h10 {
+  margin-left: 10rem;
+  margin-right: 10rem; }
+
 .mar-t0 {
   margin-top: 0; }
 
@@ -2325,6 +2339,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 
 .mar-t9 {
   margin-top: 6rem; }
+
+.mar-t10 {
+  margin-top: 10rem; }
 
 .mar-b0 {
   margin-bottom: 0; }
@@ -2356,6 +2373,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .mar-b9 {
   margin-bottom: 6rem; }
 
+.mar-b10 {
+  margin-bottom: 10rem; }
+
 .mar-r0 {
   margin-right: 0; }
 
@@ -2386,6 +2406,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .mar-r9 {
   margin-right: 6rem; }
 
+.mar-r10 {
+  margin-right: 10rem; }
+
 .mar-l0 {
   margin-left: 0; }
 
@@ -2415,6 +2438,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 
 .mar-l9 {
   margin-left: 6rem; }
+
+.mar-l10 {
+  margin-left: 10rem; }
 
 @media screen and (min-width: 48em) {
   .tb-mar-0 {
@@ -2467,6 +2493,11 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     margin-bottom: 6rem;
     margin-left: 6rem;
     margin-right: 6rem; }
+  .tb-mar-10 {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    margin-left: 10rem;
+    margin-right: 10rem; }
   .tb-mar-v0 {
     margin-top: 0;
     margin-bottom: 0; }
@@ -2497,6 +2528,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   .tb-mar-v9 {
     margin-top: 6rem;
     margin-bottom: 6rem; }
+  .tb-mar-v10 {
+    margin-top: 10rem;
+    margin-bottom: 10rem; }
   .tb-mar-h0 {
     margin-left: 0;
     margin-right: 0; }
@@ -2527,6 +2561,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   .tb-mar-h9 {
     margin-left: 6rem;
     margin-right: 6rem; }
+  .tb-mar-h10 {
+    margin-left: 10rem;
+    margin-right: 10rem; }
   .tb-mar-t0 {
     margin-top: 0; }
   .tb-mar-t1 {
@@ -2547,6 +2584,8 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     margin-top: 4rem; }
   .tb-mar-t9 {
     margin-top: 6rem; }
+  .tb-mar-t10 {
+    margin-top: 10rem; }
   .tb-mar-b0 {
     margin-bottom: 0; }
   .tb-mar-b1 {
@@ -2567,6 +2606,8 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     margin-bottom: 4rem; }
   .tb-mar-b9 {
     margin-bottom: 6rem; }
+  .tb-mar-b10 {
+    margin-bottom: 10rem; }
   .tb-mar-r0 {
     margin-right: 0; }
   .tb-mar-r1 {
@@ -2587,6 +2628,8 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     margin-right: 4rem; }
   .tb-mar-r9 {
     margin-right: 6rem; }
+  .tb-mar-r10 {
+    margin-right: 10rem; }
   .tb-mar-l0 {
     margin-left: 0; }
   .tb-mar-l1 {
@@ -2606,7 +2649,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   .tb-mar-l8 {
     margin-left: 4rem; }
   .tb-mar-l9 {
-    margin-left: 6rem; } }
+    margin-left: 6rem; }
+  .tb-mar-l10 {
+    margin-left: 10rem; } }
 
 @media screen and (min-width: 64em) {
   .dt-mar-0 {
@@ -2659,6 +2704,11 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     margin-bottom: 6rem;
     margin-left: 6rem;
     margin-right: 6rem; }
+  .dt-mar-10 {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    margin-left: 10rem;
+    margin-right: 10rem; }
   .dt-mar-v0 {
     margin-top: 0;
     margin-bottom: 0; }
@@ -2689,6 +2739,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   .dt-mar-v9 {
     margin-top: 6rem;
     margin-bottom: 6rem; }
+  .dt-mar-v10 {
+    margin-top: 10rem;
+    margin-bottom: 10rem; }
   .dt-mar-h0 {
     margin-left: 0;
     margin-right: 0; }
@@ -2719,6 +2772,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   .dt-mar-h9 {
     margin-left: 6rem;
     margin-right: 6rem; }
+  .dt-mar-h10 {
+    margin-left: 10rem;
+    margin-right: 10rem; }
   .dt-mar-t0 {
     margin-top: 0; }
   .dt-mar-t1 {
@@ -2739,6 +2795,8 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     margin-top: 4rem; }
   .dt-mar-t9 {
     margin-top: 6rem; }
+  .dt-mar-t10 {
+    margin-top: 10rem; }
   .dt-mar-b0 {
     margin-bottom: 0; }
   .dt-mar-b1 {
@@ -2759,6 +2817,8 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     margin-bottom: 4rem; }
   .dt-mar-b9 {
     margin-bottom: 6rem; }
+  .dt-mar-b10 {
+    margin-bottom: 10rem; }
   .dt-mar-r0 {
     margin-right: 0; }
   .dt-mar-r1 {
@@ -2779,6 +2839,8 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     margin-right: 4rem; }
   .dt-mar-r9 {
     margin-right: 6rem; }
+  .dt-mar-r10 {
+    margin-right: 10rem; }
   .dt-mar-l0 {
     margin-left: 0; }
   .dt-mar-l1 {
@@ -2798,7 +2860,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   .dt-mar-l8 {
     margin-left: 4rem; }
   .dt-mar-l9 {
-    margin-left: 6rem; } }
+    margin-left: 6rem; }
+  .dt-mar-l10 {
+    margin-left: 10rem; } }
 
 .mar-v1- {
   margin-top: -0.125rem;
@@ -3192,6 +3256,12 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   padding-left: 6rem;
   padding-right: 6rem; }
 
+.pad-10 {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  padding-left: 10rem;
+  padding-right: 10rem; }
+
 .pad-v0 {
   padding-top: 0;
   padding-bottom: 0; }
@@ -3231,6 +3301,10 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .pad-v9 {
   padding-top: 6rem;
   padding-bottom: 6rem; }
+
+.pad-v10 {
+  padding-top: 10rem;
+  padding-bottom: 10rem; }
 
 .pad-h0 {
   padding-left: 0;
@@ -3272,6 +3346,10 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   padding-left: 6rem;
   padding-right: 6rem; }
 
+.pad-h10 {
+  padding-left: 10rem;
+  padding-right: 10rem; }
+
 .pad-t0 {
   padding-top: 0; }
 
@@ -3301,6 +3379,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 
 .pad-t9 {
   padding-top: 6rem; }
+
+.pad-t10 {
+  padding-top: 10rem; }
 
 .pad-b0 {
   padding-bottom: 0; }
@@ -3332,6 +3413,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .pad-b9 {
   padding-bottom: 6rem; }
 
+.pad-b10 {
+  padding-bottom: 10rem; }
+
 .pad-r0 {
   padding-right: 0; }
 
@@ -3362,6 +3446,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .pad-r9 {
   padding-right: 6rem; }
 
+.pad-r10 {
+  padding-right: 10rem; }
+
 .pad-l0 {
   padding-left: 0; }
 
@@ -3391,6 +3478,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 
 .pad-l9 {
   padding-left: 6rem; }
+
+.pad-l10 {
+  padding-left: 10rem; }
 
 @media screen and (min-width: 48em) {
   .tb-pad-0 {
@@ -3443,6 +3533,11 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     padding-bottom: 6rem;
     padding-left: 6rem;
     padding-right: 6rem; }
+  .tb-pad-10 {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    padding-left: 10rem;
+    padding-right: 10rem; }
   .tb-pad-v0 {
     padding-top: 0;
     padding-bottom: 0; }
@@ -3473,6 +3568,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   .tb-pad-v9 {
     padding-top: 6rem;
     padding-bottom: 6rem; }
+  .tb-pad-v10 {
+    padding-top: 10rem;
+    padding-bottom: 10rem; }
   .tb-pad-h0 {
     padding-left: 0;
     padding-right: 0; }
@@ -3503,6 +3601,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   .tb-pad-h9 {
     padding-left: 6rem;
     padding-right: 6rem; }
+  .tb-pad-h10 {
+    padding-left: 10rem;
+    padding-right: 10rem; }
   .tb-pad-t0 {
     padding-top: 0; }
   .tb-pad-t1 {
@@ -3523,6 +3624,8 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     padding-top: 4rem; }
   .tb-pad-t9 {
     padding-top: 6rem; }
+  .tb-pad-t10 {
+    padding-top: 10rem; }
   .tb-pad-b0 {
     padding-bottom: 0; }
   .tb-pad-b1 {
@@ -3543,6 +3646,8 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     padding-bottom: 4rem; }
   .tb-pad-b9 {
     padding-bottom: 6rem; }
+  .tb-pad-b10 {
+    padding-bottom: 10rem; }
   .tb-pad-r0 {
     padding-right: 0; }
   .tb-pad-r1 {
@@ -3563,6 +3668,8 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     padding-right: 4rem; }
   .tb-pad-r9 {
     padding-right: 6rem; }
+  .tb-pad-r10 {
+    padding-right: 10rem; }
   .tb-pad-l0 {
     padding-left: 0; }
   .tb-pad-l1 {
@@ -3582,7 +3689,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   .tb-pad-l8 {
     padding-left: 4rem; }
   .tb-pad-l9 {
-    padding-left: 6rem; } }
+    padding-left: 6rem; }
+  .tb-pad-l10 {
+    padding-left: 10rem; } }
 
 @media screen and (min-width: 64em) {
   .dt-pad-0 {
@@ -3635,6 +3744,11 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     padding-bottom: 6rem;
     padding-left: 6rem;
     padding-right: 6rem; }
+  .dt-pad-10 {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    padding-left: 10rem;
+    padding-right: 10rem; }
   .dt-pad-v0 {
     padding-top: 0;
     padding-bottom: 0; }
@@ -3665,6 +3779,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   .dt-pad-v9 {
     padding-top: 6rem;
     padding-bottom: 6rem; }
+  .dt-pad-v10 {
+    padding-top: 10rem;
+    padding-bottom: 10rem; }
   .dt-pad-h0 {
     padding-left: 0;
     padding-right: 0; }
@@ -3695,6 +3812,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   .dt-pad-h9 {
     padding-left: 6rem;
     padding-right: 6rem; }
+  .dt-pad-h10 {
+    padding-left: 10rem;
+    padding-right: 10rem; }
   .dt-pad-t0 {
     padding-top: 0; }
   .dt-pad-t1 {
@@ -3715,6 +3835,8 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     padding-top: 4rem; }
   .dt-pad-t9 {
     padding-top: 6rem; }
+  .dt-pad-t10 {
+    padding-top: 10rem; }
   .dt-pad-b0 {
     padding-bottom: 0; }
   .dt-pad-b1 {
@@ -3735,6 +3857,8 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     padding-bottom: 4rem; }
   .dt-pad-b9 {
     padding-bottom: 6rem; }
+  .dt-pad-b10 {
+    padding-bottom: 10rem; }
   .dt-pad-r0 {
     padding-right: 0; }
   .dt-pad-r1 {
@@ -3755,6 +3879,8 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     padding-right: 4rem; }
   .dt-pad-r9 {
     padding-right: 6rem; }
+  .dt-pad-r10 {
+    padding-right: 10rem; }
   .dt-pad-l0 {
     padding-left: 0; }
   .dt-pad-l1 {
@@ -3774,7 +3900,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   .dt-pad-l8 {
     padding-left: 4rem; }
   .dt-pad-l9 {
-    padding-left: 6rem; } }
+    padding-left: 6rem; }
+  .dt-pad-l10 {
+    padding-left: 10rem; } }
 
 .pos-s {
   position: static; }
@@ -3838,6 +3966,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .t9 {
   top: 6rem; }
 
+.t10 {
+  top: 10rem; }
+
 .b0 {
   bottom: 0; }
 
@@ -3867,6 +3998,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 
 .b9 {
   bottom: 6rem; }
+
+.b10 {
+  bottom: 10rem; }
 
 .r0 {
   right: 0; }
@@ -3898,6 +4032,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .r9 {
   right: 6rem; }
 
+.r10 {
+  right: 10rem; }
+
 .l0 {
   left: 0; }
 
@@ -3928,6 +4065,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .l9 {
   left: 6rem; }
 
+.l10 {
+  left: 10rem; }
+
 @media screen and (min-width: 48em) {
   .tb-t0 {
     top: 0; }
@@ -3949,6 +4089,8 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     top: 4rem; }
   .tb-t9 {
     top: 6rem; }
+  .tb-t10 {
+    top: 10rem; }
   .tb-b0 {
     bottom: 0; }
   .tb-b1 {
@@ -3969,6 +4111,8 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     bottom: 4rem; }
   .tb-b9 {
     bottom: 6rem; }
+  .tb-b10 {
+    bottom: 10rem; }
   .tb-r0 {
     right: 0; }
   .tb-r1 {
@@ -3989,6 +4133,8 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     right: 4rem; }
   .tb-r9 {
     right: 6rem; }
+  .tb-r10 {
+    right: 10rem; }
   .tb-l0 {
     left: 0; }
   .tb-l1 {
@@ -4008,7 +4154,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   .tb-l8 {
     left: 4rem; }
   .tb-l9 {
-    left: 6rem; } }
+    left: 6rem; }
+  .tb-l10 {
+    left: 10rem; } }
 
 @media screen and (min-width: 64em) {
   .dt-t0 {
@@ -4031,6 +4179,8 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     top: 4rem; }
   .dt-t9 {
     top: 6rem; }
+  .dt-t10 {
+    top: 10rem; }
   .dt-b0 {
     bottom: 0; }
   .dt-b1 {
@@ -4051,6 +4201,8 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     bottom: 4rem; }
   .dt-b9 {
     bottom: 6rem; }
+  .dt-b10 {
+    bottom: 10rem; }
   .dt-r0 {
     right: 0; }
   .dt-r1 {
@@ -4071,6 +4223,8 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     right: 4rem; }
   .dt-r9 {
     right: 6rem; }
+  .dt-r10 {
+    right: 10rem; }
   .dt-l0 {
     left: 0; }
   .dt-l1 {
@@ -4090,7 +4244,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   .dt-l8 {
     left: 4rem; }
   .dt-l9 {
-    left: 6rem; } }
+    left: 6rem; }
+  .dt-l10 {
+    left: 10rem; } }
 
 .t1- {
   top: -0.125rem; }
@@ -4877,91 +5033,91 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     word-wrap: normal; } }
 
 .fill-blue,
-.fill-blue path {
+.fill-blue path:not([class*=fill-]) {
   fill: #1e9bd6; }
 
 .fill-green,
-.fill-green path {
+.fill-green path:not([class*=fill-]) {
   fill: #1ed668; }
 
 .fill-mint,
-.fill-mint path {
+.fill-mint path:not([class*=fill-]) {
   fill: #31e894; }
 
 .fill-orange,
-.fill-orange path {
+.fill-orange path:not([class*=fill-]) {
   fill: #d66a1e; }
 
 .fill-pink,
-.fill-pink path {
+.fill-pink path:not([class*=fill-]) {
   fill: #ec2666; }
 
 .fill-purple,
-.fill-purple path {
+.fill-purple path:not([class*=fill-]) {
   fill: #5930d6; }
 
 .fill-red,
-.fill-red path {
+.fill-red path:not([class*=fill-]) {
   fill: #d61e40; }
 
 .fill-teal,
-.fill-teal path {
+.fill-teal path:not([class*=fill-]) {
   fill: #17b5b5; }
 
 .fill-violet,
-.fill-violet path {
+.fill-violet path:not([class*=fill-]) {
   fill: #981bd8; }
 
 .fill-yellow,
-.fill-yellow path {
+.fill-yellow path:not([class*=fill-]) {
   fill: #d6d01e; }
 
 .fill-silver,
-.fill-silver path {
+.fill-silver path:not([class*=fill-]) {
   fill: #dde3e6; }
 
 .fill-gold,
-.fill-gold path {
+.fill-gold path:not([class*=fill-]) {
   fill: #c7aa5c; }
 
 .fill-x,
-.fill-x path {
+.fill-x path:not([class*=fill-]) {
   fill: transparent; }
 
 .fill-blk,
-.fill-blk path {
+.fill-blk path:not([class*=fill-]) {
   fill: #000; }
 
 .fill-black,
-.fill-black path {
+.fill-black path:not([class*=fill-]) {
   fill: #1a1a1a; }
 
 .fill-cream,
-.fill-cream path {
+.fill-cream path:not([class*=fill-]) {
   fill: #f7f2eb; }
 
 .fill-wht,
-.fill-wht path {
+.fill-wht path:not([class*=fill-]) {
   fill: #fff; }
 
 .fill-white,
-.fill-white path {
+.fill-white path:not([class*=fill-]) {
   fill: #f9f9f9; }
 
 .fill-grey,
-.fill-grey path {
+.fill-grey path:not([class*=fill-]) {
   fill: #82848e; }
 
 .fill-dark,
-.fill-dark path {
+.fill-dark path:not([class*=fill-]) {
   fill: #575c67; }
 
 .fill-light,
-.fill-light path {
+.fill-light path:not([class*=fill-]) {
   fill: #b5b8bf; }
 
 .fill-pitch,
-.fill-pitch path {
+.fill-pitch path:not([class*=fill-]) {
   fill: #161f23; }
 
 .va-base {
@@ -5032,105 +5188,34 @@ pre[class*="language-"] {
   border-radius: 3px;
   overflow-x: auto; }
   @media screen {
-    pre[class*="language-"] {
-      /* string content */
-      /* a keyword */
-      /* a comment */
-      /* a type name */
-      /* a literal value */
-      /* punctuation */
-      /* lisp open bracket */
-      /* lisp close bracket */
-      /* a markup attribute name */
-      /* a markup attribute value */
-      /* a declaration */
-      /* a variable name */
-      /* a function name */ }
-      pre[class*="language-"] .comment {
-        color: #78909C; }
-      pre[class*="language-"] .tag {
-        color: #59F1C2; }
-      pre[class*="language-"] .attr-name {
-        color: #69D9FB; }
-      pre[class*="language-"] .attr-value {
-        color: #FFBB75; }
-      pre[class*="language-"] .attr-value .punctuation {
-        color: #b2c0c6; }
-      pre[class*="language-"] .variable {
-        color: #59F1C2; }
-      pre[class*="language-"] .string {
-        color: #FFBB75; }
-      pre[class*="language-"] .property {
-        color: #69D9FB; }
-      pre[class*="language-"] .selector {
-        color: #59F1C2; }
-      pre[class*="language-"] .hexcode {
-        color: #D7A1FF; }
-      pre[class*="language-"] .number {
-        color: #D7A1FF; }
-      pre[class*="language-"] .atrule .rule {
-        color: #FF7B7B; }
-      pre[class*="language-"] .atrule .property {
-        color: #59F1C2; }
-      pre[class*="language-"] .str {
-        color: #D7A1FF; }
-      pre[class*="language-"] .kwd {
-        color: #cc99cc; }
-      pre[class*="language-"] .typ {
-        color: #69D9FB; }
-      pre[class*="language-"] .lit {
-        color: #FF9AE8; }
-      pre[class*="language-"] .pun {
-        color: #CFD8DC; }
-      pre[class*="language-"] .opn {
-        color: #CFD8DC; }
-      pre[class*="language-"] .clo {
-        color: #CFD8DC; }
-      pre[class*="language-"] .atn {
-        color: #69D9FB; }
-      pre[class*="language-"] .atv {
-        color: #FFBB75; }
-      pre[class*="language-"] .dec {
-        color: #59F1C2; }
-      pre[class*="language-"] .var {
-        color: #f2777a; }
-      pre[class*="language-"] .fun {
-        color: #6699cc; } }
-  @media screen {
-    pre[class*="language-"].lang-css {
-      /* a keyword */
-      /* a literal value */ }
-      pre[class*="language-"].lang-css .pln {
-        color: #CFD8DC; }
-      pre[class*="language-"].lang-css .kwd {
-        color: #69D9FB; }
-      pre[class*="language-"].lang-css .lit {
-        color: #FF9AE8; } }
-
-/* Use higher contrast and text-weight for printable form. */
-@media print, projection {
-  .str {
-    color: #006600; }
-  .kwd {
-    color: #006;
-    font-weight: bold; }
-  .com {
-    color: #600;
-    font-style: italic; }
-  .typ {
-    color: #404;
-    font-weight: bold; }
-  .lit {
-    color: #004444; }
-  .pun, .opn, .clo {
-    color: #444400; }
-  .tag {
-    color: #006;
-    font-weight: bold; }
-  .atn {
-    color: #440044; }
-  .atv {
-    color: #006600; } }
+    pre[class*="language-"] .comment {
+      color: #78909C; }
+    pre[class*="language-"] .tag {
+      color: #43EABC; }
+    pre[class*="language-"] .attr-name {
+      color: #81DEEC; }
+    pre[class*="language-"] .attr-value {
+      color: #FFB397; }
+    pre[class*="language-"] .attr-value .punctuation {
+      color: #b2c0c6; }
+    pre[class*="language-"] .variable {
+      color: #43EABC; }
+    pre[class*="language-"] .string {
+      color: #FFB397; }
+    pre[class*="language-"] .property {
+      color: #81DEEC; }
+    pre[class*="language-"] .selector {
+      color: #43EABC; }
+    pre[class*="language-"] .hexcode {
+      color: #BBA1DC; }
+    pre[class*="language-"] .number {
+      color: #BBA1DC; }
+    pre[class*="language-"] .boolean {
+      color: #BBA1DC; }
+    pre[class*="language-"] .atrule .rule {
+      color: #FF7B7B; }
+    pre[class*="language-"] .atrule .property {
+      color: #43EABC; } }
 
 code:not([class*="language-"]) {
   background: #eee;

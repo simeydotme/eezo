@@ -72,91 +72,78 @@
       </ul>
     </div>
     <div class="docs-content f1">
-      <h2 class="ls3">Font Family</h2>
-      <div class="f3 txt-j"><p>The font stacks that come by default with Eezo have been
-designed to <strong>maximize compatibility</strong> and aesthetics.</p>
+      <h2 class="ls3">Word Break</h2>
+      <div class="f3 txt-j"><p>Sometimes there comes times when it&#39;s necessary to
+supply <code>word-break</code> values to passages of text.</p>
 
-      </div><p>For the sans/serif type; <a href="https://www.google.com/get/noto/">Noto</a>
-comes first, followed by some popular/common open fonts, and then
-finally some pleasant system defaults.</p>
-<p>Even if you&#39;re a western developer/author, not designing for
-eastern screens with CJK text; your website is still probably 
-being viewed and translated by users from there.
-<strong><em>So there&#39;s also pleasant CJK defaults.</em></strong></p>
+      </div><p>If you&#39;re building websites for Chinese or Eastern
+audiences, you may need this, For more
+information on what <code>word-break</code> does, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-break">take
+a look at the MDN docs</a>.</p>
 
-      <table class="mar-t7 mb-12 txt-l txt-sans">
+      <table class="mar-t8 mar-b6 mb-12 txt-l txt-sans">
         <thead>
           <tr>
-            <th class="pad-v3 pad-h5 bor-b1">class name</th>
-            <th class="pad-v3 pad-h5 bor-b1">font stack</th>
+            <th class="pad-3 bor-b1">class name</th>
+            <th class="pad-3 bor-b1">word-break value</th>
           </tr>
         </thead>
         <tbody class="txt-code">
           <tr>
-            <td class="pad-h5 pad-v3 va-top whs-nowrap">.txt-code</td>
-            <td class="pad-h5 pad-v3 va-top">
-              <div class="code">Menlo, Monaco, Consolas, monospace</div>
+            <td class="pad-3 pad-v2 va-top whs-nowrap">.wb-break</td>
+            <td class="pad-3 pad-v2 va-top">
+              <div class="code">break-all</div>
             </td>
           </tr>
           <tr>
-            <td class="pad-h5 pad-v3 va-top whs-nowrap">.txt-heading</td>
-            <td class="pad-h5 pad-v3 va-top">
-              <div class="code">Proxima Nova, Lato, Avenir, Arial, sans-serif, 微软雅黑体, 微软雅黑, Microsoft YaHei, 黑体, SimHei, 冬青黑体, Hiragino Sans GB, 华文黑体, STHeiti, sans-serif</div>
+            <td class="pad-3 pad-v2 va-top whs-nowrap">.wb-keep</td>
+            <td class="pad-3 pad-v2 va-top">
+              <div class="code">keep-all</div>
             </td>
           </tr>
           <tr>
-            <td class="pad-h5 pad-v3 va-top whs-nowrap">.txt-sans</td>
-            <td class="pad-h5 pad-v3 va-top">
-              <div class="code">Noto Sans, Open Sans, Lato, Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif, 微软雅黑体, 微软雅黑, Microsoft YaHei, 黑体, SimHei, 冬青黑体, Hiragino Sans GB, 华文黑体, STHeiti, sans-serif</div>
-            </td>
-          </tr>
-          <tr>
-            <td class="pad-h5 pad-v3 va-top whs-nowrap">.txt-serif</td>
-            <td class="pad-h5 pad-v3 va-top">
-              <div class="code">Noto Serif, Merriweather, Georgia, serif, 新細明體, PMingLiU, 华文细黑, STXihei, 宋体, SimSun, serif</div>
+            <td class="pad-3 pad-v2 va-top whs-nowrap">.wb-normal</td>
+            <td class="pad-3 pad-v2 va-top">
+              <div class="code">normal</div>
             </td>
           </tr>
         </tbody>
       </table>
-      <h3 class="mar-t8 mar-b6">Usage example</h3><p>Out of the box, Eezo will come with the classes
-defined above, and here&#39;s an example of how to use
-them in your <code>html</code></p>
-<pre><code class="language-html">&lt;body class=&quot;txt-serif&quot;&gt;
-
-   &lt;h1 class=&quot;txt-heading&quot;&gt; heading &lt;h1&gt;
-    &lt;p class=&quot;txt-sans&quot;&gt; sub-heading &lt;/p&gt;
-  &lt;pre class=&quot;txt-code&quot;&gt; code style &lt;/pre&gt;
-
-&lt;/body&gt;
+      <h3 class="mar-t8 mar-b6">Usage example</h3><pre><code class="language-html">&lt;p class=&quot;wb-break&quot;&gt; long words will break to wrap &lt;p&gt;
+&lt;p class=&quot;wb-keep&quot;&gt; nothing will break &lt;/p&gt;
 </code></pre>
-      <h3 class="mar-t8 mar-b6">Media Queries</h3><p>No media query support for this property.
-It might not be necessary to supply different
-values at different breakpoints. Please refer to
-(<a href="xxmqxx">the <code>media-query</code> documentation</a>) for more info.</p>
-
+      <h3 class="mar-t8 mar-b6">Media Queries</h3><p>It&#39;s possible to change the value
+of the <code>word-break</code> property across
+different breakpoints.
+(<a href="xxmqxx"><em>see the media query section for details</em></a>)</p>
+<pre><code class="language-html">&lt;nav class=&quot;wb-break tb-wb-normal&quot;&gt;
+    - always break words on mobile
+    - behave normally on tablet+
+&lt;/nav&gt;
+</code></pre>
       <h3 class="mar-t8 mar-b6">Customising</h3>
-      <h4 class="mar-t6 mar-b4 ls1">Default Classes</h4><p>To change the prefix from <code>txt</code> to something else, you
-may use the <code>$font-family-prop</code> variable to override.</p>
+      <h4 class="mar-t6 mar-b4 ls1">Default Classes</h4><p>To change the prefix from <code>wb</code> to something else, you
+may use the <code>$word-break-prop</code> variable to override:</p>
 <pre><code class="language-scss">// change the default class:
-// .txt-*  -&gt;  .ff-*
-$font-family-prop: &quot;ff&quot;;
+// .wb-*  -&gt;  .wbreak-*
+$word-break-prop: &quot;wbreak&quot;;
 </code></pre>
-      <h4 class="mar-t6 mar-b4 ls1">Custom Fonts</h4><p>Supply a <code>$custom-fonts</code> map to
-add your own custom font sets:</p>
-<pre><code class="language-scss">// change the sans-serif font family, and
-// add a new font-family:
-$custom-fonts: (
-  sans: &quot;Helvetica&quot;,
-  chuck: &quot;Chuck Norris&quot;
+      <h4 class="mar-t6 mar-b4 ls1">Custom Properties</h4><p>It might not always be useful to have the
+full set of <code>word-break</code> values available.
+So it&#39;s possible to provide a map of the values
+you desire.</p>
+<pre><code class="language-scss">// change the word-break map so there&#39;s,
+// only keep-all.
+$word-breaks: (
+   k: keep-all
 );
 </code></pre>
       <h4 class="mar-t6 mar-b4 ls1">Combined</h4><p>The previous two customisations combined:</p>
 <pre><code class="language-scss">// would result in css like:
-.ff-sans { font-family: &quot;Helvetica&quot;; }
-.ff-chuck { font-family: &quot;Chuck Norris&quot;; }
+.wbreak-k { word-break: keep-all; }
 </code></pre>
       <hr class="bg-x bor-0 bor-b1 bor-light mar-t9 mar-b8"/>
-      <p class="txt-sans">view the source on github: <code><a href="https://github.com/simeydotme/eezo/tree/master//src/components/text/_family.scss">/src/components/text/_family.scss</a></code></p>
+      <p class="txt-sans">view the source on github: <code><a href="https://github.com/simeydotme/eezo/tree/master//src/components/text/_break.scss">/src/components/text/_break.scss</a></code></p>
     </div>
   </section>
   <footer>

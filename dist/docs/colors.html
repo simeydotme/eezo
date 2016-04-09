@@ -159,9 +159,9 @@ and can be easily overridden with customisation in sass.</p>
       <table class="mar-t8 mar-b6 mb-12 txt-l txt-sans">
         <thead>
           <tr>
-            <th class="pad-10 bor-b1">class name</th>
-            <th class="pad-10 bor-b1">hex value</th>
-            <th class="pad-10 bor-b1">example</th>
+            <th class="pad-3 bor-b1">class name</th>
+            <th class="pad-3 bor-b1">hex value</th>
+            <th class="pad-3 bor-b1">example</th>
           </tr>
         </thead>
         <tbody class="txt-code">
@@ -227,6 +227,66 @@ and can be easily overridden with customisation in sass.</p>
           </tr>
         </tbody>
       </table>
+      <h3 class="mar-t8 mar-b6">Customising</h3><p>There&#39;s a global set <code>map</code> set to the <code>$colors</code>
+variable which is inherited by all othe colour
+modules (<em>text, background, etc</em>).</p>
+<p>The <code>$colors</code> map is a combination of:</p>
+<ul>
+<li><code>$base-colors</code> ( as shown above under &quot;default colours&quot; )</li>
+<li><code>$extra-colors</code> ( a map of some nice ui colours )</li>
+<li><code>$custom-colors</code> ( an empty map which can be supplied )</li>
+</ul>
+
+      <h4 class="mar-t6 mar-b4 ls1">Base Colours</h4><p>These cannot be overridden, they are pretty
+standard across most UIs.</p>
+
+      <h4 class="mar-t6 mar-b4 ls1">Extra Colours</h4><p>Extra Colours may be turned on, or off, by
+changing the boolean variable, <code>$no-extra-colors</code>,
+to true. (<em>default is false</em>).</p>
+<pre><code class="language-scss">// switch off the extra colours by 
+// placing this code _before_ your eezo 
+// import/include. e.g:
+$no-extra-colors: true;
+</code></pre>
+      <h4 class="mar-t6 mar-b4 ls1">Custom Colours</h4><p>If you&#39;d prefer to supply your own set
+of colours to persist across the framework,
+you may do so by supplying them in a map
+called <code>$custom-colors</code>.</p>
+<p>Any colours supplied in <code>$custom-colors</code>, that share the
+same name as a colour in the default/extras map,
+will override the default version.</p>
+<pre><code class="language-scss">// Customise the colours for eezo,
+// - add some of our own colours
+// - override the default black colour.
+// - override the extra red colour.
+$custom-colors: (
+    facebook-blue:  #3b5998,
+    twitter-blue:   #55acee,
+    black:          #010101,
+    red:            #cc0000,
+);
+</code></pre><p>We would now be able to reference the facebook/twitter
+colours, as well as our custom black/red anywhere that inherits them;</p>
+<pre><code class="language-html">&lt;body class=&quot;txt-black&quot;&gt;
+    &lt;!-- Body has our custom black text colour --&gt;
+    &lt;h3 class=&quot;bor-1 bor-red&quot;&gt; Share &lt;/h3&gt;
+    &lt;!-- Heading has our custom red as border --&gt;
+    &lt;a href=&quot;facebook.com&quot; class=&quot;bg-facebook-blue&quot;&gt; Facebook &lt;/a&gt;
+    &lt;a href=&quot;twitter.com&quot; class=&quot;bg-twitter-blue&quot;&gt; Twitter &lt;/a&gt;
+    &lt;!-- Links have custom background colours --&gt;
+&lt;/body&gt;
+</code></pre>
+      <h4 class="mar-t6 mar-b4 ls1">More information</h4><p>See the following sections regarding the different properties
+that inherit colours:</p>
+<ul>
+<li><a href="/dist/docs/text/color.html">Text colours</a></li>
+<li><a href="/dist/docs/background/color.html">Background colours</a></li>
+<li><a href="/dist/docs/border/color.html">Border colours</a></li>
+<li><a href="/dist/docs/svg/fill.html">SVG fills</a></li>
+</ul>
+
+      <hr class="bg-x bor-0 bor-b1 bor-light mar-t9 mar-b8"/>
+      <p class="txt-sans">view the source on github: <code><a href="https://github.com/simeydotme/eezo/tree/master//src/defaults/_colors.scss">/src/defaults/_colors.scss</a></code></p>
     </div>
   </section>
   <footer>

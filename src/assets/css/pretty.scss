@@ -3,10 +3,10 @@ $code-bg:         #37474F;
 $code-plain:      #CFD8DC;
 $code-comment:    #78909C;
 $code-punc:       darken( $code-plain , 10% );
-$code-green:      #59F1C2;
-$code-blue:       #69D9FB;
-$code-yellow:     #FFBB75;
-$code-purple:     #D7A1FF;
+$code-green:      #43EABC;
+$code-blue:       #81DEEC;
+$code-yellow:     #FFB397;
+$code-purple:     #BBA1DC;
 $code-pink:       #FF9AE8;
 $code-red:        #FF7B7B;
 
@@ -36,6 +36,7 @@ pre[ class *= "language-" ] {
     .selector { color: $code-green; }
     .hexcode { color: $code-purple; }
     .number { color: $code-purple; }
+    .boolean { color: $code-purple; }
 
     .atrule {
       .rule {
@@ -46,88 +47,11 @@ pre[ class *= "language-" ] {
       }
     }
 
-
-    /* string content */
-    .str { color: $code-purple; }
-    /* a keyword */
-    .kwd { color: #cc99cc; }
-    /* a comment */
-    /* a type name */
-    .typ { color: $code-blue; }
-    /* a literal value */
-    .lit { color: $code-pink; }
-    /* punctuation */
-    .pun { color: $code-plain; }
-    /* lisp open bracket */
-    .opn { color: $code-plain; }
-    /* lisp close bracket */
-    .clo { color: $code-plain; }
-    /* a markup attribute name */
-    .atn { color: $code-blue; }
-    /* a markup attribute value */
-    .atv { color: $code-yellow; }
-    /* a declaration */
-    .dec { color: $code-green; }
-    /* a variable name */
-    .var { color: #f2777a; }
-    /* a function name */
-    .fun { color: #6699cc; }
   }
 
-  &.lang-css {
-    @media screen {
+  &.language-css,
+  &.language-scss {
 
-      .pln { color: $code-plain; }
-      /* a keyword */
-      .kwd { color: $code-blue; }
-      /* a literal value */
-      .lit { color: $code-pink; }
-
-    }
+    
   }
 }
-
-/* Use higher contrast and text-weight for printable form. */
-@media print, projection {
-  .str {
-    color: #006600;
-  }
-
-  .kwd {
-    color: #006;
-    font-weight: bold;
-  }
-
-  .com {
-    color: #600;
-    font-style: italic;
-  }
-
-  .typ {
-    color: #404;
-    font-weight: bold;
-  }
-
-  .lit {
-    color: #004444;
-  }
-
-  .pun, .opn, .clo {
-    color: #444400;
-  }
-
-  .tag {
-    color: #006;
-    font-weight: bold;
-  }
-
-  .atn {
-    color: #440044;
-  }
-
-  .atv {
-    color: #006600;
-  }
-}
-
-

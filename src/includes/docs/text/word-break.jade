@@ -1,0 +1,104 @@
+
+extends ../layout/columns
+
+
+mixin table-row( name, value )
+
+    tr
+        td.pad-3.pad-v2.va-top.whs-nowrap= name
+        td.pad-3.pad-v2.va-top
+            .code= value
+
+
+
+
+
+append content
+
+    +main-title( "Word Break" )
+
+    +intro-text
+        :marked
+            Sometimes there comes times when it's necessary to
+            supply `word-break` values to passages of text.
+
+    :marked
+        If you're building websites for Chinese or Eastern
+        audiences, you may need this, For more
+        information on what `word-break` does, [take
+        a look at the MDN docs](https://developer.mozilla.org/en-US/docs/Web/CSS/word-break).
+
+    +table
+
+        thead
+
+            tr
+
+                th.pad-3.bor-b1 class name
+                th.pad-3.bor-b1 word-break value
+
+        tbody.txt-code
+
+            +table-row( ".wb-break", "break-all" )
+            +table-row( ".wb-keep", "keep-all" )
+            +table-row( ".wb-normal", "normal" )
+
+
+    +sub-title( "Usage example" )
+
+    :prismjs( language = "html" )
+        <p class="wb-break"> long words will break to wrap <p>
+        <p class="wb-keep"> nothing will break </p>
+
+    +sub-title( "Media Queries" )
+
+    :marked
+        It's possible to change the value
+        of the `word-break` property across
+        different breakpoints.
+        ([_see the media query section for details_](xxmqxx))
+
+    :prismjs( language = "html" )
+        <nav class="wb-break tb-wb-normal">
+            - always break words on mobile
+            - behave normally on tablet+
+        </nav>
+
+    +sub-title( "Customising" )
+
+    +small-title( "Default Classes" )
+
+    :marked
+        To change the prefix from `wb` to something else, you
+        may use the `$word-break-prop` variable to override:
+
+    :prismjs( language = "scss" )
+        // change the default class:
+        // .wb-*  ->  .wbreak-*
+        $word-break-prop: "wbreak";
+
+    +small-title( "Custom Properties" )
+
+    :marked
+        It might not always be useful to have the
+        full set of `word-break` values available.
+        So it's possible to provide a map of the values
+        you desire.
+
+    :prismjs( language = "scss" )
+        // change the word-break map so there's,
+        // only keep-all.
+        $word-breaks: (
+           k: keep-all
+        );
+
+    +small-title( "Combined" )
+
+    :marked
+        The previous two customisations combined:
+
+    :prismjs( language = "scss" )
+        // would result in css like:
+        .wbreak-k { word-break: keep-all; }
+
+    +source-file( "/src/components/text/_break.scss" )

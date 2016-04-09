@@ -69,8 +69,6 @@ append content
             +table-row( "blk", "#000000" )
 
 
-
-
     +sub-title( "Extra Colours" )
 
     :marked
@@ -85,9 +83,9 @@ append content
 
             tr
 
-                th.pad-10.bor-b1 class name
-                th.pad-10.bor-b1 hex value
-                th.pad-10.bor-b1 example
+                th.pad-3.bor-b1 class name
+                th.pad-3.bor-b1 hex value
+                th.pad-3.bor-b1 example
 
         tbody.txt-code
 
@@ -106,10 +104,88 @@ append content
 
 
 
+    +sub-title( "Customising" )
+
+    :marked
+        There's a global set `map` set to the `$colors`
+        variable which is inherited by all othe colour
+        modules (_text, background, etc_).
+
+        The `$colors` map is a combination of:
+        * `$base-colors` ( as shown above under "default colours" )
+        * `$extra-colors` ( a map of some nice ui colours )
+        * `$custom-colors` ( an empty map which can be supplied )
+
+    +small-title( "Base Colours" )
+
+    :marked
+        These cannot be overridden, they are pretty
+        standard across most UIs.
+
+    +small-title( "Extra Colours" )
+
+    :marked
+        Extra Colours may be turned on, or off, by
+        changing the boolean variable, `$no-extra-colors`,
+        to true. (_default is false_).
+
+    :prismjs( language = "scss" )
+        // switch off the extra colours by 
+        // placing this code _before_ your eezo 
+        // import/include. e.g:
+        $no-extra-colors: true;
+
+    +small-title( "Custom Colours" )
+
+    :marked
+        If you'd prefer to supply your own set
+        of colours to persist across the framework,
+        you may do so by supplying them in a map
+        called `$custom-colors`.
+
+        Any colours supplied in `$custom-colors`, that share the
+        same name as a colour in the default/extras map,
+        will override the default version.
+
+    :prismjs( language = "scss" )
+        // Customise the colours for eezo,
+        // - add some of our own colours
+        // - override the default black colour.
+        // - override the extra red colour.
+        $custom-colors: (
+            facebook-blue:  #3b5998,
+            twitter-blue:   #55acee,
+            black:          #010101,
+            red:            #cc0000,
+        );
+
+    :marked
+        We would now be able to reference the facebook/twitter
+        colours, as well as our custom black/red anywhere that inherits them;
+
+    :prismjs( language = "html" )
+        <body class="txt-black">
+            <!-- Body has our custom black text colour -->
+            <h3 class="bor-1 bor-red"> Share </h3>
+            <!-- Heading has our custom red as border -->
+            <a href="facebook.com" class="bg-facebook-blue"> Facebook </a>
+            <a href="twitter.com" class="bg-twitter-blue"> Twitter </a>
+            <!-- Links have custom background colours -->
+        </body>
+
+    +small-title( "More information" )
+
+    :marked
+        See the following sections regarding the different properties
+        that inherit colours:
+
+        * [Text colours](/dist/docs/text/color.html)
+        * [Background colours](/dist/docs/background/color.html)
+        * [Border colours](/dist/docs/border/color.html)
+        * [SVG fills](/dist/docs/svg/fill.html)
 
 
 
 
 
-
-
+    +source-file( "/src/defaults/_colors.scss" )
