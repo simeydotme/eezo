@@ -36,10 +36,14 @@ mixin table-head
 
 
 
-mixin code-block( type )
 
-    pre.code( data-lang = type )
-        #{block}
+mixin no-media-query
+
+    :marked
+        No media query support for this property.
+        It might not be necessary to supply different
+        values at different breakpoints. Please refer to
+        ([the `media-query` documentation](xxmqxx)) for more info.
 
 
 mixin source-file( path )

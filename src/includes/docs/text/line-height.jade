@@ -4,8 +4,6 @@ extends ../layout/columns
 
 mixin table-row( css, value )
 
-    - value = value / 16
-
     tr
         td.pad-3.pad-v2= css
         td.pad-3.pad-v2= value
@@ -21,13 +19,13 @@ append content
 
     +intro-text
         :marked
-            Line heights in Eezo are defined to keep
-            on the same scale as the `font-size` property.
+            Line heights in Eezo are defined to have a few
+            real-world values for text / forms.
             The line heights are unitless.
 
     :marked
         Line heights can be trickey for non-text elements
-        and I would suggest using `bem`-style css to set
+        and I would suggest using **bem-style** css to set
         very particular `line-height` on elements which require
         it.
 
@@ -41,21 +39,19 @@ append content
             tr
 
                 th.pad-3.bor-b1 class name
-                th.pad-3.bor-b1 unitless value
+                th.pad-3.bor-b1 line-height value
 
         tbody.txt-code
 
-            +table-row( ".lh2-", 12 )
-            +table-row( ".lh1-", 14 )
-            +table-row( ".lh0", 16 )
-            +table-row( ".lh1", 18 )
-            +table-row( ".lh2", 20 )
-            +table-row( ".lh3", 24 )
-            +table-row( ".lh4", 32 )
-            +table-row( ".lh5", 40 )
-            +table-row( ".lh6", 48 )
-            +table-row( ".lh7", 64 )
-            +table-row( ".lh8", 80 )
+            +table-row( ".lh2-", 0.5 )
+            +table-row( ".lh1-", 0.75 )
+            +table-row( ".lh0", 1 )
+            +table-row( ".lh1", 1.25 )
+            +table-row( ".lh2", 1.4 )
+            +table-row( ".lh3", 1.5 )
+            +table-row( ".lh4", 1.6 )
+            +table-row( ".lh5", 2 )
+            +table-row( ".lh6", 3 )
 
     +sub-title( "Usage example" )
 
@@ -77,12 +73,12 @@ append content
 
     :marked
         Line heights are also available across the
-        defined breakpoints; allowing different values 
+        defined breakpoints; allowing different values
         for difference devices.
         ([_see the media query section for details_](xxmqxx))
 
     :prismjs( language = "html" )
-        <body class="lh4 tb-lh3">
+        <body class="lh5 tb-lh3">
             Line height is set to:
                 - 2 on mobile
                 - 1.5 on tablet+

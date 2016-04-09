@@ -12,6 +12,9 @@ mixin table-row( css, size )
         td.pad-3.pad-v2= size + "px"
 
 
+mixin example( css )
+
+    span.disp-ib.mar-h3( class = css ) .#{css}
 
 
 
@@ -55,6 +58,20 @@ append content
             +table-row( ".f6", 48 )
             +table-row( ".f7", 64 )
             +table-row( ".f8", 80 )
+
+
+    +example( "f2-" )
+    +example( "f1-" )
+    +example( "f0" )
+    +example( "f1" )
+    +example( "f2" )
+    +example( "f3" )
+    +example( "f4" )
+    +example( "f5" )
+    +example( "f6" )
+    +example( "f7" )
+    +example( "f8" )
+
 
     +sub-title( "Usage example" )
 

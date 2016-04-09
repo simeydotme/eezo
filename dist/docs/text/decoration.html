@@ -76,59 +76,80 @@
       </ul>
     </div>
     <div class="docs-content f1">
-      <h2 class="ls3">Installation</h2>
-      <p>
-        There's a couple of ways to get Eezo running,
-        there's the classic method of downloading a css
-        file and including, or the more advanced Bower method.
-      </p>
-      <h3 class="mar-t8 mar-b6">Download a bundle</h3>
-      <p>
-        Perhaps the simplest way to get Eezo running is
-        to download and include one of the bundles from
-        Github. There's a few options, listed below.
-      </p>
-      <table class="txt-sans mb-12 txt-l bor-b1 bor-dark pad-b30 mar-v100">
-        <tr>
-                  <th class="pad-v10 bor-b1 bor-dark">Bundle Name</th>
-                  <th class="pad-v10 bor-b1 bor-dark">Size</th>
-                  <th class="pad-v10 bor-b1 bor-dark">Download</th>
-        </tr>
-        <tr>
-          <th class="mb-7 pad-t20">
-            <div class="txt-code f4">Core</div>
-            <div class="fw-n lh1">
-              The basic bundle for Eezo, containing the most
-              common css compositions, no extra weight.
-            </div>
-          </th>
-                  <td class="txt-code docs-purple">~ 7.65kb</td>
-                  <td><a href="#" class="mb-12 btn-alt noline pad-h20 txt-code bg-x">Core</a></td>
-        </tr>
-        <tr>
-          <th class="pad-t20">
-            <div class="txt-code f4">Core +</div>
-            <div class="fw-n lh1">
-              The basic bundle for Eezo, plus some extra
-              features...
-            </div>
-          </th>
-                  <td class="txt-code docs-purple">~ 8.77kb</td>
-                  <td><a href="#" class="mb-12 btn-alt noline pad-h20 txt-code bg-x">Core +</a></td>
-        </tr>
+      <h2 class="ls3">Text Decoration</h2>
+      <div class="f3 txt-j"><p>Text decoration properties can be manipulated
+using the css classes listed below.</p>
+
+      </div>
+      <table class="mar-t8 mar-b6 mb-12 txt-l txt-sans">
+        <thead>
+          <tr>
+            <th class="pad-3 bor-b1">class name</th>
+            <th class="pad-3 bor-b1">decoration value</th>
+          </tr>
+        </thead>
+        <tbody class="txt-code">
+          <tr>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.oline</td>
+            <td class="pad-3 pad-b0 va-top code">overline</td>
+          </tr>
+          <tr>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.uline</td>
+            <td class="pad-3 pad-b0 va-top code">underline</td>
+          </tr>
+          <tr>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.strike</td>
+            <td class="pad-3 pad-b0 va-top code">line-through</td>
+          </tr>
+          <tr>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.bline</td>
+            <td class="pad-3 pad-b0 va-top code">overline underline</td>
+          </tr>
+          <tr>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.aline</td>
+            <td class="pad-3 pad-b0 va-top code">overline line-through underline</td>
+          </tr>
+          <tr>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.noline</td>
+            <td class="pad-3 pad-b0 va-top code">none</td>
+          </tr>
+        </tbody>
       </table>
-      <h3 class="mar-t8 mar-b6">Install with Bower</h3>
-      <pre data-lang="sh" class="code">bower install --save eezo</pre>
-      <p>
-        Installing with bower opens up the possibility of customising
-        Eezo's default options, allowing complete control over the 
-        different components.
-      </p>
-      <pre data-lang="sass" class="code">/* import eezo as .scss for complete control */
-@import "./bower_components/eezo/src/eezo";
- 
-/* or just include a bundle from the dist folder */
-@import "./bower_components/eezo/dist/eezo-core";</pre>
+      <h3 class="mar-t8 mar-b6">Usage example</h3><pre><code class="language-html">&lt;p class=&quot;oline&quot;&gt; line over text &lt;p&gt;
+&lt;p class=&quot;uline&quot;&gt; line under text &lt;/p&gt;
+&lt;p class=&quot;strike&quot;&gt; strike-through text &lt;/p&gt;
+&lt;p class=&quot;noline&quot;&gt; no decoration &lt;/p&gt;
+</code></pre>
+      <h3 class="mar-t8 mar-b6">Media Queries</h3><p>No media query support for this property.
+It might not be necessary to supply different
+values at different breakpoints. Please refer to
+(<a href="xxmqxx">the <code>media-query</code> documentation</a>) for more info.</p>
+
+      <h3 class="mar-t8 mar-b6">Customising</h3>
+      <h4 class="mar-t6 mar-b4 ls1">Default Classes</h4><p>To add a prefix to the decoration properties, you
+may use the <code>$text-decoration-prop</code> variable:</p>
+<pre><code class="language-scss">// change the class prefix to `.dec-`:
+$text-decoration-prop: &quot;dec&quot;;
+</code></pre>
+      <h4 class="mar-t6 mar-b4 ls1">Custom Decoration</h4><p>Your website may not need all, or any
+of the decoration values. You can modify
+the css output using a custom map:</p>
+<pre><code class="language-scss">// change the decoration map so there&#39;s,
+// only `underline`, `strikethrough` and `none`.
+$text-aligns: (
+   u: underline,
+   s: line-through,
+   none: none
+);
+</code></pre>
+      <h4 class="mar-t6 mar-b4 ls1">Combined</h4><p>The previous two customisations combined:</p>
+<pre><code class="language-scss">// would result in css like:
+.dec-u      { text-decoration: underline; }
+.dec-s      { text-decoration: line-through; }
+.dec-none   { text-decoration: none; }
+</code></pre>
+      <hr class="bg-x bor-0 bor-b1 bor-light mar-t9 mar-b8"/>
+      <p class="txt-sans">view the source on github: <code><a href="https://github.com/simeydotme/eezo/tree/master//src/components/text/_decoration.scss">/src/components/text/_decoration.scss</a></code></p>
     </div>
   </section>
   <footer>

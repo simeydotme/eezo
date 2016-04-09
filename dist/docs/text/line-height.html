@@ -52,7 +52,11 @@
               </li>
               <li class="pad-l4"><a href="/dist/docs/text/font-size.html">Font Size</a>
               </li>
+              <li class="pad-l4"><a href="/dist/docs/text/line-height.html">Line Height</a>
+              </li>
               <li class="pad-l4"><a href="/dist/docs/text/alignment.html">Text Align</a>
+              </li>
+              <li class="pad-l4"><a href="/dist/docs/text/word-break.html">Word Break</a>
               </li>
               <li class="mar-t6">
                 <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Border</h4>
@@ -73,12 +77,12 @@
     </div>
     <div class="docs-content f1">
       <h2 class="ls3">Line Height</h2>
-      <div class="f3 txt-j"><p>Line heights in Eezo are defined to keep
-on the same scale as the <code>font-size</code> property.
+      <div class="f3 txt-j"><p>Line heights in Eezo are defined to have a few
+real-world values for text / forms.
 The line heights are unitless.</p>
 
       </div><p>Line heights can be trickey for non-text elements
-and I would suggest using <code>bem</code>-style css to set
+and I would suggest using <strong>bem-style</strong> css to set
 very particular <code>line-height</code> on elements which require
 it.</p>
 <p>For text and forms, however, Eezo&#39;s defined values
@@ -88,17 +92,17 @@ should serve you very well.</p>
         <thead>
           <tr>
             <th class="pad-3 bor-b1">class name</th>
-            <th class="pad-3 bor-b1">unitless value</th>
+            <th class="pad-3 bor-b1">line-height value</th>
           </tr>
         </thead>
         <tbody class="txt-code">
           <tr>
             <td class="pad-3 pad-v2">.lh2-</td>
-            <td class="pad-3 pad-v2">0.75</td>
+            <td class="pad-3 pad-v2">0.5</td>
           </tr>
           <tr>
             <td class="pad-3 pad-v2">.lh1-</td>
-            <td class="pad-3 pad-v2">0.875</td>
+            <td class="pad-3 pad-v2">0.75</td>
           </tr>
           <tr>
             <td class="pad-3 pad-v2">.lh0</td>
@@ -106,11 +110,11 @@ should serve you very well.</p>
           </tr>
           <tr>
             <td class="pad-3 pad-v2">.lh1</td>
-            <td class="pad-3 pad-v2">1.125</td>
+            <td class="pad-3 pad-v2">1.25</td>
           </tr>
           <tr>
             <td class="pad-3 pad-v2">.lh2</td>
-            <td class="pad-3 pad-v2">1.25</td>
+            <td class="pad-3 pad-v2">1.4</td>
           </tr>
           <tr>
             <td class="pad-3 pad-v2">.lh3</td>
@@ -118,23 +122,15 @@ should serve you very well.</p>
           </tr>
           <tr>
             <td class="pad-3 pad-v2">.lh4</td>
-            <td class="pad-3 pad-v2">2</td>
+            <td class="pad-3 pad-v2">1.6</td>
           </tr>
           <tr>
             <td class="pad-3 pad-v2">.lh5</td>
-            <td class="pad-3 pad-v2">2.5</td>
+            <td class="pad-3 pad-v2">2</td>
           </tr>
           <tr>
             <td class="pad-3 pad-v2">.lh6</td>
             <td class="pad-3 pad-v2">3</td>
-          </tr>
-          <tr>
-            <td class="pad-3 pad-v2">.lh7</td>
-            <td class="pad-3 pad-v2">4</td>
-          </tr>
-          <tr>
-            <td class="pad-3 pad-v2">.lh8</td>
-            <td class="pad-3 pad-v2">5</td>
           </tr>
         </tbody>
       </table>
@@ -150,10 +146,10 @@ right down.</p>
 &lt;/body&gt;
 </code></pre>
       <h3 class="mar-t8 mar-b6">Media Queries</h3><p>Line heights are also available across the
-defined breakpoints; allowing different values 
+defined breakpoints; allowing different values
 for difference devices.
 (<a href="xxmqxx"><em>see the media query section for details</em></a>)</p>
-<pre><code class="language-html">&lt;body class=&quot;lh4 tb-lh3&quot;&gt;
+<pre><code class="language-html">&lt;body class=&quot;lh5 tb-lh3&quot;&gt;
     Line height is set to:
         - 2 on mobile
         - 1.5 on tablet+
