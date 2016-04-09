@@ -34,9 +34,8 @@
     "light"
   ],
   "dependencies": {
-    "eezo": "https://github.com/simeydotme/eezo.git#~0.6.4-alpha",
+    "eezo": "https://github.com/simeydotme/eezo.git#~0.6.5-alpha",
     "jquery": "^2.2.1",
-    "google-code-prettify-language-handlers": "^0.1.5",
     "prism": "^1.4.1"
   }
 }
