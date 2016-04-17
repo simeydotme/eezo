@@ -4555,6 +4555,12 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .fw-black {
   font-weight: 900; }
 
+.ls5- {
+  letter-spacing: -0.25em; }
+
+.ls4- {
+  letter-spacing: -0.125em; }
+
 .ls3- {
   letter-spacing: -0.075em; }
 
@@ -4588,10 +4594,23 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .ls7 {
   letter-spacing: 1em; }
 
+.ls8 {
+  letter-spacing: 1.5em; }
+
+.ls9 {
+  letter-spacing: 2em; }
+
+.ls10 {
+  letter-spacing: 3em; }
+
 .lsn {
   letter-spacing: normal; }
 
 @media screen and (min-width: 48em) {
+  .tb-ls5- {
+    letter-spacing: -0.25em; }
+  .tb-ls4- {
+    letter-spacing: -0.125em; }
   .tb-ls3- {
     letter-spacing: -0.075em; }
   .tb-ls2- {
@@ -4614,10 +4633,20 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     letter-spacing: 0.5em; }
   .tb-ls7 {
     letter-spacing: 1em; }
+  .tb-ls8 {
+    letter-spacing: 1.5em; }
+  .tb-ls9 {
+    letter-spacing: 2em; }
+  .tb-ls10 {
+    letter-spacing: 3em; }
   .tb-lsn {
     letter-spacing: normal; } }
 
 @media screen and (min-width: 64em) {
+  .dt-ls5- {
+    letter-spacing: -0.25em; }
+  .dt-ls4- {
+    letter-spacing: -0.125em; }
   .dt-ls3- {
     letter-spacing: -0.075em; }
   .dt-ls2- {
@@ -4640,6 +4669,12 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     letter-spacing: 0.5em; }
   .dt-ls7 {
     letter-spacing: 1em; }
+  .dt-ls8 {
+    letter-spacing: 1.5em; }
+  .dt-ls9 {
+    letter-spacing: 2em; }
+  .dt-ls10 {
+    letter-spacing: 3em; }
   .dt-lsn {
     letter-spacing: normal; } }
 
@@ -4944,90 +4979,83 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     word-break: normal; } }
 
 .ws3- {
-  word-spacing: -0.075em; }
+  word-spacing: -0.5em; }
 
 .ws2- {
-  word-spacing: -0.05em; }
+  word-spacing: -0.25em; }
 
 .ws1- {
-  word-spacing: -0.025em; }
+  word-spacing: -0.125em; }
 
 .ws0 {
   word-spacing: 0; }
 
 .ws1 {
-  word-spacing: 0.025em; }
-
-.ws2 {
-  word-spacing: 0.05em; }
-
-.ws3 {
-  word-spacing: 0.075em; }
-
-.ws4 {
   word-spacing: 0.125em; }
 
-.ws5 {
+.ws2 {
   word-spacing: 0.25em; }
 
-.ws6 {
+.ws3 {
   word-spacing: 0.5em; }
 
-.ws7 {
+.ws4 {
   word-spacing: 1em; }
+
+.ws5 {
+  word-spacing: 2em; }
+
+.ws6 {
+  word-spacing: 3em; }
 
 .wsn {
   word-spacing: normal; }
 
 @media screen and (min-width: 48em) {
   .tb-ws3- {
-    word-spacing: -0.075em; }
+    word-spacing: -0.5em; }
   .tb-ws2- {
-    word-spacing: -0.05em; }
+    word-spacing: -0.25em; }
   .tb-ws1- {
-    word-spacing: -0.025em; }
+    word-spacing: -0.125em; }
   .tb-ws0 {
     word-spacing: 0; }
   .tb-ws1 {
-    word-spacing: 0.025em; }
-  .tb-ws2 {
-    word-spacing: 0.05em; }
-  .tb-ws3 {
-    word-spacing: 0.075em; }
-  .tb-ws4 {
     word-spacing: 0.125em; }
-  .tb-ws5 {
+  .tb-ws2 {
     word-spacing: 0.25em; }
-  .tb-ws6 {
+  .tb-ws3 {
     word-spacing: 0.5em; }
-  .tb-ws7 {
+  .tb-ws4 {
     word-spacing: 1em; }
+  .tb-ws5 {
+    word-spacing: 2em; }
+  .tb-ws6 {
+    word-spacing: 3em; }
   .tb-wsn {
     word-spacing: normal; } }
 
 @media screen and (min-width: 64em) {
   .dt-ws3- {
-    word-spacing: -0.075em; }
+    word-spacing: -0.5em; }
   .dt-ws2- {
-    word-spacing: -0.05em; }
+    word-spacing: -0.25em; }
   .dt-ws1- {
-    word-spacing: -0.025em; }
+    word-spacing: -0.125em; }
   .dt-ws0 {
     word-spacing: 0; }
   .dt-ws1 {
-    word-spacing: 0.025em; }
-  .dt-ws2 {
-    word-spacing: 0.05em; }
-  .dt-ws3 {
-    word-spacing: 0.075em; }
-  .dt-ws4 {
     word-spacing: 0.125em; }
-  .dt-ws5 {
+  .dt-ws2 {
     word-spacing: 0.25em; }
-  .dt-ws6 {
+  .dt-ws3 {
     word-spacing: 0.5em; }
-  .dt-ws7 {
+  .dt-ws4 {
     word-spacing: 1em; }
+  .dt-ws5 {
+    word-spacing: 2em; }
+  .dt-ws6 {
+    word-spacing: 3em; }
   .dt-wsn {
     word-spacing: normal; } }
 
