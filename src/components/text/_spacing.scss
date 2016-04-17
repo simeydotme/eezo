@@ -2,6 +2,8 @@
 $letter-spacing-prop:   "ls" !default;
 $letter-spacings: (
 
+    "5-":   -0.25em,
+    "4-":   -0.125em,
     "3-":   -0.075em,
     "2-":   -0.05em,
     "1-":   -0.025em,
@@ -13,12 +15,29 @@ $letter-spacings: (
     "5":    0.25em,
     "6":    0.5em,
     "7":    1em,
+    "8":    1.5em,
+    "9":    2em,
+    "10":   3em,
     "n":    normal,
 
 ) !default;
 
 $word-spacing-prop:   "ws" !default;
-$word-spacings: $letter-spacings !default;
+$word-spacings: (
+
+    "3-":   -0.5em,
+    "2-":   -0.25em,
+    "1-":   -0.125em,
+    "0":    0,
+    "1":    0.125em,
+    "2":    0.25em,
+    "3":    0.5em,
+    "4":    1em,
+    "5":    2em,
+    "6":    3em,
+    "n":    normal,
+
+) !default;
 
 
 
