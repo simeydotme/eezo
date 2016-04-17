@@ -1,0 +1,95 @@
+
+extends ../layout/columns
+
+
+mixin table-row( name, value )
+
+    tr
+        td.pad-3.pad-b0.va-top.whs-nowrap .#{ name }
+        td.pad-3.pad-b0.va-top.code= value
+
+
+
+
+
+append content
+
+    +main-title( "Letter Spacing" )
+
+    +intro-text
+        :marked
+            Text decoration properties can be manipulated
+            using the css classes listed below.
+
+    +table
+
+        thead
+
+            tr
+
+                th.pad-3.bor-b1 class name
+                th.pad-3.bor-b1 decoration value
+
+        tbody.txt-code
+
+            +table-row( "oline", "overline" )
+            +table-row( "uline", "underline" )
+            +table-row( "strike", "line-through" )
+            +table-row( "bline", "overline underline" )
+            +table-row( "aline", "overline line-through underline" )
+            +table-row( "noline", "none" )
+
+
+    +sub-title( "Usage example" )
+
+    :prismjs( language = "html" )
+        <p class="oline"> line over text <p>
+        <p class="uline"> line under text </p>
+        <p class="strike"> strike-through text </p>
+        <p class="noline"> no decoration </p>
+
+    +sub-title( "Media Queries" )
+
+    +no-media-query
+
+
+    +sub-title( "Customising" )
+
+    +small-title( "Default Classes" )
+
+    :marked
+        To add a prefix to the decoration properties, you
+        may use the `$text-decoration-prop` variable:
+
+    :prismjs( language = "scss" )
+        // change the class prefix to `.dec-`:
+        $text-decoration-prop: "dec";
+
+    +small-title( "Custom Decoration" )
+
+    :marked
+        Your website may not need all, or any
+        of the decoration values. You can modify
+        the css output using a custom map:
+
+    :prismjs( language = "scss" )
+        // change the decoration map so there's,
+        // only `underline`, `strikethrough` and `none`.
+        $text-aligns: (
+           u: underline,
+           s: line-through,
+           none: none
+        );
+
+    +small-title( "Combined" )
+
+    :marked
+        The previous two customisations combined:
+
+    :prismjs( language = "scss" )
+        // would result in css like:
+        .dec-u      { text-decoration: underline; }
+        .dec-s      { text-decoration: line-through; }
+        .dec-none   { text-decoration: none; }
+
+    +source-file( "/src/components/text/_decoration.scss" )
