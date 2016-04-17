@@ -1,0 +1,48 @@
+
+$word-spacing-prop:   "ws" !default;
+$word-spacings: (
+
+    "3-":   -0.5em,
+    "2-":   -0.25em,
+    "1-":   -0.125em,
+    "0":    0,
+    "1":    0.125em,
+    "2":    0.25em,
+    "3":    0.5em,
+    "4":    1em,
+    "5":    2em,
+    "6":    3em,
+    "n":    normal,
+
+) !default;
+
+@mixin word-spacing( $bps: $text-bps ) {
+
+    $p: $word-spacing-prop;
+
+    @each $b in $bps {
+
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
+
+        @include breakpoint( $b ) {
+
+            $bp: hyphen-after( $b );
+
+            @each $space in $word-spacings {
+
+                $key: nth( $space, 1 );
+                $val: nth( $space, 2 );
+
+                .#{ $bp }#{ $p }#{ $key } {
+                    word-spacing: $val;
+                }
+
+            }
+
+        }
+
+    }
+
+}

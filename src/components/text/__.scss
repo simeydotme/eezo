@@ -9,13 +9,14 @@ $text-bps:      $default-bps !default;
 @import "color";
 @import "decoration";
 @import "family";
+@import "letter-spacing";
 @import "line-height";
 @import "size";
-@import "spacing";
 @import "style";
 @import "transform";
 @import "weight";
 @import "whitespace";
+@import "word-spacing";
 @import "wrap";
 
 @mixin texts() {
