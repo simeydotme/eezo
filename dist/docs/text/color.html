@@ -54,7 +54,11 @@
               </li>
               <li class="pad-l4"><a href="/dist/docs/text/line-height.html">Line Height</a>
               </li>
+              <li class="pad-l4"><a href="/dist/docs/text/decoration.html">Text Decoration</a>
+              </li>
               <li class="pad-l4"><a href="/dist/docs/text/alignment.html">Text Align</a>
+              </li>
+              <li class="pad-l4"><a href="/dist/docs/text/letter-spacing.html">Letter Spacing</a>
               </li>
               <li class="pad-l4"><a href="/dist/docs/text/word-break.html">Word Break</a>
               </li>
@@ -113,25 +117,25 @@ if no <a href="../border/color.html">border colour</a> is supplied.</p>
         <div class="mb-6 tb-3 col end pad-v6 bg-undefined mint"><span class="disp-b f3 txt-code fw-b">.mint</span></div>
         <div class="mb-6 tb-3 col end pad-v6 bg-undefined green"><span class="disp-b f3 txt-code fw-b">.green</span></div>
       </div>
-      <h3 class="mar-t8 mar-b6">Usage example</h3><p>Out of the box, Eezo will come with the classes
+      <h3 id="usage-example" class="mar-t8 mar-b6"><a href="#usage-example" class="subtitle link">Usage example</a></h3><p>Out of the box, Eezo will come with the classes
 defined above, and here&#39;s an example of how to use
 them in your <code>html</code></p>
 <pre><code class="language-html">&lt;body class=&quot;black&quot;&gt;
   has black text.
 &lt;/body&gt;
 </code></pre>
-      <h3 class="mar-t8 mar-b6">Media Queries</h3><p>No media query support for this property.
+      <h3 id="media-queries" class="mar-t8 mar-b6"><a href="#media-queries" class="subtitle link">Media Queries</a></h3><p>No media query support for this property.
 It might not be necessary to supply different
 values at different breakpoints. Please refer to
 (<a href="xxmqxx">the <code>media-query</code> documentation</a>) for more info.</p>
 
-      <h3 class="mar-t8 mar-b6">Customising</h3>
-      <h4 class="mar-t6 mar-b4 ls1">Default Classes</h4><p>To add a prefix in front of the text colours,
+      <h3 id="customising" class="mar-t8 mar-b6"><a href="#customising" class="subtitle link">Customising</a></h3>
+      <h4 id="default-classes" class="mar-t6 mar-b4 ls1"><a href="#default-classes" class="subtitle link">Default Classes</a></h4><p>To add a prefix in front of the text colours,
 you may use the <code>$text-color-prop</code> variable.</p>
 <pre><code class="language-scss">// change the class prefix to .clr-
 $text-color-prop: &quot;clr&quot;;
 </code></pre>
-      <h4 class="mar-t6 mar-b4 ls1">Custom Text Colours</h4><p>Also the <code>$text-colors</code> variable can supplied a map
+      <h4 id="custom-text colours" class="mar-t6 mar-b4 ls1"><a href="#custom-text colours" class="subtitle link">Custom Text Colours</a></h4><p>Also the <code>$text-colors</code> variable can supplied a map
 to override the font colors. By default <code>$text-colors</code>
 will inherit from <a href="../colors.html">the base <code>$colors</code> map</a>.</p>
 <pre><code class="language-scss">// change the font colors to Fifty Shades of Grey.
@@ -145,7 +149,7 @@ $text-colors: (
   grey-50: #111111
 );
 </code></pre>
-      <h4 class="mar-t6 mar-b4 ls1">Combined</h4><p>After changing the prefix property and the map
+      <h4 id="combined" class="mar-t6 mar-b4 ls1"><a href="#combined" class="subtitle link">Combined</a></h4><p>After changing the prefix property and the map
 of colours in the previous two customisations, we
 would result in the following css.</p>
 <pre><code class="language-css">/* would result in css like: */

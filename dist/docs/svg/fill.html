@@ -54,7 +54,11 @@
               </li>
               <li class="pad-l4"><a href="/dist/docs/text/line-height.html">Line Height</a>
               </li>
+              <li class="pad-l4"><a href="/dist/docs/text/decoration.html">Text Decoration</a>
+              </li>
               <li class="pad-l4"><a href="/dist/docs/text/alignment.html">Text Align</a>
+              </li>
+              <li class="pad-l4"><a href="/dist/docs/text/letter-spacing.html">Letter Spacing</a>
               </li>
               <li class="pad-l4"><a href="/dist/docs/text/word-break.html">Word Break</a>
               </li>
@@ -364,26 +368,26 @@ and any customisation that has been applied.</p>
         </div>
       </div>
       <p class="f1 fs-i txt-c mar-v7">SVGs designed by <a href="http://www.flaticon.com/authors/freepik">freepik</a></p>
-      <h3 class="mar-t8 mar-b6">Usage example</h3><pre><code class="language-html">&lt;svg class=&quot;fill-red&quot;&gt;
+      <h3 id="usage-example" class="mar-t8 mar-b6"><a href="#usage-example" class="subtitle link">Usage example</a></h3><pre><code class="language-html">&lt;svg class=&quot;fill-red&quot;&gt;
   &lt;path&gt; &lt;!-- svg path is red --&gt; &lt;/path&gt;
   &lt;path&gt; &lt;!-- svg path is red --&gt; &lt;/path&gt;
   &lt;path class=&quot;fill-purple&quot;&gt; &lt;!-- svg path is red --&gt; &lt;/path&gt;
   &lt;path class=&quot;fill-teal&quot;&gt; &lt;!-- svg path is teal --&gt; &lt;/path&gt;
 &lt;/svg&gt;
 </code></pre>
-      <h3 class="mar-t8 mar-b6">Media Queries</h3><p>No media query support for this property.
+      <h3 id="media-queries" class="mar-t8 mar-b6"><a href="#media-queries" class="subtitle link">Media Queries</a></h3><p>No media query support for this property.
 It might not be necessary to supply different
 values at different breakpoints. Please refer to
 (<a href="xxmqxx">the <code>media-query</code> documentation</a>) for more info.</p>
 
-      <h3 class="mar-t8 mar-b6">Customising</h3>
-      <h4 class="mar-t6 mar-b4 ls1">Default Classes</h4><p>The fill colours are prefixed with <code>fill-</code> by
+      <h3 id="customising" class="mar-t8 mar-b6"><a href="#customising" class="subtitle link">Customising</a></h3>
+      <h4 id="default-classes" class="mar-t6 mar-b4 ls1"><a href="#default-classes" class="subtitle link">Default Classes</a></h4><p>The fill colours are prefixed with <code>fill-</code> by
 default, but this can be changed with the
 <code>$svg-fill-prop</code> variable.</p>
 <pre><code class="language-scss">// change the class prefix to .svg-
 $svg-fill-prop: &quot;svg&quot;;
 </code></pre>
-      <h4 class="mar-t6 mar-b4 ls1">Custom Background Colours</h4><p>As with all colours, the fill property inherits <a href="../colors.html">the
+      <h4 id="custom-background colours" class="mar-t6 mar-b4 ls1"><a href="#custom-background colours" class="subtitle link">Custom Background Colours</a></h4><p>As with all colours, the fill property inherits <a href="../colors.html">the
 default <code>$colors</code> map</a>. You may customise the colours
 used for fills by supplying a <code>$svg-fill-colors</code> map instead.</p>
 <pre><code class="language-scss">// change the fill colours to only gun-metal and black.
@@ -392,7 +396,7 @@ $svg-fill-colors: (
   black: #000
 );
 </code></pre>
-      <h4 class="mar-t6 mar-b4 ls1">Combined</h4><p>After changing the prefix property and the map
+      <h4 id="combined" class="mar-t6 mar-b4 ls1"><a href="#combined" class="subtitle link">Combined</a></h4><p>After changing the prefix property and the map
 of colours in the previous two customisations, we
 would end up with the following css.</p>
 <pre><code class="language-css">/* would result in css like: */

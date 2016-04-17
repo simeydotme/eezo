@@ -54,7 +54,11 @@
               </li>
               <li class="pad-l4"><a href="/dist/docs/text/line-height.html">Line Height</a>
               </li>
+              <li class="pad-l4"><a href="/dist/docs/text/decoration.html">Text Decoration</a>
+              </li>
               <li class="pad-l4"><a href="/dist/docs/text/alignment.html">Text Align</a>
+              </li>
+              <li class="pad-l4"><a href="/dist/docs/text/letter-spacing.html">Letter Spacing</a>
               </li>
               <li class="pad-l4"><a href="/dist/docs/text/word-break.html">Word Break</a>
               </li>
@@ -86,7 +90,7 @@ finally some pleasant system defaults.</p>
 <p>Even if you&#39;re a western developer/author, not designing for
 eastern screens with CJK text; your website is still probably 
 being viewed and translated by users from there.
-<strong><em>So there&#39;s also pleasant CJK defaults.</em></strong></p>
+So there&#39;s also pleasant CJK defaults.</p>
 
       <table class="mar-t7 mb-12 txt-l txt-sans">
         <thead>
@@ -114,7 +118,7 @@ being viewed and translated by users from there.
           </tr>
         </tbody>
       </table>
-      <h3 class="mar-t8 mar-b6">Usage example</h3><p>Out of the box, Eezo will come with the classes
+      <h3 id="usage-example" class="mar-t8 mar-b6"><a href="#usage-example" class="subtitle link">Usage example</a></h3><p>Out of the box, Eezo will come with the classes
 defined above, and here&#39;s an example of how to use
 them in your <code>html</code></p>
 <pre><code class="language-html">&lt;body class=&quot;txt-serif&quot;&gt;
@@ -125,28 +129,28 @@ them in your <code>html</code></p>
 
 &lt;/body&gt;
 </code></pre>
-      <h3 class="mar-t8 mar-b6">Media Queries</h3><p>No media query support for this property.
+      <h3 id="media-queries" class="mar-t8 mar-b6"><a href="#media-queries" class="subtitle link">Media Queries</a></h3><p>No media query support for this property.
 It might not be necessary to supply different
 values at different breakpoints. Please refer to
 (<a href="xxmqxx">the <code>media-query</code> documentation</a>) for more info.</p>
 
-      <h3 class="mar-t8 mar-b6">Customising</h3>
-      <h4 class="mar-t6 mar-b4 ls1">Default Classes</h4><p>To change the prefix from <code>txt</code> to something else, you
+      <h3 id="customising" class="mar-t8 mar-b6"><a href="#customising" class="subtitle link">Customising</a></h3>
+      <h4 id="default-classes" class="mar-t6 mar-b4 ls1"><a href="#default-classes" class="subtitle link">Default Classes</a></h4><p>To change the prefix from <code>txt</code> to something else, you
 may use the <code>$font-family-prop</code> variable to override.</p>
 <pre><code class="language-scss">// change the default class:
 // .txt-*  -&gt;  .ff-*
 $font-family-prop: &quot;ff&quot;;
 </code></pre>
-      <h4 class="mar-t6 mar-b4 ls1">Custom Fonts</h4><p>Supply a <code>$custom-fonts</code> map to
+      <h4 id="custom-fonts" class="mar-t6 mar-b4 ls1"><a href="#custom-fonts" class="subtitle link">Custom Fonts</a></h4><p>Supply a <code>$custom-fonts</code> map to
 add your own custom font sets:</p>
-<pre><code class="language-scss">// change the sans-serif font family, and
-// add a new font-family:
+<pre><code class="language-scss">// override the sans-serif font family, 
+// and add a new font-family:
 $custom-fonts: (
   sans: &quot;Helvetica&quot;,
   chuck: &quot;Chuck Norris&quot;
 );
 </code></pre>
-      <h4 class="mar-t6 mar-b4 ls1">Combined</h4><p>The previous two customisations combined:</p>
+      <h4 id="combined" class="mar-t6 mar-b4 ls1"><a href="#combined" class="subtitle link">Combined</a></h4><p>The previous two customisations combined:</p>
 <pre><code class="language-scss">// would result in css like:
 .ff-sans { font-family: &quot;Helvetica&quot;; }
 .ff-chuck { font-family: &quot;Chuck Norris&quot;; }

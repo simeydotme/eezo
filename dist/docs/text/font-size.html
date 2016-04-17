@@ -54,7 +54,11 @@
               </li>
               <li class="pad-l4"><a href="/dist/docs/text/line-height.html">Line Height</a>
               </li>
+              <li class="pad-l4"><a href="/dist/docs/text/decoration.html">Text Decoration</a>
+              </li>
               <li class="pad-l4"><a href="/dist/docs/text/alignment.html">Text Align</a>
+              </li>
+              <li class="pad-l4"><a href="/dist/docs/text/letter-spacing.html">Letter Spacing</a>
               </li>
               <li class="pad-l4"><a href="/dist/docs/text/word-break.html">Word Break</a>
               </li>
@@ -152,7 +156,7 @@ than 12px. It&#39;s not good.</p>
           </tr>
         </tbody>
       </table><span class="disp-ib mar-h3 f2-">.f2-</span><span class="disp-ib mar-h3 f1-">.f1-</span><span class="disp-ib mar-h3 f0">.f0</span><span class="disp-ib mar-h3 f1">.f1</span><span class="disp-ib mar-h3 f2">.f2</span><span class="disp-ib mar-h3 f3">.f3</span><span class="disp-ib mar-h3 f4">.f4</span><span class="disp-ib mar-h3 f5">.f5</span><span class="disp-ib mar-h3 f6">.f6</span><span class="disp-ib mar-h3 f7">.f7</span><span class="disp-ib mar-h3 f8">.f8</span>
-      <h3 class="mar-t8 mar-b6">Usage example</h3><p>Eezo is designed to have and extremely flat
+      <h3 id="usage-example" class="mar-t8 mar-b6"><a href="#usage-example" class="subtitle link">Usage example</a></h3><p>Eezo is designed to have and extremely flat
 specificity tree, which means that if you define
 a <code>font-size</code> on an element; it should cascade
 to all children (except headings).</p>
@@ -164,7 +168,7 @@ to all children (except headings).</p>
 
 &lt;/body&gt;
 </code></pre>
-      <h3 class="mar-t8 mar-b6">Media Queries</h3><p>Font sizes are also applied across the
+      <h3 id="media-queries" class="mar-t8 mar-b6"><a href="#media-queries" class="subtitle link">Media Queries</a></h3><p>Font sizes are also applied across the
 defined breakpoints allowing different font
 sizes at different breakpoints.
 (<a href="xxmqxx"><em>see the media query section for details</em></a>)</p>
@@ -175,14 +179,14 @@ sizes at different breakpoints.
         - 1.25rem on desktop
 &lt;/body&gt;
 </code></pre>
-      <h3 class="mar-t8 mar-b6">Customising</h3>
-      <h4 class="mar-t6 mar-b4 ls1">Default Classes</h4><p>To change the prefix from <code>f</code> to something else, you
+      <h3 id="customising" class="mar-t8 mar-b6"><a href="#customising" class="subtitle link">Customising</a></h3>
+      <h4 id="default-classes" class="mar-t6 mar-b4 ls1"><a href="#default-classes" class="subtitle link">Default Classes</a></h4><p>To change the prefix from <code>f</code> to something else, you
 may use the <code>$font-size-prop</code> variable to override.</p>
 <pre><code class="language-scss">// change the default class:
 // .f*  -&gt;  .size-*
 $font-size-prop: &quot;size-&quot;;
 </code></pre>
-      <h4 class="mar-t6 mar-b4 ls1">Custom Size Scale</h4><p>Also the <code>$font-sizes</code> variable can be overridden with a map
+      <h4 id="custom-size scale" class="mar-t6 mar-b4 ls1"><a href="#custom-size scale" class="subtitle link">Custom Size Scale</a></h4><p>Also the <code>$font-sizes</code> variable can be overridden with a map
 to change the scale.</p>
 <pre><code class="language-scss">// change the font scale to be multiples of 3px.
 $font-sizes: (
@@ -193,7 +197,7 @@ $font-sizes: (
   &quot;18&quot;: 18px
 );
 </code></pre>
-      <h4 class="mar-t6 mar-b4 ls1">Combined</h4><p>The previous two customisations combined:</p>
+      <h4 id="combined" class="mar-t6 mar-b4 ls1"><a href="#combined" class="subtitle link">Combined</a></h4><p>The previous two customisations combined:</p>
 <pre><code class="language-scss">// would result in css like:
 .size-6 { font-size: 6px; }
 .size-9 { font-size: 9px; }

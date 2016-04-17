@@ -54,7 +54,11 @@
               </li>
               <li class="pad-l4"><a href="/dist/docs/text/line-height.html">Line Height</a>
               </li>
+              <li class="pad-l4"><a href="/dist/docs/text/decoration.html">Text Decoration</a>
+              </li>
               <li class="pad-l4"><a href="/dist/docs/text/alignment.html">Text Align</a>
+              </li>
+              <li class="pad-l4"><a href="/dist/docs/text/letter-spacing.html">Letter Spacing</a>
               </li>
               <li class="pad-l4"><a href="/dist/docs/text/word-break.html">Word Break</a>
               </li>
@@ -111,25 +115,25 @@ has been applied.</p>
         <div class="mb-6 tb-3 col end pad-0"><span class="mar-2 disp-b pad-v4 bor-1 bor-mint">.bor-mint</span></div>
         <div class="mb-6 tb-3 col end pad-0"><span class="mar-2 disp-b pad-v4 bor-1 bor-green">.bor-green</span></div>
       </div>
-      <h3 class="mar-t8 mar-b6">Usage example</h3><p>Without any customisation, Eezo will come
+      <h3 id="usage-example" class="mar-t8 mar-b6"><a href="#usage-example" class="subtitle link">Usage example</a></h3><p>Without any customisation, Eezo will come
 with the classes described above, here&#39;s
 and example of how to use them</p>
 <pre><code class="language-html">&lt;body class=&quot;bor-1 bor-purple&quot;&gt;
   has a purple border.
 &lt;/body&gt;
 </code></pre>
-      <h3 class="mar-t8 mar-b6">Media Queries</h3><p>No media query support for this property.
+      <h3 id="media-queries" class="mar-t8 mar-b6"><a href="#media-queries" class="subtitle link">Media Queries</a></h3><p>No media query support for this property.
 It might not be necessary to supply different
 values at different breakpoints. Please refer to
 (<a href="xxmqxx">the <code>media-query</code> documentation</a>) for more info.</p>
 
-      <h3 class="mar-t8 mar-b6">Customising</h3>
-      <h4 class="mar-t6 mar-b4 ls1">Default Classes</h4><p>To change the prefix in front of border colours,
+      <h3 id="customising" class="mar-t8 mar-b6"><a href="#customising" class="subtitle link">Customising</a></h3>
+      <h4 id="default-classes" class="mar-t6 mar-b4 ls1"><a href="#default-classes" class="subtitle link">Default Classes</a></h4><p>To change the prefix in front of border colours,
 you may use the <code>$border-color-prop</code> variable.</p>
 <pre><code class="language-scss">// change the class prefix to .bclr-
 $border-color-prop: &quot;bclr&quot;;
 </code></pre>
-      <h4 class="mar-t6 mar-b4 ls1">Custom Border Colours</h4><p>Just like text colours, borders will also inherit <a href="../colors.html">the
+      <h4 id="custom-border colours" class="mar-t6 mar-b4 ls1"><a href="#custom-border colours" class="subtitle link">Custom Border Colours</a></h4><p>Just like text colours, borders will also inherit <a href="../colors.html">the
 default <code>$colors</code> map</a>. You may customise the colours
 used for borders by supplying a <code>$border-colors</code> map instead.</p>
 <pre><code class="language-scss">// change the border colours to only red and blue.
@@ -138,7 +142,7 @@ $text-colors: (
   blue: #0000ff
 );
 </code></pre>
-      <h4 class="mar-t6 mar-b4 ls1">Combined</h4><p>After changing the prefix property and the map
+      <h4 id="combined" class="mar-t6 mar-b4 ls1"><a href="#combined" class="subtitle link">Combined</a></h4><p>After changing the prefix property and the map
 of colours in the previous two customisations, we
 would end up with the following css.</p>
 <pre><code class="language-css">/* would result in css like: */

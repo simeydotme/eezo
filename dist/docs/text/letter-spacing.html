@@ -80,80 +80,136 @@
       </ul>
     </div>
     <div class="docs-content f1">
-      <h2 class="ls3">Text Decoration</h2>
-      <div class="f3 txt-j"><p>Text decoration properties can be manipulated
-using the css classes listed below.</p>
+      <h2 class="ls3">Letter Spacing</h2>
+      <div class="f3 txt-j"><p>Letter spacing properties for manipulating
+the space between each character in text. Below
+are the listed css classes that come default with Eezo.</p>
 
-      </div>
+      </div><p><em>why so many?</em> Well; I find <code>letter-spacing</code> is rarely used, and
+when it is, it&#39;s often just a magic number. So Eezo provides a
+scale based on fractions of the <code>em</code> size of the character that you
+can choose from. And if you have some special tracking
+size you&#39;d like to use, it can <a href="#customising">easily be added to, or replace</a>,
+the default scale.</p>
+
       <table class="mar-t8 mar-b6 mb-12 txt-l txt-sans">
         <thead>
           <tr>
             <th class="pad-3 bor-b1">class name</th>
-            <th class="pad-3 bor-b1">decoration value</th>
+            <th class="pad-3 bor-b1">letter-spacing value</th>
           </tr>
         </thead>
         <tbody class="txt-code">
           <tr>
-            <td class="pad-3 pad-b0 va-top whs-nowrap">.oline</td>
-            <td class="pad-3 pad-b0 va-top code">overline</td>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.lsn</td>
+            <td class="pad-3 pad-b0 va-top code">normal</td>
           </tr>
           <tr>
-            <td class="pad-3 pad-b0 va-top whs-nowrap">.uline</td>
-            <td class="pad-3 pad-b0 va-top code">underline</td>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls5-</td>
+            <td class="pad-3 pad-b0 va-top code">-0.25em</td>
           </tr>
           <tr>
-            <td class="pad-3 pad-b0 va-top whs-nowrap">.strike</td>
-            <td class="pad-3 pad-b0 va-top code">line-through</td>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls4-</td>
+            <td class="pad-3 pad-b0 va-top code">-0.125em</td>
           </tr>
           <tr>
-            <td class="pad-3 pad-b0 va-top whs-nowrap">.bline</td>
-            <td class="pad-3 pad-b0 va-top code">overline underline</td>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls3-</td>
+            <td class="pad-3 pad-b0 va-top code">-0.075em</td>
           </tr>
           <tr>
-            <td class="pad-3 pad-b0 va-top whs-nowrap">.aline</td>
-            <td class="pad-3 pad-b0 va-top code">overline line-through underline</td>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls2-</td>
+            <td class="pad-3 pad-b0 va-top code">-0.05em</td>
           </tr>
           <tr>
-            <td class="pad-3 pad-b0 va-top whs-nowrap">.noline</td>
-            <td class="pad-3 pad-b0 va-top code">none</td>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls1-</td>
+            <td class="pad-3 pad-b0 va-top code">-0.025em</td>
+          </tr>
+          <tr>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls0</td>
+            <td class="pad-3 pad-b0 va-top code">0</td>
+          </tr>
+          <tr>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls1</td>
+            <td class="pad-3 pad-b0 va-top code">0.025em</td>
+          </tr>
+          <tr>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls2</td>
+            <td class="pad-3 pad-b0 va-top code">0.05em</td>
+          </tr>
+          <tr>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls3</td>
+            <td class="pad-3 pad-b0 va-top code">0.075em</td>
+          </tr>
+          <tr>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls4</td>
+            <td class="pad-3 pad-b0 va-top code">0.125em</td>
+          </tr>
+          <tr>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls5</td>
+            <td class="pad-3 pad-b0 va-top code">0.25em</td>
+          </tr>
+          <tr>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls6</td>
+            <td class="pad-3 pad-b0 va-top code">0.5em</td>
+          </tr>
+          <tr>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls7</td>
+            <td class="pad-3 pad-b0 va-top code">1em</td>
+          </tr>
+          <tr>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls8</td>
+            <td class="pad-3 pad-b0 va-top code">1.5em</td>
+          </tr>
+          <tr>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls9</td>
+            <td class="pad-3 pad-b0 va-top code">2em</td>
+          </tr>
+          <tr>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls10</td>
+            <td class="pad-3 pad-b0 va-top code">3em</td>
           </tr>
         </tbody>
       </table>
-      <h3 id="usage-example" class="mar-t8 mar-b6"><a href="#usage-example" class="subtitle link">Usage example</a></h3><pre><code class="language-html">&lt;p class=&quot;oline&quot;&gt; line over text &lt;p&gt;
-&lt;p class=&quot;uline&quot;&gt; line under text &lt;/p&gt;
-&lt;p class=&quot;strike&quot;&gt; strike-through text &lt;/p&gt;
-&lt;p class=&quot;noline&quot;&gt; no decoration &lt;/p&gt;
+      <h3 id="usage-example" class="mar-t8 mar-b6"><a href="#usage-example" class="subtitle link">Usage example</a></h3><pre><code class="language-html">&lt;h2 class=&quot;upper ls3&quot;&gt;
+    Text is uppercase and slightly tracked.
+&lt;h2&gt;
 </code></pre>
-      <h3 id="media-queries" class="mar-t8 mar-b6"><a href="#media-queries" class="subtitle link">Media Queries</a></h3><p>No media query support for this property.
-It might not be necessary to supply different
-values at different breakpoints. Please refer to
-(<a href="xxmqxx">the <code>media-query</code> documentation</a>) for more info.</p>
+      <h3 id="media-queries" class="mar-t8 mar-b6"><a href="#media-queries" class="subtitle link">Media Queries</a></h3><p>Letter spacings adhere to the media-query class style.
+(<a href="xxmqxx"><em>see the media query section for details</em></a>)</p>
+<pre><code class="language-html">&lt;body class=&quot;ls1 tb-lsn dt-ls1-&quot;&gt;
+    Letter spacing is:
+        - slightly increased on mobile
+        - normal on tablet
+        - slightly decreased on desktop
+&lt;/body&gt;
 
-      <h3 id="customising" class="mar-t8 mar-b6"><a href="#customising" class="subtitle link">Customising</a></h3>
-      <h4 id="default-classes" class="mar-t6 mar-b4 ls1"><a href="#default-classes" class="subtitle link">Default Classes</a></h4><p>To add a prefix to the decoration properties, you
-may use the <code>$text-decoration-prop</code> variable:</p>
-<pre><code class="language-scss">// change the class prefix to `.dec-`:
-$text-decoration-prop: &quot;dec&quot;;
 </code></pre>
-      <h4 id="custom-decoration" class="mar-t6 mar-b4 ls1"><a href="#custom-decoration" class="subtitle link">Custom Decoration</a></h4><p>Your website may not need all, or any
-of the decoration values. You can modify
-the css output using a custom map:</p>
-<pre><code class="language-scss">// change the decoration map so there&#39;s,
-// only `underline`, `strikethrough` and `none`.
-$text-aligns: (
-   u: underline,
-   s: line-through,
-   none: none
+      <h3 id="customising" class="mar-t8 mar-b6"><a href="#customising" class="subtitle link">Customising</a></h3>
+      <h4 id="default-classes" class="mar-t6 mar-b4 ls1"><a href="#default-classes" class="subtitle link">Default Classes</a></h4><p>To change the default prefix from <code>ls</code> to something
+else, then use <code>$letter-spacing-prop</code> variable:</p>
+<pre><code class="language-scss">// change the class prefix to `.let-`:
+$letter-spacing-prop: &quot;let-&quot;;
+</code></pre>
+      <h4 id="custom-spacings" class="mar-t6 mar-b4 ls1"><a href="#custom-spacings" class="subtitle link">Custom Spacings</a></h4><p>Actually, you may have special or unique
+letter spacings for your website, or even none
+at all. Then you can modify the map below to your
+suiting.</p>
+<pre><code class="language-scss">// change the letter spacing map so there&#39;s,
+// only a couple of custom values.
+$letter-spacings: (
+   n: none,
+   c: 0.067em,
+   a: 0.124em
 );
 </code></pre>
       <h4 id="combined" class="mar-t6 mar-b4 ls1"><a href="#combined" class="subtitle link">Combined</a></h4><p>The previous two customisations combined:</p>
 <pre><code class="language-scss">// would result in css like:
-.dec-u      { text-decoration: underline; }
-.dec-s      { text-decoration: line-through; }
-.dec-none   { text-decoration: none; }
+.let-n: { letter-spacing: none; }
+.let-c: { letter-spacing: 0.067em; }
+.let-a: { letter-spacing: 0.124em; }
 </code></pre>
       <hr class="bg-x bor-0 bor-b1 bor-light mar-t9 mar-b8"/>
-      <p class="txt-sans">view the source on github: <code><a href="https://github.com/simeydotme/eezo/tree/master//src/components/text/_decoration.scss">/src/components/text/_decoration.scss</a></code></p>
+      <p class="txt-sans">view the source on github: <code><a href="https://github.com/simeydotme/eezo/tree/master//src/components/text/_letter-spacing.scss">/src/components/text/_letter-spacing.scss</a></code></p>
     </div>
   </section>
   <footer>

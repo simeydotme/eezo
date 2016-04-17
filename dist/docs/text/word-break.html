@@ -54,7 +54,11 @@
               </li>
               <li class="pad-l4"><a href="/dist/docs/text/line-height.html">Line Height</a>
               </li>
+              <li class="pad-l4"><a href="/dist/docs/text/decoration.html">Text Decoration</a>
+              </li>
               <li class="pad-l4"><a href="/dist/docs/text/alignment.html">Text Align</a>
+              </li>
+              <li class="pad-l4"><a href="/dist/docs/text/letter-spacing.html">Letter Spacing</a>
               </li>
               <li class="pad-l4"><a href="/dist/docs/text/word-break.html">Word Break</a>
               </li>
@@ -107,10 +111,10 @@ a look at the MDN docs</a>.</p>
           </tr>
         </tbody>
       </table>
-      <h3 class="mar-t8 mar-b6">Usage example</h3><pre><code class="language-html">&lt;p class=&quot;wb-break&quot;&gt; long words will break to wrap &lt;p&gt;
+      <h3 id="usage-example" class="mar-t8 mar-b6"><a href="#usage-example" class="subtitle link">Usage example</a></h3><pre><code class="language-html">&lt;p class=&quot;wb-break&quot;&gt; long words will break to wrap &lt;p&gt;
 &lt;p class=&quot;wb-keep&quot;&gt; nothing will break &lt;/p&gt;
 </code></pre>
-      <h3 class="mar-t8 mar-b6">Media Queries</h3><p>It&#39;s possible to change the value
+      <h3 id="media-queries" class="mar-t8 mar-b6"><a href="#media-queries" class="subtitle link">Media Queries</a></h3><p>It&#39;s possible to change the value
 of the <code>word-break</code> property across
 different breakpoints.
 (<a href="xxmqxx"><em>see the media query section for details</em></a>)</p>
@@ -119,14 +123,14 @@ different breakpoints.
     - behave normally on tablet+
 &lt;/nav&gt;
 </code></pre>
-      <h3 class="mar-t8 mar-b6">Customising</h3>
-      <h4 class="mar-t6 mar-b4 ls1">Default Classes</h4><p>To change the prefix from <code>wb</code> to something else, you
+      <h3 id="customising" class="mar-t8 mar-b6"><a href="#customising" class="subtitle link">Customising</a></h3>
+      <h4 id="default-classes" class="mar-t6 mar-b4 ls1"><a href="#default-classes" class="subtitle link">Default Classes</a></h4><p>To change the prefix from <code>wb</code> to something else, you
 may use the <code>$word-break-prop</code> variable to override:</p>
 <pre><code class="language-scss">// change the default class:
 // .wb-*  -&gt;  .wbreak-*
 $word-break-prop: &quot;wbreak&quot;;
 </code></pre>
-      <h4 class="mar-t6 mar-b4 ls1">Custom Properties</h4><p>It might not always be useful to have the
+      <h4 id="custom-properties" class="mar-t6 mar-b4 ls1"><a href="#custom-properties" class="subtitle link">Custom Properties</a></h4><p>It might not always be useful to have the
 full set of <code>word-break</code> values available.
 So it&#39;s possible to provide a map of the values
 you desire.</p>
@@ -136,7 +140,7 @@ $word-breaks: (
    k: keep-all
 );
 </code></pre>
-      <h4 class="mar-t6 mar-b4 ls1">Combined</h4><p>The previous two customisations combined:</p>
+      <h4 id="combined" class="mar-t6 mar-b4 ls1"><a href="#combined" class="subtitle link">Combined</a></h4><p>The previous two customisations combined:</p>
 <pre><code class="language-scss">// would result in css like:
 .wbreak-k { word-break: keep-all; }
 </code></pre>

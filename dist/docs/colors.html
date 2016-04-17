@@ -54,7 +54,11 @@
               </li>
               <li class="pad-l4"><a href="/dist/docs/text/line-height.html">Line Height</a>
               </li>
+              <li class="pad-l4"><a href="/dist/docs/text/decoration.html">Text Decoration</a>
+              </li>
               <li class="pad-l4"><a href="/dist/docs/text/alignment.html">Text Align</a>
+              </li>
+              <li class="pad-l4"><a href="/dist/docs/text/letter-spacing.html">Letter Spacing</a>
               </li>
               <li class="pad-l4"><a href="/dist/docs/text/word-break.html">Word Break</a>
               </li>
@@ -83,7 +87,7 @@ and <strong>borders</strong>. The colours can also be customised in sass
 by changing the default values or adding more colours.</p>
 
       </div>
-      <h3 class="mar-t8 mar-b6">Default Colours</h3><p>These are the default colours that come with Eezo, they are
+      <h3 id="default-colours" class="mar-t8 mar-b6"><a href="#default-colours" class="subtitle link">Default Colours</a></h3><p>These are the default colours that come with Eezo, they are
 mostly just nice defaults for general UI purposes
 with a slightly cool hue for greys.</p>
 <p>The <code>black</code> and <code>white</code> colors are both set
@@ -155,7 +159,7 @@ this.</a></p>
           </tr>
         </tbody>
       </table>
-      <h3 class="mar-t8 mar-b6">Extra Colours</h3><p>The extra colours are just some <em>&quot;pretty OK&quot;</em>
+      <h3 id="extra-colours" class="mar-t8 mar-b6"><a href="#extra-colours" class="subtitle link">Extra Colours</a></h3><p>The extra colours are just some <em>&quot;pretty OK&quot;</em>
 colours to jump-start your ui. They only come with 
 the <strong class="txt-sans">Core+</strong> bundle
 and can be easily overridden with customisation in sass.</p>
@@ -231,7 +235,7 @@ and can be easily overridden with customisation in sass.</p>
           </tr>
         </tbody>
       </table>
-      <h3 class="mar-t8 mar-b6">Customising</h3><p>There&#39;s a global set <code>map</code> set to the <code>$colors</code>
+      <h3 id="customising" class="mar-t8 mar-b6"><a href="#customising" class="subtitle link">Customising</a></h3><p>There&#39;s a global set <code>map</code> set to the <code>$colors</code>
 variable which is inherited by all othe colour
 modules (<em>text, background, etc</em>).</p>
 <p>The <code>$colors</code> map is a combination of:</p>
@@ -241,10 +245,10 @@ modules (<em>text, background, etc</em>).</p>
 <li><code>$custom-colors</code> ( an empty map which can be supplied )</li>
 </ul>
 
-      <h4 class="mar-t6 mar-b4 ls1">Base Colours</h4><p>These cannot be overridden, they are pretty
+      <h4 id="base-colours" class="mar-t6 mar-b4 ls1"><a href="#base-colours" class="subtitle link">Base Colours</a></h4><p>These cannot be overridden, they are pretty
 standard across most UIs.</p>
 
-      <h4 class="mar-t6 mar-b4 ls1">Extra Colours</h4><p>Extra Colours may be turned on, or off, by
+      <h4 id="extra-colours" class="mar-t6 mar-b4 ls1"><a href="#extra-colours" class="subtitle link">Extra Colours</a></h4><p>Extra Colours may be turned on, or off, by
 changing the boolean variable, <code>$no-extra-colors</code>,
 to true. (<em>default is false</em>).</p>
 <pre><code class="language-scss">// switch off the extra colours by 
@@ -252,7 +256,7 @@ to true. (<em>default is false</em>).</p>
 // import/include. e.g:
 $no-extra-colors: true;
 </code></pre>
-      <h4 class="mar-t6 mar-b4 ls1">Custom Colours</h4><p>If you&#39;d prefer to supply your own set
+      <h4 id="custom-colours" class="mar-t6 mar-b4 ls1"><a href="#custom-colours" class="subtitle link">Custom Colours</a></h4><p>If you&#39;d prefer to supply your own set
 of colours to persist across the framework,
 you may do so by supplying them in a map
 called <code>$custom-colors</code>.</p>
@@ -280,7 +284,7 @@ colours, as well as our custom black/red anywhere that inherits them;</p>
     &lt;!-- Links have custom background colours --&gt;
 &lt;/body&gt;
 </code></pre>
-      <h4 class="mar-t6 mar-b4 ls1">More information</h4><p>See the following sections regarding the different properties
+      <h4 id="more-information" class="mar-t6 mar-b4 ls1"><a href="#more-information" class="subtitle link">More information</a></h4><p>See the following sections regarding the different properties
 that inherit colours:</p>
 <ul>
 <li><a href="/dist/docs/text/color.html">Text colours</a></li>

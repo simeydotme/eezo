@@ -54,7 +54,11 @@
               </li>
               <li class="pad-l4"><a href="/dist/docs/text/line-height.html">Line Height</a>
               </li>
+              <li class="pad-l4"><a href="/dist/docs/text/decoration.html">Text Decoration</a>
+              </li>
               <li class="pad-l4"><a href="/dist/docs/text/alignment.html">Text Align</a>
+              </li>
+              <li class="pad-l4"><a href="/dist/docs/text/letter-spacing.html">Letter Spacing</a>
               </li>
               <li class="pad-l4"><a href="/dist/docs/text/word-break.html">Word Break</a>
               </li>
@@ -120,12 +124,12 @@ below but can obviously be extended with customisation.</p>
           </tr>
         </tbody>
       </table>
-      <h3 class="mar-t8 mar-b6">Usage example</h3><pre><code class="language-html">&lt;p class=&quot;txt-l&quot;&gt; aligned left &lt;p&gt;
+      <h3 id="usage-example" class="mar-t8 mar-b6"><a href="#usage-example" class="subtitle link">Usage example</a></h3><pre><code class="language-html">&lt;p class=&quot;txt-l&quot;&gt; aligned left &lt;p&gt;
 &lt;p class=&quot;txt-r&quot;&gt; aligned right &lt;/p&gt;
 &lt;p class=&quot;txt-c&quot;&gt; centered &lt;/p&gt;
 &lt;p class=&quot;txt-j&quot;&gt; justified &lt;/p&gt;
 </code></pre>
-      <h3 class="mar-t8 mar-b6">Media Queries</h3><p>Alignment is also applied across the
+      <h3 id="media-queries" class="mar-t8 mar-b6"><a href="#media-queries" class="subtitle link">Media Queries</a></h3><p>Alignment is also applied across the
 defined breakpoints allowing different
 alignments at different breakpoints.
 (<a href="xxmqxx"><em>see the media query section for details</em></a>)</p>
@@ -136,14 +140,14 @@ alignments at different breakpoints.
         - right on desktop
 &lt;/nav&gt;
 </code></pre>
-      <h3 class="mar-t8 mar-b6">Customising</h3>
-      <h4 class="mar-t6 mar-b4 ls1">Default Classes</h4><p>To change the prefix from <code>txt</code> to something else, you
+      <h3 id="customising" class="mar-t8 mar-b6"><a href="#customising" class="subtitle link">Customising</a></h3>
+      <h4 id="default-classes" class="mar-t6 mar-b4 ls1"><a href="#default-classes" class="subtitle link">Default Classes</a></h4><p>To change the prefix from <code>txt</code> to something else, you
 may use the <code>$text-align-prop</code> variable to override:</p>
 <pre><code class="language-scss">// change the default class:
 // .txt-*  -&gt;  .ta-*
 $text-align-prop: &quot;ta&quot;;
 </code></pre>
-      <h4 class="mar-t6 mar-b4 ls1">Custom Alignment</h4><p>You may not always need all the alignment
+      <h4 id="custom-alignment" class="mar-t6 mar-b4 ls1"><a href="#custom-alignment" class="subtitle link">Custom Alignment</a></h4><p>You may not always need all the alignment
 values, so to save some bytes you may supply a custom
 <code>$text-aligns</code> map to define your alignments:</p>
 <pre><code class="language-scss">// change the alignments map so there&#39;s,
@@ -154,7 +158,7 @@ $text-aligns: (
    c: center
 );
 </code></pre>
-      <h4 class="mar-t6 mar-b4 ls1">Combined</h4><p>The previous two customisations combined:</p>
+      <h4 id="combined" class="mar-t6 mar-b4 ls1"><a href="#combined" class="subtitle link">Combined</a></h4><p>The previous two customisations combined:</p>
 <pre><code class="language-scss">// would result in css like:
 .ta-l { text-align: left; }
 .ta-r { text-align: right; }
