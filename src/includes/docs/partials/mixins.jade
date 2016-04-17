@@ -5,11 +5,15 @@ mixin main-title( text )
 
 mixin sub-title( text )
 
-    h3.mar-t8.mar-b6= text
+    - link = text.replace(" ","-").toLowerCase();
+    h3( id = link ).mar-t8.mar-b6
+        a( href = "#" + link ).subtitle.link= text
 
 mixin small-title( text )
 
-    h4.mar-t6.mar-b4.ls1= text
+    - link = text.replace(" ","-").toLowerCase();
+    h4( id = link ).mar-t6.mar-b4.ls1
+        a( href = "#" + link ).subtitle.link= text
 
 mixin intro-text
 

@@ -1,0 +1,125 @@
+
+extends ../layout/columns
+
+
+mixin table-row( name, value )
+
+    tr
+        td.pad-3.pad-b0.va-top.whs-nowrap .ls#{ name }
+        td.pad-3.pad-b0.va-top.code= value
+
+
+
+
+
+append content
+
+    +main-title( "Letter Spacing" )
+
+    +intro-text
+        :marked
+            Letter spacing properties for manipulating
+            the space between each character in text. Below
+            are the listed css classes that come default with Eezo.
+
+    :marked
+        *why so many?* Well; I find `letter-spacing` is rarely used, and
+        when it is, it's often just a magic number. So Eezo provides a
+        scale based on fractions of the `em` size of the character that you
+        can choose from. And if you have some special tracking
+        size you'd like to use, it can [easily be added to, or replace](#customising),
+        the default scale.
+
+    +table
+
+        thead
+
+            tr
+
+                th.pad-3.bor-b1 class name
+                th.pad-3.bor-b1 letter-spacing value
+
+        tbody.txt-code
+
+            +table-row( "n",    "normal" )
+            +table-row( "5-",   "-0.25em" )
+            +table-row( "4-",   "-0.125em" )
+            +table-row( "3-",   "-0.075em" )
+            +table-row( "2-",   "-0.05em" )
+            +table-row( "1-",   "-0.025em" )
+            +table-row( "0",    "0" )
+            +table-row( "1",    "0.025em" )
+            +table-row( "2",    "0.05em" )
+            +table-row( "3",    "0.075em" )
+            +table-row( "4",    "0.125em" )
+            +table-row( "5",    "0.25em" )
+            +table-row( "6",    "0.5em" )
+            +table-row( "7",    "1em" )
+            +table-row( "8",    "1.5em" )
+            +table-row( "9",    "2em" )
+            +table-row( "10",   "3em" )
+
+
+    +sub-title( "Usage example" )
+
+    :prismjs( language = "html" )
+        <h2 class="upper ls3">
+            Text is uppercase and slightly tracked.
+        <h2>
+
+    +sub-title( "Media Queries" )
+
+    :marked
+        Letter spacings adhere to the media-query class style.
+        ([_see the media query section for details_](xxmqxx))
+
+    :prismjs( language = "html" )
+        <body class="ls1 tb-lsn dt-ls1-">
+            Letter spacing is:
+                - slightly increased on mobile
+                - normal on tablet
+                - slightly decreased on desktop
+        </body>
+
+
+    +sub-title( "Customising" )
+
+    +small-title( "Default Classes" )
+
+    :marked
+        To change the default prefix from `ls` to something
+        else, then use `$letter-spacing-prop` variable:
+
+    :prismjs( language = "scss" )
+        // change the class prefix to `.let-`:
+        $letter-spacing-prop: "let-";
+
+    +small-title( "Custom Spacings" )
+
+    :marked
+        Actually, you may have special or unique
+        letter spacings for your website, or even none
+        at all. Then you can modify the map below to your
+        suiting.
+
+    :prismjs( language = "scss" )
+        // change the letter spacing map so there's,
+        // only a couple of custom values.
+        $letter-spacings: (
+           n: none,
+           c: 0.067em,
+           a: 0.124em
+        );
+
+    +small-title( "Combined" )
+
+    :marked
+        The previous two customisations combined:
+
+    :prismjs( language = "scss" )
+        // would result in css like:
+        .let-n: { letter-spacing: none; }
+        .let-c: { letter-spacing: 0.067em; }
+        .let-a: { letter-spacing: 0.124em; }
+
+    +source-file( "/src/components/text/_letter-spacing.scss" )
