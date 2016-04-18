@@ -82,136 +82,106 @@
       </ul>
     </div>
     <div class="docs-content f1">
-      <h2 class="ls3">Font Size</h2>
-      <div class="f3 txt-j"><p>Out of the box, Eezo will come with the
-text scale defined below. This is based
-on a fairly standard <em>multiple of 16</em> scale
-with some sensible in-between values.</p>
+      <h2 class="ls3">Word Spacing</h2>
+      <div class="f3 txt-j"><p>Word spacing properties for manipulating
+the space between each word in a block of text. Below
+are the listed css classes that come default with Eezo.</p>
 
-      </div><p>I highly <strong>suggest not to use the smaller values</strong>
-if possible, and have not provided anything smaller
-than 12px. It&#39;s not good.</p>
+      </div><p>If you have some special <code>word-spacing</code>
+sizes you&#39;d like to use, the defaults can easily 
+be added to, or replaced, by <a href="#customising">customising the default scale</a>.</p>
 
       <table class="mar-t8 mar-b6 mb-12 txt-l txt-sans">
         <thead>
           <tr>
             <th class="pad-3 bor-b1">class name
             </th>
-            <th class="pad-3 bor-b1">in rems
-            </th>
-            <th class="pad-3 bor-b1">in pixels
+            <th class="pad-3 bor-b1">word-spacing value
             </th>
           </tr>
         </thead>
         <tbody class="txt-code">
           <tr>
-            <td class="pad-3 pad-v2">.f2-</td>
-            <td class="pad-3 pad-v2">0.75rem</td>
-            <td class="pad-3 pad-v2">12px</td>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.wsn</td>
+            <td class="pad-3 pad-b0 va-top code">normal</td>
           </tr>
           <tr>
-            <td class="pad-3 pad-v2">.f1-</td>
-            <td class="pad-3 pad-v2">0.875rem</td>
-            <td class="pad-3 pad-v2">14px</td>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.ws3-</td>
+            <td class="pad-3 pad-b0 va-top code">-0.5em</td>
           </tr>
           <tr>
-            <td class="pad-3 pad-v2">.f0</td>
-            <td class="pad-3 pad-v2">1rem</td>
-            <td class="pad-3 pad-v2">16px</td>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.ws2-</td>
+            <td class="pad-3 pad-b0 va-top code">-0.25em</td>
           </tr>
           <tr>
-            <td class="pad-3 pad-v2">.f1</td>
-            <td class="pad-3 pad-v2">1.125rem</td>
-            <td class="pad-3 pad-v2">18px</td>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.ws1-</td>
+            <td class="pad-3 pad-b0 va-top code">-0.125em</td>
           </tr>
           <tr>
-            <td class="pad-3 pad-v2">.f2</td>
-            <td class="pad-3 pad-v2">1.25rem</td>
-            <td class="pad-3 pad-v2">20px</td>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.ws0</td>
+            <td class="pad-3 pad-b0 va-top code">0</td>
           </tr>
           <tr>
-            <td class="pad-3 pad-v2">.f3</td>
-            <td class="pad-3 pad-v2">1.5rem</td>
-            <td class="pad-3 pad-v2">24px</td>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.ws1</td>
+            <td class="pad-3 pad-b0 va-top code">0.125em</td>
           </tr>
           <tr>
-            <td class="pad-3 pad-v2">.f4</td>
-            <td class="pad-3 pad-v2">2rem</td>
-            <td class="pad-3 pad-v2">32px</td>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.ws2</td>
+            <td class="pad-3 pad-b0 va-top code">0.25em</td>
           </tr>
           <tr>
-            <td class="pad-3 pad-v2">.f5</td>
-            <td class="pad-3 pad-v2">2.5rem</td>
-            <td class="pad-3 pad-v2">40px</td>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.ws3</td>
+            <td class="pad-3 pad-b0 va-top code">0.5em</td>
           </tr>
           <tr>
-            <td class="pad-3 pad-v2">.f6</td>
-            <td class="pad-3 pad-v2">3rem</td>
-            <td class="pad-3 pad-v2">48px</td>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.ws4</td>
+            <td class="pad-3 pad-b0 va-top code">1em</td>
           </tr>
           <tr>
-            <td class="pad-3 pad-v2">.f7</td>
-            <td class="pad-3 pad-v2">4rem</td>
-            <td class="pad-3 pad-v2">64px</td>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.ws5</td>
+            <td class="pad-3 pad-b0 va-top code">2em</td>
           </tr>
           <tr>
-            <td class="pad-3 pad-v2">.f8</td>
-            <td class="pad-3 pad-v2">5rem</td>
-            <td class="pad-3 pad-v2">80px</td>
+            <td class="pad-3 pad-b0 va-top whs-nowrap">.ws6</td>
+            <td class="pad-3 pad-b0 va-top code">3em</td>
           </tr>
         </tbody>
-      </table><span class="disp-ib mar-h3 f2-">.f2-</span><span class="disp-ib mar-h3 f1-">.f1-</span><span class="disp-ib mar-h3 f0">.f0</span><span class="disp-ib mar-h3 f1">.f1</span><span class="disp-ib mar-h3 f2">.f2</span><span class="disp-ib mar-h3 f3">.f3</span><span class="disp-ib mar-h3 f4">.f4</span><span class="disp-ib mar-h3 f5">.f5</span><span class="disp-ib mar-h3 f6">.f6</span><span class="disp-ib mar-h3 f7">.f7</span><span class="disp-ib mar-h3 f8">.f8</span>
-      <h3 id="usage-example" class="mar-t8 mar-b6"><a href="#usage-example" class="subtitle link">Usage example</a></h3><p>Eezo is designed to have and extremely flat
-specificity tree, which means that if you define
-a <code>font-size</code> on an element; it should cascade
-to all children (except headings).</p>
-<pre><code class="language-html">&lt;body class=&quot;f0&quot;&gt;
-
-  &lt;p&gt;text is normal&lt;/p&gt;
-  &lt;h1 class=&quot;f8&quot;&gt; text is huge &lt;h1&gt;
-  &lt;small class=&quot;f2-&quot;&gt; text is tiny &lt;/small&gt;
-
-&lt;/body&gt;
+      </table>
+      <h3 id="usage-example" class="mar-t8 mar-b6"><a href="#usage-example" class="subtitle link">Usage example</a></h3><pre><code class="language-html">&lt;h2 class=&quot;ws2&quot;&gt;
+    an extra 25% spacing between words
+&lt;h2&gt;
 </code></pre>
-      <h3 id="media-queries" class="mar-t8 mar-b6"><a href="#media-queries" class="subtitle link">Media Queries</a></h3><p>Font sizes are also applied across the
-defined breakpoints allowing different font
-sizes at different breakpoints.
+      <h3 id="media-queries" class="mar-t8 mar-b6"><a href="#media-queries" class="subtitle link">Media Queries</a></h3><p>Word spacings also work across breakpoints.
 (<a href="xxmqxx"><em>see the media query section for details</em></a>)</p>
-<pre><code class="language-html">&lt;body class=&quot;f0 tb-f1 dt-f2&quot;&gt;
-    Font is:
-        - 1rem on mobile
-        - 1.125rem on tablet
-        - 1.25rem on desktop
+<pre><code class="language-html">&lt;body class=&quot;ws3 dt-ws0&quot;&gt;
+    Word spacing is:
+        - increased by 50% on mobiles and tablets
+        - normal on desktop
 &lt;/body&gt;
+
 </code></pre>
       <h3 id="customising" class="mar-t8 mar-b6"><a href="#customising" class="subtitle link">Customising</a></h3>
-      <h4 id="default-classes" class="mar-t6 mar-b4 ls1"><a href="#default-classes" class="subtitle link">Default Classes</a></h4><p>To change the prefix from <code>f</code> to something else, you
-may use the <code>$font-size-prop</code> variable to override.</p>
-<pre><code class="language-scss">// change the default class:
-// .f*  -&gt;  .size-*
-$font-size-prop: &quot;size-&quot;;
+      <h4 id="default-classes" class="mar-t6 mar-b4 ls1"><a href="#default-classes" class="subtitle link">Default Classes</a></h4><p>To change the default prefix from <code>ws</code> to something
+else, then use <code>$word-spacing-prop</code> variable:</p>
+<pre><code class="language-scss">// change the class prefix to `.w3rd-`:
+$word-spacing-prop: &quot;w3rd-&quot;;
 </code></pre>
-      <h4 id="custom-size scale" class="mar-t6 mar-b4 ls1"><a href="#custom-size scale" class="subtitle link">Custom Size Scale</a></h4><p>Also the <code>$font-sizes</code> variable can be overridden with a map
-to change the scale.</p>
-<pre><code class="language-scss">// change the font scale to be multiples of 3px.
-$font-sizes: (
-  &quot;6&quot;: 6px,
-  &quot;9&quot;: 9px,
-  &quot;12&quot;: 12px,
-  &quot;15&quot;: 15px,
-  &quot;18&quot;: 18px
+      <h4 id="custom-spacings" class="mar-t6 mar-b4 ls1"><a href="#custom-spacings" class="subtitle link">Custom Spacings</a></h4><p>Actually, you may have special or unique
+word spacings for your website, or even none
+at all. Then you can modify the map below to your
+suiting.</p>
+<pre><code class="language-scss">// change the word spacing map so there&#39;s,
+// only one custom value.
+$word-spacings: (
+   epic: 100px
 );
 </code></pre>
       <h4 id="combined" class="mar-t6 mar-b4 ls1"><a href="#combined" class="subtitle link">Combined</a></h4><p>The previous two customisations combined:</p>
 <pre><code class="language-scss">// would result in css like:
-.size-6 { font-size: 6px; }
-.size-9 { font-size: 9px; }
-.size-12 { font-size: 12px; }
-.size-15 { font-size: 15px; }
-.size-18 { font-size: 18px; }
+.w3rd-epic: { word-spacing: 100px; }
 </code></pre>
       <hr class="bg-x bor-0 bor-b1 bor-light mar-t9 mar-b8"/>
-      <p class="txt-sans">view the source on github: <code><a href="https://github.com/simeydotme/eezo/tree/master//src/components/text/_size.scss">/src/components/text/_size.scss</a></code></p>
+      <p class="txt-sans">view the source on github: <code><a href="https://github.com/simeydotme/eezo/tree/master//src/components/text/_word-spacing.scss">/src/components/text/_word-spacing.scss</a></code></p>
     </div>
   </section>
   <footer>
