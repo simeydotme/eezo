@@ -1,0 +1,111 @@
+
+extends ../layout/columns
+
+
+mixin table-row( name, value )
+
+    tr
+        td.pad-3.pad-b0.va-top.whs-nowrap .ws#{ name }
+        td.pad-3.pad-b0.va-top.code= value
+
+
+
+
+
+append content
+
+    +main-title( "Word Spacing" )
+
+    +intro-text
+        :marked
+            Word spacing properties for manipulating
+            the space between each word in a block of text. Below
+            are the listed css classes that come default with Eezo.
+
+    :marked
+        If you have some special `word-spacing`
+        sizes you'd like to use, the defaults can easily 
+        be added to, or replaced, by [customising the default scale](#customising).
+
+    +table
+
+        thead
+
+            tr
+
+                +table-head class name
+                +table-head word-spacing value
+
+        tbody.txt-code
+
+            +table-row( "n",    "normal" )
+            +table-row( "3-",   "-0.5em" )
+            +table-row( "2-",   "-0.25em" )
+            +table-row( "1-",   "-0.125em" )
+            +table-row( "0",    "0" )
+            +table-row( "1",    "0.125em" )
+            +table-row( "2",    "0.25em" )
+            +table-row( "3",    "0.5em" )
+            +table-row( "4",    "1em" )
+            +table-row( "5",    "2em" )
+            +table-row( "6",    "3em" )
+
+
+    +sub-title( "Usage example" )
+
+    :prismjs( language = "html" )
+        <h2 class="ws2">
+            an extra 25% spacing between words
+        <h2>
+
+    +sub-title( "Media Queries" )
+
+    :marked
+        Word spacings also work across breakpoints.
+        ([_see the media query section for details_](xxmqxx))
+
+    :prismjs( language = "html" )
+        <body class="ws3 dt-ws0">
+            Word spacing is:
+                - increased by 50% on mobiles and tablets
+                - normal on desktop
+        </body>
+
+
+    +sub-title( "Customising" )
+
+    +small-title( "Default Classes" )
+
+    :marked
+        To change the default prefix from `ws` to something
+        else, then use `$word-spacing-prop` variable:
+
+    :prismjs( language = "scss" )
+        // change the class prefix to `.w3rd-`:
+        $word-spacing-prop: "w3rd-";
+
+    +small-title( "Custom Spacings" )
+
+    :marked
+        Actually, you may have special or unique
+        word spacings for your website, or even none
+        at all. Then you can modify the map below to your
+        suiting.
+
+    :prismjs( language = "scss" )
+        // change the word spacing map so there's,
+        // only one custom value.
+        $word-spacings: (
+           epic: 100px
+        );
+
+    +small-title( "Combined" )
+
+    :marked
+        The previous two customisations combined:
+
+    :prismjs( language = "scss" )
+        // would result in css like:
+        .w3rd-epic: { word-spacing: 100px; }
+
+    +source-file( "/src/components/text/_word-spacing.scss" )
