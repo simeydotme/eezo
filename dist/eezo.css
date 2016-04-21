@@ -1,7 +1,7 @@
 /*!
  * [ eezo ]
  * - css framework for massless stylesheets
- * - 0.6.5-alpha | http://github.com/simeydotme/eezo
+ * - 0.6.7-alpha | http://github.com/simeydotme/eezo
  * - @simeydotme | http://simey.me
  */
 @charset "UTF-8";
@@ -4522,37 +4522,37 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .fs-i {
   font-style: italic; }
 
-.fw-thin {
+.fw-t {
   font-weight: 100; }
 
-.fw-x-light {
+.fw-xl {
   font-weight: 200; }
 
-.fw-light {
+.fw-l {
   font-weight: 300; }
 
-.fw-book {
+.fw-bk {
   font-weight: 400; }
 
 .fw-n {
   font-weight: normal; }
 
-.fw-medium {
+.fw-m {
   font-weight: 500; }
 
-.fw-d-bold {
+.fw-sb {
   font-weight: 600; }
 
 .fw-b {
   font-weight: bold; }
 
-.fw-bold {
+.fw-bld {
   font-weight: 700; }
 
-.fw-heavy {
+.fw-hvy {
   font-weight: 800; }
 
-.fw-black {
+.fw-blk {
   font-weight: 900; }
 
 .ls5- {
