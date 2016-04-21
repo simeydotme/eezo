@@ -1,0 +1,132 @@
+
+extends ../layout/columns
+
+block title
+    | docs | font weight
+
+
+
+
+mixin table-row( css, weight )
+
+    tr
+        td.pad-3.pad-v2= ".fw-" + css
+        td.pad-3.pad-v2= weight
+        td.pad-3.pad-v2( class = "fw-" + css ) Supercalifragilisticexpialidocious
+
+
+
+
+append content
+
+    +main-title( "Font Weight" )
+
+    +intro-text
+        :marked
+            When it's time to change font weight, there should
+            be easy to remember &mdash; and apply &mdash; composable classes
+            to handle it. Eezo comes with the ones shown below.
+
+    :marked
+        You're obviously not always going to need, or be able to
+        use (due to your typeface) every font weight, so you can
+        optionally reduce your file size by [supplying a custom map](#customising).
+
+        Most of the time, you'll end up using `fw-b` for bold text, and
+        `fw-n` for normal.
+
+    +table
+
+        thead
+
+            tr
+
+                +table-head class name
+                +table-head font weight
+                +table-head example
+
+        tbody.txt-code
+
+            +table-row( "thin",     "100" )
+            +table-row( "x-light",  "200" )
+            +table-row( "light",    "300" )
+            +table-row( "book",     "400" )
+            +table-row( "n",        "normal" )
+            +table-row( "medium",   "500" )
+            +table-row( "d-bold",   "600" )
+            +table-row( "b",        "bold" )
+            +table-row( "bold",     "700" )
+            +table-row( "heavy",    "800" )
+            +table-row( "black",    "900" )
+
+
+    +sub-title( "Usage example" )
+
+    :marked
+        Because Eezo should have a pretty flat specificity
+        tree, it should always be possible to override the
+        weight of an element by applying the `.fw-x` class
+        to it.
+
+    :prismjs( language = "html" )
+        <body class="fw-light">
+
+          <h1 class="fw-heavy"> heading is 900 weight <h1>
+          <p> body text is light (300) </p>
+
+          <strong> text is bold </strong>
+          <strong class="fw-thin"> text is 100 weight </strong>
+
+        </body>
+
+    +sub-title( "Media Queries" )
+
+    :marked
+        No media query support; `font-weight` should be **meaningful**,
+        not *fluff*... make sure your weight means something
+        across all devices.
+
+    +sub-title( "Customising" )
+
+    +small-title( "Default Classes" )
+
+    :marked
+        To change the prefix from `fw` to something else, you
+        may use the `$font-weight-prop` variable to override.
+
+    :prismjs( language = "scss" )
+        // change the default class:
+        // .fw-*  ->  .wt-*
+        $font-weight-prop: "wt";
+
+    +small-title( "Custom Weights" )
+
+    :marked
+        Also the `$font-weights` map can be overridden
+        to change the weights available.
+
+    :prismjs( language = "scss" )
+        // change the weights so there's only a couple
+        // which are supported by Open Sans.
+        $font-weights: (
+          "300":  300,
+          "n":    400,
+          "600":  600,
+          "b":    700,
+          "800":  800
+        );
+
+    +small-title( "Combined" )
+
+    :marked
+        The previous two customisations combined:
+
+    :prismjs( language = "scss" )
+        // would result in css like:
+        .wt-300 { font-weight: 300; }
+        .wt-n   { font-weight: 400; }
+        .wt-600 { font-weight: 600; }
+        .wt-b   { font-weight: 700; }
+        .wt-800 { font-weight: 800; }
+
+    +source-file( "/src/components/text/_weight.scss" )

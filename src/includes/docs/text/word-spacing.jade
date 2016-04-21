@@ -1,6 +1,11 @@
 
 extends ../layout/columns
 
+block title
+    | docs | word spacing
+
+
+
 
 mixin table-row( name, value )
 
@@ -81,8 +86,8 @@ append content
         else, then use `$word-spacing-prop` variable:
 
     :prismjs( language = "scss" )
-        // change the class prefix to `.w3rd-`:
-        $word-spacing-prop: "w3rd-";
+        // change the class prefix to `.word-`:
+        $word-spacing-prop: "word-";
 
     +small-title( "Custom Spacings" )
 
@@ -106,6 +111,6 @@ append content
 
     :prismjs( language = "scss" )
         // would result in css like:
-        .w3rd-epic: { word-spacing: 100px; }
+        .word-epic: { word-spacing: 100px; }
 
     +source-file( "/src/components/text/_word-spacing.scss" )
