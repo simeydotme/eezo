@@ -1,0 +1,115 @@
+
+extends ../layout/columns
+
+block title
+    | docs | text transform
+
+
+
+
+mixin table-row( css, transform )
+
+    tr
+        td.pad-3.pad-v2= ".txt-" + css
+        td.pad-3.pad-v2= transform
+        td.pad-3.pad-v2( class = "txt-" + css ) Your <em>clothes</em>, Your <strong>BOOTS</strong>...
+
+
+
+
+append content
+
+    +main-title( "Text Transform" )
+
+    +intro-text
+        :marked
+            Text trasformation is a powerful way to emphasize,
+            and differentiate text, it's accessible via the
+            `text-transform` styles shown below.
+
+    :marked
+        Text Transform should be used sparingly. The classes are
+        verbose, incidentally, but this makes them easily searchable strings
+        in large codebases.
+
+    +table
+
+        thead
+
+            tr
+
+                +table-head class name
+                +table-head transform
+                +table-head example
+
+        tbody.txt-code
+
+            +table-row( "none",     "none" )
+            +table-divider( 3 )
+            +table-row( "upper",    "uppercase" )
+            +table-row( "lower",    "lowercase" )
+            +table-row( "cap",      "capitalize" )
+
+
+    +sub-title( "Usage example" )
+
+    :marked
+        It's easy to quickly change the transform of any
+        text node by simply adding one of the classes from above
+
+    :prismjs( language = "html" )
+        <h1 class="txt-upper"> heading is uppercase <h1>
+        <p class="txt-cap"> paragraph is capitalised </p>
+
+    +sub-title( "Media Queries" )
+
+    :marked
+        Transforms can be applied across breakpoints, 
+        ([_see the media query section for details_](xxmqxx))
+
+    :prismjs( language = "html" )
+        <p class="txt-upper tb-txt-none">
+            Font is:
+                - uppercase on mobile
+                - normal on tablet & desktop
+        </p>
+
+    +sub-title( "Customising" )
+
+    +small-title( "Default Classes" )
+
+    :marked
+        The default prefix for `text-transform` is simply
+        inherited from the `$text-prop` variable (`.txt`). It's
+        possible you don't like the prefix or want to use
+        something a little shorter.
+
+    :prismjs( language = "scss" )
+        // change the default class:
+        // .txt-*  ->  "tt-*"
+        $text-transform-prop: "tt";
+
+    +small-title( "Custom Properties" )
+
+    :marked
+        Also the `$text-transforms` map can be overridden
+
+    :prismjs( language = "scss" )
+        // change the transforms map
+        // to only have uppercase and none.
+        $text-transforms: (
+          n:   none,
+          u:   uppercase
+        );
+
+    +small-title( "Combined" )
+
+    :marked
+        The previous two customisations combined:
+
+    :prismjs( language = "scss" )
+        // would result in css like:
+        .tt-n   { text-transform: none; }
+        .tt-u   { text-transform: uppercase; }
+
+    +source-file( "/src/components/text/_transform.scss" )

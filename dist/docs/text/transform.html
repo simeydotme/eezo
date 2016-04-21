@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>eezo | docs | getting started</title><meta charset="utf-8" />
+    <title>eezo | docs | text transform</title><meta charset="utf-8" />
     <meta description="a lightweight and responsive css framework">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#32295F">
@@ -92,59 +92,89 @@
       </ul>
     </div>
     <div class="docs-content f1">
-      <h2 class="ls3">Installation</h2>
-      <p>
-        There's a couple of ways to get Eezo running,
-        there's the classic method of downloading a css
-        file and including, or the more advanced Bower method.
-      </p>
-      <h3 id="download-a bundle" class="mar-t8 mar-b6"><a href="#download-a bundle" class="subtitle link">Download a bundle</a></h3>
-      <p>
-        Perhaps the simplest way to get Eezo running is
-        to download and include one of the bundles from
-        Github. There's a few options, listed below.
-      </p>
-      <table class="txt-sans mb-12 txt-l bor-b1 bor-dark pad-b30 mar-v100">
-        <tr>
-                  <th class="pad-v10 bor-b1 bor-dark">Bundle Name</th>
-                  <th class="pad-v10 bor-b1 bor-dark">Size</th>
-                  <th class="pad-v10 bor-b1 bor-dark">Download</th>
-        </tr>
-        <tr>
-          <th class="mb-7 pad-t20">
-            <div class="txt-code f4">Core</div>
-            <div class="fw-n lh1">
-              The basic bundle for Eezo, containing the most
-              common css compositions, no extra weight.
-            </div>
-          </th>
-                  <td class="txt-code docs-purple">~ 7.65kb</td>
-                  <td><a href="#" class="mb-12 btn-alt noline pad-h20 txt-code bg-x">Core</a></td>
-        </tr>
-        <tr>
-          <th class="pad-t20">
-            <div class="txt-code f4">Core +</div>
-            <div class="fw-n lh1">
-              The basic bundle for Eezo, plus some extra
-              features...
-            </div>
-          </th>
-                  <td class="txt-code docs-purple">~ 8.77kb</td>
-                  <td><a href="#" class="mb-12 btn-alt noline pad-h20 txt-code bg-x">Core +</a></td>
-        </tr>
+      <h2 class="ls3">Text Transform</h2>
+      <div class="f3 txt-j"><p>Text trasformation is a powerful way to emphasize,
+and differentiate text, it&#39;s accessible via the
+<code>text-transform</code> styles shown below.</p>
+
+      </div><p>Text Transform should be used sparingly. The classes are
+verbose, incidentally, but this makes them easily searchable strings
+in large codebases.</p>
+
+      <table class="mar-t8 mar-b6 mb-12 txt-l txt-sans">
+        <thead>
+          <tr>
+            <th class="pad-3 bor-b1">class name
+            </th>
+            <th class="pad-3 bor-b1">transform
+            </th>
+            <th class="pad-3 bor-b1">example
+            </th>
+          </tr>
+        </thead>
+        <tbody class="txt-code">
+          <tr>
+            <td class="pad-3 pad-v2">.txt-none</td>
+            <td class="pad-3 pad-v2">none</td>
+            <td class="pad-3 pad-v2 txt-none">Your <em>clothes</em>, Your <strong>BOOTS</strong>...</td>
+          </tr>
+          <tr>
+            <td colspan="3" class="pad-0 bor-b1 bor-light"></td>
+          </tr>
+          <tr>
+            <td class="pad-3 pad-v2">.txt-upper</td>
+            <td class="pad-3 pad-v2">uppercase</td>
+            <td class="pad-3 pad-v2 txt-upper">Your <em>clothes</em>, Your <strong>BOOTS</strong>...</td>
+          </tr>
+          <tr>
+            <td class="pad-3 pad-v2">.txt-lower</td>
+            <td class="pad-3 pad-v2">lowercase</td>
+            <td class="pad-3 pad-v2 txt-lower">Your <em>clothes</em>, Your <strong>BOOTS</strong>...</td>
+          </tr>
+          <tr>
+            <td class="pad-3 pad-v2">.txt-cap</td>
+            <td class="pad-3 pad-v2">capitalize</td>
+            <td class="pad-3 pad-v2 txt-cap">Your <em>clothes</em>, Your <strong>BOOTS</strong>...</td>
+          </tr>
+        </tbody>
       </table>
-      <h3 id="install-with bower" class="mar-t8 mar-b6"><a href="#install-with bower" class="subtitle link">Install with Bower</a></h3>
-      <pre data-lang="sh" class="code">bower install --save eezo</pre>
-      <p>
-        Installing with bower opens up the possibility of customising
-        Eezo's default options, allowing complete control over the 
-        different components.
-      </p>
-      <pre data-lang="sass" class="code">/* import eezo as .scss for complete control */
-@import "./bower_components/eezo/src/eezo";
- 
-/* or just include a bundle from the dist folder */
-@import "./bower_components/eezo/dist/eezo-core";</pre>
+      <h3 id="usage-example" class="mar-t8 mar-b6"><a href="#usage-example" class="subtitle link">Usage example</a></h3><p>It&#39;s easy to quickly change the transform of any
+text node by simply adding one of the classes from above</p>
+<pre><code class="language-html">&lt;h1 class=&quot;txt-upper&quot;&gt; heading is uppercase &lt;h1&gt;
+&lt;p class=&quot;txt-cap&quot;&gt; paragraph is capitalised &lt;/p&gt;
+</code></pre>
+      <h3 id="media-queries" class="mar-t8 mar-b6"><a href="#media-queries" class="subtitle link">Media Queries</a></h3><p>Transforms can be applied across breakpoints, 
+(<a href="xxmqxx"><em>see the media query section for details</em></a>)</p>
+<pre><code class="language-html">&lt;p class=&quot;txt-upper tb-txt-none&quot;&gt;
+    Font is:
+        - uppercase on mobile
+        - normal on tablet &amp; desktop
+&lt;/p&gt;
+</code></pre>
+      <h3 id="customising" class="mar-t8 mar-b6"><a href="#customising" class="subtitle link">Customising</a></h3>
+      <h4 id="default-classes" class="mar-t6 mar-b4 ls1"><a href="#default-classes" class="subtitle link">Default Classes</a></h4><p>The default prefix for <code>text-transform</code> is simply
+inherited from the <code>$text-prop</code> variable (<code>.txt</code>). It&#39;s
+possible you don&#39;t like the prefix or want to use
+something a little shorter.</p>
+<pre><code class="language-scss">// change the default class:
+// .txt-*  -&gt;  &quot;tt-*&quot;
+$text-transform-prop: &quot;tt&quot;;
+</code></pre>
+      <h4 id="custom-properties" class="mar-t6 mar-b4 ls1"><a href="#custom-properties" class="subtitle link">Custom Properties</a></h4><p>Also the <code>$text-transforms</code> map can be overridden</p>
+<pre><code class="language-scss">// change the transforms map
+// to only have uppercase and none.
+$text-transforms: (
+  n:   none,
+  u:   uppercase
+);
+</code></pre>
+      <h4 id="combined" class="mar-t6 mar-b4 ls1"><a href="#combined" class="subtitle link">Combined</a></h4><p>The previous two customisations combined:</p>
+<pre><code class="language-scss">// would result in css like:
+.tt-n   { text-transform: none; }
+.tt-u   { text-transform: uppercase; }
+</code></pre>
+      <hr class="bg-x bor-0 bor-b1 bor-light mar-t9 mar-b8"/>
+      <p class="txt-sans">view the source on github: <code><a href="https://github.com/simeydotme/eezo/tree/master//src/components/text/_transform.scss">/src/components/text/_transform.scss</a></code></p>
     </div>
   </section>
   <footer>

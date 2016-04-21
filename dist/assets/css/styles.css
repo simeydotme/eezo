@@ -4404,6 +4404,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .txt-serif {
   font-family: "Noto Serif", Merriweather, Georgia, serif, 新細明體, PMingLiU, 华文细黑, STXihei, 宋体, SimSun, serif; }
 
+.txt-raleway {
+  font-family: Raleway; }
+
 .f2- {
   font-size: 0.75rem; }
 
@@ -4491,37 +4494,37 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .fs-i {
   font-style: italic; }
 
-.fw-thin {
+.fw-t {
   font-weight: 100; }
 
-.fw-x-light {
+.fw-xl {
   font-weight: 200; }
 
-.fw-light {
+.fw-l {
   font-weight: 300; }
 
-.fw-book {
+.fw-bk {
   font-weight: 400; }
 
 .fw-n {
   font-weight: normal; }
 
-.fw-medium {
+.fw-m {
   font-weight: 500; }
 
-.fw-d-bold {
+.fw-sb {
   font-weight: 600; }
 
 .fw-b {
   font-weight: bold; }
 
-.fw-bold {
+.fw-bld {
   font-weight: 700; }
 
-.fw-heavy {
+.fw-hvy {
   font-weight: 800; }
 
-.fw-black {
+.fw-blk {
   font-weight: 900; }
 
 .ls5- {

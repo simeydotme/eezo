@@ -1,0 +1,114 @@
+
+extends ../layout/columns
+
+block title
+    | docs | font style
+
+
+
+
+mixin table-row( css, style )
+
+    tr
+        td.pad-3.pad-v2= ".fs-" + css
+        td.pad-3.pad-v2= style
+        td.pad-3.pad-v2.txt-sans( class = "fs-" + css ) If you like it then you shoulda...
+
+
+
+
+append content
+
+    +main-title( "Font Style" )
+
+    +intro-text
+        :marked
+            It's possible to modify the style of text by
+            using the `font-style` css classes shown below.
+
+    :marked
+        The values of `normal` and `italic` are really the
+        only necessary ones, as most web fonts do not have an
+        `oblique` typeface and it can be simluated by adding
+        [`fw-b` from the font-weights](./font-weight.html) class list.
+
+        _It's also possible to add `oblique` yourself [by customising
+        the styles map](#customising)._
+
+    +table
+
+        thead
+
+            tr
+
+                +table-head class name
+                +table-head font style
+                +table-head example
+
+        tbody.txt-code
+
+            +table-row( "n",  "normal" )
+            +table-row( "i",  "italic" )
+
+
+    +sub-title( "Usage example" )
+
+    :marked
+        Because Eezo should have a pretty flat specificity
+        tree, it should always be possible to override the
+        weight of an element by applying the `.fw-*` class
+        to it.
+
+    :prismjs( language = "html" )
+        <h1 class="fs-i"> heading is italic <h1>
+
+        <em> text is italic </em>
+        <em class="fs-n"> text is normal </em>
+        <em class="fs-n fw-b"> text is oblique(ish) </em>
+
+    +sub-title( "Media Queries" )
+
+    :marked
+        No media query support; `font-style` should be *meaningful*,
+        and the same for all viewers regardless of their medium.
+
+    +sub-title( "Customising" )
+
+    +small-title( "Default Classes" )
+
+    :marked
+        It's possible you don't like the prefix `fs-` and want
+        something else, or nothing... you can modify the `$font-style-prop`
+        variable to achieve this.
+
+    :prismjs( language = "scss" )
+        // change the default class:
+        // .fs-*  ->  ""
+        $font-style-prop: "";
+
+    +small-title( "Custom Styles" )
+
+    :marked
+        Also the `$font-styles` map can be overridden,
+        although I don't see any need for it.
+
+    :prismjs( language = "scss" )
+        // change the styles so we can use oblique.
+        $font-styles: (
+          normal:   normal,
+          italic:   italic,
+          oblique:  oblique
+        );
+
+    +small-title( "Combined" )
+
+    :marked
+        The previous two customisations combined:
+
+    :prismjs( language = "scss" )
+        // would result in css like:
+        .normal   { font-style: normal; }
+        .italic   { font-style: italic; }
+        .oblique  { font-style: oblique; }
+
+    +source-file( "/src/components/text/_style.scss" )

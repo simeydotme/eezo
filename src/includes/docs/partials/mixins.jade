@@ -37,6 +37,11 @@ mixin table-head
     th.pad-3.bor-b1
         block
 
+mixin table-divider( cells )
+
+    tr( role = presentation )
+        td( colspan = cells, role = presentation ).pad-0.bor-b1.bor-light
+
 
 
 

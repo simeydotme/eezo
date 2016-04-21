@@ -4,6 +4,9 @@ extends ../layout/columns
 block title
     | docs | font weight
 
+append styles
+    link( rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&text=Supercalifragilisticexpialidocious" )
+
 
 
 
@@ -12,7 +15,7 @@ mixin table-row( css, weight )
     tr
         td.pad-3.pad-v2= ".fw-" + css
         td.pad-3.pad-v2= weight
-        td.pad-3.pad-v2( class = "fw-" + css ) Supercalifragilisticexpialidocious
+        td.pad-3.pad-v2.txt-raleway( class = "fw-" + css ) Supercalifragilisticexpialidocious
 
 
 
@@ -47,17 +50,18 @@ append content
 
         tbody.txt-code
 
-            +table-row( "thin",     "100" )
-            +table-row( "x-light",  "200" )
-            +table-row( "light",    "300" )
-            +table-row( "book",     "400" )
-            +table-row( "n",        "normal" )
-            +table-row( "medium",   "500" )
-            +table-row( "d-bold",   "600" )
-            +table-row( "b",        "bold" )
-            +table-row( "bold",     "700" )
-            +table-row( "heavy",    "800" )
-            +table-row( "black",    "900" )
+            +table-row( "n",  "normal" )
+            +table-row( "b",  "bold" )
+            +table-divider( 3 )
+            +table-row( "t",  "100" )
+            +table-row( "xl",  "200" )
+            +table-row( "l",  "300" )
+            +table-row( "bk",  "400" )
+            +table-row( "m",  "500" )
+            +table-row( "sb",  "600" )
+            +table-row( "bld",  "700" )
+            +table-row( "hvy",  "800" )
+            +table-row( "blk",  "900" )
 
 
     +sub-title( "Usage example" )
@@ -65,17 +69,17 @@ append content
     :marked
         Because Eezo should have a pretty flat specificity
         tree, it should always be possible to override the
-        weight of an element by applying the `.fw-x` class
+        weight of an element by applying the `.fw-*` class
         to it.
 
     :prismjs( language = "html" )
-        <body class="fw-light">
+        <body class="fw-l">
 
-          <h1 class="fw-heavy"> heading is 900 weight <h1>
-          <p> body text is light (300) </p>
+          <h1 class="fw-hvy"> heading is heavy (900 weight) <h1>
+          <p> body text is light (300 weight) </p>
 
           <strong> text is bold </strong>
-          <strong class="fw-thin"> text is 100 weight </strong>
+          <strong class="fw-t"> text is thin (100 weight) </strong>
 
         </body>
 
@@ -97,7 +101,7 @@ append content
     :prismjs( language = "scss" )
         // change the default class:
         // .fw-*  ->  .wt-*
-        $font-weight-prop: "wt";
+        $font-weight-prop: "wt-";
 
     +small-title( "Custom Weights" )
 
@@ -109,11 +113,11 @@ append content
         // change the weights so there's only a couple
         // which are supported by Open Sans.
         $font-weights: (
-          "300":  300,
-          "n":    400,
-          "600":  600,
-          "b":    700,
-          "800":  800
+          300:  300,
+          n:    400,
+          600:  600,
+          b:    700,
+          800:  800
         );
 
     +small-title( "Combined" )
