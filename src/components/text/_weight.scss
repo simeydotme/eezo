@@ -1,18 +1,18 @@
 
-$font-weight-prop:      "fw" !default;
+$font-weight-prop:      "fw-" !default;
 $font-weights: (
 
-    "thin":       100,
-    "x-light":    200,
-    "light":      300,
-    "book":       400,
-    "n":          normal,
-    "medium":     500,
-    "d-bold":     600,
-    "b":          bold,
-    "bold":       700,
-    "heavy":      800,
-    "black":      900,
+    "t":    100,
+    "xl":   200,
+    "l":    300,
+    "bk":   400,
+    "n":    normal,
+    "m":    500,
+    "sb":   600,
+    "b":    bold,
+    "bld":  700,
+    "hvy":  800,
+    "blk":  900,
 
 ) !default;
 
@@ -20,7 +20,7 @@ $font-weights: (
 
 @mixin font-weight() {
 
-    $p: hyphen-after( $font-weight-prop );
+    $p: $font-weight-prop;
 
     @each $weight in $font-weights {
 
