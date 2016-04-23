@@ -1,5 +1,5 @@
 
-$font-style-prop:       "fs" !default;
+$font-style-prop:       "fs-" !default;
 $font-styles: (
 
     n:      normal,
@@ -13,7 +13,7 @@ $font-styles: (
 
     @each $style in $font-styles {
 
-        $p: hyphen-after( $font-style-prop );
+        $p: $font-style-prop;
 
         $key: nth( $style, 1 );
         $val: nth( $style, 2 );

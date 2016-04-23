@@ -1,5 +1,5 @@
 
-$word-wrap-prop:   "ww" !default;
+$word-wrap-prop:   "ww-" !default;
 $word-wraps: (
 
     break:      break-word,
@@ -11,7 +11,7 @@ $word-wraps: (
 
 @mixin word-wrap( $bps: $text-bps ) {
 
-    $p: hyphen-after( $word-wrap-prop );
+    $p: $word-wrap-prop;
 
     @each $b in $bps {
 

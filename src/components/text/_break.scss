@@ -1,5 +1,5 @@
 
-$word-break-prop:   "wb" !default;
+$word-break-prop:   "wb-" !default;
 $word-breaks: (
 
     break:      break-all,
@@ -12,7 +12,7 @@ $word-breaks: (
 
 @mixin word-break( $bps: $text-bps ) {
 
-    $p: hyphen-after( $word-break-prop );
+    $p: $word-break-prop;
 
     @each $b in $bps {
 

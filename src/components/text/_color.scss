@@ -6,7 +6,7 @@ $text-colors:           $colors !default;
 
 @mixin text-color() {
 
-    $p: hyphen-after( $text-color-prop );
+    $p: $text-color-prop;
 
     @each $color in $text-colors {
 

@@ -34,7 +34,7 @@ $fonts: map-merge( $fonts, $custom-fonts );
 
 @mixin font-family() {
 
-    $p: hyphen-after( $font-family-prop );
+    $p: $font-family-prop;
 
     @each $family in $fonts {
 
