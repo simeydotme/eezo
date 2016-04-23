@@ -1,0 +1,102 @@
+
+extends ../layout/columns
+
+block title
+    | docs | border radius
+
+
+
+
+mixin rad( size )
+
+    div.mb-6.tb-3.col.end.pad-3
+        span.mar-2.disp-b.pad-v4.bor-1.bor-grey( class = "bor-" + size ) .bor-#{size}
+
+
+
+
+append content
+
+    +main-title( "Border Colours" )
+
+
+    +intro-text
+        :marked
+            The radius of a border can be changed
+            using the border-radius classes (beginning with
+            `bor-rad*`) shown below.
+
+    :marked
+        [Customisation is available](#customising) to define
+        the `border-radius` sizes you need for your application,
+        if they are not covered by the default property map.
+
+    .row.mar-t7.txt-c.txt-code.mar-h3-
+
+        +rad( "rad0",   "0" )
+        +rad( "rad1",   "1px" )
+        +rad( "rad2",   "2px" )
+        +rad( "rad3",   "3px" )
+        +rad( "rad4",   "4px" )
+        +rad( "rad5",   "5px" )
+        +rad( "rad10",  "10px" )
+        +rad( "circle", "100%" )
+
+    +sub-title( "Usage example" )
+
+    :marked
+        Simply applying a `bor-rad*` class to any element
+        will give it the corresponding radius. Here's an
+        example of how to use it;
+
+    :prismjs( language = "html" )
+        <aside class="bor-1 bor-rad3">
+          border has a radius of 3.
+        </aside>
+
+    +sub-title( "Media Queries" )
+
+    +no-media-query
+
+    +sub-title( "Customising" )
+
+    +small-title( "Default Classes" )
+
+    :marked
+        The default class prefix can be changed
+        by supplying a `$border-radius-prop` variable.
+
+    :prismjs( language = "scss" )
+        // change the class prefix to .br-
+        $border-radius-prop: "br-";
+
+    +small-title( "Custom Radii" )
+
+    :marked
+        As with pretty much all of Eezo's properties
+        it's possible to override the default map of
+        properties and values for the `border-radius`,
+        this is done by supplying a `$border-radius` map.
+
+    :prismjs( language = "scss" )
+        // change the border colours to only red and blue.
+        $border-radius: (
+          2: 2px,
+          4: 4px,
+          8: 8px
+        );
+
+    +small-title( "Combined" )
+
+    :marked
+        After changing the prefix property and the map
+        of radii in the previous two customisations, we
+        would end up with the following css.
+
+    :prismjs( language = "css" )
+        /* would result in css like: */
+        .br-2   { border-radius: 2px; }
+        .br-4   { border-radius: 4px; }
+        .br-8   { border-radius: 8px; }
+
+    +source-file( "/src/components/border/_color.scss" )

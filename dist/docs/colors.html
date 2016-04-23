@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html class="loading no-js">
   <head>
     <title>eezo | docs | colours</title><meta charset="utf-8" />
     <meta description="a lightweight and responsive css framework">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#32295F">
+    <script>
+      document.getElementsByTagName("html")[0].classList.remove("no-js");
+      
+    </script>
     <link rel="stylesheet" href="/dist/assets/css/styles.css">
   </head>
-  <body class="f0 lh3 pos-r pad-b6 bg-white dark"></body>
-  <header class="docs-header bg-pitch-darker">
-    <div class="container center pos-r pad-7">
-      <nav class="main-nav f2 txt-sans">
-        <ul class="mar-0 pad-0 txt-r float-r">
-          <li class="disp-ib"><a href="/" class="pad-h6 pad-v5 link pitch">home</a></li>
-          <li class="disp-ib"><a href="/dist/docs/" class="pad-h6 pad-v5 link pitch">docs</a></li>
-        </ul>
-      </nav>
-      <h1 class="docs-header__logo mar-0 pos-r t2-"><svg id="eezo-type" data-name="eezo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 535.78 98">
+  <body class="f0 lh3 pos-r pad-b6 bg-white dark">
+    <header class="docs-header bg-pitch-darker">
+      <div class="container center pos-r pad-7">
+        <nav class="main-nav f2 txt-sans">
+          <ul class="mar-0 pad-0 txt-r float-r">
+            <li class="disp-ib"><a href="/" class="pad-h6 pad-v5 link pitch">home</a></li>
+            <li class="disp-ib"><a href="/dist/docs/" class="pad-h6 pad-v5 link pitch">docs</a></li>
+          </ul>
+        </nav>
+        <h1 class="docs-header__logo mar-0 pos-r t2-"><svg id="eezo-type" data-name="eezo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 535.78 98">
   <title>eezo</title>
   <g>
     <path class="eezo-e1" d="M31.08,88.06c-1.12,2.52-2.8,6.44-3.22,7.28C27.16,96.6,25.62,98,22.4,98H0V2.8A3.06,3.06,0,0,1,3.08,0H29.26L25.9,7.28c-0.56,1.26-2.1,2.8-5.32,2.8H12.46a2.28,2.28,0,0,0-2.38,2.38V41.58H25.2C24.08,44.1,22.4,48.16,22,49c-0.7,1.26-2.1,2.66-5.32,2.66h-4.2A2.45,2.45,0,0,0,10.08,54v34h21Z" fill="#222"/>
@@ -26,80 +30,80 @@
   </g>
 </svg>
 <span class="hidden">Eezo</span>
-      </h1>
-    </div>
-  </header>
-  <section class="docs-body container pad-h4 dt-pad-h7 mar-v4 dt-mar-v7 center pos-r">
-    <div class="docs-sidebar pos-a t0 r4 dt-r7">
-      <ul class="mar-0 pad-0 txt-sans">
-              <li class="mar-t6">
-                <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Getting Started</h4>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/">Installation</a>
-              </li>
-              <li class="mar-t6">
-                <hr class="bor-t1 bor-t-light">
-                <h4 class="pad-l4 mar-b2 f2 fw-bold">Colour</h4>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/colors.html">Colours</a>
-              </li>
-              <li class="mar-t6">
-                <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Text</h4>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/color.html">Colour</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/font-family.html">Font Family</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/font-size.html">Font Size</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/line-height.html">Line Height</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/font-weight.html">Font Weight</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/font-style.html">Font Style</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/decoration.html">Text Decoration</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/alignment.html">Text Align</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/transform.html">Text Transform</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/letter-spacing.html">Letter Spacing</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/white-space.html">White Space</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/word-break.html">Word Break</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/word-spacing.html">Word Spacing</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/word-wrap.html">Word Wrap</a>
-              </li>
-              <li class="mar-t6">
-                <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Border</h4>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/border/color.html">Colours</a>
-              </li>
-              <li class="mar-t6">
-                <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Background</h4>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/background/color.html">Colours</a>
-              </li>
-              <li class="mar-t6">
-                <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">SVG</h4>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/svg/fill.html">Fill</a>
-              </li>
-      </ul>
-    </div>
-    <div class="docs-content f1">
-      <h2 class="ls3">Colours</h2>
-      <div class="f3 txt-j"><p>Eezo comes with the ability to change colours of some
+        </h1>
+      </div>
+    </header>
+    <section class="docs-body container pad-h4 dt-pad-h7 mar-v4 dt-mar-v7 center pos-r">
+      <div class="docs-sidebar pos-a t0 r4 dt-r7">
+        <ul class="mar-0 pad-0 txt-sans">
+                  <li class="mar-t6">
+                    <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Getting Started</h4>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/">Installation</a>
+                  </li>
+                  <li class="mar-t6">
+                    <hr class="bor-t1 bor-t-light">
+                    <h4 class="pad-l4 mar-b2 f2 fw-bold">Colour</h4>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/colors.html">Colours</a>
+                  </li>
+                  <li class="mar-t6">
+                    <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Text</h4>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/color.html">Colour</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/font-family.html">Font Family</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/font-size.html">Font Size</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/line-height.html">Line Height</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/font-weight.html">Font Weight</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/font-style.html">Font Style</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/decoration.html">Text Decoration</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/alignment.html">Text Align</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/transform.html">Text Transform</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/letter-spacing.html">Letter Spacing</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/white-space.html">White Space</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/word-break.html">Word Break</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/word-spacing.html">Word Spacing</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/word-wrap.html">Word Wrap</a>
+                  </li>
+                  <li class="mar-t6">
+                    <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Border</h4>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/border/color.html">Colours</a>
+                  </li>
+                  <li class="mar-t6">
+                    <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Background</h4>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/background/color.html">Colours</a>
+                  </li>
+                  <li class="mar-t6">
+                    <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">SVG</h4>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/svg/fill.html">Fill</a>
+                  </li>
+        </ul>
+      </div>
+      <div class="docs-content f1">
+        <h2 class="ls3">Colours</h2>
+        <div class="f3 txt-j"><p>Eezo comes with the ability to change colours of some
 properties such as <strong>text</strong>, <strong>background-color</strong>
 and <strong>borders</strong>. The colours can also be customised in sass
 by changing the default values or adding more colours.</p>
 
-      </div>
-      <h3 id="default-colours" class="mar-t8 mar-b6"><a href="#default-colours" class="subtitle link">Default Colours</a></h3><p>These are the default colours that come with Eezo, they are
+        </div>
+        <h3 id="default-colours" class="mar-t8 mar-b6"><a href="#default-colours" class="subtitle link">Default Colours</a></h3><p>These are the default colours that come with Eezo, they are
 mostly just nice defaults for general UI purposes
 with a slightly cool hue for greys.</p>
 <p>The <code>black</code> and <code>white</code> colors are both set
@@ -107,150 +111,150 @@ to a <em>&quot;nicer&quot;</em> shade with no saturation. And the greys are
 slightly saturated with a cool hue. <a href="http://ianstormtaylor.com/design-tip-never-use-black/">why? read 
 this.</a></p>
 
-      <table class="mar-t8 mar-b6 mb-12 txt-l txt-sans">
-        <thead>
-          <tr>
-            <th class="pad-3 bor-b1">class name
-            </th>
-            <th class="pad-3 bor-b1">hex value
-            </th>
-            <th class="pad-3 bor-b1">example
-            </th>
-          </tr>
-        </thead>
-        <tbody class="txt-code">
-          <tr>
-            <td class="pad-v2 pad-h3">x</td>
-            <td class="pad-v2 pad-h3">transparent</td>
-            <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-x"></td>
-          </tr>
-          <tr>
-            <td class="pad-v2 pad-h3">wht</td>
-            <td class="pad-v2 pad-h3">#ffffff</td>
-            <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-wht"></td>
-          </tr>
-          <tr>
-            <td class="pad-v2 pad-h3">white</td>
-            <td class="pad-v2 pad-h3">#f9f9f9</td>
-            <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-white"></td>
-          </tr>
-          <tr>
-            <td class="pad-v2 pad-h3">cream</td>
-            <td class="pad-v2 pad-h3">#f7f2eb</td>
-            <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-cream"></td>
-          </tr>
-          <tr>
-            <td class="pad-v2 pad-h3">light</td>
-            <td class="pad-v2 pad-h3">#b5b8bf</td>
-            <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-light"></td>
-          </tr>
-          <tr>
-            <td class="pad-v2 pad-h3">grey</td>
-            <td class="pad-v2 pad-h3">#82848e</td>
-            <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-grey"></td>
-          </tr>
-          <tr>
-            <td class="pad-v2 pad-h3">dark</td>
-            <td class="pad-v2 pad-h3">#575c67</td>
-            <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-dark"></td>
-          </tr>
-          <tr>
-            <td class="pad-v2 pad-h3">pitch</td>
-            <td class="pad-v2 pad-h3">#161f23</td>
-            <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-pitch"></td>
-          </tr>
-          <tr>
-            <td class="pad-v2 pad-h3">black</td>
-            <td class="pad-v2 pad-h3">#1a1a1a</td>
-            <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-black"></td>
-          </tr>
-          <tr>
-            <td class="pad-v2 pad-h3">blk</td>
-            <td class="pad-v2 pad-h3">#000000</td>
-            <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-blk"></td>
-          </tr>
-        </tbody>
-      </table>
-      <h3 id="extra-colours" class="mar-t8 mar-b6"><a href="#extra-colours" class="subtitle link">Extra Colours</a></h3><p>The extra colours are just some <em>&quot;pretty OK&quot;</em>
+        <table class="mar-t8 mar-b6 mb-12 txt-l txt-sans">
+          <thead>
+            <tr>
+              <th class="pad-3 bor-b1">class name
+              </th>
+              <th class="pad-3 bor-b1">hex value
+              </th>
+              <th class="pad-3 bor-b1">example
+              </th>
+            </tr>
+          </thead>
+          <tbody class="txt-code">
+            <tr>
+              <td class="pad-v2 pad-h3">x</td>
+              <td class="pad-v2 pad-h3">transparent</td>
+              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-x"></td>
+            </tr>
+            <tr>
+              <td class="pad-v2 pad-h3">wht</td>
+              <td class="pad-v2 pad-h3">#ffffff</td>
+              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-wht"></td>
+            </tr>
+            <tr>
+              <td class="pad-v2 pad-h3">white</td>
+              <td class="pad-v2 pad-h3">#f9f9f9</td>
+              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-white"></td>
+            </tr>
+            <tr>
+              <td class="pad-v2 pad-h3">cream</td>
+              <td class="pad-v2 pad-h3">#f7f2eb</td>
+              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-cream"></td>
+            </tr>
+            <tr>
+              <td class="pad-v2 pad-h3">light</td>
+              <td class="pad-v2 pad-h3">#b5b8bf</td>
+              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-light"></td>
+            </tr>
+            <tr>
+              <td class="pad-v2 pad-h3">grey</td>
+              <td class="pad-v2 pad-h3">#82848e</td>
+              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-grey"></td>
+            </tr>
+            <tr>
+              <td class="pad-v2 pad-h3">dark</td>
+              <td class="pad-v2 pad-h3">#575c67</td>
+              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-dark"></td>
+            </tr>
+            <tr>
+              <td class="pad-v2 pad-h3">pitch</td>
+              <td class="pad-v2 pad-h3">#161f23</td>
+              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-pitch"></td>
+            </tr>
+            <tr>
+              <td class="pad-v2 pad-h3">black</td>
+              <td class="pad-v2 pad-h3">#1a1a1a</td>
+              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-black"></td>
+            </tr>
+            <tr>
+              <td class="pad-v2 pad-h3">blk</td>
+              <td class="pad-v2 pad-h3">#000000</td>
+              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-blk"></td>
+            </tr>
+          </tbody>
+        </table>
+        <h3 id="extra-colours" class="mar-t8 mar-b6"><a href="#extra-colours" class="subtitle link">Extra Colours</a></h3><p>The extra colours are just some <em>&quot;pretty OK&quot;</em>
 colours to jump-start your ui. They only come with 
 the <strong class="txt-sans">Core+</strong> bundle
 and can be easily overridden with customisation in sass.</p>
 
-      <table class="mar-t8 mar-b6 mb-12 txt-l txt-sans">
-        <thead>
-          <tr>
-            <th class="pad-3 bor-b1">class name
-            </th>
-            <th class="pad-3 bor-b1">hex value
-            </th>
-            <th class="pad-3 bor-b1">example
-            </th>
-          </tr>
-        </thead>
-        <tbody class="txt-code">
-          <tr>
-            <td class="pad-v2 pad-h3">silver</td>
-            <td class="pad-v2 pad-h3">#dde3e6</td>
-            <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-silver"></td>
-          </tr>
-          <tr>
-            <td class="pad-v2 pad-h3">gold</td>
-            <td class="pad-v2 pad-h3">#c7aa5c</td>
-            <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-gold"></td>
-          </tr>
-          <tr>
-            <td class="pad-v2 pad-h3">yellow</td>
-            <td class="pad-v2 pad-h3">#d6d01e</td>
-            <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-yellow"></td>
-          </tr>
-          <tr>
-            <td class="pad-v2 pad-h3">orange</td>
-            <td class="pad-v2 pad-h3">#d66a1e</td>
-            <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-orange"></td>
-          </tr>
-          <tr>
-            <td class="pad-v2 pad-h3">red</td>
-            <td class="pad-v2 pad-h3">#d61e40</td>
-            <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-red"></td>
-          </tr>
-          <tr>
-            <td class="pad-v2 pad-h3">pink</td>
-            <td class="pad-v2 pad-h3">#ec2666</td>
-            <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-pink"></td>
-          </tr>
-          <tr>
-            <td class="pad-v2 pad-h3">violet</td>
-            <td class="pad-v2 pad-h3">#981bd8</td>
-            <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-violet"></td>
-          </tr>
-          <tr>
-            <td class="pad-v2 pad-h3">purple</td>
-            <td class="pad-v2 pad-h3">#5930d6</td>
-            <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-purple"></td>
-          </tr>
-          <tr>
-            <td class="pad-v2 pad-h3">blue</td>
-            <td class="pad-v2 pad-h3">#1e9bd6</td>
-            <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-blue"></td>
-          </tr>
-          <tr>
-            <td class="pad-v2 pad-h3">teal</td>
-            <td class="pad-v2 pad-h3">#17b5b5</td>
-            <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-teal"></td>
-          </tr>
-          <tr>
-            <td class="pad-v2 pad-h3">mint</td>
-            <td class="pad-v2 pad-h3">#31e894</td>
-            <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-mint"></td>
-          </tr>
-          <tr>
-            <td class="pad-v2 pad-h3">green</td>
-            <td class="pad-v2 pad-h3">#1ed668</td>
-            <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-green"></td>
-          </tr>
-        </tbody>
-      </table>
-      <h3 id="customising" class="mar-t8 mar-b6"><a href="#customising" class="subtitle link">Customising</a></h3><p>There&#39;s a global set <code>map</code> set to the <code>$colors</code>
+        <table class="mar-t8 mar-b6 mb-12 txt-l txt-sans">
+          <thead>
+            <tr>
+              <th class="pad-3 bor-b1">class name
+              </th>
+              <th class="pad-3 bor-b1">hex value
+              </th>
+              <th class="pad-3 bor-b1">example
+              </th>
+            </tr>
+          </thead>
+          <tbody class="txt-code">
+            <tr>
+              <td class="pad-v2 pad-h3">silver</td>
+              <td class="pad-v2 pad-h3">#dde3e6</td>
+              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-silver"></td>
+            </tr>
+            <tr>
+              <td class="pad-v2 pad-h3">gold</td>
+              <td class="pad-v2 pad-h3">#c7aa5c</td>
+              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-gold"></td>
+            </tr>
+            <tr>
+              <td class="pad-v2 pad-h3">yellow</td>
+              <td class="pad-v2 pad-h3">#d6d01e</td>
+              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-yellow"></td>
+            </tr>
+            <tr>
+              <td class="pad-v2 pad-h3">orange</td>
+              <td class="pad-v2 pad-h3">#d66a1e</td>
+              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-orange"></td>
+            </tr>
+            <tr>
+              <td class="pad-v2 pad-h3">red</td>
+              <td class="pad-v2 pad-h3">#d61e40</td>
+              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-red"></td>
+            </tr>
+            <tr>
+              <td class="pad-v2 pad-h3">pink</td>
+              <td class="pad-v2 pad-h3">#ec2666</td>
+              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-pink"></td>
+            </tr>
+            <tr>
+              <td class="pad-v2 pad-h3">violet</td>
+              <td class="pad-v2 pad-h3">#981bd8</td>
+              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-violet"></td>
+            </tr>
+            <tr>
+              <td class="pad-v2 pad-h3">purple</td>
+              <td class="pad-v2 pad-h3">#5930d6</td>
+              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-purple"></td>
+            </tr>
+            <tr>
+              <td class="pad-v2 pad-h3">blue</td>
+              <td class="pad-v2 pad-h3">#1e9bd6</td>
+              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-blue"></td>
+            </tr>
+            <tr>
+              <td class="pad-v2 pad-h3">teal</td>
+              <td class="pad-v2 pad-h3">#17b5b5</td>
+              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-teal"></td>
+            </tr>
+            <tr>
+              <td class="pad-v2 pad-h3">mint</td>
+              <td class="pad-v2 pad-h3">#31e894</td>
+              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-mint"></td>
+            </tr>
+            <tr>
+              <td class="pad-v2 pad-h3">green</td>
+              <td class="pad-v2 pad-h3">#1ed668</td>
+              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-green"></td>
+            </tr>
+          </tbody>
+        </table>
+        <h3 id="customising" class="mar-t8 mar-b6"><a href="#customising" class="subtitle link">Customising</a></h3><p>There&#39;s a global set <code>map</code> set to the <code>$colors</code>
 variable which is inherited by all othe colour
 modules (<em>text, background, etc</em>).</p>
 <p>The <code>$colors</code> map is a combination of:</p>
@@ -260,10 +264,10 @@ modules (<em>text, background, etc</em>).</p>
 <li><code>$custom-colors</code> ( an empty map which can be supplied )</li>
 </ul>
 
-      <h4 id="base-colours" class="mar-t6 mar-b4 ls1"><a href="#base-colours" class="subtitle link">Base Colours</a></h4><p>These cannot be overridden, they are pretty
+        <h4 id="base-colours" class="mar-t6 mar-b4 ls1"><a href="#base-colours" class="subtitle link">Base Colours</a></h4><p>These cannot be overridden, they are pretty
 standard across most UIs.</p>
 
-      <h4 id="extra-colours" class="mar-t6 mar-b4 ls1"><a href="#extra-colours" class="subtitle link">Extra Colours</a></h4><p>Extra Colours may be turned on, or off, by
+        <h4 id="extra-colours" class="mar-t6 mar-b4 ls1"><a href="#extra-colours" class="subtitle link">Extra Colours</a></h4><p>Extra Colours may be turned on, or off, by
 changing the boolean variable, <code>$no-extra-colors</code>,
 to true. (<em>default is false</em>).</p>
 <pre><code class="language-scss">// switch off the extra colours by 
@@ -271,7 +275,7 @@ to true. (<em>default is false</em>).</p>
 // import/include. e.g:
 $no-extra-colors: true;
 </code></pre>
-      <h4 id="custom-colours" class="mar-t6 mar-b4 ls1"><a href="#custom-colours" class="subtitle link">Custom Colours</a></h4><p>If you&#39;d prefer to supply your own set
+        <h4 id="custom-colours" class="mar-t6 mar-b4 ls1"><a href="#custom-colours" class="subtitle link">Custom Colours</a></h4><p>If you&#39;d prefer to supply your own set
 of colours to persist across the framework,
 you may do so by supplying them in a map
 called <code>$custom-colors</code>.</p>
@@ -299,7 +303,7 @@ colours, as well as our custom black/red anywhere that inherits them;</p>
     &lt;!-- Links have custom background colours --&gt;
 &lt;/body&gt;
 </code></pre>
-      <h4 id="more-information" class="mar-t6 mar-b4 ls1"><a href="#more-information" class="subtitle link">More information</a></h4><p>See the following sections regarding the different properties
+        <h4 id="more-information" class="mar-t6 mar-b4 ls1"><a href="#more-information" class="subtitle link">More information</a></h4><p>See the following sections regarding the different properties
 that inherit colours:</p>
 <ul>
 <li><a href="/dist/docs/text/color.html">Text colours</a></li>
@@ -308,11 +312,31 @@ that inherit colours:</p>
 <li><a href="/dist/docs/svg/fill.html">SVG fills</a></li>
 </ul>
 
-      <hr class="bg-x bor-0 bor-b1 bor-light mar-t9 mar-b8"/>
-      <p class="txt-sans">view the source on github: <code><a href="https://github.com/simeydotme/eezo/tree/master//src/defaults/_colors.scss">/src/defaults/_colors.scss</a></code></p>
-    </div>
-  </section>
-  <footer>
-    <script src="/dist/assets/js/app.js"></script>
-  </footer>
+        <hr class="bg-x bor-0 bor-b1 bor-light mar-t9 mar-b8"/>
+        <p class="txt-sans">view the source on github: <code><a href="https://github.com/simeydotme/eezo/tree/master//src/defaults/_colors.scss">/src/defaults/_colors.scss</a></code></p>
+      </div>
+    </section>
+    <footer>
+      <script>
+        WebFontConfig = {
+            google: { families: [ 'Merriweather:300,700,300italic,700italic:latin' ] }
+        };
+        
+        (function() {
+            var wf = document.createElement('script');
+            wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })();
+        
+        setTimeout(function(){
+            document.getElementsByTagName("html")[0].classList.remove("loading");
+        }, 100);
+        
+      </script>
+      <script src="/dist/assets/js/app.js"></script>
+    </footer>
+  </body>
 </html>

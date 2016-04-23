@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html class="loading no-js">
   <head>
     <title>eezo | docs | background colours</title><meta charset="utf-8" />
     <meta description="a lightweight and responsive css framework">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#32295F">
+    <script>
+      document.getElementsByTagName("html")[0].classList.remove("no-js");
+      
+    </script>
     <link rel="stylesheet" href="/dist/assets/css/styles.css">
   </head>
-  <body class="f0 lh3 pos-r pad-b6 bg-white dark"></body>
-  <header class="docs-header bg-pitch-darker">
-    <div class="container center pos-r pad-7">
-      <nav class="main-nav f2 txt-sans">
-        <ul class="mar-0 pad-0 txt-r float-r">
-          <li class="disp-ib"><a href="/" class="pad-h6 pad-v5 link pitch">home</a></li>
-          <li class="disp-ib"><a href="/dist/docs/" class="pad-h6 pad-v5 link pitch">docs</a></li>
-        </ul>
-      </nav>
-      <h1 class="docs-header__logo mar-0 pos-r t2-"><svg id="eezo-type" data-name="eezo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 535.78 98">
+  <body class="f0 lh3 pos-r pad-b6 bg-white dark">
+    <header class="docs-header bg-pitch-darker">
+      <div class="container center pos-r pad-7">
+        <nav class="main-nav f2 txt-sans">
+          <ul class="mar-0 pad-0 txt-r float-r">
+            <li class="disp-ib"><a href="/" class="pad-h6 pad-v5 link pitch">home</a></li>
+            <li class="disp-ib"><a href="/dist/docs/" class="pad-h6 pad-v5 link pitch">docs</a></li>
+          </ul>
+        </nav>
+        <h1 class="docs-header__logo mar-0 pos-r t2-"><svg id="eezo-type" data-name="eezo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 535.78 98">
   <title>eezo</title>
   <g>
     <path class="eezo-e1" d="M31.08,88.06c-1.12,2.52-2.8,6.44-3.22,7.28C27.16,96.6,25.62,98,22.4,98H0V2.8A3.06,3.06,0,0,1,3.08,0H29.26L25.9,7.28c-0.56,1.26-2.1,2.8-5.32,2.8H12.46a2.28,2.28,0,0,0-2.38,2.38V41.58H25.2C24.08,44.1,22.4,48.16,22,49c-0.7,1.26-2.1,2.66-5.32,2.66h-4.2A2.45,2.45,0,0,0,10.08,54v34h21Z" fill="#222"/>
@@ -26,124 +30,124 @@
   </g>
 </svg>
 <span class="hidden">Eezo</span>
-      </h1>
-    </div>
-  </header>
-  <section class="docs-body container pad-h4 dt-pad-h7 mar-v4 dt-mar-v7 center pos-r">
-    <div class="docs-sidebar pos-a t0 r4 dt-r7">
-      <ul class="mar-0 pad-0 txt-sans">
-              <li class="mar-t6">
-                <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Getting Started</h4>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/">Installation</a>
-              </li>
-              <li class="mar-t6">
-                <hr class="bor-t1 bor-t-light">
-                <h4 class="pad-l4 mar-b2 f2 fw-bold">Colour</h4>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/colors.html">Colours</a>
-              </li>
-              <li class="mar-t6">
-                <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Text</h4>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/color.html">Colour</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/font-family.html">Font Family</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/font-size.html">Font Size</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/line-height.html">Line Height</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/font-weight.html">Font Weight</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/font-style.html">Font Style</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/decoration.html">Text Decoration</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/alignment.html">Text Align</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/transform.html">Text Transform</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/letter-spacing.html">Letter Spacing</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/white-space.html">White Space</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/word-break.html">Word Break</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/word-spacing.html">Word Spacing</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/word-wrap.html">Word Wrap</a>
-              </li>
-              <li class="mar-t6">
-                <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Border</h4>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/border/color.html">Colours</a>
-              </li>
-              <li class="mar-t6">
-                <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Background</h4>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/background/color.html">Colours</a>
-              </li>
-              <li class="mar-t6">
-                <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">SVG</h4>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/svg/fill.html">Fill</a>
-              </li>
-      </ul>
-    </div>
-    <div class="docs-content f1">
-      <h2 class="ls3">Background Colours</h2>
-      <div class="f3 txt-j"><p>Like text colours, background colours can be applied to any
+        </h1>
+      </div>
+    </header>
+    <section class="docs-body container pad-h4 dt-pad-h7 mar-v4 dt-mar-v7 center pos-r">
+      <div class="docs-sidebar pos-a t0 r4 dt-r7">
+        <ul class="mar-0 pad-0 txt-sans">
+                  <li class="mar-t6">
+                    <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Getting Started</h4>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/">Installation</a>
+                  </li>
+                  <li class="mar-t6">
+                    <hr class="bor-t1 bor-t-light">
+                    <h4 class="pad-l4 mar-b2 f2 fw-bold">Colour</h4>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/colors.html">Colours</a>
+                  </li>
+                  <li class="mar-t6">
+                    <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Text</h4>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/color.html">Colour</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/font-family.html">Font Family</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/font-size.html">Font Size</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/line-height.html">Line Height</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/font-weight.html">Font Weight</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/font-style.html">Font Style</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/decoration.html">Text Decoration</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/alignment.html">Text Align</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/transform.html">Text Transform</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/letter-spacing.html">Letter Spacing</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/white-space.html">White Space</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/word-break.html">Word Break</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/word-spacing.html">Word Spacing</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/word-wrap.html">Word Wrap</a>
+                  </li>
+                  <li class="mar-t6">
+                    <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Border</h4>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/border/color.html">Colours</a>
+                  </li>
+                  <li class="mar-t6">
+                    <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Background</h4>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/background/color.html">Colours</a>
+                  </li>
+                  <li class="mar-t6">
+                    <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">SVG</h4>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/svg/fill.html">Fill</a>
+                  </li>
+        </ul>
+      </div>
+      <div class="docs-content f1">
+        <h2 class="ls3">Background Colours</h2>
+        <div class="f3 txt-j"><p>Like text colours, background colours can be applied to any
 valid html element using the class: <code>bg-x</code>. Where
 <code>x</code> is replaced with the desired colour.</p>
 
-      </div><p>The colours available to choose from depend on
+        </div><p>The colours available to choose from depend on
 <a href="../colors.html">the colours module</a>, and any customisation that
 has been applied.</p>
 
-      <div class="row mar-t7 txt-c txt-code">
-        <div class="mb-6 tb-3 col end pad-v7 bg-x undefined"><span class="disp-b">.bg-x</span></div>
-        <div class="mb-6 tb-3 col end pad-v7 bg-wht pitch"><span class="disp-b">.bg-wht</span></div>
-        <div class="mb-6 tb-3 col end pad-v7 bg-white pitch"><span class="disp-b">.bg-white</span></div>
-        <div class="mb-6 tb-3 col end pad-v7 bg-cream pitch"><span class="disp-b">.bg-cream</span></div>
-        <div class="mb-6 tb-3 col end pad-v7 bg-light pitch"><span class="disp-b">.bg-light</span></div>
-        <div class="mb-6 tb-3 col end pad-v7 bg-grey white"><span class="disp-b">.bg-grey</span></div>
-        <div class="mb-6 tb-3 col end pad-v7 bg-dark white"><span class="disp-b">.bg-dark</span></div>
-        <div class="mb-6 tb-3 col end pad-v7 bg-pitch white"><span class="disp-b">.bg-pitch</span></div>
-        <div class="mb-6 tb-3 col end pad-v7 bg-black white"><span class="disp-b">.bg-black</span></div>
-        <div class="mb-6 tb-3 col end pad-v7 bg-blk white"><span class="disp-b">.bg-blk</span></div>
-      </div>
-      <div class="row mar-t7 txt-c txt-code">
-        <div class="mb-6 tb-3 col end pad-v7 bg-silver pitch"><span class="disp-b">.bg-silver</span></div>
-        <div class="mb-6 tb-3 col end pad-v7 bg-gold pitch"><span class="disp-b">.bg-gold</span></div>
-        <div class="mb-6 tb-3 col end pad-v7 bg-yellow pitch"><span class="disp-b">.bg-yellow</span></div>
-        <div class="mb-6 tb-3 col end pad-v7 bg-orange white"><span class="disp-b">.bg-orange</span></div>
-        <div class="mb-6 tb-3 col end pad-v7 bg-red white"><span class="disp-b">.bg-red</span></div>
-        <div class="mb-6 tb-3 col end pad-v7 bg-pink white"><span class="disp-b">.bg-pink</span></div>
-        <div class="mb-6 tb-3 col end pad-v7 bg-violet white"><span class="disp-b">.bg-violet</span></div>
-        <div class="mb-6 tb-3 col end pad-v7 bg-purple white"><span class="disp-b">.bg-purple</span></div>
-        <div class="mb-6 tb-3 col end pad-v7 bg-blue white"><span class="disp-b">.bg-blue</span></div>
-        <div class="mb-6 tb-3 col end pad-v7 bg-teal white"><span class="disp-b">.bg-teal</span></div>
-        <div class="mb-6 tb-3 col end pad-v7 bg-mint pitch"><span class="disp-b">.bg-mint</span></div>
-        <div class="mb-6 tb-3 col end pad-v7 bg-green pitch"><span class="disp-b">.bg-green</span></div>
-      </div>
-      <h3 id="usage-example" class="mar-t8 mar-b6"><a href="#usage-example" class="subtitle link">Usage example</a></h3><pre><code class="language-html">&lt;body class=&quot;bg-white&quot;&gt;
+        <div class="row mar-t7 txt-c txt-code">
+          <div class="mb-6 tb-3 col end pad-v7 bg-x undefined"><span class="disp-b">.bg-x</span></div>
+          <div class="mb-6 tb-3 col end pad-v7 bg-wht pitch"><span class="disp-b">.bg-wht</span></div>
+          <div class="mb-6 tb-3 col end pad-v7 bg-white pitch"><span class="disp-b">.bg-white</span></div>
+          <div class="mb-6 tb-3 col end pad-v7 bg-cream pitch"><span class="disp-b">.bg-cream</span></div>
+          <div class="mb-6 tb-3 col end pad-v7 bg-light pitch"><span class="disp-b">.bg-light</span></div>
+          <div class="mb-6 tb-3 col end pad-v7 bg-grey white"><span class="disp-b">.bg-grey</span></div>
+          <div class="mb-6 tb-3 col end pad-v7 bg-dark white"><span class="disp-b">.bg-dark</span></div>
+          <div class="mb-6 tb-3 col end pad-v7 bg-pitch white"><span class="disp-b">.bg-pitch</span></div>
+          <div class="mb-6 tb-3 col end pad-v7 bg-black white"><span class="disp-b">.bg-black</span></div>
+          <div class="mb-6 tb-3 col end pad-v7 bg-blk white"><span class="disp-b">.bg-blk</span></div>
+        </div>
+        <div class="row mar-t7 txt-c txt-code">
+          <div class="mb-6 tb-3 col end pad-v7 bg-silver pitch"><span class="disp-b">.bg-silver</span></div>
+          <div class="mb-6 tb-3 col end pad-v7 bg-gold pitch"><span class="disp-b">.bg-gold</span></div>
+          <div class="mb-6 tb-3 col end pad-v7 bg-yellow pitch"><span class="disp-b">.bg-yellow</span></div>
+          <div class="mb-6 tb-3 col end pad-v7 bg-orange white"><span class="disp-b">.bg-orange</span></div>
+          <div class="mb-6 tb-3 col end pad-v7 bg-red white"><span class="disp-b">.bg-red</span></div>
+          <div class="mb-6 tb-3 col end pad-v7 bg-pink white"><span class="disp-b">.bg-pink</span></div>
+          <div class="mb-6 tb-3 col end pad-v7 bg-violet white"><span class="disp-b">.bg-violet</span></div>
+          <div class="mb-6 tb-3 col end pad-v7 bg-purple white"><span class="disp-b">.bg-purple</span></div>
+          <div class="mb-6 tb-3 col end pad-v7 bg-blue white"><span class="disp-b">.bg-blue</span></div>
+          <div class="mb-6 tb-3 col end pad-v7 bg-teal white"><span class="disp-b">.bg-teal</span></div>
+          <div class="mb-6 tb-3 col end pad-v7 bg-mint pitch"><span class="disp-b">.bg-mint</span></div>
+          <div class="mb-6 tb-3 col end pad-v7 bg-green pitch"><span class="disp-b">.bg-green</span></div>
+        </div>
+        <h3 id="usage-example" class="mar-t8 mar-b6"><a href="#usage-example" class="subtitle link">Usage example</a></h3><pre><code class="language-html">&lt;body class=&quot;bg-white&quot;&gt;
   has a white background.
 &lt;/body&gt;
 </code></pre>
-      <h3 id="media-queries" class="mar-t8 mar-b6"><a href="#media-queries" class="subtitle link">Media Queries</a></h3><p>No media query support for this property.
+        <h3 id="media-queries" class="mar-t8 mar-b6"><a href="#media-queries" class="subtitle link">Media Queries</a></h3><p>No media query support for this property.
 It might not be necessary to supply different
 values at different breakpoints. Please refer to
 (<a href="xxmqxx">the <code>media-query</code> documentation</a>) for more info.</p>
 
-      <h3 id="customising" class="mar-t8 mar-b6"><a href="#customising" class="subtitle link">Customising</a></h3>
-      <h4 id="default-classes" class="mar-t6 mar-b4 ls1"><a href="#default-classes" class="subtitle link">Default Classes</a></h4><p>The background colours are prefixed with <code>bg-</code> by
+        <h3 id="customising" class="mar-t8 mar-b6"><a href="#customising" class="subtitle link">Customising</a></h3>
+        <h4 id="default-classes" class="mar-t6 mar-b4 ls1"><a href="#default-classes" class="subtitle link">Default Classes</a></h4><p>The background colours are prefixed with <code>bg-</code> by
 default, but this can be changed with the
 <code>$background-color-prop</code> variable.</p>
 <pre><code class="language-scss">// change the class prefix to .b-
 $background-color-prop: &quot;b&quot;;
 </code></pre>
-      <h4 id="custom-background colours" class="mar-t6 mar-b4 ls1"><a href="#custom-background colours" class="subtitle link">Custom Background Colours</a></h4><p>As with all colours, the backgrounds inherit <a href="../colors.html">the
+        <h4 id="custom-background colours" class="mar-t6 mar-b4 ls1"><a href="#custom-background colours" class="subtitle link">Custom Background Colours</a></h4><p>As with all colours, the backgrounds inherit <a href="../colors.html">the
 default <code>$colors</code> map</a>. You may customise the colours
 used for backgrounds by supplying a <code>$background-colors</code> map instead.</p>
 <pre><code class="language-scss">// change the background colours to only gold and crimson.
@@ -152,18 +156,38 @@ $background-colors: (
   crimson: #C1001B
 );
 </code></pre>
-      <h4 id="combined" class="mar-t6 mar-b4 ls1"><a href="#combined" class="subtitle link">Combined</a></h4><p>After changing the prefix property and the map
+        <h4 id="combined" class="mar-t6 mar-b4 ls1"><a href="#combined" class="subtitle link">Combined</a></h4><p>After changing the prefix property and the map
 of colours in the previous two customisations, we
 would end up with the following css.</p>
 <pre><code class="language-css">/* would result in css like: */
 .b-gold     { color: #DAC36E; }
 .b-crimson  { color: #C1001B; }
 </code></pre>
-      <hr class="bg-x bor-0 bor-b1 bor-light mar-t9 mar-b8"/>
-      <p class="txt-sans">view the source on github: <code><a href="https://github.com/simeydotme/eezo/tree/master//src/components/background/_color.scss">/src/components/background/_color.scss</a></code></p>
-    </div>
-  </section>
-  <footer>
-    <script src="/dist/assets/js/app.js"></script>
-  </footer>
+        <hr class="bg-x bor-0 bor-b1 bor-light mar-t9 mar-b8"/>
+        <p class="txt-sans">view the source on github: <code><a href="https://github.com/simeydotme/eezo/tree/master//src/components/background/_color.scss">/src/components/background/_color.scss</a></code></p>
+      </div>
+    </section>
+    <footer>
+      <script>
+        WebFontConfig = {
+            google: { families: [ 'Merriweather:300,700,300italic,700italic:latin' ] }
+        };
+        
+        (function() {
+            var wf = document.createElement('script');
+            wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })();
+        
+        setTimeout(function(){
+            document.getElementsByTagName("html")[0].classList.remove("loading");
+        }, 100);
+        
+      </script>
+      <script src="/dist/assets/js/app.js"></script>
+    </footer>
+  </body>
 </html>

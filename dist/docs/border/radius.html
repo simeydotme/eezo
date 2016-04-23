@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="loading no-js">
   <head>
-    <title>eezo | docs | line height</title><meta charset="utf-8" />
+    <title>eezo | docs | border radius</title><meta charset="utf-8" />
     <meta description="a lightweight and responsive css framework">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#32295F">
@@ -96,113 +96,64 @@
         </ul>
       </div>
       <div class="docs-content f1">
-        <h2 class="ls3">Line Height</h2>
-        <div class="f3 txt-j"><p>Line heights in Eezo are defined to have a few
-real-world values for text / forms.
-The line heights are unitless.</p>
+        <h2 class="ls3">Border Colours</h2>
+        <div class="f3 txt-j"><p>The radius of a border can be changed
+using the border-radius classes (beginning with
+<code>bor-rad*</code>) shown below.</p>
 
-        </div><p>Line heights can be trickey for non-text elements
-and I would suggest using <strong>bem-style</strong> css to set
-very particular <code>line-height</code> on elements which require
-it.</p>
-<p>For text and forms, however, Eezo&#39;s defined values
-should serve you very well.</p>
+        </div><p><a href="#customising">Customisation is available</a> to define
+the <code>border-radius</code> sizes you need for your application,
+if they are not covered by the default property map.</p>
 
-        <table class="mar-t8 mar-b6 mb-12 txt-l txt-sans">
-          <thead>
-            <tr>
-              <th class="pad-3 bor-b1">class name
-              </th>
-              <th class="pad-3 bor-b1">line-height value
-              </th>
-            </tr>
-          </thead>
-          <tbody class="txt-code">
-            <tr>
-              <td class="pad-3 pad-v2">.lh2-</td>
-              <td class="pad-3 pad-v2">0.5</td>
-            </tr>
-            <tr>
-              <td class="pad-3 pad-v2">.lh1-</td>
-              <td class="pad-3 pad-v2">0.75</td>
-            </tr>
-            <tr>
-              <td class="pad-3 pad-v2">.lh0</td>
-              <td class="pad-3 pad-v2">1</td>
-            </tr>
-            <tr>
-              <td class="pad-3 pad-v2">.lh1</td>
-              <td class="pad-3 pad-v2">1.25</td>
-            </tr>
-            <tr>
-              <td class="pad-3 pad-v2">.lh2</td>
-              <td class="pad-3 pad-v2">1.4</td>
-            </tr>
-            <tr>
-              <td class="pad-3 pad-v2">.lh3</td>
-              <td class="pad-3 pad-v2">1.5</td>
-            </tr>
-            <tr>
-              <td class="pad-3 pad-v2">.lh4</td>
-              <td class="pad-3 pad-v2">1.6</td>
-            </tr>
-            <tr>
-              <td class="pad-3 pad-v2">.lh5</td>
-              <td class="pad-3 pad-v2">2</td>
-            </tr>
-            <tr>
-              <td class="pad-3 pad-v2">.lh6</td>
-              <td class="pad-3 pad-v2">3</td>
-            </tr>
-          </tbody>
-        </table>
-        <h3 id="usage-example" class="mar-t8 mar-b6"><a href="#usage-example" class="subtitle link">Usage example</a></h3><p>With Eezo&#39;s primarily flat specificity
-tree, it means you can set <code>line-height</code> on
-pretty much any element and have it cascade
-right down.</p>
-<pre><code class="language-html">&lt;body class=&quot;lh3&quot;&gt;
-
-  &lt;p&gt; all content has line-height: 1.5; &lt;/p&gt;
-  &lt;h1 class=&quot;lh4&quot;&gt; heading has line-height: 2; &lt;h1&gt;
-
-&lt;/body&gt;
+        <div class="row mar-t7 txt-c txt-code mar-h3-">
+          <div class="mb-6 tb-3 col end pad-3"><span class="mar-2 disp-b pad-v4 bor-1 bor-grey bor-rad0">.bor-rad0</span></div>
+          <div class="mb-6 tb-3 col end pad-3"><span class="mar-2 disp-b pad-v4 bor-1 bor-grey bor-rad1">.bor-rad1</span></div>
+          <div class="mb-6 tb-3 col end pad-3"><span class="mar-2 disp-b pad-v4 bor-1 bor-grey bor-rad2">.bor-rad2</span></div>
+          <div class="mb-6 tb-3 col end pad-3"><span class="mar-2 disp-b pad-v4 bor-1 bor-grey bor-rad3">.bor-rad3</span></div>
+          <div class="mb-6 tb-3 col end pad-3"><span class="mar-2 disp-b pad-v4 bor-1 bor-grey bor-rad4">.bor-rad4</span></div>
+          <div class="mb-6 tb-3 col end pad-3"><span class="mar-2 disp-b pad-v4 bor-1 bor-grey bor-rad5">.bor-rad5</span></div>
+          <div class="mb-6 tb-3 col end pad-3"><span class="mar-2 disp-b pad-v4 bor-1 bor-grey bor-rad10">.bor-rad10</span></div>
+          <div class="mb-6 tb-3 col end pad-3"><span class="mar-2 disp-b pad-v4 bor-1 bor-grey bor-circle">.bor-circle</span></div>
+        </div>
+        <h3 id="usage-example" class="mar-t8 mar-b6"><a href="#usage-example" class="subtitle link">Usage example</a></h3><p>Simply applying a <code>bor-rad*</code> class to any element
+will give it the corresponding radius. Here&#39;s an
+example of how to use it;</p>
+<pre><code class="language-html">&lt;aside class=&quot;bor-1 bor-rad3&quot;&gt;
+  border has a radius of 3.
+&lt;/aside&gt;
 </code></pre>
-        <h3 id="media-queries" class="mar-t8 mar-b6"><a href="#media-queries" class="subtitle link">Media Queries</a></h3><p>Line heights are also available across the
-defined breakpoints; allowing different values
-for difference devices.
-(<a href="xxmqxx"><em>see the media query section for details</em></a>)</p>
-<pre><code class="language-html">&lt;body class=&quot;lh5 tb-lh3&quot;&gt;
-    Line height is set to:
-        - 2 on mobile
-        - 1.5 on tablet+
-&lt;/body&gt;
-</code></pre>
+        <h3 id="media-queries" class="mar-t8 mar-b6"><a href="#media-queries" class="subtitle link">Media Queries</a></h3><p>No media query support for this property.
+It might not be necessary to supply different
+values at different breakpoints. Please refer to
+(<a href="xxmqxx">the <code>media-query</code> documentation</a>) for more info.</p>
+
         <h3 id="customising" class="mar-t8 mar-b6"><a href="#customising" class="subtitle link">Customising</a></h3>
-        <h4 id="default-classes" class="mar-t6 mar-b4 ls1"><a href="#default-classes" class="subtitle link">Default Classes</a></h4><p>To change the prefix from <code>lh</code> to something else, you
-may use the <code>$line-height-prop</code> variable to override.</p>
-<pre><code class="language-scss">// change the default class:
-// .lh*  -&gt;  .line-*
-$line-height-prop: &quot;line-&quot;;
+        <h4 id="default-classes" class="mar-t6 mar-b4 ls1"><a href="#default-classes" class="subtitle link">Default Classes</a></h4><p>The default class prefix can be changed
+by supplying a <code>$border-radius-prop</code> variable.</p>
+<pre><code class="language-scss">// change the class prefix to .br-
+$border-radius-prop: &quot;br-&quot;;
 </code></pre>
-        <h4 id="custom-size scale" class="mar-t6 mar-b4 ls1"><a href="#custom-size scale" class="subtitle link">Custom Size Scale</a></h4><p>Also the <code>$line-heights</code> variable can be overridden with a map
-to change the scale.</p>
-<pre><code class="language-scss">// change the line heights to be specific rems.
-$line-heights: (
-  &quot;0-5&quot;: 0.5rem,
-    &quot;1&quot;: 1rem,
-  &quot;1-5&quot;: 1.5rem,
-    &quot;2&quot;: 2rem
+        <h4 id="custom-radii" class="mar-t6 mar-b4 ls1"><a href="#custom-radii" class="subtitle link">Custom Radii</a></h4><p>As with pretty much all of Eezo&#39;s properties
+it&#39;s possible to override the default map of
+properties and values for the <code>border-radius</code>,
+this is done by supplying a <code>$border-radius</code> map.</p>
+<pre><code class="language-scss">// change the border colours to only red and blue.
+$border-radius: (
+  2: 2px,
+  4: 4px,
+  8: 8px
 );
 </code></pre>
-        <h4 id="combined" class="mar-t6 mar-b4 ls1"><a href="#combined" class="subtitle link">Combined</a></h4><p>The previous two customisations combined:</p>
-<pre><code class="language-scss">// would result in css like:
-.line-0-5 { line-height: 0.5rem; }
-.line-1   { line-height: 1rem; }
-.line-1-5 { line-height: 1.5rem; }
-.line-2   { line-height: 2rem; }
+        <h4 id="combined" class="mar-t6 mar-b4 ls1"><a href="#combined" class="subtitle link">Combined</a></h4><p>After changing the prefix property and the map
+of radii in the previous two customisations, we
+would end up with the following css.</p>
+<pre><code class="language-css">/* would result in css like: */
+.br-2   { border-radius: 2px; }
+.br-4   { border-radius: 4px; }
+.br-8   { border-radius: 8px; }
 </code></pre>
         <hr class="bg-x bor-0 bor-b1 bor-light mar-t9 mar-b8"/>
-        <p class="txt-sans">view the source on github: <code><a href="https://github.com/simeydotme/eezo/tree/master//src/components/text/_line-height.scss">/src/components/text/_line-height.scss</a></code></p>
+        <p class="txt-sans">view the source on github: <code><a href="https://github.com/simeydotme/eezo/tree/master//src/components/border/_color.scss">/src/components/border/_color.scss</a></code></p>
       </div>
     </section>
     <footer>

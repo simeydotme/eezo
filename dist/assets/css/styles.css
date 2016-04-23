@@ -5234,6 +5234,13 @@ pre[class*="language-"] {
     pre[class*="language-"] .atrule .property {
       color: #43EABC; } }
 
+html:not(.no-js) {
+  will-change: opacity;
+  transition: opacity 0.25s ease-out; }
+  html:not(.no-js).wf-loading, html:not(.no-js).loading {
+    opacity: 0;
+    transition: none; }
+
 code:not([class*="language-"]) {
   background: #eee;
   border: 1px dotted #ccc;

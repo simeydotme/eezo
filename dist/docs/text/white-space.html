@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html class="loading no-js">
   <head>
     <title>eezo | docs | white-space</title><meta charset="utf-8" />
     <meta description="a lightweight and responsive css framework">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#32295F">
+    <script>
+      document.getElementsByTagName("html")[0].classList.remove("no-js");
+      
+    </script>
     <link rel="stylesheet" href="/dist/assets/css/styles.css">
   </head>
-  <body class="f0 lh3 pos-r pad-b6 bg-white dark"></body>
-  <header class="docs-header bg-pitch-darker">
-    <div class="container center pos-r pad-7">
-      <nav class="main-nav f2 txt-sans">
-        <ul class="mar-0 pad-0 txt-r float-r">
-          <li class="disp-ib"><a href="/" class="pad-h6 pad-v5 link pitch">home</a></li>
-          <li class="disp-ib"><a href="/dist/docs/" class="pad-h6 pad-v5 link pitch">docs</a></li>
-        </ul>
-      </nav>
-      <h1 class="docs-header__logo mar-0 pos-r t2-"><svg id="eezo-type" data-name="eezo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 535.78 98">
+  <body class="f0 lh3 pos-r pad-b6 bg-white dark">
+    <header class="docs-header bg-pitch-darker">
+      <div class="container center pos-r pad-7">
+        <nav class="main-nav f2 txt-sans">
+          <ul class="mar-0 pad-0 txt-r float-r">
+            <li class="disp-ib"><a href="/" class="pad-h6 pad-v5 link pitch">home</a></li>
+            <li class="disp-ib"><a href="/dist/docs/" class="pad-h6 pad-v5 link pitch">docs</a></li>
+          </ul>
+        </nav>
+        <h1 class="docs-header__logo mar-0 pos-r t2-"><svg id="eezo-type" data-name="eezo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 535.78 98">
   <title>eezo</title>
   <g>
     <path class="eezo-e1" d="M31.08,88.06c-1.12,2.52-2.8,6.44-3.22,7.28C27.16,96.6,25.62,98,22.4,98H0V2.8A3.06,3.06,0,0,1,3.08,0H29.26L25.9,7.28c-0.56,1.26-2.1,2.8-5.32,2.8H12.46a2.28,2.28,0,0,0-2.38,2.38V41.58H25.2C24.08,44.1,22.4,48.16,22,49c-0.7,1.26-2.1,2.66-5.32,2.66h-4.2A2.45,2.45,0,0,0,10.08,54v34h21Z" fill="#222"/>
@@ -26,120 +30,120 @@
   </g>
 </svg>
 <span class="hidden">Eezo</span>
-      </h1>
-    </div>
-  </header>
-  <section class="docs-body container pad-h4 dt-pad-h7 mar-v4 dt-mar-v7 center pos-r">
-    <div class="docs-sidebar pos-a t0 r4 dt-r7">
-      <ul class="mar-0 pad-0 txt-sans">
-              <li class="mar-t6">
-                <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Getting Started</h4>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/">Installation</a>
-              </li>
-              <li class="mar-t6">
-                <hr class="bor-t1 bor-t-light">
-                <h4 class="pad-l4 mar-b2 f2 fw-bold">Colour</h4>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/colors.html">Colours</a>
-              </li>
-              <li class="mar-t6">
-                <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Text</h4>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/color.html">Colour</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/font-family.html">Font Family</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/font-size.html">Font Size</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/line-height.html">Line Height</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/font-weight.html">Font Weight</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/font-style.html">Font Style</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/decoration.html">Text Decoration</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/alignment.html">Text Align</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/transform.html">Text Transform</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/letter-spacing.html">Letter Spacing</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/white-space.html">White Space</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/word-break.html">Word Break</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/word-spacing.html">Word Spacing</a>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/text/word-wrap.html">Word Wrap</a>
-              </li>
-              <li class="mar-t6">
-                <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Border</h4>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/border/color.html">Colours</a>
-              </li>
-              <li class="mar-t6">
-                <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Background</h4>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/background/color.html">Colours</a>
-              </li>
-              <li class="mar-t6">
-                <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">SVG</h4>
-              </li>
-              <li class="pad-l4"><a href="/dist/docs/svg/fill.html">Fill</a>
-              </li>
-      </ul>
-    </div>
-    <div class="docs-content f1">
-      <h2 class="ls3">White Space</h2>
-      <div class="f3 txt-j"><p><code>white-space</code> allows defining how the browser handles
+        </h1>
+      </div>
+    </header>
+    <section class="docs-body container pad-h4 dt-pad-h7 mar-v4 dt-mar-v7 center pos-r">
+      <div class="docs-sidebar pos-a t0 r4 dt-r7">
+        <ul class="mar-0 pad-0 txt-sans">
+                  <li class="mar-t6">
+                    <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Getting Started</h4>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/">Installation</a>
+                  </li>
+                  <li class="mar-t6">
+                    <hr class="bor-t1 bor-t-light">
+                    <h4 class="pad-l4 mar-b2 f2 fw-bold">Colour</h4>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/colors.html">Colours</a>
+                  </li>
+                  <li class="mar-t6">
+                    <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Text</h4>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/color.html">Colour</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/font-family.html">Font Family</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/font-size.html">Font Size</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/line-height.html">Line Height</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/font-weight.html">Font Weight</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/font-style.html">Font Style</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/decoration.html">Text Decoration</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/alignment.html">Text Align</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/transform.html">Text Transform</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/letter-spacing.html">Letter Spacing</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/white-space.html">White Space</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/word-break.html">Word Break</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/word-spacing.html">Word Spacing</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/text/word-wrap.html">Word Wrap</a>
+                  </li>
+                  <li class="mar-t6">
+                    <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Border</h4>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/border/color.html">Colours</a>
+                  </li>
+                  <li class="mar-t6">
+                    <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Background</h4>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/background/color.html">Colours</a>
+                  </li>
+                  <li class="mar-t6">
+                    <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">SVG</h4>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/svg/fill.html">Fill</a>
+                  </li>
+        </ul>
+      </div>
+      <div class="docs-content f1">
+        <h2 class="ls3">White Space</h2>
+        <div class="f3 txt-j"><p><code>white-space</code> allows defining how the browser handles
 white-space characters, especially strings of white-space and
 new lines.</p>
 
-      </div><p>There&#39;s a few scenarios where you might need <code>white-space</code>
+        </div><p>There&#39;s a few scenarios where you might need <code>white-space</code>
 definitions, including code blocks and editable content areas.</p>
 
-      <table class="mar-t8 mar-b6 mb-12 txt-l txt-sans">
-        <thead>
-          <tr>
-            <th class="pad-3 bor-b1">class name
-            </th>
-            <th class="pad-3 bor-b1">white-space value
-            </th>
-          </tr>
-        </thead>
-        <tbody class="txt-code">
-          <tr>
-            <td class="pad-3 pad-v2 va-top whs-nowrap">.whs-wrap</td>
-            <td class="pad-3 pad-v2 va-top code">normal</td>
-          </tr>
-          <tr>
-            <td class="pad-3 pad-v2 va-top whs-nowrap">.whs-nowrap</td>
-            <td class="pad-3 pad-v2 va-top code">nowrap</td>
-          </tr>
-          <tr>
-            <td class="pad-3 pad-v2 va-top whs-nowrap">.whs-pre</td>
-            <td class="pad-3 pad-v2 va-top code">pre</td>
-          </tr>
-          <tr>
-            <td class="pad-3 pad-v2 va-top whs-nowrap">.whs-prewrap</td>
-            <td class="pad-3 pad-v2 va-top code">pre-wrap</td>
-          </tr>
-          <tr>
-            <td class="pad-3 pad-v2 va-top whs-nowrap">.whs-preline</td>
-            <td class="pad-3 pad-v2 va-top code">pre-line</td>
-          </tr>
-        </tbody>
-      </table>
-      <h3 id="usage-example" class="mar-t8 mar-b6"><a href="#usage-example" class="subtitle link">Usage example</a></h3><pre><code class="language-html">&lt;p class=&quot;whs-wrap&quot;&gt;
+        <table class="mar-t8 mar-b6 mb-12 txt-l txt-sans">
+          <thead>
+            <tr>
+              <th class="pad-3 bor-b1">class name
+              </th>
+              <th class="pad-3 bor-b1">white-space value
+              </th>
+            </tr>
+          </thead>
+          <tbody class="txt-code">
+            <tr>
+              <td class="pad-3 pad-v2 va-top whs-nowrap">.whs-wrap</td>
+              <td class="pad-3 pad-v2 va-top code">normal</td>
+            </tr>
+            <tr>
+              <td class="pad-3 pad-v2 va-top whs-nowrap">.whs-nowrap</td>
+              <td class="pad-3 pad-v2 va-top code">nowrap</td>
+            </tr>
+            <tr>
+              <td class="pad-3 pad-v2 va-top whs-nowrap">.whs-pre</td>
+              <td class="pad-3 pad-v2 va-top code">pre</td>
+            </tr>
+            <tr>
+              <td class="pad-3 pad-v2 va-top whs-nowrap">.whs-prewrap</td>
+              <td class="pad-3 pad-v2 va-top code">pre-wrap</td>
+            </tr>
+            <tr>
+              <td class="pad-3 pad-v2 va-top whs-nowrap">.whs-preline</td>
+              <td class="pad-3 pad-v2 va-top code">pre-line</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3 id="usage-example" class="mar-t8 mar-b6"><a href="#usage-example" class="subtitle link">Usage example</a></h3><pre><code class="language-html">&lt;p class=&quot;whs-wrap&quot;&gt;
     new lines, multiple spaces collapse
     and text wraps &lt;p&gt;
 
 &lt;p class=&quot;whs-pre&quot;&gt;
     all white-space is preserved &lt;/p&gt;
 </code></pre>
-      <h3 id="media-queries" class="mar-t8 mar-b6"><a href="#media-queries" class="subtitle link">Media Queries</a></h3><p><code>white-space</code> can be defined across individual
+        <h3 id="media-queries" class="mar-t8 mar-b6"><a href="#media-queries" class="subtitle link">Media Queries</a></h3><p><code>white-space</code> can be defined across individual
 breakpoints using the media query class prefixes.
 (<a href="xxmqxx"><em>see the media query section for details</em></a>)</p>
 <pre><code class="language-html">&lt;article class=&quot;whs-prewrap tb-whs-pre&quot;&gt;
@@ -147,14 +151,14 @@ breakpoints using the media query class prefixes.
     - tablet+ preserves all white-space
 &lt;/article&gt;
 </code></pre>
-      <h3 id="customising" class="mar-t8 mar-b6"><a href="#customising" class="subtitle link">Customising</a></h3>
-      <h4 id="default-classes" class="mar-t6 mar-b4 ls1"><a href="#default-classes" class="subtitle link">Default Classes</a></h4><p>It&#39;s possible to modify the class prefix for <code>white-space</code>
+        <h3 id="customising" class="mar-t8 mar-b6"><a href="#customising" class="subtitle link">Customising</a></h3>
+        <h4 id="default-classes" class="mar-t6 mar-b4 ls1"><a href="#default-classes" class="subtitle link">Default Classes</a></h4><p>It&#39;s possible to modify the class prefix for <code>white-space</code>
 using the <code>$word-break-prop</code> variable:</p>
 <pre><code class="language-scss">// change the default class:
 // .whs-*  -&gt;  .white-*
 $white-space-prop: &quot;white-&quot;;
 </code></pre>
-      <h4 id="custom-properties" class="mar-t6 mar-b4 ls1"><a href="#custom-properties" class="subtitle link">Custom Properties</a></h4><p>The properties accessible to the <code>white-space</code>
+        <h4 id="custom-properties" class="mar-t6 mar-b4 ls1"><a href="#custom-properties" class="subtitle link">Custom Properties</a></h4><p>The properties accessible to the <code>white-space</code>
 classes can be modified to save kilobytes
 or change the names.</p>
 <pre><code class="language-scss">// change the white-space map so there&#39;s,
@@ -164,16 +168,36 @@ $white-spaces: (
    n: normal
 );
 </code></pre>
-      <h4 id="combined" class="mar-t6 mar-b4 ls1"><a href="#combined" class="subtitle link">Combined</a></h4><p>The previous two customisations combined:</p>
+        <h4 id="combined" class="mar-t6 mar-b4 ls1"><a href="#combined" class="subtitle link">Combined</a></h4><p>The previous two customisations combined:</p>
 <pre><code class="language-scss">// would result in css like:
 .white-p { white-space: pre; }
 .white-n { white-space: normal; }
 </code></pre>
-      <hr class="bg-x bor-0 bor-b1 bor-light mar-t9 mar-b8"/>
-      <p class="txt-sans">view the source on github: <code><a href="https://github.com/simeydotme/eezo/tree/master//src/components/text/_whitespace.scss">/src/components/text/_whitespace.scss</a></code></p>
-    </div>
-  </section>
-  <footer>
-    <script src="/dist/assets/js/app.js"></script>
-  </footer>
+        <hr class="bg-x bor-0 bor-b1 bor-light mar-t9 mar-b8"/>
+        <p class="txt-sans">view the source on github: <code><a href="https://github.com/simeydotme/eezo/tree/master//src/components/text/_whitespace.scss">/src/components/text/_whitespace.scss</a></code></p>
+      </div>
+    </section>
+    <footer>
+      <script>
+        WebFontConfig = {
+            google: { families: [ 'Merriweather:300,700,300italic,700italic:latin' ] }
+        };
+        
+        (function() {
+            var wf = document.createElement('script');
+            wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })();
+        
+        setTimeout(function(){
+            document.getElementsByTagName("html")[0].classList.remove("loading");
+        }, 100);
+        
+      </script>
+      <script src="/dist/assets/js/app.js"></script>
+    </footer>
+  </body>
 </html>
