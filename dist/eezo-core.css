@@ -1,7 +1,7 @@
 /*!
  * [ eezo ]
  * - css framework for massless stylesheets
- * - 0.6.8-alpha | http://github.com/simeydotme/eezo
+ * - 0.6.9-alpha | http://github.com/simeydotme/eezo
  * - @simeydotme | http://simey.me
  */
 @charset "UTF-8";
@@ -1030,28 +1030,28 @@ h1, h2, h3, h4, h5, h6 {
 .bor-r-pitch {
   border-right-color: #161f23; }
 
-.bor-rad0 {
+.rad-0 {
   border-radius: 0; }
 
-.bor-rad1 {
-  border-radius: 0.0625rem; }
+.rad-1 {
+  border-radius: 1px; }
 
-.bor-rad2 {
-  border-radius: 0.125rem; }
+.rad-2 {
+  border-radius: 2px; }
 
-.bor-rad3 {
-  border-radius: 0.1875rem; }
+.rad-3 {
+  border-radius: 3px; }
 
-.bor-rad4 {
-  border-radius: 0.25rem; }
+.rad-4 {
+  border-radius: 4px; }
 
-.bor-rad5 {
-  border-radius: 0.3125rem; }
+.rad-5 {
+  border-radius: 5px; }
 
-.bor-rad10 {
-  border-radius: 0.625rem; }
+.rad-10 {
+  border-radius: 10px; }
 
-.bor-circle {
+.rad-c {
   border-radius: 100%; }
 
 .cur-d {
