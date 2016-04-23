@@ -1,0 +1,113 @@
+
+extends ../layout/columns
+
+block title
+    | docs | white-space
+
+
+
+
+mixin table-row( name, value )
+
+    tr
+        td.pad-3.pad-v2.va-top.whs-nowrap .whs-#{ name }
+        td.pad-3.pad-v2.va-top.code= value
+
+
+
+
+
+append content
+
+    +main-title( "White Space" )
+
+    +intro-text
+        :marked
+            `white-space` allows defining how the browser handles
+            white-space characters, especially strings of white-space and
+            new lines.
+
+    :marked
+        There's a few scenarios where you might need `white-space`
+        definitions, including code blocks and editable content areas.
+
+    +table
+
+        thead
+
+            tr
+
+                +table-head class name
+                +table-head white-space value
+
+        tbody.txt-code
+
+            +table-row( "wrap",     "normal" )
+            +table-row( "nowrap",   "nowrap" )
+            +table-row( "pre",      "pre" )
+            +table-row( "prewrap",  "pre-wrap" )
+            +table-row( "preline",  "pre-line" )
+
+
+    +sub-title( "Usage example" )
+
+    :prismjs( language = "html" )
+        <p class="whs-wrap">
+            new lines, multiple spaces collapse
+            and text wraps <p>
+
+        <p class="whs-pre">
+            all white-space is preserved </p>
+
+    +sub-title( "Media Queries" )
+
+    :marked
+        `white-space` can be defined across individual
+        breakpoints using the media query class prefixes.
+        ([_see the media query section for details_](xxmqxx))
+
+    :prismjs( language = "html" )
+        <article class="whs-prewrap tb-whs-pre">
+            - mobile maintains spaces/new lines but wraps text
+            - tablet+ preserves all white-space
+        </article>
+
+    +sub-title( "Customising" )
+
+    +small-title( "Default Classes" )
+
+    :marked
+        It's possible to modify the class prefix for `white-space`
+        using the `$word-break-prop` variable:
+
+    :prismjs( language = "scss" )
+        // change the default class:
+        // .whs-*  ->  .white-*
+        $white-space-prop: "white";
+
+    +small-title( "Custom Properties" )
+
+    :marked
+        The properties accessible to the `white-space`
+        classes can be modified to save kilobytes
+        or change the names.
+
+    :prismjs( language = "scss" )
+        // change the white-space map so there's,
+        // only pre and normal.
+        $white-spaces: (
+           p: pre,
+           n: normal
+        );
+
+    +small-title( "Combined" )
+
+    :marked
+        The previous two customisations combined:
+
+    :prismjs( language = "scss" )
+        // would result in css like:
+        .white-p { white-space: pre; }
+        .white-n { white-space: normal; }
+
+    +source-file( "/src/components/text/_whitespace.scss" )

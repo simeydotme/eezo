@@ -1,0 +1,95 @@
+
+extends ../layout/columns
+
+block title
+    | docs | word wrap
+
+
+
+
+mixin table-row( name, value )
+
+    tr
+        td.pad-3.pad-v2.va-top.whs-nowrap= name
+        td.pad-3.pad-v2.va-top.code= value
+
+
+
+
+
+append content
+
+    +main-title( "Word Wrap" )
+
+    +intro-text
+        :marked
+            Word wrap support comes by default in Eezo extended, although
+            it's probably rarely used so it's not part of the core.
+
+    +table
+
+        thead
+
+            tr
+
+                +table-head class name
+                +table-head word-wrap value
+
+        tbody.txt-code
+
+            +table-row( ".ww-normal", "normal" )
+            +table-row( ".ww-break", "break-word" )
+
+
+    +sub-title( "Usage example" )
+
+    :prismjs( language = "html" )
+        <p class="ww-break"> long words will break to wrap <p>
+
+    +sub-title( "Media Queries" )
+
+    :marked
+        `word-wrap`'s usefulness is more apparent in smaller
+        text flow areas. So it's possible to define different
+        `word-wrap` properties on different screen sizes with
+        the media query classes. ([_see the media query section for details_](xxmqxx))
+
+    :prismjs( language = "html" )
+        <main class="ww-break tb-ww-normal">
+            - always break words on mobile
+            - behave normally on tablet+
+        </main>
+
+    +sub-title( "Customising" )
+
+    +small-title( "Default Classes" )
+
+    :marked
+        To change the prefix from `ww` to something else, you
+        may use the `$word-wrap-prop` variable to override:
+
+    :prismjs( language = "scss" )
+        // change the default class:
+        // .ww-*  ->  .wrap-*
+        $word-wrap-prop: "wrap";
+
+    +small-title( "Custom Properties" )
+
+    :prismjs( language = "scss" )
+        // change the word-wrap properties map.
+        $word-wraps: (
+           b: break-word,
+           n: normal
+        );
+
+    +small-title( "Combined" )
+
+    :marked
+        The previous two customisations combined:
+
+    :prismjs( language = "scss" )
+        // would result in css like:
+        .wrap-b { word-wrap: break-word; }
+        .wrap-n { word-wrap: normal; }
+
+    +source-file( "/src/components/text/_wrap.scss" )
