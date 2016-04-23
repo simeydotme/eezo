@@ -2,8 +2,8 @@ mixin header( name, border )
 
     li.mar-t6
         if border
-            hr.bor-t1.bor-t-light
-            h4.pad-l4.mar-b2.f2.fw-bold= name
+            hr.bor-0.bor-t1.bor-t-light
+            h4.pad-l4.mar-b2.f2= name
         else
             h4.pad-l4.mar-b2.mar-t6.f2.fw-bold= name
 
@@ -20,7 +20,8 @@ mixin item( name, url )
 
 ul.mar-0.pad-0.txt-sans
 
-    +header( "Getting Started" )
+    li.mar-t2
+        h4.pad-l4.mar-b2.mar-t2.f2 Getting Started
 
     +item( "Installation",      "/" )
 
