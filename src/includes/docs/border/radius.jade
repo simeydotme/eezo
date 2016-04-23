@@ -10,7 +10,7 @@ block title
 mixin rad( size )
 
     div.mb-6.tb-3.col.end.pad-3
-        span.mar-2.disp-b.pad-v4.bor-1.bor-grey( class = "bor-" + size ) .bor-#{size}
+        span.mar-2.disp-b.pad-v4.bor-1.bor-grey( class = "rad-" + size ) .rad-#{size}
 
 
 
@@ -24,7 +24,7 @@ append content
         :marked
             The radius of a border can be changed
             using the border-radius classes (beginning with
-            `bor-rad*`) shown below.
+            `rad-*`) shown below.
 
     :marked
         [Customisation is available](#customising) to define
@@ -33,24 +33,24 @@ append content
 
     .row.mar-t7.txt-c.txt-code.mar-h3-
 
-        +rad( "rad0",   "0" )
-        +rad( "rad1",   "1px" )
-        +rad( "rad2",   "2px" )
-        +rad( "rad3",   "3px" )
-        +rad( "rad4",   "4px" )
-        +rad( "rad5",   "5px" )
-        +rad( "rad10",  "10px" )
-        +rad( "circle", "100%" )
+        +rad( "0",   "0" )
+        +rad( "1",   "1px" )
+        +rad( "2",   "2px" )
+        +rad( "3",   "3px" )
+        +rad( "4",   "4px" )
+        +rad( "5",   "5px" )
+        +rad( "10",  "10px" )
+        +rad( "c",   "100%" )
 
     +sub-title( "Usage example" )
 
     :marked
-        Simply applying a `bor-rad*` class to any element
+        Simply applying a `rad-*` class to any element
         will give it the corresponding radius. Here's an
         example of how to use it;
 
     :prismjs( language = "html" )
-        <aside class="bor-1 bor-rad3">
+        <aside class="bor-1 rad-3">
           border has a radius of 3.
         </aside>
 
