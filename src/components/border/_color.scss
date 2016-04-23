@@ -7,7 +7,7 @@ $border-color-coords:   $border-coords !default;
 
 @mixin border-color() {
 
-    $p: hyphen-after( $border-color-prop );
+    $p: $border-color-prop;
 
     @each $c in $border-coords {
 

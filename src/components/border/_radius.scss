@@ -1,16 +1,15 @@
 
-$border-radius-prop:    $border-prop !default;
-
+$border-radius-prop:    "rad-" !default;
 $border-radius: (
 
-    "rad0":         0,
-    "rad1":         rems( 1px ),
-    "rad2":         rems( 2px ),
-    "rad3":         rems( 3px ),
-    "rad4":         rems( 4px ),
-    "rad5":         rems( 5px ),
-    "rad10":        rems( 10px ),
-    "circle":       100%,
+    "0":    0,
+    "1":    1px,
+    "2":    2px,
+    "3":    3px,
+    "4":    4px,
+    "5":    5px,
+    "10":   10px,
+    "c":    100%,
 
 ) !default;
 
@@ -18,7 +17,7 @@ $border-radius: (
 
 @mixin border-radius() {
 
-    $p: hyphen-after( $border-radius-prop );
+    $p: $border-radius-prop;
 
     @each $rad in $border-radius {
 
