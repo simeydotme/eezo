@@ -7,10 +7,15 @@ block title
 
 
 
-mixin borcolor( color )
+mixin borcolor( color, side )
+
+    - sideHyphen = ( side ) ? side + "-" : "";
+    - side = side || "";
+    - colorClass = "bor-" + sideHyphen + color;
+    - borderClass = "bor-" + side + "1";
 
     div.mb-6.tb-3.col.end.pad-0
-        span.mar-2.disp-b.pad-v4.bor-1( class = "bor-" + color ) .bor-#{color}
+        span.mar-2.disp-b.pad-v4( class = borderClass + " " + colorClass ) .#{colorClass}
 
 
 
@@ -30,6 +35,9 @@ append content
         The colours available to choose from depend on
         [the colours module](../colors.html), and any customisation that
         has been applied.
+
+
+    +small-title( "Full Boxes" )
 
     .row.mar-t7.txt-c.txt-code
 
@@ -59,6 +67,15 @@ append content
         +borcolor( "mint" )
         +borcolor( "green" )
 
+    +small-title( "Coordinates" )
+
+    .row.mar-t7.txt-c.txt-code
+
+        +borcolor( "pink", "l" )
+        +borcolor( "violet", "t" )
+        +borcolor( "blue", "b" )
+        +borcolor( "green", "r" )
+
     +sub-title( "Usage example" )
 
     :marked
@@ -67,9 +84,18 @@ append content
         and example of how to use them
 
     :prismjs( language = "html" )
-        <body class="bor-1 bor-purple">
+        <div class="bor-1 bor-purple">
           has a purple border.
-        </body>
+        </div>
+
+        <div class="bor-l1 bor-l-pink">
+          left-side has a pink border.
+        </div>
+
+        <div class="bor-1 bor-x bor-t-black bor-b-black">
+          left / right borders are transparent.
+          top / bottom borders are black.
+        </div>
 
     +sub-title( "Media Queries" )
 

@@ -1,0 +1,192 @@
+
+extends ../layout/columns
+
+block title
+    | docs | border styles
+
+
+
+
+mixin basic( size )
+
+    div.disp-b.mar-2
+        span.disp-b.pad-4.pad-h6.bg-silver( class = "bor-" + size ) .bor-#{size}
+
+
+
+
+append content
+
+    +main-title( "Border Styles" )
+
+
+    +intro-text
+        :marked
+            Border styles are applied with `.bor-*` by default
+            and there's quite a few options depending on which
+            coordinate and style you want.
+
+    :marked
+        Any class prefix and value is [customisable](#customising)
+        so you can have the css code that suits your coding style.
+
+    +sub-title( "Usage" )
+    +small-title( "Basic" )
+
+    :marked
+        Basic border styles are just applying a uniform,
+        solid border style to every edge of the element. The
+        **color of the border** is inherited from the **font color**.
+
+    .row.mar-t4.txt-code
+        +basic( "0" )
+        +basic( "1" )
+        +basic( "2" )
+        +basic( "3" )
+        +basic( "5" )
+
+    :prismjs( language = "html" )
+        <span class="bor-0"> has no border    </span>
+        <span class="bor-1"> has a 1px border </span>
+        <span class="bor-3"> has a 3px border </span>
+
+    +small-title( "Styles" )
+
+    .row.mar-t4.txt-code
+        +basic( "2" )
+        +basic( "2dot" )
+        +basic( "2dash" )
+
+    :prismjs( language = "html" )
+        <span class="bor-2">     solid border  </span>
+        <span class="bor-2dot">  dotted border </span>
+        <span class="bor-2dash"> dashed border </span>
+
+    +small-title( "Coordinates" )
+
+    .row.mar-t4.txt-code
+        +basic( "3" )
+        +basic( "l3" )
+        +basic( "t3" )
+        +basic( "b3" )
+        +basic( "r3" )
+
+    :prismjs( language = "html" )
+        <span class="bor-3">  full border   </span>
+        <span class="bor-l3"> left border   </span>
+        <span class="bor-r3"> right border  </span>
+        <span class="bor-t3"> top border    </span>
+        <span class="bor-b3"> bottom border </span>
+
+    +small-title( "Combined" )
+
+    .row.mar-t4.txt-code
+        +basic( "t3" )
+        +basic( "t3dot" )
+        +basic( "t3dash" )
+
+    :prismjs( language = "html" )
+        <span class="bor-t3">     top border, 3px, solid   </span>
+        <span class="bor-t3dot">  top border, 3px, dotted  </span>
+        <span class="bor-t3dash"> top border, 3px, dashed  </span>
+
+    +sub-title( "Media Queries" )
+
+    :marked
+        Border styles are supported across breakpoints by supplying
+        the prefixes defined (default: `tb, dt`) to target screen
+        sizes. ([_see the media query section for details_](xxmqxx))
+
+    :prismjs( language = "html" )
+        <table class="bor-1 tb-bor-t3 tb-bor-b3 dt-bor-l5 dt-bor-r5">
+            Table has:
+                - 1px border
+                - 3px top/bottom border on tablet+
+                - 5px left/right border on desktop+
+        </table>
+
+    +sub-title( "Customising" )
+
+    +small-title( "Default Classes" )
+
+    :marked
+        The default class prefix can be changed
+        by supplying a `$border-style-prop` variable.
+
+    :prismjs( language = "scss" )
+        // change the class prefix to .b-
+        $border-style-prop: "b-";
+
+    +small-title( "Custom Coordinates" )
+
+    :marked
+        The directions/coordinates that css is generated
+        for can be customised by supplying a custom
+        `border-style-coords` map.
+
+    :prismjs( language = "scss" )
+        // only generate top/left/all borders
+        // with a different prefix
+        $border-style-coords: (
+          a: "",
+          t: "top",
+          l: "left"
+        );
+
+    +small-title( "Custom Styles" )
+
+    :marked
+        Another property that can be customised
+        is the `border-style`, which is achieved by
+        providing an override map for `$border-styles`.
+
+    :prismjs( language = "scss" )
+        // only supply solid and dotted
+        // border styles.
+        $border-styles: (
+          "s": solid,
+          "d": dotted
+        );
+
+    +small-title( "Custom Sizes" )
+
+    :marked
+        Lastly the sizes of the borders
+        can also be supplied with a custom
+        `$border-sizes` map.
+
+    :prismjs( language = "scss" )
+        // we just want 1px and 10px borders
+        $border-sizes: (
+          "1":  1px,
+          "10": 10px
+        );
+
+    +small-title( "Combined" )
+
+    :marked
+        After changing the prefix property and the map
+        of radii in the previous two customisations, we
+        would end up with the following css.
+
+    :prismjs( language = "css" )
+        /* would result in css like: */
+        .b-a0     { border: none; }
+        .b-a1s    { border: 1px solid; }
+        .b-a1d    { border: 1px dotted; }
+        .b-a10s   { border: 10px solid; }
+        .b-a10d   { border: 10px dotted; }
+
+        .b-t0     { border-top: none; }
+        .b-t1s    { border-top: 1px solid; }
+        .b-t1d    { border-top: 1px dotted; }
+        .b-t10s   { border-top: 10px solid; }
+        .b-t10d   { border-top: 10px dotted; }
+
+        .b-l0     { border-left: none; }
+        .b-l1s    { border-left: 1px solid; }
+        .b-l1d    { border-left: 1px dotted; }
+        .b-l10s   { border-left: 10px solid; }
+        .b-l10d   { border-left: 10px dotted; }
+
+    +source-file( "/src/components/border/_style.scss" )
