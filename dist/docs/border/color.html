@@ -83,6 +83,10 @@
                   </li>
                   <li class="pad-l4"><a href="/dist/docs/border/color.html">Colours</a>
                   </li>
+                  <li class="pad-l4"><a href="/dist/docs/border/radius.html">Radius</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/border/style.html">Style</a>
+                  </li>
                   <li class="mar-t6">
                     <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Background</h4>
                   </li>
@@ -105,6 +109,7 @@ with the colour desired.</p>
 <a href="../colors.html">the colours module</a>, and any customisation that
 has been applied.</p>
 
+        <h4 id="full-boxes" class="mar-t6 mar-b4 ls1"><a href="#full-boxes" class="subtitle link">Full Boxes</a></h4>
         <div class="row mar-t7 txt-c txt-code">
           <div class="mb-6 tb-3 col end pad-0"><span class="mar-2 disp-b pad-v4 bor-1 bor-x">.bor-x</span></div>
           <div class="mb-6 tb-3 col end pad-0"><span class="mar-2 disp-b pad-v4 bor-1 bor-cream">.bor-cream</span></div>
@@ -131,12 +136,28 @@ has been applied.</p>
           <div class="mb-6 tb-3 col end pad-0"><span class="mar-2 disp-b pad-v4 bor-1 bor-mint">.bor-mint</span></div>
           <div class="mb-6 tb-3 col end pad-0"><span class="mar-2 disp-b pad-v4 bor-1 bor-green">.bor-green</span></div>
         </div>
+        <h4 id="coordinates" class="mar-t6 mar-b4 ls1"><a href="#coordinates" class="subtitle link">Coordinates</a></h4>
+        <div class="row mar-t7 txt-c txt-code">
+          <div class="mb-6 tb-3 col end pad-0"><span class="mar-2 disp-b pad-v4 bor-l1 bor-l-pink">.bor-l-pink</span></div>
+          <div class="mb-6 tb-3 col end pad-0"><span class="mar-2 disp-b pad-v4 bor-t1 bor-t-violet">.bor-t-violet</span></div>
+          <div class="mb-6 tb-3 col end pad-0"><span class="mar-2 disp-b pad-v4 bor-b1 bor-b-blue">.bor-b-blue</span></div>
+          <div class="mb-6 tb-3 col end pad-0"><span class="mar-2 disp-b pad-v4 bor-r1 bor-r-green">.bor-r-green</span></div>
+        </div>
         <h3 id="usage-example" class="mar-t8 mar-b6"><a href="#usage-example" class="subtitle link">Usage example</a></h3><p>Without any customisation, Eezo will come
 with the classes described above, here&#39;s
 and example of how to use them</p>
-<pre><code class="language-html">&lt;body class=&quot;bor-1 bor-purple&quot;&gt;
+<pre><code class="language-html">&lt;div class=&quot;bor-1 bor-purple&quot;&gt;
   has a purple border.
-&lt;/body&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;bor-l1 bor-l-pink&quot;&gt;
+  left-side has a pink border.
+&lt;/div&gt;
+
+&lt;div class=&quot;bor-1 bor-x bor-t-black bor-b-black&quot;&gt;
+  left / right borders are transparent.
+  top / bottom borders are black.
+&lt;/div&gt;
 </code></pre>
         <h3 id="media-queries" class="mar-t8 mar-b6"><a href="#media-queries" class="subtitle link">Media Queries</a></h3><p>No media query support for this property.
 It might not be necessary to supply different

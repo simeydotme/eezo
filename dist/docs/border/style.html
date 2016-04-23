@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="loading no-js">
   <head>
-    <title>eezo | docs | background colours</title><meta charset="utf-8" />
+    <title>eezo | docs | border styles</title><meta charset="utf-8" />
     <meta description="a lightweight and responsive css framework">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#32295F">
@@ -100,75 +100,130 @@
         </ul>
       </div>
       <div class="docs-content f1">
-        <h2 class="ls3">Background Colours</h2>
-        <div class="f3 txt-j"><p>Like text colours, background colours can be applied to any
-valid html element using the class: <code>bg-x</code>. Where
-<code>x</code> is replaced with the desired colour.</p>
+        <h2 class="ls3">Border Styles</h2>
+        <div class="f3 txt-j"><p>Border styles are applied with <code>.bor-*</code> by default
+and there&#39;s quite a few options depending on which
+coordinate and style you want.</p>
 
-        </div><p>The colours available to choose from depend on
-<a href="../colors.html">the colours module</a>, and any customisation that
-has been applied.</p>
+        </div><p>Any class prefix and value is <a href="#customising">customisable</a>
+so you can have the css code that suits your coding style.</p>
 
-        <div class="row mar-t7 txt-c txt-code">
-          <div class="mb-6 tb-3 col end pad-v7 bg-x undefined"><span class="disp-b">.bg-x</span></div>
-          <div class="mb-6 tb-3 col end pad-v7 bg-wht pitch"><span class="disp-b">.bg-wht</span></div>
-          <div class="mb-6 tb-3 col end pad-v7 bg-white pitch"><span class="disp-b">.bg-white</span></div>
-          <div class="mb-6 tb-3 col end pad-v7 bg-cream pitch"><span class="disp-b">.bg-cream</span></div>
-          <div class="mb-6 tb-3 col end pad-v7 bg-light pitch"><span class="disp-b">.bg-light</span></div>
-          <div class="mb-6 tb-3 col end pad-v7 bg-grey white"><span class="disp-b">.bg-grey</span></div>
-          <div class="mb-6 tb-3 col end pad-v7 bg-dark white"><span class="disp-b">.bg-dark</span></div>
-          <div class="mb-6 tb-3 col end pad-v7 bg-pitch white"><span class="disp-b">.bg-pitch</span></div>
-          <div class="mb-6 tb-3 col end pad-v7 bg-black white"><span class="disp-b">.bg-black</span></div>
-          <div class="mb-6 tb-3 col end pad-v7 bg-blk white"><span class="disp-b">.bg-blk</span></div>
-        </div>
-        <div class="row mar-t7 txt-c txt-code">
-          <div class="mb-6 tb-3 col end pad-v7 bg-silver pitch"><span class="disp-b">.bg-silver</span></div>
-          <div class="mb-6 tb-3 col end pad-v7 bg-gold pitch"><span class="disp-b">.bg-gold</span></div>
-          <div class="mb-6 tb-3 col end pad-v7 bg-yellow pitch"><span class="disp-b">.bg-yellow</span></div>
-          <div class="mb-6 tb-3 col end pad-v7 bg-orange white"><span class="disp-b">.bg-orange</span></div>
-          <div class="mb-6 tb-3 col end pad-v7 bg-red white"><span class="disp-b">.bg-red</span></div>
-          <div class="mb-6 tb-3 col end pad-v7 bg-pink white"><span class="disp-b">.bg-pink</span></div>
-          <div class="mb-6 tb-3 col end pad-v7 bg-violet white"><span class="disp-b">.bg-violet</span></div>
-          <div class="mb-6 tb-3 col end pad-v7 bg-purple white"><span class="disp-b">.bg-purple</span></div>
-          <div class="mb-6 tb-3 col end pad-v7 bg-blue white"><span class="disp-b">.bg-blue</span></div>
-          <div class="mb-6 tb-3 col end pad-v7 bg-teal white"><span class="disp-b">.bg-teal</span></div>
-          <div class="mb-6 tb-3 col end pad-v7 bg-mint pitch"><span class="disp-b">.bg-mint</span></div>
-          <div class="mb-6 tb-3 col end pad-v7 bg-green pitch"><span class="disp-b">.bg-green</span></div>
-        </div>
-        <h3 id="usage-example" class="mar-t8 mar-b6"><a href="#usage-example" class="subtitle link">Usage example</a></h3><pre><code class="language-html">&lt;body class=&quot;bg-white&quot;&gt;
-  has a white background.
-&lt;/body&gt;
+        <h3 id="usage" class="mar-t8 mar-b6"><a href="#usage" class="subtitle link">Usage</a></h3>
+        <h4 id="basic" class="mar-t6 mar-b4 ls1"><a href="#basic" class="subtitle link">Basic</a></h4><p>Basic border styles are just applying a uniform,
+solid border style to every edge of the element. The
+<strong>color of the border</strong> is inherited from the <strong>font color</strong>.</p>
+
+        <div class="row mar-t4 txt-code">
+          <div class="disp-b mar-2"><span class="disp-b pad-4 pad-h6 bg-silver bor-0">.bor-0</span></div>
+          <div class="disp-b mar-2"><span class="disp-b pad-4 pad-h6 bg-silver bor-1">.bor-1</span></div>
+          <div class="disp-b mar-2"><span class="disp-b pad-4 pad-h6 bg-silver bor-2">.bor-2</span></div>
+          <div class="disp-b mar-2"><span class="disp-b pad-4 pad-h6 bg-silver bor-3">.bor-3</span></div>
+          <div class="disp-b mar-2"><span class="disp-b pad-4 pad-h6 bg-silver bor-5">.bor-5</span></div>
+        </div><pre><code class="language-html">&lt;span class=&quot;bor-0&quot;&gt; has no border    &lt;/span&gt;
+&lt;span class=&quot;bor-1&quot;&gt; has a 1px border &lt;/span&gt;
+&lt;span class=&quot;bor-3&quot;&gt; has a 3px border &lt;/span&gt;
 </code></pre>
-        <h3 id="media-queries" class="mar-t8 mar-b6"><a href="#media-queries" class="subtitle link">Media Queries</a></h3><p>No media query support for this property.
-It might not be necessary to supply different
-values at different breakpoints. Please refer to
-(<a href="xxmqxx">the <code>media-query</code> documentation</a>) for more info.</p>
-
+        <h4 id="styles" class="mar-t6 mar-b4 ls1"><a href="#styles" class="subtitle link">Styles</a></h4>
+        <div class="row mar-t4 txt-code">
+          <div class="disp-b mar-2"><span class="disp-b pad-4 pad-h6 bg-silver bor-2">.bor-2</span></div>
+          <div class="disp-b mar-2"><span class="disp-b pad-4 pad-h6 bg-silver bor-2dot">.bor-2dot</span></div>
+          <div class="disp-b mar-2"><span class="disp-b pad-4 pad-h6 bg-silver bor-2dash">.bor-2dash</span></div>
+        </div><pre><code class="language-html">&lt;span class=&quot;bor-2&quot;&gt;     solid border  &lt;/span&gt;
+&lt;span class=&quot;bor-2dot&quot;&gt;  dotted border &lt;/span&gt;
+&lt;span class=&quot;bor-2dash&quot;&gt; dashed border &lt;/span&gt;
+</code></pre>
+        <h4 id="coordinates" class="mar-t6 mar-b4 ls1"><a href="#coordinates" class="subtitle link">Coordinates</a></h4>
+        <div class="row mar-t4 txt-code">
+          <div class="disp-b mar-2"><span class="disp-b pad-4 pad-h6 bg-silver bor-3">.bor-3</span></div>
+          <div class="disp-b mar-2"><span class="disp-b pad-4 pad-h6 bg-silver bor-l3">.bor-l3</span></div>
+          <div class="disp-b mar-2"><span class="disp-b pad-4 pad-h6 bg-silver bor-t3">.bor-t3</span></div>
+          <div class="disp-b mar-2"><span class="disp-b pad-4 pad-h6 bg-silver bor-b3">.bor-b3</span></div>
+          <div class="disp-b mar-2"><span class="disp-b pad-4 pad-h6 bg-silver bor-r3">.bor-r3</span></div>
+        </div><pre><code class="language-html">&lt;span class=&quot;bor-3&quot;&gt;  full border   &lt;/span&gt;
+&lt;span class=&quot;bor-l3&quot;&gt; left border   &lt;/span&gt;
+&lt;span class=&quot;bor-r3&quot;&gt; right border  &lt;/span&gt;
+&lt;span class=&quot;bor-t3&quot;&gt; top border    &lt;/span&gt;
+&lt;span class=&quot;bor-b3&quot;&gt; bottom border &lt;/span&gt;
+</code></pre>
+        <h4 id="combined" class="mar-t6 mar-b4 ls1"><a href="#combined" class="subtitle link">Combined</a></h4>
+        <div class="row mar-t4 txt-code">
+          <div class="disp-b mar-2"><span class="disp-b pad-4 pad-h6 bg-silver bor-t3">.bor-t3</span></div>
+          <div class="disp-b mar-2"><span class="disp-b pad-4 pad-h6 bg-silver bor-t3dot">.bor-t3dot</span></div>
+          <div class="disp-b mar-2"><span class="disp-b pad-4 pad-h6 bg-silver bor-t3dash">.bor-t3dash</span></div>
+        </div><pre><code class="language-html">&lt;span class=&quot;bor-t3&quot;&gt;     top border, 3px, solid   &lt;/span&gt;
+&lt;span class=&quot;bor-t3dot&quot;&gt;  top border, 3px, dotted  &lt;/span&gt;
+&lt;span class=&quot;bor-t3dash&quot;&gt; top border, 3px, dashed  &lt;/span&gt;
+</code></pre>
+        <h3 id="media-queries" class="mar-t8 mar-b6"><a href="#media-queries" class="subtitle link">Media Queries</a></h3><p>Border styles are supported across breakpoints by supplying
+the prefixes defined (default: <code>tb, dt</code>) to target screen
+sizes. (<a href="xxmqxx"><em>see the media query section for details</em></a>)</p>
+<pre><code class="language-html">&lt;table class=&quot;bor-1 tb-bor-t3 tb-bor-b3 dt-bor-l5 dt-bor-r5&quot;&gt;
+    Table has:
+        - 1px border
+        - 3px top/bottom border on tablet+
+        - 5px left/right border on desktop+
+&lt;/table&gt;
+</code></pre>
         <h3 id="customising" class="mar-t8 mar-b6"><a href="#customising" class="subtitle link">Customising</a></h3>
-        <h4 id="default-classes" class="mar-t6 mar-b4 ls1"><a href="#default-classes" class="subtitle link">Default Classes</a></h4><p>The background colours are prefixed with <code>bg-</code> by
-default, but this can be changed with the
-<code>$background-color-prop</code> variable.</p>
+        <h4 id="default-classes" class="mar-t6 mar-b4 ls1"><a href="#default-classes" class="subtitle link">Default Classes</a></h4><p>The default class prefix can be changed
+by supplying a <code>$border-style-prop</code> variable.</p>
 <pre><code class="language-scss">// change the class prefix to .b-
-$background-color-prop: &quot;b&quot;;
+$border-style-prop: &quot;b-&quot;;
 </code></pre>
-        <h4 id="custom-background colours" class="mar-t6 mar-b4 ls1"><a href="#custom-background colours" class="subtitle link">Custom Background Colours</a></h4><p>As with all colours, the backgrounds inherit <a href="../colors.html">the
-default <code>$colors</code> map</a>. You may customise the colours
-used for backgrounds by supplying a <code>$background-colors</code> map instead.</p>
-<pre><code class="language-scss">// change the background colours to only gold and crimson.
-$background-colors: (
-  gold: #DAC36E,
-  crimson: #C1001B
+        <h4 id="custom-coordinates" class="mar-t6 mar-b4 ls1"><a href="#custom-coordinates" class="subtitle link">Custom Coordinates</a></h4><p>The directions/coordinates that css is generated
+for can be customised by supplying a custom
+<code>border-style-coords</code> map.</p>
+<pre><code class="language-scss">// only generate top/left/all borders
+// with a different prefix
+$border-style-coords: (
+  a: &quot;&quot;,
+  t: &quot;top&quot;,
+  l: &quot;left&quot;
+);
+</code></pre>
+        <h4 id="custom-styles" class="mar-t6 mar-b4 ls1"><a href="#custom-styles" class="subtitle link">Custom Styles</a></h4><p>Another property that can be customised
+is the <code>border-style</code>, which is achieved by
+providing an override map for <code>$border-styles</code>.</p>
+<pre><code class="language-scss">// only supply solid and dotted
+// border styles.
+$border-styles: (
+  &quot;s&quot;: solid,
+  &quot;d&quot;: dotted
+);
+</code></pre>
+        <h4 id="custom-sizes" class="mar-t6 mar-b4 ls1"><a href="#custom-sizes" class="subtitle link">Custom Sizes</a></h4><p>Lastly the sizes of the borders
+can also be supplied with a custom
+<code>$border-sizes</code> map.</p>
+<pre><code class="language-scss">// we just want 1px and 10px borders
+$border-sizes: (
+  &quot;1&quot;:  1px,
+  &quot;10&quot;: 10px
 );
 </code></pre>
         <h4 id="combined" class="mar-t6 mar-b4 ls1"><a href="#combined" class="subtitle link">Combined</a></h4><p>After changing the prefix property and the map
-of colours in the previous two customisations, we
+of radii in the previous two customisations, we
 would end up with the following css.</p>
 <pre><code class="language-css">/* would result in css like: */
-.b-gold     { color: #DAC36E; }
-.b-crimson  { color: #C1001B; }
+.b-a0     { border: none; }
+.b-a1s    { border: 1px solid; }
+.b-a1d    { border: 1px dotted; }
+.b-a10s   { border: 10px solid; }
+.b-a10d   { border: 10px dotted; }
+
+.b-t0     { border-top: none; }
+.b-t1s    { border-top: 1px solid; }
+.b-t1d    { border-top: 1px dotted; }
+.b-t10s   { border-top: 10px solid; }
+.b-t10d   { border-top: 10px dotted; }
+
+.b-l0     { border-left: none; }
+.b-l1s    { border-left: 1px solid; }
+.b-l1d    { border-left: 1px dotted; }
+.b-l10s   { border-left: 10px solid; }
+.b-l10d   { border-left: 10px dotted; }
 </code></pre>
         <hr class="bg-x bor-0 bor-b1 bor-light mar-t9 mar-b8"/>
-        <p class="txt-sans">view the source on github: <code><a href="https://github.com/simeydotme/eezo/tree/master//src/components/background/_color.scss">/src/components/background/_color.scss</a></code></p>
+        <p class="txt-sans">view the source on github: <code><a href="https://github.com/simeydotme/eezo/tree/master//src/components/border/_style.scss">/src/components/border/_style.scss</a></code></p>
       </div>
     </section>
     <footer>
