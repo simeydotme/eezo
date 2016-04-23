@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>eezo | docs | letter spacing</title><meta charset="utf-8" />
+    <title>eezo | docs | white-space</title><meta charset="utf-8" />
     <meta description="a lightweight and responsive css framework">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#32295F">
@@ -92,138 +92,73 @@
       </ul>
     </div>
     <div class="docs-content f1">
-      <h2 class="ls3">Letter Spacing</h2>
-      <div class="f3 txt-j"><p>Letter spacing properties for manipulating
-the space between each character in text. Below
-are the listed css classes that come default with Eezo.</p>
+      <h2 class="ls3">White Space</h2>
+      <div class="f3 txt-j"><p><code>white-space</code> allows defining how the browser handles
+white-space characters, especially strings of white-space.</p>
 
-      </div><p><em>why so many?</em> Well; I find <code>letter-spacing</code> is rarely used, and
-when it is, it&#39;s often just a magic number. So Eezo provides a
-scale based on fractions of the <code>em</code> size of the character that you
-can choose from. And if you have some special tracking
-size you&#39;d like to use, it can <a href="#customising">easily be added to, or replace</a>,
-the default scale.</p>
+      </div><p>There&#39;s a few scenarios where you might need <code>white-space</code>
+definitions, including code blocks and editable content areas.</p>
 
       <table class="mar-t8 mar-b6 mb-12 txt-l txt-sans">
         <thead>
           <tr>
             <th class="pad-3 bor-b1">class name
             </th>
-            <th class="pad-3 bor-b1">letter-spacing value
+            <th class="pad-3 bor-b1">word-break value
             </th>
           </tr>
         </thead>
         <tbody class="txt-code">
           <tr>
-            <td class="pad-3 pad-b0 va-top whs-nowrap">.lsn</td>
-            <td class="pad-3 pad-b0 va-top code">normal</td>
+            <td class="pad-3 pad-v2 va-top whs-nowrap">.wb-break</td>
+            <td class="pad-3 pad-v2 va-top code">break-all</td>
           </tr>
           <tr>
-            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls5-</td>
-            <td class="pad-3 pad-b0 va-top code">-0.25em</td>
+            <td class="pad-3 pad-v2 va-top whs-nowrap">.wb-keep</td>
+            <td class="pad-3 pad-v2 va-top code">keep-all</td>
           </tr>
           <tr>
-            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls4-</td>
-            <td class="pad-3 pad-b0 va-top code">-0.125em</td>
-          </tr>
-          <tr>
-            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls3-</td>
-            <td class="pad-3 pad-b0 va-top code">-0.075em</td>
-          </tr>
-          <tr>
-            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls2-</td>
-            <td class="pad-3 pad-b0 va-top code">-0.05em</td>
-          </tr>
-          <tr>
-            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls1-</td>
-            <td class="pad-3 pad-b0 va-top code">-0.025em</td>
-          </tr>
-          <tr>
-            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls0</td>
-            <td class="pad-3 pad-b0 va-top code">0</td>
-          </tr>
-          <tr>
-            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls1</td>
-            <td class="pad-3 pad-b0 va-top code">0.025em</td>
-          </tr>
-          <tr>
-            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls2</td>
-            <td class="pad-3 pad-b0 va-top code">0.05em</td>
-          </tr>
-          <tr>
-            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls3</td>
-            <td class="pad-3 pad-b0 va-top code">0.075em</td>
-          </tr>
-          <tr>
-            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls4</td>
-            <td class="pad-3 pad-b0 va-top code">0.125em</td>
-          </tr>
-          <tr>
-            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls5</td>
-            <td class="pad-3 pad-b0 va-top code">0.25em</td>
-          </tr>
-          <tr>
-            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls6</td>
-            <td class="pad-3 pad-b0 va-top code">0.5em</td>
-          </tr>
-          <tr>
-            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls7</td>
-            <td class="pad-3 pad-b0 va-top code">1em</td>
-          </tr>
-          <tr>
-            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls8</td>
-            <td class="pad-3 pad-b0 va-top code">1.5em</td>
-          </tr>
-          <tr>
-            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls9</td>
-            <td class="pad-3 pad-b0 va-top code">2em</td>
-          </tr>
-          <tr>
-            <td class="pad-3 pad-b0 va-top whs-nowrap">.ls10</td>
-            <td class="pad-3 pad-b0 va-top code">3em</td>
+            <td class="pad-3 pad-v2 va-top whs-nowrap">.wb-normal</td>
+            <td class="pad-3 pad-v2 va-top code">normal</td>
           </tr>
         </tbody>
       </table>
-      <h3 id="usage-example" class="mar-t8 mar-b6"><a href="#usage-example" class="subtitle link">Usage example</a></h3><pre><code class="language-html">&lt;h2 class=&quot;upper ls3&quot;&gt;
-    Text is uppercase and slightly tracked.
-&lt;h2&gt;
+      <h3 id="usage-example" class="mar-t8 mar-b6"><a href="#usage-example" class="subtitle link">Usage example</a></h3><pre><code class="language-html">&lt;p class=&quot;wb-break&quot;&gt; long words will break to wrap &lt;p&gt;
+&lt;p class=&quot;wb-keep&quot;&gt; nothing will break &lt;/p&gt;
 </code></pre>
-      <h3 id="media-queries" class="mar-t8 mar-b6"><a href="#media-queries" class="subtitle link">Media Queries</a></h3><p>Letter spacings adhere to the media-query class style.
+      <h3 id="media-queries" class="mar-t8 mar-b6"><a href="#media-queries" class="subtitle link">Media Queries</a></h3><p>It&#39;s possible to change the value
+of the <code>word-break</code> property across
+different breakpoints so that smaller devices dont
+end up with ugly screen-overflowing text.
 (<a href="xxmqxx"><em>see the media query section for details</em></a>)</p>
-<pre><code class="language-html">&lt;body class=&quot;ls1 tb-lsn dt-ls1-&quot;&gt;
-    Letter spacing is:
-        - slightly increased on mobile
-        - normal on tablet
-        - slightly decreased on desktop
-&lt;/body&gt;
-
+<pre><code class="language-html">&lt;nav class=&quot;wb-break tb-wb-normal&quot;&gt;
+    - always break words on mobile
+    - behave normally on tablet+
+&lt;/nav&gt;
 </code></pre>
       <h3 id="customising" class="mar-t8 mar-b6"><a href="#customising" class="subtitle link">Customising</a></h3>
-      <h4 id="default-classes" class="mar-t6 mar-b4 ls1"><a href="#default-classes" class="subtitle link">Default Classes</a></h4><p>To change the default prefix from <code>ls</code> to something
-else, then use <code>$letter-spacing-prop</code> variable:</p>
-<pre><code class="language-scss">// change the class prefix to `.let-`:
-$letter-spacing-prop: &quot;let-&quot;;
+      <h4 id="default-classes" class="mar-t6 mar-b4 ls1"><a href="#default-classes" class="subtitle link">Default Classes</a></h4><p>To change the prefix from <code>wb</code> to something else, you
+may use the <code>$word-break-prop</code> variable to override:</p>
+<pre><code class="language-scss">// change the default class:
+// .wb-*  -&gt;  .wbreak-*
+$word-break-prop: &quot;wbreak&quot;;
 </code></pre>
-      <h4 id="custom-spacings" class="mar-t6 mar-b4 ls1"><a href="#custom-spacings" class="subtitle link">Custom Spacings</a></h4><p>Actually, you may have special or unique
-letter spacings for your website, or even none
-at all. Then you can modify the map below to your
-suiting.</p>
-<pre><code class="language-scss">// change the letter spacing map so there&#39;s,
-// only a couple of custom values.
-$letter-spacings: (
-   n: none,
-   c: 0.067em,
-   a: 0.124em
+      <h4 id="custom-properties" class="mar-t6 mar-b4 ls1"><a href="#custom-properties" class="subtitle link">Custom Properties</a></h4><p>It might not always be useful to have the
+full set of <code>word-break</code> values available.
+So it&#39;s possible to provide a map of the values
+you desire.</p>
+<pre><code class="language-scss">// change the word-break map so there&#39;s,
+// only keep-all.
+$word-breaks: (
+   k: keep-all
 );
 </code></pre>
       <h4 id="combined" class="mar-t6 mar-b4 ls1"><a href="#combined" class="subtitle link">Combined</a></h4><p>The previous two customisations combined:</p>
 <pre><code class="language-scss">// would result in css like:
-.let-n: { letter-spacing: none; }
-.let-c: { letter-spacing: 0.067em; }
-.let-a: { letter-spacing: 0.124em; }
+.wbreak-k { word-break: keep-all; }
 </code></pre>
       <hr class="bg-x bor-0 bor-b1 bor-light mar-t9 mar-b8"/>
-      <p class="txt-sans">view the source on github: <code><a href="https://github.com/simeydotme/eezo/tree/master//src/components/text/_letter-spacing.scss">/src/components/text/_letter-spacing.scss</a></code></p>
+      <p class="txt-sans">view the source on github: <code><a href="https://github.com/simeydotme/eezo/tree/master//src/components/text/_break.scss">/src/components/text/_break.scss</a></code></p>
     </div>
   </section>
   <footer>
