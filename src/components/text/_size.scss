@@ -1,8 +1,8 @@
 
-// $font-sizes inherits from the $text-scale set
-// in the defaults file.
 $font-size-prop:        "f" !default;
 $font-sizes:            $text-scale !default;
+// $font-sizes inherits from the $text-scale set
+// in the defaults file.
 
 @mixin font-size( $bps: $text-bps ) {
 

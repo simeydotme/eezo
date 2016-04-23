@@ -1,7 +1,5 @@
 
-$white-space-prop:       "whs" !default;
-$white-space-bps:        $default-bps !default;
-
+$white-space-prop:      "whs-" !default;
 $white-spaces: (
 
     "wrap":         normal,
@@ -14,9 +12,9 @@ $white-spaces: (
 
 
 
-@mixin white-space( $bps: $white-space-bps ) {
+@mixin white-space( $bps: $text-bps ) {
 
-    $p: hyphen-after( $white-space-prop );
+    $p: $white-space-prop;
 
     @each $b in $bps {
 

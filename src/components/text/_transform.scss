@@ -13,7 +13,7 @@ $text-transforms: (
 
 @mixin text-transform( $bps: $text-bps ) {
 
-    $p: hyphen-after( $text-transform-prop );
+    $p: $text-transform-prop;
 
     @each $b in $bps {
 

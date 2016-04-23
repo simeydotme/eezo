@@ -15,7 +15,7 @@ $text-decorations: (
 
 @mixin text-decoration() {
 
-    $p: hyphen-after( $text-decoration-prop );
+    $p: $text-decoration-prop;
 
     @each $deco in $text-decorations {
 

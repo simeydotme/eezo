@@ -16,7 +16,7 @@ $text-aligns: (
 
 @mixin text-align( $bps: $text-bps ) {
 
-    $p: hyphen-after( $text-align-prop );
+    $p: $text-align-prop;
 
     @each $b in $bps {
 
