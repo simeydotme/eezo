@@ -17,7 +17,6 @@ $custom-fonts: (
 
 html:not( .no-js ) {
 
-    will-change: opacity;
     transition: opacity 0.25s ease-out;
 
     &.wf-loading,
