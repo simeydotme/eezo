@@ -7,6 +7,18 @@ block title
 
 
 
+mixin table-head( name )
+    th(scope=col).pad-v4.bor-b1.bor-dark= name
+
+mixin table-size( size )
+    td.txt-code.docs-purple= size
+
+mixin table-button( name, link )
+    td: a(href= link).mb-12.btn-alt.btn-min.noline.txt-code= name
+
+
+
+
 append content
 
     +main-title( "Installation" )
@@ -24,16 +36,7 @@ append content
         | to download and include one of the bundles from
         | Github. There's a few options, listed below.
 
-    table.txt-sans.mb-12.txt-l.bor-b1.bor-dark.pad-b30.mar-v100
-
-        mixin table-head( name )
-            th(scope=col).pad-v10.bor-b1.bor-dark= name
-
-        mixin table-button( name, link )
-            td: a(href= link).mb-12.btn-alt.noline.pad-h20.txt-code.bg-x= name
-
-        mixin table-size( size )
-            td.txt-code.docs-purple= size
+    table.txt-sans.mb-12.txt-l.bor-b1.bor-dark.pad-b4.mar-v100
 
         tr
             +table-head("Bundle Name")
@@ -41,8 +44,8 @@ append content
             +table-head("Download")
 
         tr
-            th(scope=row).mb-7.pad-t20
-                div.txt-code.f4 Core
+            th(scope=row).mb-7.pad-t3
+                div.txt-code.f3 Core
                 .fw-n.lh1
                     | The basic bundle for Eezo, containing the most
                     | common css compositions, no extra weight.
@@ -52,7 +55,7 @@ append content
 
         tr
             th(scope=row).pad-t20
-                div.txt-code.f4 Core +
+                div.txt-code.f3 Core +
                 .fw-n.lh1
                     | The basic bundle for Eezo, plus some extra
                     | features...
@@ -62,17 +65,17 @@ append content
 
     +sub-title( "Install with Bower" )
 
-    pre(data-lang="sh").code
-        | bower install --save eezo
+    :prismjs( language = "bash" )
+        bower install --save eezo
 
     p
         | Installing with bower opens up the possibility of customising
-        | Eezo's default options, allowing complete control over the 
+        | Eezo's default options, allowing complete control over the
         | different components.
 
-    pre(data-lang="sass").code
-        | /* import eezo as .scss for complete control */
-        | @import "./bower_components/eezo/src/eezo";
-        | 
-        | /* or just include a bundle from the dist folder */
-        | @import "./bower_components/eezo/dist/eezo-core";
+    :prismjs( language = "scss" )
+        /* import eezo as .scss for complete control */
+        @import "./bower_components/eezo/src/eezo";
+
+        /* or just include a bundle from the dist folder */
+        @import "./bower_components/eezo/dist/eezo-core";

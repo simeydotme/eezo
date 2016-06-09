@@ -1,0 +1,228 @@
+
+extends ../layout/columns
+
+block title
+    | docs | margins
+
+
+
+
+mixin table-row( css, rem )
+
+    - px = rem * 16
+
+    tr
+        td.pad-3.pad-v2= "." + css
+        td.pad-3.pad-v2= rem + "rem"
+        td.pad-3.pad-v2= px + "px"
+
+
+
+
+
+
+
+append content
+
+
+
+    +main-title( "Margins" )
+
+    +intro-text
+        :marked
+            Margin, along with [Padding](./paddings.html) will be one of your
+            **most used components** in Eezo. So by default it is
+            very easy to remember the syntax and [completely customisable](#customising).
+
+    :marked
+        Eezo is also designed to have an extremely flat
+        specificity tree, so applying a `mar-*` class to any
+        element should just work. Even with grids.
+
+    +sub-title( "Default Values" )
+
+    :marked
+        The default values are based on **multiples of the base unit**
+        (`16px`/`1rem`) and start at `mar-4` (`1rem`). If you're developing
+        to a design system, you should find that **these values are
+        reusable across the application**.
+
+        If, however, you've being given a design
+        [with magic numbers](http://csswizardry.com/2012/11/code-smells-in-css/#magic-numbers)
+        all over the place; I would suggest that you _vehemently_ try
+        to convince your designer to _think more carefully_ about the
+        problem they are trying to solve, and failing that...
+        avoid a css framework. There's no hope for you.
+
+    +table
+
+        thead
+
+            tr
+
+                +table-head class name
+                +table-head rem value
+                +table-head pixels
+
+        tbody.txt-code
+
+            +table-row( "mar-0", 0 )
+            +table-row( "mar-1", 0.125 )
+            +table-row( "mar-2", 0.25 )
+            +table-row( "mar-3", 0.5 )
+            +table-row( "mar-4", 1 )
+            +table-row( "mar-5", 1.5 )
+            +table-row( "mar-6", 2 )
+            +table-row( "mar-7", 3 )
+            +table-row( "mar-8", 4 )
+            +table-row( "mar-9", 6 )
+            +table-row( "mar-10", 10 )
+
+    :marked
+        If you're used to a somewhat normal way of building
+        websites, with `5px`, `10px` and `1px` values all
+        everywhere... you're probably crying out: "**_Whaaat!_**"
+
+        But I suggest, with a little practise, **you'll realise** that
+        there's such an **insignificant difference** between `1px` and `2px`,
+        and such a small difference between `4px` and `5px` that the
+        only consequence of changing your approach is that the
+        **numbers have a relationship** to your font size. (which is a good thing).
+
+
+
+    +sub-title( "Negative Margins" )
+
+    :marked
+        There come times when negative margins are
+        beneficial. Like **for outdenting** text or boxes, or
+        nudging icons away from text. But negative
+        margins are, **generally, smaller** and so they do not go
+        as high as the positive margins. _however, as always, this
+        can be customised_.
+
+    +table
+
+        thead
+
+            tr
+
+                +table-head class name
+                +table-head rem value
+                +table-head pixels
+
+        tbody.txt-code
+
+            +table-row( "mar-1-", -0.125 )
+            +table-row( "mar-2-", -0.25 )
+            +table-row( "mar-3-", -0.5 )
+            +table-row( "mar-4-", -1 )
+            +table-row( "mar-5-", -1.5 )
+
+
+
+    +sub-title( "Coordinates" )
+
+    :marked
+        Margins are subject to the [default coordinates
+        system (`v, h, t, l, b, r`)](xxcoordxx) and
+        can be customised globally or specifically on the
+        `margin` component.
+
+    :prismjs( language = "html" )
+        <!-- example of coordinates for margins -->
+        <div class="mar-4">  1 rem margin all around </div>
+
+        <div class="mar-v4"> 1 rem margin vertically </div>
+        <div class="mar-h4"> 1 rem margin horizontally </div>
+
+        <div class="mar-t4"> 1 rem margin at the top </div>
+        <div class="mar-r4"> 1 rem margin on the right </div>
+        <div class="mar-b4"> 1 rem margin at the bottom </div>
+        <div class="mar-l4"> 1 rem margin on the left </div>
+
+    +sub-title( "Customising" )
+
+    :marked
+        There's a global set `map` set to the `$colors`
+        variable which is inherited by all othe colour
+        modules (_text, background, etc_).
+
+        The `$colors` map is a combination of:
+        * `$base-colors` ( as shown above under "default colours" )
+        * `$extra-colors` ( a map of some nice ui colours )
+        * `$custom-colors` ( an empty map which can be supplied )
+
+    +small-title( "Base Colours" )
+
+    :marked
+        These cannot be overridden, they are pretty
+        standard across most UIs.
+
+    +small-title( "Extra Colours" )
+
+    :marked
+        Extra Colours may be turned on, or off, by
+        changing the boolean variable, `$no-extra-colors`,
+        to true. (_default is false_).
+
+    :prismjs( language = "scss" )
+        // switch off the extra colours by 
+        // placing this code _before_ your eezo 
+        // import/include. e.g:
+        $no-extra-colors: true;
+
+    +small-title( "Custom Colours" )
+
+    :marked
+        If you'd prefer to supply your own set
+        of colours to persist across the framework,
+        you may do so by supplying them in a map
+        called `$custom-colors`.
+
+        Any colours supplied in `$custom-colors`, that share the
+        same name as a colour in the default/extras map,
+        will override the default version.
+
+    :prismjs( language = "scss" )
+        // Customise the colours for eezo,
+        // - add some of our own colours
+        // - override the default black colour.
+        // - override the extra red colour.
+        $custom-colors: (
+            facebook-blue:  #3b5998,
+            twitter-blue:   #55acee,
+            black:          #010101,
+            red:            #cc0000,
+        );
+
+    :marked
+        We would now be able to reference the facebook/twitter
+        colours, as well as our custom black/red anywhere that inherits them;
+
+    :prismjs( language = "html" )
+        <body class="txt-black">
+            <!-- Body has our custom black text colour -->
+            <h3 class="bor-1 bor-red"> Share </h3>
+            <!-- Heading has our custom red as border -->
+            <a href="facebook.com" class="bg-facebook-blue"> Facebook </a>
+            <a href="twitter.com" class="bg-twitter-blue"> Twitter </a>
+            <!-- Links have custom background colours -->
+        </body>
+
+    +small-title( "More information" )
+
+    :marked
+        See the following sections regarding the different properties
+        that inherit colours:
+
+        * [Text colours](/dist/docs/text/color.html)
+        * [Background colours](/dist/docs/background/color.html)
+        * [Border colours](/dist/docs/border/color.html)
+        * [SVG fills](/dist/docs/svg/fill.html)
+
+
+
+
+
+    +source-file( "/src/defaults/_colors.scss" )

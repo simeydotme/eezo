@@ -33,10 +33,9 @@ append content
         prefixes**. This is because some of the css properties are
         considered to be _screen-size-agnostic_; you shouldn't need to
         change the `cursor` style, or `font-weight` across screen sizes.
-        *With that being said, it may be possible in future to decide
-        the breakpoints for each component.*
 
-
+        _Also see the [mixins section](xxmixinsxx) for info on how you can use
+        the Eezo breakpoints system in your own application css._
 
 
     +sub-title( "Default Breakpoints" )
@@ -90,19 +89,11 @@ append content
         The list shown above is a set of references to the `$breakpoints` map.
 
         The way this works is that in each component which supports media query
-        prefixes, we will loop through this list, and attempt to pluck each
-        media query definition from the `$breakpoints` map.
+        prefixes, we will loop through `$default-bps` and attempt to pluck each
+        matching media query definition from the `$breakpoints` map.
 
-        The components **will not create a prefix for the first item**
-        in this list, so the class for `font-size: 1rem` **will not be**:
-
-    :prismjs( language = "css" )
-        .mb-f0 { font-size: 1rem; }
-        .tb-f0 { font-size: 1rem; }
-        .dt-f0 { font-size: 1rem; }
-
-    :marked
-        but **will, in fact, be**:
+        Eezo's css components **will not create a class-prefix for the first item**.
+        So the definition for `font-size: 1rem` will be:
 
     :prismjs( language = "css" )
         .f0 { font-size: 1rem; }
@@ -144,7 +135,7 @@ append content
 
     :marked
         With the code block above placed in to your `.scss` file
-        (as described in the [customising Eezo section](xxcxx)) an
+        (as described in the [customising Eezo section](/dist/docs/customising.html)) an
         example output of code for the `display` component would be:
 
     :prismjs( language = "css" )
@@ -211,10 +202,14 @@ append content
         .float-n { float: none; }
 
         @media screen and ( min-width: 75em ) {
-            .float-l { float: left; }
-            .float-r { float: right; }
-            .float-n { float: none; }
+            .lg-float-l { float: left; }
+            .lg-float-r { float: right; }
+            .lg-float-n { float: none; }
         }
+
+    :marked
+        Check each individual component's documentation page to
+        find out how to customise the targetted breakpoints.
 
     +sub-title( "Best Practises" )
 
@@ -222,18 +217,18 @@ append content
         _Refer to the [Tips & Tricks section]() for a more
         general overview of best practises._
 
-        These breakpoints apply to a large number of
-        components with a lot of css. Although Eezo is designed
-        to [take advantage of GZIP](http://www.infinitepartitions.com/art001.html)
-        by having a lot of repetitive code; it is not ideal
+        These breakpoints apply to a **large number of
+        components** with a **lot of css**. Although Eezo is designed
+        to take advantage of [GZIP](http://www.infinitepartitions.com/art001.html)
+        by having a lot of repetitive code, it is not ideal
         to be supplying a large number of breakpoints
         for a few reasons;
 
         1. **User Experience** - You do not want a large amount of
         css repeated unnecessarily, it will bloat your css
-        file and increase download times.
+        file and increase download/render times.
         2. **Developer Usability** - Trying to remember a large
-        amount of breakpoints to use will be troublesome.
+        amount of breakpoints will be troublesome in development.
 
     +small-title( "Only Neccessary Breakpoints" )
 
@@ -242,6 +237,10 @@ append content
         If you find a reason to have more breakpoints,
         consider [modifying the `$*-bps` variable](#targetted-breakpoints) for **specific
         components** rather than applying them globally.
+
+        And remember, if a certain part of your website needs to have
+        much more fine control over it's layout across media queries,
+        it's probably better to use BEM style css to handle that.
 
     +small-title( "Augment with BEM" )
 
@@ -267,5 +266,63 @@ append content
             classes from eezo */
         .my-component { /* ... */ }
         .my-component__header { /* ... */ }
+
+    +small-title( "Template your HTML" )
+
+    :marked
+        **Not your CSS**.
+
+        One reaction people have to composable/atomic
+        css is that _it will be hard to replace things across the
+        application if they change_. Well, a simple solution (and one that
+        you should really be doing either way) is **templating your HTML**.
+
+        **If you need buttons across your app to have a consistent style, then
+        template them!** That way you only need to change the template.
+
+    :prismjs( language = "jade" )
+        <!-- a .jade button mixin -->
+        <!-- buttons don't have a margin by default. -->
+
+        mixin button( classes )
+            button( class = classes ).pad-5.rad-3.white.bg-pitch
+                block
+
+        mixin cancelButton( classes )
+            button( class = classes ).pad-5.rad-3.pitch.bg-white.bor-1.bor-pitch
+                block
+
+    :prismjs( language = "jade" )
+        <!-- a .jade template file -->
+        <!-- these buttons need BEM classes, plus a margin. -->
+
+        form.form-component
+            +cancelButton( "form-component__cancel mar-2" )
+                | Cancel
+
+            +button( "form-component__submit mar-2" )
+                | Submit This Form
+
+    :prismjs( language = "html" )
+        <!-- output html -->
+        <form class="form-component">
+            <button class="form-component__cancel mar-2 pad-5 rad-3 pitch bg-white bor-1 bor-pitch">
+                Cancel
+            </button>
+
+            <button class="form-component__submit mar-2 pad-5 rad-3 white bg-pitch">
+                Submit This Form
+            </button>
+        </form>
+
+    :marked
+        Above is a great example of how **you can maintain a consistent
+        style** of buttons **across your application**, but also have
+        **fine control over each** one by supplying custom css classes
+        in a BEM style.
+
+        In this case it's demonstrated using `.jade`, but
+        you can use `twig` or `jstl` or `razor` or whatever template
+        engine you desire.
 
     +source-file( "/src/config/_breakpoints.scss" )

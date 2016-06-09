@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="loading no-js">
   <head>
-    <title>eezo | docs | colours</title><meta charset="utf-8" />
+    <title>eezo | docs | margins</title><meta charset="utf-8" />
     <meta description="a lightweight and responsive css framework">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#32295F">
@@ -142,164 +142,164 @@
         </ul>
       </div>
       <div class="docs-content f1">
-        <h2 class="ls1 fw-t">Colours</h2>
-        <div class="f2 tb-txt-j"><p>Eezo comes with the ability to change colours of some
-properties such as <strong>text</strong>, <strong>background-color</strong>
-and <strong>borders</strong>. The colours can also be customised in sass
-by changing the default values or adding more colours.</p>
+        <h2 class="ls1 fw-t">Margins</h2>
+        <div class="f2 tb-txt-j"><p>Margin, along with <a href="./paddings.html">Padding</a> will be one of your
+<strong>most used components</strong> in Eezo. So by default it is
+very easy to remember the syntax and <a href="#customising">completely customisable</a>.</p>
 
-        </div>
-        <h3 id="default-colours" class="mar-t8 mar-b6"><a href="#default-colours" class="subtitle link">Default Colours</a></h3><p>These are the default colours that come with Eezo, they are
-mostly just nice defaults for general UI purposes
-with a slightly cool hue for greys.</p>
-<p>The <code>black</code> and <code>white</code> colors are both set
-to a <em>&quot;nicer&quot;</em> shade with no saturation. And the greys are 
-slightly saturated with a cool hue. <a href="http://ianstormtaylor.com/design-tip-never-use-black/">why? read 
-this.</a></p>
+        </div><p>Eezo is also designed to have an extremely flat
+specificity tree, so applying a <code>mar-*</code> class to any
+element should just work. Even with grids.</p>
 
-        <table class="mar-t8 mar-b6 mb-12 txt-l txt-sans">
-          <thead>
-            <tr>
-              <th class="pad-3 bor-b1">class name
-              </th>
-              <th class="pad-3 bor-b1">hex value
-              </th>
-              <th class="pad-3 bor-b1">example
-              </th>
-            </tr>
-          </thead>
-          <tbody class="txt-code">
-            <tr>
-              <td class="pad-v2 pad-h3">x</td>
-              <td class="pad-v2 pad-h3">transparent</td>
-              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-x"></td>
-            </tr>
-            <tr>
-              <td class="pad-v2 pad-h3">wht</td>
-              <td class="pad-v2 pad-h3">#ffffff</td>
-              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-wht"></td>
-            </tr>
-            <tr>
-              <td class="pad-v2 pad-h3">white</td>
-              <td class="pad-v2 pad-h3">#f9f9f9</td>
-              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-white"></td>
-            </tr>
-            <tr>
-              <td class="pad-v2 pad-h3">cream</td>
-              <td class="pad-v2 pad-h3">#f7f2eb</td>
-              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-cream"></td>
-            </tr>
-            <tr>
-              <td class="pad-v2 pad-h3">light</td>
-              <td class="pad-v2 pad-h3">#b5b8bf</td>
-              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-light"></td>
-            </tr>
-            <tr>
-              <td class="pad-v2 pad-h3">grey</td>
-              <td class="pad-v2 pad-h3">#82848e</td>
-              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-grey"></td>
-            </tr>
-            <tr>
-              <td class="pad-v2 pad-h3">dark</td>
-              <td class="pad-v2 pad-h3">#575c67</td>
-              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-dark"></td>
-            </tr>
-            <tr>
-              <td class="pad-v2 pad-h3">pitch</td>
-              <td class="pad-v2 pad-h3">#161f23</td>
-              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-pitch"></td>
-            </tr>
-            <tr>
-              <td class="pad-v2 pad-h3">black</td>
-              <td class="pad-v2 pad-h3">#1a1a1a</td>
-              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-black"></td>
-            </tr>
-            <tr>
-              <td class="pad-v2 pad-h3">blk</td>
-              <td class="pad-v2 pad-h3">#000000</td>
-              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-blk"></td>
-            </tr>
-          </tbody>
-        </table>
-        <h3 id="extra-colours" class="mar-t8 mar-b6"><a href="#extra-colours" class="subtitle link">Extra Colours</a></h3><p>The extra colours are just some <em>&quot;pretty OK&quot;</em>
-colours to jump-start your ui. They only come with 
-the <strong class="txt-sans">Core+</strong> bundle
-and can be easily overridden with customisation in sass.</p>
+        <h3 id="default-values" class="mar-t8 mar-b6"><a href="#default-values" class="subtitle link">Default Values</a></h3><p>The default values are based on <strong>multiples of the base unit</strong>
+(<code>16px</code>/<code>1rem</code>) and start at <code>mar-4</code> (<code>1rem</code>). If you&#39;re developing
+to a design system, you should find that <strong>these values are
+reusable across the application</strong>.</p>
+<p>If, however, you&#39;ve being given a design
+<a href="http://csswizardry.com/2012/11/code-smells-in-css/#magic-numbers">with magic numbers</a>
+all over the place; I would suggest that you <em>vehemently</em> try
+to convince your designer to <em>think more carefully</em> about the
+problem they are trying to solve, and failing that...
+avoid a css framework. There&#39;s no hope for you.</p>
 
         <table class="mar-t8 mar-b6 mb-12 txt-l txt-sans">
           <thead>
             <tr>
               <th class="pad-3 bor-b1">class name
               </th>
-              <th class="pad-3 bor-b1">hex value
+              <th class="pad-3 bor-b1">rem value
               </th>
-              <th class="pad-3 bor-b1">example
+              <th class="pad-3 bor-b1">pixels
               </th>
             </tr>
           </thead>
           <tbody class="txt-code">
             <tr>
-              <td class="pad-v2 pad-h3">silver</td>
-              <td class="pad-v2 pad-h3">#dde3e6</td>
-              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-silver"></td>
+              <td class="pad-3 pad-v2">.mar-0</td>
+              <td class="pad-3 pad-v2">0rem</td>
+              <td class="pad-3 pad-v2">0px</td>
             </tr>
             <tr>
-              <td class="pad-v2 pad-h3">gold</td>
-              <td class="pad-v2 pad-h3">#c7aa5c</td>
-              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-gold"></td>
+              <td class="pad-3 pad-v2">.mar-1</td>
+              <td class="pad-3 pad-v2">0.125rem</td>
+              <td class="pad-3 pad-v2">2px</td>
             </tr>
             <tr>
-              <td class="pad-v2 pad-h3">yellow</td>
-              <td class="pad-v2 pad-h3">#d6d01e</td>
-              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-yellow"></td>
+              <td class="pad-3 pad-v2">.mar-2</td>
+              <td class="pad-3 pad-v2">0.25rem</td>
+              <td class="pad-3 pad-v2">4px</td>
             </tr>
             <tr>
-              <td class="pad-v2 pad-h3">orange</td>
-              <td class="pad-v2 pad-h3">#d66a1e</td>
-              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-orange"></td>
+              <td class="pad-3 pad-v2">.mar-3</td>
+              <td class="pad-3 pad-v2">0.5rem</td>
+              <td class="pad-3 pad-v2">8px</td>
             </tr>
             <tr>
-              <td class="pad-v2 pad-h3">red</td>
-              <td class="pad-v2 pad-h3">#d61e40</td>
-              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-red"></td>
+              <td class="pad-3 pad-v2">.mar-4</td>
+              <td class="pad-3 pad-v2">1rem</td>
+              <td class="pad-3 pad-v2">16px</td>
             </tr>
             <tr>
-              <td class="pad-v2 pad-h3">pink</td>
-              <td class="pad-v2 pad-h3">#ec2666</td>
-              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-pink"></td>
+              <td class="pad-3 pad-v2">.mar-5</td>
+              <td class="pad-3 pad-v2">1.5rem</td>
+              <td class="pad-3 pad-v2">24px</td>
             </tr>
             <tr>
-              <td class="pad-v2 pad-h3">violet</td>
-              <td class="pad-v2 pad-h3">#981bd8</td>
-              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-violet"></td>
+              <td class="pad-3 pad-v2">.mar-6</td>
+              <td class="pad-3 pad-v2">2rem</td>
+              <td class="pad-3 pad-v2">32px</td>
             </tr>
             <tr>
-              <td class="pad-v2 pad-h3">purple</td>
-              <td class="pad-v2 pad-h3">#5930d6</td>
-              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-purple"></td>
+              <td class="pad-3 pad-v2">.mar-7</td>
+              <td class="pad-3 pad-v2">3rem</td>
+              <td class="pad-3 pad-v2">48px</td>
             </tr>
             <tr>
-              <td class="pad-v2 pad-h3">blue</td>
-              <td class="pad-v2 pad-h3">#1e9bd6</td>
-              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-blue"></td>
+              <td class="pad-3 pad-v2">.mar-8</td>
+              <td class="pad-3 pad-v2">4rem</td>
+              <td class="pad-3 pad-v2">64px</td>
             </tr>
             <tr>
-              <td class="pad-v2 pad-h3">teal</td>
-              <td class="pad-v2 pad-h3">#17b5b5</td>
-              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-teal"></td>
+              <td class="pad-3 pad-v2">.mar-9</td>
+              <td class="pad-3 pad-v2">6rem</td>
+              <td class="pad-3 pad-v2">96px</td>
             </tr>
             <tr>
-              <td class="pad-v2 pad-h3">mint</td>
-              <td class="pad-v2 pad-h3">#31e894</td>
-              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-mint"></td>
+              <td class="pad-3 pad-v2">.mar-10</td>
+              <td class="pad-3 pad-v2">10rem</td>
+              <td class="pad-3 pad-v2">160px</td>
+            </tr>
+          </tbody>
+        </table><p>If you&#39;re used to a somewhat normal way of building
+websites, with <code>5px</code>, <code>10px</code> and <code>1px</code> values all
+everywhere... you&#39;re probably crying out: &quot;<strong><em>Whaaat!</em></strong>&quot;</p>
+<p>But I suggest, with a little practise, <strong>you&#39;ll realise</strong> that
+there&#39;s such an <strong>insignificant difference</strong> between <code>1px</code> and <code>2px</code>,
+and such a small difference between <code>4px</code> and <code>5px</code> that the
+only consequence of changing your approach is that the
+<strong>numbers have a relationship</strong> to your font size. (which is a good thing).</p>
+
+        <h3 id="negative-margins" class="mar-t8 mar-b6"><a href="#negative-margins" class="subtitle link">Negative Margins</a></h3><p>There come times when negative margins are
+beneficial. Like <strong>for outdenting</strong> text or boxes, or
+nudging icons away from text. But negative
+margins are, <strong>generally, smaller</strong> and so they do not go
+as high as the positive margins. <em>however, as always, this
+can be customised</em>.</p>
+
+        <table class="mar-t8 mar-b6 mb-12 txt-l txt-sans">
+          <thead>
+            <tr>
+              <th class="pad-3 bor-b1">class name
+              </th>
+              <th class="pad-3 bor-b1">rem value
+              </th>
+              <th class="pad-3 bor-b1">pixels
+              </th>
+            </tr>
+          </thead>
+          <tbody class="txt-code">
+            <tr>
+              <td class="pad-3 pad-v2">.mar-1-</td>
+              <td class="pad-3 pad-v2">-0.125rem</td>
+              <td class="pad-3 pad-v2">-2px</td>
             </tr>
             <tr>
-              <td class="pad-v2 pad-h3">green</td>
-              <td class="pad-v2 pad-h3">#1ed668</td>
-              <td class="pad-v2 pad-h3 bor-1dot bor-t0 bor-light bg-green"></td>
+              <td class="pad-3 pad-v2">.mar-2-</td>
+              <td class="pad-3 pad-v2">-0.25rem</td>
+              <td class="pad-3 pad-v2">-4px</td>
+            </tr>
+            <tr>
+              <td class="pad-3 pad-v2">.mar-3-</td>
+              <td class="pad-3 pad-v2">-0.5rem</td>
+              <td class="pad-3 pad-v2">-8px</td>
+            </tr>
+            <tr>
+              <td class="pad-3 pad-v2">.mar-4-</td>
+              <td class="pad-3 pad-v2">-1rem</td>
+              <td class="pad-3 pad-v2">-16px</td>
+            </tr>
+            <tr>
+              <td class="pad-3 pad-v2">.mar-5-</td>
+              <td class="pad-3 pad-v2">-1.5rem</td>
+              <td class="pad-3 pad-v2">-24px</td>
             </tr>
           </tbody>
         </table>
+        <h3 id="coordinates" class="mar-t8 mar-b6"><a href="#coordinates" class="subtitle link">Coordinates</a></h3><p>Margins are subject to the <a href="xxcoordxx">default coordinates
+system (<code>v, h, t, l, b, r</code>)</a> and
+can be customised globally or specifically on the
+<code>margin</code> component.</p>
+<pre><code class="language-html">&lt;!-- example of coordinates for margins --&gt;
+&lt;div class=&quot;mar-4&quot;&gt;  1 rem margin all around &lt;/div&gt;
+
+&lt;div class=&quot;mar-v4&quot;&gt; 1 rem margin vertically &lt;/div&gt;
+&lt;div class=&quot;mar-h4&quot;&gt; 1 rem margin horizontally &lt;/div&gt;
+
+&lt;div class=&quot;mar-t4&quot;&gt; 1 rem margin at the top &lt;/div&gt;
+&lt;div class=&quot;mar-r4&quot;&gt; 1 rem margin on the right &lt;/div&gt;
+&lt;div class=&quot;mar-b4&quot;&gt; 1 rem margin at the bottom &lt;/div&gt;
+&lt;div class=&quot;mar-l4&quot;&gt; 1 rem margin on the left &lt;/div&gt;
+</code></pre>
         <h3 id="customising" class="mar-t8 mar-b6"><a href="#customising" class="subtitle link">Customising</a></h3><p>There&#39;s a global set <code>map</code> set to the <code>$colors</code>
 variable which is inherited by all othe colour
 modules (<em>text, background, etc</em>).</p>

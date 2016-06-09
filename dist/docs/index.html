@@ -44,11 +44,69 @@
                   </li>
                   <li class="pad-l4"><a href="/dist/docs/media-queries.html">Media Queries</a>
                   </li>
+                  <li class="pad-l4"><a href="/dist/docs/mixins.html">Mixins</a>
+                  </li>
                   <li class="mar-t6">
-                    <hr class="bor-0 bor-t1 bor-t-light">
-                    <h4 class="pad-l4 mar-b2 f2">Colour</h4>
+                    <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Customising</h4>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/customising.html">Customising Eezo</a>
                   </li>
                   <li class="pad-l4"><a href="/dist/docs/colors.html">Colours</a>
+                  </li>
+                  <li class="mar-t6">
+                    <hr class="bor-0 bor-t1 bor-t-light">
+                    <h4 class="pad-l4 mar-b2 f2">Components</h4>
+                  </li>
+                  <li class="mar-t6">
+                    <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Background</h4>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/background/color.html">Colours</a>
+                  </li>
+                  <li class="mar-t6">
+                    <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Border</h4>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/border/color.html">Colours</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/border/radius.html">Radius</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/border/style.html">Style</a>
+                  </li>
+                  <li class="mar-t6">
+                    <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Form</h4>
+                  </li>
+                  <li class="mar-t6">
+                    <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Grid</h4>
+                  </li>
+                  <li class="mar-t6">
+                    <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Misc</h4>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/misc/cursor.html">Cursor</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/misc/display.html">Display</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/misc/float.html">Float</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/misc/links.html">Links</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/misc/overflow.html">Overflow</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/misc/valign.html">Vertical Align</a>
+                  </li>
+                  <li class="mar-t6">
+                    <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Positioning</h4>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/positioning/margin.html">Margin</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/positioning/padding.html">Padding</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/positioning/position.html">Position</a>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/positioning/positioning.html">Positioning</a>
+                  </li>
+                  <li class="mar-t6">
+                    <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">SVG</h4>
+                  </li>
+                  <li class="pad-l4"><a href="/dist/docs/svg/fill.html">Fill</a>
                   </li>
                   <li class="mar-t6">
                     <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Text</h4>
@@ -81,25 +139,6 @@
                   </li>
                   <li class="pad-l4"><a href="/dist/docs/text/word-wrap.html">Word Wrap</a>
                   </li>
-                  <li class="mar-t6">
-                    <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Border</h4>
-                  </li>
-                  <li class="pad-l4"><a href="/dist/docs/border/color.html">Colours</a>
-                  </li>
-                  <li class="pad-l4"><a href="/dist/docs/border/radius.html">Radius</a>
-                  </li>
-                  <li class="pad-l4"><a href="/dist/docs/border/style.html">Style</a>
-                  </li>
-                  <li class="mar-t6">
-                    <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">Background</h4>
-                  </li>
-                  <li class="pad-l4"><a href="/dist/docs/background/color.html">Colours</a>
-                  </li>
-                  <li class="mar-t6">
-                    <h4 class="pad-l4 mar-b2 mar-t6 f2 fw-bold">SVG</h4>
-                  </li>
-                  <li class="pad-l4"><a href="/dist/docs/svg/fill.html">Fill</a>
-                  </li>
         </ul>
       </div>
       <div class="docs-content f1">
@@ -115,47 +154,49 @@
           to download and include one of the bundles from
           Github. There's a few options, listed below.
         </p>
-        <table class="txt-sans mb-12 txt-l bor-b1 bor-dark pad-b30 mar-v100">
+        <table class="txt-sans mb-12 txt-l bor-b1 bor-dark pad-b4 mar-v100">
           <tr>
-                      <th class="pad-v10 bor-b1 bor-dark">Bundle Name</th>
-                      <th class="pad-v10 bor-b1 bor-dark">Size</th>
-                      <th class="pad-v10 bor-b1 bor-dark">Download</th>
+            <th class="pad-3 bor-b1">
+            </th>
+            <th class="pad-3 bor-b1">
+            </th>
+            <th class="pad-3 bor-b1">
+            </th>
           </tr>
           <tr>
-            <th class="mb-7 pad-t20">
-              <div class="txt-code f4">Core</div>
+            <th class="mb-7 pad-t3">
+              <div class="txt-code f3">Core</div>
               <div class="fw-n lh1">
                 The basic bundle for Eezo, containing the most
                 common css compositions, no extra weight.
               </div>
             </th>
-                      <td class="txt-code docs-purple">~ 7.65kb</td>
-                      <td><a href="#" class="mb-12 btn-alt noline pad-h20 txt-code bg-x">Core</a></td>
+            <td class="txt-code docs-purple">~ 7.65kb</td>
+            <td><a href="#" class="mb-12 btn-alt btn-min noline txt-code">Core</a></td>
           </tr>
           <tr>
             <th class="pad-t20">
-              <div class="txt-code f4">Core +</div>
+              <div class="txt-code f3">Core +</div>
               <div class="fw-n lh1">
                 The basic bundle for Eezo, plus some extra
                 features...
               </div>
             </th>
-                      <td class="txt-code docs-purple">~ 8.77kb</td>
-                      <td><a href="#" class="mb-12 btn-alt noline pad-h20 txt-code bg-x">Core +</a></td>
+            <td class="txt-code docs-purple">~ 8.77kb</td>
+            <td><a href="#" class="mb-12 btn-alt btn-min noline txt-code">Core +</a></td>
           </tr>
         </table>
-        <h3 id="install-with bower" class="mar-t8 mar-b6"><a href="#install-with bower" class="subtitle link">Install with Bower</a></h3>
-        <pre data-lang="sh" class="code">bower install --save eezo</pre>
+        <h3 id="install-with bower" class="mar-t8 mar-b6"><a href="#install-with bower" class="subtitle link">Install with Bower</a></h3><pre><code class="language-bash">bower install --save eezo
+</code></pre>
         <p>
           Installing with bower opens up the possibility of customising
-          Eezo's default options, allowing complete control over the 
+          Eezo's default options, allowing complete control over the
           different components.
-        </p>
-        <pre data-lang="sass" class="code">/* import eezo as .scss for complete control */
-@import "./bower_components/eezo/src/eezo";
- 
+        </p><pre><code class="language-scss">/* import eezo as .scss for complete control */
+@import &quot;./bower_components/eezo/src/eezo&quot;;
+
 /* or just include a bundle from the dist folder */
-@import "./bower_components/eezo/dist/eezo-core";</pre>
+@import &quot;./bower_components/eezo/dist/eezo-core&quot;;</code></pre>
       </div>
     </section>
     <footer>
@@ -175,7 +216,7 @@
         
         setTimeout(function(){
             document.getElementsByTagName("html")[0].classList.remove("loading");
-        }, 100);
+        }, 200 );
         
       </script>
       <script src="/dist/assets/js/app.js"></script>

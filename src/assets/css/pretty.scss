@@ -13,45 +13,76 @@ $code-red:        #FF7B7B;
 
 pre[ class *= "language-" ] {
 
-  font-size: 1.125rem;
-  background: $code-bg;
-  color: $code-plain;
-  padding: 20px;
-  border-radius: 3px;
-  overflow-x: auto;
+    font-size: 1.125rem;
+    background: $code-bg;
+    color: $code-plain;
+    padding: 20px;
+    border-radius: 3px;
+    overflow-x: auto;
 
+    &::-webkit-scrollbar {
 
-  @media screen {
+        background: transparent;
 
-    .comment { color: $code-comment; }
-
-    .tag { color: $code-green; }
-    .attr-name { color: $code-blue; }
-    .attr-value { color: $code-yellow; }
-    .attr-value .punctuation { color: $code-punc; }
-
-    .variable { color: $code-green; }
-    .string { color: $code-yellow; }
-    .property { color: $code-blue; }
-    .selector { color: $code-green; }
-    .hexcode { color: $code-purple; }
-    .number { color: $code-purple; }
-    .boolean { color: $code-purple; }
-
-    .atrule {
-      .rule {
-        color: $code-red;
-      }
-      .property {
-        color: $code-green;
-      }
     }
 
-  }
+    &::-webkit-scrollbar-thumb {
 
-  &.language-css,
-  &.language-scss {
+        background-color: rgba(255,255,255,0.2);
+        border-radius: 10px;
+        border: 4px solid $code-bg;
 
-    
-  }
+    }
+
+    &:hover::-webkit-scrollbar-thumb {
+
+        background-color: rgba(255,255,255,0.6);
+
+    }
+
+
+    @media screen {
+
+        .comment { color: $code-comment; }
+
+        .tag { color: $code-green; }
+        .attr-name { color: $code-blue; }
+        .attr-value { color: $code-yellow; }
+        .attr-value .punctuation { color: $code-punc; }
+
+        .variable { color: $code-green; }
+        .string { color: $code-yellow; }
+        .property { color: $code-blue; }
+        .selector { color: $code-green; }
+        .hexcode { color: $code-purple; }
+        .number { color: $code-purple; }
+        .boolean { color: $code-purple; }
+
+        .atrule {
+            .rule {
+                color: $code-red;
+            }
+            .property {
+                color: $code-green;
+            }
+        }
+
+        &.language-css,
+        &.language-scss {
+
+            
+        }
+
+        &.language-jade {
+            .mixin {
+
+                color: $code-yellow;
+
+                .keyword { color: $code-red; }
+                .function { color: $code-blue; }
+                .punctuation { color: $code-plain; }
+            }
+        }
+
+    }
 }

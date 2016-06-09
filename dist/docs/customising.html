@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="loading no-js">
   <head>
-    <title>eezo | docs | font colours</title><meta charset="utf-8" />
+    <title>eezo | docs | customising eezo</title><meta charset="utf-8" />
     <meta description="a lightweight and responsive css framework">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#32295F">
@@ -142,89 +142,13 @@
         </ul>
       </div>
       <div class="docs-content f1">
-        <h2 class="ls1 fw-t">Text Colours</h2>
-        <div class="f2 tb-txt-j"><p>Text (foreground) colours can easily be styled
-by supplying a classname of the colour you want. This
-also applies for any custom colours you define.</p>
+        <h2 class="ls1 fw-t">Customising Eezo</h2>
+        <div class="f2 tb-txt-j"><p>Section about how to customise the default colours, coords, distances, text scale</p>
 
-        </div><p>The colours available to choose from depend on
-<a href="../colors.html">the colours module</a>, and any customisation that
-has been applied.</p>
-<p>Obviously text colours will also be inherited by borders
-if no <a href="../border/color.html">border colour</a> is supplied.</p>
-
-        <div class="row mar-t9 txt-c txt-sans">
-          <div class="mb-6 tb-3 col end pad-v6 bg-silver x"><span class="disp-b f3 txt-code fw-b">.x</span></div>
-          <div class="mb-6 tb-3 col end pad-v6 bg-silver cream"><span class="disp-b f3 txt-code fw-b">.cream</span></div>
-          <div class="mb-6 tb-3 col end pad-v6 bg-silver wht"><span class="disp-b f3 txt-code fw-b">.wht</span></div>
-          <div class="mb-6 tb-3 col end pad-v6 bg-silver white"><span class="disp-b f3 txt-code fw-b">.white</span></div>
-          <div class="mb-6 tb-3 col end pad-v6 bg-undefined light"><span class="disp-b f3 txt-code fw-b">.light</span></div>
-          <div class="mb-6 tb-3 col end pad-v6 bg-undefined grey"><span class="disp-b f3 txt-code fw-b">.grey</span></div>
-          <div class="mb-6 tb-3 col end pad-v6 bg-undefined dark"><span class="disp-b f3 txt-code fw-b">.dark</span></div>
-          <div class="mb-6 tb-3 col end pad-v6 bg-undefined pitch"><span class="disp-b f3 txt-code fw-b">.pitch</span></div>
-          <div class="mb-6 tb-3 col end pad-v6 bg-undefined black"><span class="disp-b f3 txt-code fw-b">.black</span></div>
-          <div class="mb-6 tb-3 col end pad-v6 bg-undefined blk"><span class="disp-b f3 txt-code fw-b">.blk</span></div>
         </div>
-        <div class="row mar-t6 txt-c txt-sans">
-          <div class="mb-6 tb-3 col end pad-v6 bg-undefined silver"><span class="disp-b f3 txt-code fw-b">.silver</span></div>
-          <div class="mb-6 tb-3 col end pad-v6 bg-undefined gold"><span class="disp-b f3 txt-code fw-b">.gold</span></div>
-          <div class="mb-6 tb-3 col end pad-v6 bg-undefined yellow"><span class="disp-b f3 txt-code fw-b">.yellow</span></div>
-          <div class="mb-6 tb-3 col end pad-v6 bg-undefined orange"><span class="disp-b f3 txt-code fw-b">.orange</span></div>
-          <div class="mb-6 tb-3 col end pad-v6 bg-undefined red"><span class="disp-b f3 txt-code fw-b">.red</span></div>
-          <div class="mb-6 tb-3 col end pad-v6 bg-undefined pink"><span class="disp-b f3 txt-code fw-b">.pink</span></div>
-          <div class="mb-6 tb-3 col end pad-v6 bg-undefined violet"><span class="disp-b f3 txt-code fw-b">.violet</span></div>
-          <div class="mb-6 tb-3 col end pad-v6 bg-undefined purple"><span class="disp-b f3 txt-code fw-b">.purple</span></div>
-          <div class="mb-6 tb-3 col end pad-v6 bg-undefined blue"><span class="disp-b f3 txt-code fw-b">.blue</span></div>
-          <div class="mb-6 tb-3 col end pad-v6 bg-undefined teal"><span class="disp-b f3 txt-code fw-b">.teal</span></div>
-          <div class="mb-6 tb-3 col end pad-v6 bg-undefined mint"><span class="disp-b f3 txt-code fw-b">.mint</span></div>
-          <div class="mb-6 tb-3 col end pad-v6 bg-undefined green"><span class="disp-b f3 txt-code fw-b">.green</span></div>
-        </div>
-        <h3 id="usage-example" class="mar-t8 mar-b6"><a href="#usage-example" class="subtitle link">Usage example</a></h3><p>Out of the box, Eezo will come with the classes
-defined above, and here&#39;s an example of how to use
-them in your <code>html</code></p>
-<pre><code class="language-html">&lt;body class=&quot;black&quot;&gt;
-  has black text.
-&lt;/body&gt;
-</code></pre>
-        <h3 id="media-queries" class="mar-t8 mar-b6"><a href="#media-queries" class="subtitle link">Media Queries</a></h3><p>No media query support for this property.
-It might not be necessary to supply different
-values at different breakpoints. Please refer to
-(<a href="/dist/docs/media-queries.html">the <code>media-query</code> documentation</a>) for more info.</p>
-
-        <h3 id="customising" class="mar-t8 mar-b6"><a href="#customising" class="subtitle link">Customising</a></h3>
-        <h4 id="default-classes" class="mar-t6 mar-b4 ls1"><a href="#default-classes" class="subtitle link">Default Classes</a></h4><p>To add a prefix in front of the text colours,
-you may use the <code>$text-color-prop</code> variable.</p>
-<pre><code class="language-scss">// change the class prefix to .clr-
-$text-color-prop: &quot;clr&quot;;
-</code></pre>
-        <h4 id="custom-text colours" class="mar-t6 mar-b4 ls1"><a href="#custom-text colours" class="subtitle link">Custom Text Colours</a></h4><p>Also the <code>$text-colors</code> variable can supplied a map
-to override the font colors. By default <code>$text-colors</code>
-will inherit from <a href="../colors.html">the base <code>$colors</code> map</a>.</p>
-<pre><code class="language-scss">// change the font colors to Fifty Shades of Grey.
-$text-colors: (
-  grey-1: #eeeeee,
-  grey-2: #eaeaea,
-  grey-3: #e6e6e6,
-  grey-16: #cccccc,
-  grey-21: #999999,
-  grey-49: #1a1a1a,
-  grey-50: #111111
-);
-</code></pre>
-        <h4 id="combined" class="mar-t6 mar-b4 ls1"><a href="#combined" class="subtitle link">Combined</a></h4><p>After changing the prefix property and the map
-of colours in the previous two customisations, we
-would result in the following css.</p>
-<pre><code class="language-css">/* would result in css like: */
-.clr-grey-1   { color: #eeeeee; }
-.clr-grey-2   { color: #eaeaea; }
-.clr-grey-3   { color: #e6e6e6; }
-.clr-grey-16  { color: #cccccc; }
-.clr-grey-21  { color: #999999; }
-.clr-grey-49  { color: #1a1a1a; }
-.clr-grey-50  { color: #111111; }
-</code></pre>
+        
         <hr class="bg-x bor-0 bor-b1 bor-light mar-t9 mar-b8"/>
-        <p class="txt-sans">view the source on github: <code><a href="https://github.com/simeydotme/eezo/tree/master//src/components/text/_color.scss">/src/components/text/_color.scss</a></code></p>
+        <p class="txt-sans">view the source on github: <code><a href="https://github.com/simeydotme/eezo/tree/master//src/defaults">/src/defaults</a></code></p>
       </div>
     </section>
     <footer>

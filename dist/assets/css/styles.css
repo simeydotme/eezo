@@ -5204,6 +5204,14 @@ pre[class*="language-"] {
   padding: 20px;
   border-radius: 3px;
   overflow-x: auto; }
+  pre[class*="language-"]::-webkit-scrollbar {
+    background: transparent; }
+  pre[class*="language-"]::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    border: 4px solid #37474F; }
+  pre[class*="language-"]:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.6); }
   @media screen {
     pre[class*="language-"] .comment {
       color: #78909C; }
@@ -5232,10 +5240,17 @@ pre[class*="language-"] {
     pre[class*="language-"] .atrule .rule {
       color: #FF7B7B; }
     pre[class*="language-"] .atrule .property {
-      color: #43EABC; } }
+      color: #43EABC; }
+    pre[class*="language-"].language-jade .mixin {
+      color: #FFB397; }
+      pre[class*="language-"].language-jade .mixin .keyword {
+        color: #FF7B7B; }
+      pre[class*="language-"].language-jade .mixin .function {
+        color: #81DEEC; }
+      pre[class*="language-"].language-jade .mixin .punctuation {
+        color: #CFD8DC; } }
 
 html:not(.no-js) {
-  will-change: opacity;
   transition: opacity 0.25s ease-out; }
   html:not(.no-js).wf-loading, html:not(.no-js).loading {
     opacity: 0;
