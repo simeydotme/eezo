@@ -1,18 +1,14 @@
 
+@function heading( $n ) {
+
+    $l:         length( $text-scale );
+    $item:      nth( $text-scale, ( $l - $n ) );
+    $key:       nth( $item, 1 );
+
+    @return ".#{ $font-size-prop }#{ $key }";
+}
+
 @mixin headings() {
-
-/*
- * some default link styling
- */
-
-    @function heading( $n ) {
-
-        $l:         length( $text-scale );
-        $item:      nth( $text-scale, ( $l - $n ) );
-        $key:       nth( $item, 1 );
-
-        @return ".#{ $font-size-prop }#{ $key }";
-    }
 
     h1 { @extend #{ heading(1) }; }
     h2 { @extend #{ heading(2) }; }
