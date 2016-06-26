@@ -18,7 +18,7 @@
 
     li {
 
-        @extend %list-item;
+        @extend %list;
 
     }
 
@@ -30,7 +30,7 @@
 
     .list-item {
 
-        @extend %list-item;
+        @extend %list;
 
     }
 
