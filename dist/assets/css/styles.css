@@ -522,9 +522,6 @@ fieldset {
 .clear:after {
   clear: both; }
 
-/*
- * some default link styling
- */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Noto Sans", "Open Sans", Lato, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: inherit; }
@@ -551,6 +548,10 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (min-width: 64em) and (max-width: 74.9375em) {
   .dt-only-hide {
     display: none !important; } }
+
+ul, ol, .list {
+  margin: auto;
+  padding: 0; }
 
 table {
   text-align: left;
@@ -2147,14 +2148,73 @@ thead th {
   .dt-float-n {
     float: none; } }
 
-a:not([class]), .link {
+a, .link {
   color: #1e9bd6;
   text-decoration: none;
   transition: color 0.8s ease; }
 
-a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
+a:hover, .link:hover, a:focus, .link:focus {
   color: #17b5b5;
   transition: color 0.2s ease; }
+
+a:visited, .link:visited {
+  color: #5930d6; }
+
+.list-disc {
+  list-style-type: disc; }
+
+.list-circle {
+  list-style-type: circle; }
+
+.list-square {
+  list-style-type: square; }
+
+.list-none {
+  list-style-type: none; }
+
+@media screen and (min-width: 48em) {
+  .tb-list-disc {
+    list-style-type: disc; }
+  .tb-list-circle {
+    list-style-type: circle; }
+  .tb-list-square {
+    list-style-type: square; }
+  .tb-list-none {
+    list-style-type: none; } }
+
+@media screen and (min-width: 64em) {
+  .dt-list-disc {
+    list-style-type: disc; }
+  .dt-list-circle {
+    list-style-type: circle; }
+  .dt-list-square {
+    list-style-type: square; }
+  .dt-list-none {
+    list-style-type: none; } }
+
+.list-in {
+  list-style-position: inside; }
+
+.list-out {
+  list-style-position: outside; }
+
+@media screen and (min-width: 48em) {
+  .tb-list-in {
+    list-style-position: inside; }
+  .tb-list-out {
+    list-style-position: outside; } }
+
+@media screen and (min-width: 64em) {
+  .dt-list-in {
+    list-style-position: inside; }
+  .dt-list-out {
+    list-style-position: outside; } }
+
+.mar-a {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto; }
 
 .mar-0 {
   margin-top: 0;
@@ -2222,6 +2282,10 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   margin-left: 10rem;
   margin-right: 10rem; }
 
+.mar-va {
+  margin-top: auto;
+  margin-bottom: auto; }
+
 .mar-v0 {
   margin-top: 0;
   margin-bottom: 0; }
@@ -2265,6 +2329,10 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .mar-v10 {
   margin-top: 10rem;
   margin-bottom: 10rem; }
+
+.mar-ha {
+  margin-left: auto;
+  margin-right: auto; }
 
 .mar-h0 {
   margin-left: 0;
@@ -2310,6 +2378,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   margin-left: 10rem;
   margin-right: 10rem; }
 
+.mar-ta {
+  margin-top: 10rem; }
+
 .mar-t0 {
   margin-top: 0; }
 
@@ -2342,6 +2413,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 
 .mar-t10 {
   margin-top: 10rem; }
+
+.mar-ba {
+  margin-bottom: 10rem; }
 
 .mar-b0 {
   margin-bottom: 0; }
@@ -2376,6 +2450,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 .mar-b10 {
   margin-bottom: 10rem; }
 
+.mar-ra {
+  margin-right: 10rem; }
+
 .mar-r0 {
   margin-right: 0; }
 
@@ -2408,6 +2485,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
 
 .mar-r10 {
   margin-right: 10rem; }
+
+.mar-la {
+  margin-left: 10rem; }
 
 .mar-l0 {
   margin-left: 0; }
@@ -2443,6 +2523,11 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   margin-left: 10rem; }
 
 @media screen and (min-width: 48em) {
+  .tb-mar-a {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto; }
   .tb-mar-0 {
     margin-top: 0;
     margin-bottom: 0;
@@ -2498,6 +2583,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     margin-bottom: 10rem;
     margin-left: 10rem;
     margin-right: 10rem; }
+  .tb-mar-va {
+    margin-top: auto;
+    margin-bottom: auto; }
   .tb-mar-v0 {
     margin-top: 0;
     margin-bottom: 0; }
@@ -2531,6 +2619,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   .tb-mar-v10 {
     margin-top: 10rem;
     margin-bottom: 10rem; }
+  .tb-mar-ha {
+    margin-left: auto;
+    margin-right: auto; }
   .tb-mar-h0 {
     margin-left: 0;
     margin-right: 0; }
@@ -2564,6 +2655,8 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   .tb-mar-h10 {
     margin-left: 10rem;
     margin-right: 10rem; }
+  .tb-mar-ta {
+    margin-top: 10rem; }
   .tb-mar-t0 {
     margin-top: 0; }
   .tb-mar-t1 {
@@ -2586,6 +2679,8 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     margin-top: 6rem; }
   .tb-mar-t10 {
     margin-top: 10rem; }
+  .tb-mar-ba {
+    margin-bottom: 10rem; }
   .tb-mar-b0 {
     margin-bottom: 0; }
   .tb-mar-b1 {
@@ -2608,6 +2703,8 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     margin-bottom: 6rem; }
   .tb-mar-b10 {
     margin-bottom: 10rem; }
+  .tb-mar-ra {
+    margin-right: 10rem; }
   .tb-mar-r0 {
     margin-right: 0; }
   .tb-mar-r1 {
@@ -2630,6 +2727,8 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     margin-right: 6rem; }
   .tb-mar-r10 {
     margin-right: 10rem; }
+  .tb-mar-la {
+    margin-left: 10rem; }
   .tb-mar-l0 {
     margin-left: 0; }
   .tb-mar-l1 {
@@ -2654,6 +2753,11 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     margin-left: 10rem; } }
 
 @media screen and (min-width: 64em) {
+  .dt-mar-a {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto; }
   .dt-mar-0 {
     margin-top: 0;
     margin-bottom: 0;
@@ -2709,6 +2813,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     margin-bottom: 10rem;
     margin-left: 10rem;
     margin-right: 10rem; }
+  .dt-mar-va {
+    margin-top: auto;
+    margin-bottom: auto; }
   .dt-mar-v0 {
     margin-top: 0;
     margin-bottom: 0; }
@@ -2742,6 +2849,9 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   .dt-mar-v10 {
     margin-top: 10rem;
     margin-bottom: 10rem; }
+  .dt-mar-ha {
+    margin-left: auto;
+    margin-right: auto; }
   .dt-mar-h0 {
     margin-left: 0;
     margin-right: 0; }
@@ -2775,6 +2885,8 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
   .dt-mar-h10 {
     margin-left: 10rem;
     margin-right: 10rem; }
+  .dt-mar-ta {
+    margin-top: 10rem; }
   .dt-mar-t0 {
     margin-top: 0; }
   .dt-mar-t1 {
@@ -2797,6 +2909,8 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     margin-top: 6rem; }
   .dt-mar-t10 {
     margin-top: 10rem; }
+  .dt-mar-ba {
+    margin-bottom: 10rem; }
   .dt-mar-b0 {
     margin-bottom: 0; }
   .dt-mar-b1 {
@@ -2819,6 +2933,8 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     margin-bottom: 6rem; }
   .dt-mar-b10 {
     margin-bottom: 10rem; }
+  .dt-mar-ra {
+    margin-right: 10rem; }
   .dt-mar-r0 {
     margin-right: 0; }
   .dt-mar-r1 {
@@ -2841,6 +2957,8 @@ a:hover:not([class]), .link:hover, a:focus:not([class]), .link:focus {
     margin-right: 6rem; }
   .dt-mar-r10 {
     margin-right: 10rem; }
+  .dt-mar-la {
+    margin-left: 10rem; }
   .dt-mar-l0 {
     margin-left: 0; }
   .dt-mar-l1 {
