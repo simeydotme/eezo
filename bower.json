@@ -1,5 +1,5 @@
 {
-  "name": "eezo github pages",
+  "name": "eezo-github-pages",
   "version": "0.0.1",
   "author": {
     "name": "simeydotme",
@@ -34,7 +34,7 @@
     "light"
   ],
   "dependencies": {
-    "eezo": "https://github.com/simeydotme/eezo.git#~0.6.9-alpha",
+    "eezo": "https://github.com/simeydotme/eezo.git#~0.7.0-alpha",
     "jquery": "^2.2.1",
     "prism": "^1.4.1"
   }
