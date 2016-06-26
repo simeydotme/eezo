@@ -1,0 +1,43 @@
+
+$list-position-prop:      "list" !default;
+$list-position-bps:       $default-bps !default;
+
+$list-positions: (
+
+    "in":     inside,
+    "out":    outside,
+
+) !default;
+
+
+
+@mixin list-positions( $bps: $list-position-bps ) {
+
+    $p: hyphen-after( $list-position-prop );
+
+    @each $b in $bps {
+
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
+
+        @include breakpoint( $b ) {
+
+            $bp: hyphen-after( $b );
+
+            @each $lpos in $list-positions {
+
+                $key: nth( $lpos, 1 );
+                $val: nth( $lpos, 2 );
+
+                .#{ $bp }#{ $p }#{ $key } {
+                    list-style-position: $val;
+                }
+
+            }
+
+        }
+
+    }
+
+}
