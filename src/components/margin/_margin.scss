@@ -23,6 +23,45 @@ $margin-dist:           $distances !default;
                 $c-key: nth( $c , 1 );
                 $c-val: nth( $c , 2 );
 
+
+                // AUTO MARGIN
+
+                // create a selector with the
+                // property, coordinate key and "a" (for auto)
+
+                .#{ $bp }#{ $p }#{ $c-key }#{ a } {
+
+                    // if our coordinate is a list of other coordinates
+                    // then loop through them.
+
+                    @if type-of( $c-val ) == "list" {
+
+                        @each $item in $c-val {
+
+                            $i-key: map-get( $margin-coords , $item );
+
+                            // return a property and value based on the
+                            // property value, coord item key and distance value.
+
+                            #{ margin }#{ hyphen( $i-key ) }: auto;
+
+                        }
+
+                    }
+
+                    @else {
+
+                        // return a property and value based on the
+                        // property value, coord value and distance value.
+
+                        #{ margin }#{ hyphen( $c-val ) }: $d-val;
+
+                    }
+
+                }
+
+                // NON-AUTO MARGIN
+
                 @each $d in $margin-dist {
 
                     $d-key: nth( $d , 1 );

@@ -1,0 +1,37 @@
+
+
+
+@mixin list() {
+
+    %list {
+
+        margin: auto;
+        padding: 0;
+
+    }
+
+    ul, ol {
+
+        @extend %list;
+
+    }
+
+    li {
+
+        @extend %list-item;
+
+    }
+
+    .list {
+
+        @extend %list;
+
+    }
+
+    .list-item {
+
+        @extend %list-item;
+
+    }
+
+}

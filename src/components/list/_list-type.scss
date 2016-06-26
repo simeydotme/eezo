@@ -1,0 +1,45 @@
+
+$list-type-prop:      "list" !default;
+$list-type-bps:       $default-bps !default;
+
+$list-types: (
+
+    "disc":     disc,
+    "circle":   circle,
+    "square":   square,
+    "none":     none,
+
+) !default;
+
+
+
+@mixin list-types( $bps: $list-type-bps ) {
+
+    $p: hyphen-after( $list-type-prop );
+
+    @each $b in $bps {
+
+        @if $b == nth( $default-bps, 1 ) {
+            $b: "";
+        }
+
+        @include breakpoint( $b ) {
+
+            $bp: hyphen-after( $b );
+
+            @each $ltype in $list-types {
+
+                $key: nth( $ltype, 1 );
+                $val: nth( $ltype, 2 );
+
+                .#{ $bp }#{ $p }#{ $key } {
+                    list-style-type: $val;
+                }
+
+            }
+
+        }
+
+    }
+
+}

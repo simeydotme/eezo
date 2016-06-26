@@ -1,6 +1,7 @@
 
 $link-normal:       $eezo-blue !default;
 $link-hover:        $eezo-teal !default;
+$link-visited:      $eezo-purple !default;
 
 
 
@@ -21,6 +22,12 @@ $link-hover:        $eezo-teal !default;
 
             color: $link-hover;
             transition: color 0.2s ease;
+
+        }
+
+        &:visited {
+
+            color: $link-visited;
 
         }
 
