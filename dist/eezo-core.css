@@ -1,7 +1,7 @@
 /*!
  * [ eezo ]
  * - css framework for massless stylesheets
- * - 0.7.1-alpha | http://github.com/simeydotme/eezo
+ * - 0.7.2-alpha | http://github.com/simeydotme/eezo
  * - @simeydotme | http://simey.me
  */
 @charset "UTF-8";
@@ -1326,7 +1326,7 @@ a:visited, .link:visited {
   margin-right: 10rem; }
 
 .mar-ta {
-  margin-top: 10rem; }
+  margin-top: auto; }
 
 .mar-t0 {
   margin-top: 0; }
@@ -1362,7 +1362,7 @@ a:visited, .link:visited {
   margin-top: 10rem; }
 
 .mar-ba {
-  margin-bottom: 10rem; }
+  margin-bottom: auto; }
 
 .mar-b0 {
   margin-bottom: 0; }
@@ -1398,7 +1398,7 @@ a:visited, .link:visited {
   margin-bottom: 10rem; }
 
 .mar-ra {
-  margin-right: 10rem; }
+  margin-right: auto; }
 
 .mar-r0 {
   margin-right: 0; }
@@ -1434,7 +1434,7 @@ a:visited, .link:visited {
   margin-right: 10rem; }
 
 .mar-la {
-  margin-left: 10rem; }
+  margin-left: auto; }
 
 .mar-l0 {
   margin-left: 0; }
@@ -1603,7 +1603,7 @@ a:visited, .link:visited {
     margin-left: 10rem;
     margin-right: 10rem; }
   .tb-mar-ta {
-    margin-top: 10rem; }
+    margin-top: auto; }
   .tb-mar-t0 {
     margin-top: 0; }
   .tb-mar-t1 {
@@ -1627,7 +1627,7 @@ a:visited, .link:visited {
   .tb-mar-t10 {
     margin-top: 10rem; }
   .tb-mar-ba {
-    margin-bottom: 10rem; }
+    margin-bottom: auto; }
   .tb-mar-b0 {
     margin-bottom: 0; }
   .tb-mar-b1 {
@@ -1651,7 +1651,7 @@ a:visited, .link:visited {
   .tb-mar-b10 {
     margin-bottom: 10rem; }
   .tb-mar-ra {
-    margin-right: 10rem; }
+    margin-right: auto; }
   .tb-mar-r0 {
     margin-right: 0; }
   .tb-mar-r1 {
@@ -1675,7 +1675,7 @@ a:visited, .link:visited {
   .tb-mar-r10 {
     margin-right: 10rem; }
   .tb-mar-la {
-    margin-left: 10rem; }
+    margin-left: auto; }
   .tb-mar-l0 {
     margin-left: 0; }
   .tb-mar-l1 {
@@ -1833,7 +1833,7 @@ a:visited, .link:visited {
     margin-left: 10rem;
     margin-right: 10rem; }
   .dt-mar-ta {
-    margin-top: 10rem; }
+    margin-top: auto; }
   .dt-mar-t0 {
     margin-top: 0; }
   .dt-mar-t1 {
@@ -1857,7 +1857,7 @@ a:visited, .link:visited {
   .dt-mar-t10 {
     margin-top: 10rem; }
   .dt-mar-ba {
-    margin-bottom: 10rem; }
+    margin-bottom: auto; }
   .dt-mar-b0 {
     margin-bottom: 0; }
   .dt-mar-b1 {
@@ -1881,7 +1881,7 @@ a:visited, .link:visited {
   .dt-mar-b10 {
     margin-bottom: 10rem; }
   .dt-mar-ra {
-    margin-right: 10rem; }
+    margin-right: auto; }
   .dt-mar-r0 {
     margin-right: 0; }
   .dt-mar-r1 {
@@ -1905,7 +1905,7 @@ a:visited, .link:visited {
   .dt-mar-r10 {
     margin-right: 10rem; }
   .dt-mar-la {
-    margin-left: 10rem; }
+    margin-left: auto; }
   .dt-mar-l0 {
     margin-left: 0; }
   .dt-mar-l1 {
