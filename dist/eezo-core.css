@@ -1,7 +1,7 @@
 /*!
  * [ eezo ]
  * - css framework for massless stylesheets
- * - 0.7.2-alpha | http://github.com/simeydotme/eezo
+ * - 0.7.3-alpha | http://github.com/simeydotme/eezo
  * - @simeydotme | http://simey.me
  */
 @charset "UTF-8";
@@ -559,7 +559,7 @@ h1, h2, h3, h4, h5, h6 {
   .dt-only-hide {
     display: none !important; } }
 
-ul, ol, .list {
+ul, ol, li, .list, .list-item {
   margin: auto;
   padding: 0; }
 
