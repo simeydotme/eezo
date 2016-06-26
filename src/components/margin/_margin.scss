@@ -54,7 +54,7 @@ $margin-dist:           $distances !default;
                         // return a property and value based on the
                         // property value, coord value and distance value.
 
-                        #{ margin }#{ hyphen( $c-val ) }: $d-val;
+                        #{ margin }#{ hyphen( $c-val ) }: auto;
 
                     }
 
