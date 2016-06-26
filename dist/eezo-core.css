@@ -1,7 +1,7 @@
 /*!
  * [ eezo ]
  * - css framework for massless stylesheets
- * - 0.7.0-alpha | http://github.com/simeydotme/eezo
+ * - 0.7.1-alpha | http://github.com/simeydotme/eezo
  * - @simeydotme | http://simey.me
  */
 @charset "UTF-8";
@@ -532,9 +532,6 @@ fieldset {
 .clear:after {
   clear: both; }
 
-/*
- * some default link styling
- */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Noto Sans", "Open Sans", Lato, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: inherit; }
@@ -592,9 +589,6 @@ thead th {
 .clear:after {
   clear: both; }
 
-/*
- * some default link styling
- */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Noto Sans", "Open Sans", Lato, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: inherit; }

@@ -1,6 +1,6 @@
 {
   "name": "eezo",
-  "version": "0.7.0-alpha",
+  "version": "0.7.1-alpha",
   "author": {
     "name": "simeydotme",
     "email": "simey.me@gmail.com",
@@ -37,7 +37,7 @@
     "gulp-cssnano": "^2.1.0",
     "gulp-header": "^1.7.1",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.1.1",
+    "gulp-sass": "^2.3.2",
     "gulp-size": "^2.0.0",
     "gulp-sourcemaps": "^1.6.0",
     "lodash": "^4.2.0"
