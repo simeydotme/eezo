@@ -6,6 +6,7 @@
     $key:       nth( $item, 1 );
 
     @return ".#{ $font-size-prop }#{ $key }";
+    
 }
 
 @mixin headings() {

@@ -76,26 +76,21 @@
  */
 
 /*
- * eezo's main component styling
+ * eezo's core component styling
  */
 
     @include background-color();
     @include background-repeat();
     @include background-size();
-
     @include borders();
     @include cursors();
     @include displays();
     @include floats();
     @include links();
-
     @include margin();
-
     @include overflows();
-    @include paddings();
-
+    @include padding();
     @include position();
     @include positioning();
-
     @include texts();
     @include valigns();
